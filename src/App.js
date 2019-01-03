@@ -1,15 +1,23 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import { StyleSheet, css } from 'aphrodite'
+
 import Header from './components/Header'
-import AFrame from './components/A-Frame'
+import Content from './components/Content'
+
+const styles = StyleSheet.create({
+    app: {
+        width: '100%',
+        height: '100%',
+        textAlign: 'center',
+    }
+})
 
 class App extends Component {
     render() {
         return ( 
-            <div className = "App">
+            <div className={css(styles.app)}>
                 <Header></Header>
-                <AFrame></AFrame>
+                <Content></Content>
             </div>
         );
     }
