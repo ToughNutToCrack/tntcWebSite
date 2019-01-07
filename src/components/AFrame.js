@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
         position: 'absolute',
         width: '100%',
         height: '100%',
-        backgroundColor: '#ECECEC'
+        backgroundColor: '#FFFFFF'
     }
 })
 
@@ -20,7 +20,7 @@ class AFrame extends Component {
             <div className={css(styles.aFrame)}>
                 <a-scene vr-mode-ui="enabled: false" scroll-listener="">
                     <sin-row></sin-row>
-                    <a-sky color="#ECECEC"></a-sky>
+                    <a-sky color="#FFFFFF"></a-sky>
                     <a-entity position="0 -1 0">
                         <a-camera look-controls-enabled="false" wasd-controls-enabled="false" ></a-camera>
                     </a-entity>

@@ -10,13 +10,10 @@ class Content extends Component {
   render() {
     return (
       <Switch>
-        <Route exact path='/' component={AFrame}/>
-        {/* both /roster and /roster/:number begin with /roster */}
-        {/* <Route path='/Home' component={Udemy}/> */}
-        <Route path='/about-us' component={AboutUs}/>
-        {/* <Route path='/Blog' component={Blog}/> */}
-        {/* <Route path='/Projects' component={Projects}/> */}
-        {/* <Redirect to="/Home"/> */}
+        {/* <Route exact path='/' component={AFrame}/> */}
+        <Route path='/Home' component={AFrame}/>
+        <Route path='/AboutUs' component={AboutUs}/>
+        <Redirect to="/Home"/>
       </Switch>
     );
   }

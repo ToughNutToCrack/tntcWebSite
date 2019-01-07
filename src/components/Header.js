@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
         position: 'fixed',
         width: '100%',
         height: '100px',
-        backgroundColor: '#ECECEC',
+        backgroundColor: '#FFFFFF',
         display: 'flex',
         alignItems: 'center',
         opacity: 1,
@@ -23,14 +23,14 @@ const styles = StyleSheet.create({
     },
     title: {
         fontFamily: '"Patua One", cursive',
-        color: '#202020',
+        color: '#424242',
         fontSize: 36,
         fontWeight: 600,
         width: '15%',
         opacity: 1
     },
     navigation: {
-        color: '#202020',
+        color: '#424242',
         width: '70%',
         opacity: 1
     },
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     },
     navLink:{
         fontFamily: '"Patua One", regular',
-        color: '#202020',
+        color: '#9E9E9E',
         display: 'inline-block',
         textAlign: 'center',
         padding: '14px 16px',
@@ -55,14 +55,17 @@ const styles = StyleSheet.create({
         fontWeight: 600,
         fontSize: 22,
     },
+    active:{
+        color: '#424242',
+    },
     socials: {
-        color: '#202020',
+        color: '#424242',
         fontSize: 24,
         width: '15%',
         opacity: 1
     },
     socialIcon: {
-        color: '#202020',
+        color: '#424242',
         width: '15%',
         opacity: 1
     },
@@ -84,19 +87,19 @@ class Header extends Component {
                 <div className={css(styles.navigation)}>
                     <ul className={css(styles.navs)}>
                         <li className={css(styles.nav)}>
-                            <NavLink className={css(styles.navLink, styles.hover)} to="/Home">Home</NavLink>
+                            <NavLink className={css(styles.navLink, styles.hover)} activeClassName={css(styles.active)} to="/Home">Home</NavLink>
                         </li>
                         <li className={css(styles.nav)}>
-                            <NavLink className={css(styles.navLink, styles.hover)} to="/Studio">Studio</NavLink>
+                            <NavLink className={css(styles.navLink, styles.hover)} activeClassName={css(styles.active)} to="/Studio">Studio</NavLink>
                         </li>
                         <li className={css(styles.nav)}>
-                            <NavLink className={css(styles.navLink, styles.hover)} to="/Broadcast">Broadcast</NavLink>
+                            <NavLink className={css(styles.navLink, styles.hover)} activeClassName={css(styles.active)} to="/Broadcast">Broadcast</NavLink>
                         </li>
                         <li className={css(styles.nav)}>
-                            <NavLink className={css(styles.navLink, styles.hover)} to="/AboutUs">AboutUs</NavLink>
+                            <NavLink className={css(styles.navLink, styles.hover)} activeClassName={css(styles.active)} to="/AboutUs">AboutUs</NavLink>
                         </li>
                         <li className={css(styles.nav)}>
-                            <NavLink className={css(styles.navLink, styles.hover)} to="/Contacts">Contacts</NavLink>
+                            <NavLink className={css(styles.navLink, styles.hover)} activeClassName={css(styles.active)} to="/Contacts">Contacts</NavLink>
                         </li>
                     </ul>
                 </div>
