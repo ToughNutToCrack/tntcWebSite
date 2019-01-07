@@ -3,6 +3,7 @@ import aframe from 'aframe'
 import { StyleSheet, css } from 'aphrodite';
 
 import sinRow from '../aFrame/primitives/sinRow'
+import scrollListener from "../aFrame/components/scroll-listener"
 
 const styles = StyleSheet.create({
     aFrame: {
@@ -17,11 +18,11 @@ class AFrame extends Component {
     render() {
         return ( 
             <div className={css(styles.aFrame)}>
-                <a-scene vr-mode-ui="enabled: false">
+                <a-scene vr-mode-ui="enabled: false" scroll-listener="">
                     <sin-row></sin-row>
                     <a-sky color="#ECECEC"></a-sky>
                     <a-entity position="0 -1 0">
-                        <a-camera look-controls-enabled="false" wasd-controls-enabled="false"></a-camera>
+                        <a-camera look-controls-enabled="false" wasd-controls-enabled="false" ></a-camera>
                     </a-entity>
                 </a-scene>
             </div>

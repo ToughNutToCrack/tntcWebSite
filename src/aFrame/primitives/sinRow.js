@@ -3,11 +3,11 @@ import { initElement, rgbToHex } from '../lib/utils'
 
 const sinRow = aframe.registerPrimitive('sin-row', {
     defaultComponents: {
-        'sinRow': ''
+        'sinrow': ''
     }
 })
 
-aframe.registerComponent('sinRow', {
+aframe.registerComponent('sinrow', {
     init: function() {
 
         var points = new Array(30);
