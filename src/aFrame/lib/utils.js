@@ -35,6 +35,18 @@ function initElement(name, attrs) {
     return el
 }
 
+function initSpecialElement(name, attrs) {
+    attrs = attrs || {}
+    let el = document.createElement(name)
+
+    Object.keys(attrs).forEach(key => { 
+        el.setAttribute(key, attrs[key]) 
+    })
+
+    el.addAttributes(attrs)
+    return el
+}
+
 function getColor(uv, src) {
     return new Promise((resolve) => {
         const img = new Image()
@@ -73,4 +85,4 @@ function rgbToHex(r, g, b) {
     return "#" + num.toString(16).substr(1)
 }
 
-export { initElement, setAttributesGroup, getColor, rgbToHex }
+export { initElement, initSpecialElement, setAttributesGroup, getColor, rgbToHex }
