@@ -18,10 +18,10 @@ class AFrame extends Component {
     render() {
         return ( 
             <div className={css(styles.aFrame)}>
-                <a-scene vr-mode-ui="enabled: false" scroll-listener="">
+                <a-scene fog="type: exponential; color: #FFF; near: 0.1" vr-mode-ui="enabled: false" scroll-listener="">
                     <sin-row></sin-row>
                     <a-sky color="#FFFFFF"></a-sky>
-                    <a-entity position="0 -1 0">
+                    <a-entity position="0 0 0">
                         <a-camera look-controls-enabled="false" wasd-controls-enabled="false" ></a-camera>
                     </a-entity>
                 </a-scene>
