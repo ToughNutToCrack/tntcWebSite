@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import aframe from 'aframe'
 import { StyleSheet, css } from 'aphrodite';
+import 'aframe'
 
+/* eslint-disable no-unused-vars */
 import sinGrid from '../aFrame/primitives/sinGrid'
-import scrollListener from "../aFrame/components/scroll-listener"
+import scrollListener from '../aFrame/components/scroll-listener'
+/* eslint-enable no-unused-vars */
 
 const styles = StyleSheet.create({
     aFrame: {
@@ -17,7 +19,7 @@ const styles = StyleSheet.create({
 class AFrame extends Component {
     render() {
         return ( 
-            <div className={css(styles.aFrame)}>
+            <div className={ css(styles.aFrame) }>
                 <a-scene fog="type: exponential; color: #FFF; near: 0.1" vr-mode-ui="enabled: false" scroll-listener="" cursor="rayOrigin: mouse">
                     <sin-grid></sin-grid>
                     <a-sky color="#FFFFFF"></a-sky>

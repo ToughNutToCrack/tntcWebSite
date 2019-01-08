@@ -1,7 +1,7 @@
 import aframe from 'aframe'
 
 function setAttributes(el, attrs) {
-    Object.keys(attrs).forEach(key => el.setAttribute(key, attrs[key]));
+    Object.keys(attrs).forEach(key => el.setAttribute(key, attrs[ key ]));
 }
 
 Element.prototype.addAttributes = function(args) {
@@ -14,7 +14,7 @@ function setAttributesGroup(els, attrs) {
 
 function initElement(name, attrs) {
     attrs = attrs || {}
-    let el = document.createElement(name)
+    const el = document.createElement(name)
 
     let { pos, rot } = attrs
     pos = pos || { x: 0, y: 0, z: 0 }
@@ -28,7 +28,7 @@ function initElement(name, attrs) {
     )
 
     Object.keys(attrs).forEach(key => {
-        if (key !== 'pos' && key !== 'rot') { el.setAttribute(key, attrs[key]) }
+        if (key !== 'pos' && key !== 'rot') { el.setAttribute(key, attrs[ key ]) }
     })
 
     el.addAttributes(attrs)
@@ -37,10 +37,10 @@ function initElement(name, attrs) {
 
 function initSpecialElement(name, attrs) {
     attrs = attrs || {}
-    let el = document.createElement(name)
+    const el = document.createElement(name)
 
     Object.keys(attrs).forEach(key => { 
-        el.setAttribute(key, attrs[key]) 
+        el.setAttribute(key, attrs[ key ]) 
     })
 
     el.addAttributes(attrs)
@@ -53,7 +53,7 @@ function getColor(uv, src) {
         img.src = src
 
         img.onload = function() {
-            let coords = {
+            const coords = {
                 x: uv.x * img.width,
                 y: (1 - uv.y) * img.height,
             }
@@ -63,7 +63,7 @@ function getColor(uv, src) {
             canvas.width = img.width;
             canvas.height = img.height;
 
-            document.getElementsByTagName('body')[0].appendChild(canvas)
+            document.getElementsByTagName('body')[ 0 ].appendChild(canvas)
             canvas.getContext('2d').drawImage(img, 0, 0, img.width, img.height);
             var pixelData = canvas.getContext('2d').getImageData(coords.x, coords.y, 1, 1).data;
             canvas.remove()
@@ -82,7 +82,7 @@ function rgbToHex(r, g, b) {
     b = scale(b, -3, 3, 0, 255)
     let num = ((1 << 24) + (r << 16) + (g << 8) + b)
     num = Math.floor(num)
-    return "#" + num.toString(16).substr(1)
+    return '#' + num.toString(16).substr(1)
 }
 
 export { initElement, initSpecialElement, setAttributesGroup, getColor, rgbToHex }

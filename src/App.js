@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
 class App extends Component {
     render() {
         return ( 
-            <div className={css(styles.app)}>
+            <div className={ css(styles.app) }>
                 <Header></Header>
                 <Content></Content>
             </div>

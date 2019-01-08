@@ -1,6 +1,5 @@
 import aframe from 'aframe'
-import { initElement, initSpecialElement, rgbToHex } from '../lib/utils'
-import colorOnMouseOver from '../components/color-on-mouse-hover'
+import { initElement, initSpecialElement } from '../lib/utils'
 
 const sinGrid = aframe.registerPrimitive('sin-grid', {
     defaultComponents: {
@@ -11,27 +10,27 @@ const sinGrid = aframe.registerPrimitive('sin-grid', {
 aframe.registerComponent('singrid', {
     init: function() {
 
-        let rows = 30
-        let cols = 30
+        const rows = 30
+        const cols = 30
 
         var points = new Array(rows * cols);
 
         for (let j=0; j<rows; j++){
             for (let i = 0; i < cols; i++) {
 
-                let xCoord = -7.25+(0.5 * i)
-                let zCoord = -6+(0.3*j)
+                const xCoord = -7.25+(0.5 * i)
+                const zCoord = -6+(0.3*j)
 
                 let colorPoint = '#424242'
                 if( xCoord> 0){
-                    let module = j%4
+                    const module = j%4
                     if(module === 0){ colorPoint = '#818285'}
                     if(module === 1){ colorPoint = '#000000'}
                     if(module === 2){ colorPoint = '#ed1c24'}
                     if(module === 3){ colorPoint = '#fcd703'}
                 }
 
-                let box = initElement('a-sphere', {
+                const box = initElement('a-sphere', {
                     pos: { x: xCoord , y: 0, z: zCoord },
                     // depth: 0.01,
                     // height: 0.01,
@@ -41,13 +40,13 @@ aframe.registerComponent('singrid', {
                     // "color-on-mouse-over": ""
                 })
 
-                let circle = initElement('a-circle',{
+                const circle = initElement('a-circle',{
                     material: 'color: #000000; transparent: true; opacity: 0',
                     geometry: 'primitive:circle; radius:0.1'
 
                 })
 
-                let animationSize = initSpecialElement('a-animation',{
+                const animationSize = initSpecialElement('a-animation',{
                     attribute: 'scale',
                     begin: 'mouseenter',
                     direction: 'alternate',
@@ -56,7 +55,7 @@ aframe.registerComponent('singrid', {
                     duration: '0.1'
                 })
 
-                let animationColor = initSpecialElement('a-animation',{
+                const animationColor = initSpecialElement('a-animation',{
                     attribute: 'color',
                     begin: 'mouseenter',
                     direction: 'alternate',
@@ -70,7 +69,7 @@ aframe.registerComponent('singrid', {
                 box.appendChild(animationSize)
                 box.appendChild(animationColor)
 
-                points[i+(j*cols)] = box 
+                points[ i+(j*cols) ] = box 
                                   
             }
         }

@@ -6,12 +6,12 @@ import AboutUs from './AboutUs';
 class Content extends Component {
   render() {
     return (
-      <Switch>
-        {/* <Route exact path='/' component={AFrame}/> */}
-        <Route path='/Home' component={AFrame}/>
-        <Route path='/AboutUs' component={AboutUs}/>
-        <Redirect to="/Home"/>
-      </Switch>
+        <Switch>
+            {/* <Route exact path='/' component={AFrame}/> */}
+            <Route path='/Home' component={ AFrame }/>
+            <Route path='/AboutUs' component={ AboutUs }/>
+            <Redirect to="/Home"/>
+        </Switch>
     );
   }
 }

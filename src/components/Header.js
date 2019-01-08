@@ -2,13 +2,12 @@ import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import { StyleSheet, css } from 'aphrodite'
 import { FaTwitter, FaFacebookF, FaYoutube, FaInstagram } from 'react-icons/fa'
-import { IconContext } from "react-icons"
+import { IconContext } from 'react-icons'
 
-
-const twitterLink = "https://twitter.com/tntcproject"
-const instagramLink = "https://www.instagram.com/tntcproject/"
-const facebookLink = "https://www.facebook.com/toughnutocrack/"
-const youtubeLink = "https://www.youtube.com/channel/UCtj_LuYF9i5xkk4Q9EYamYA"
+const twitterLink = 'https://twitter.com/tntcproject'
+const instagramLink = 'https://www.instagram.com/tntcproject/'
+const facebookLink = 'https://www.facebook.com/toughnutocrack/'
+const youtubeLink = 'https://www.youtube.com/channel/UCtj_LuYF9i5xkk4Q9EYamYA'
 
 const styles = StyleSheet.create({
     header: {
@@ -76,40 +75,39 @@ const styles = StyleSheet.create({
     },
 })
 
-
 class Header extends Component {
     render() {
         return ( 
-            <div className={css(styles.header)}>
-                <div className={css(styles.title)}>
+            <div className={ css(styles.header) }>
+                <div className={ css(styles.title) }>
                     TNTC
                 </div>
-                <div className={css(styles.navigation)}>
-                    <ul className={css(styles.navs)}>
-                        <li className={css(styles.nav)}>
-                            <NavLink className={css(styles.navLink, styles.hover)} activeClassName={css(styles.active)} to="/Home">Home</NavLink>
+                <div className={ css(styles.navigation) }>
+                    <ul className={ css(styles.navs) }>
+                        <li className={ css(styles.nav) }>
+                            <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/Home">Home</NavLink>
                         </li>
-                        <li className={css(styles.nav)}>
-                            <NavLink className={css(styles.navLink, styles.hover)} activeClassName={css(styles.active)} to="/Studio">Studio</NavLink>
+                        <li className={ css(styles.nav) }>
+                            <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/Studio">Studio</NavLink>
                         </li>
-                        <li className={css(styles.nav)}>
-                            <NavLink className={css(styles.navLink, styles.hover)} activeClassName={css(styles.active)} to="/Broadcast">Broadcast</NavLink>
+                        <li className={ css(styles.nav) }>
+                            <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/Broadcast">Broadcast</NavLink>
                         </li>
-                        <li className={css(styles.nav)}>
-                            <NavLink className={css(styles.navLink, styles.hover)} activeClassName={css(styles.active)} to="/AboutUs">AboutUs</NavLink>
+                        <li className={ css(styles.nav) }>
+                            <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/AboutUs">AboutUs</NavLink>
                         </li>
-                        <li className={css(styles.nav)}>
-                            <NavLink className={css(styles.navLink, styles.hover)} activeClassName={css(styles.active)} to="/Contacts">Contacts</NavLink>
+                        <li className={ css(styles.nav) }>
+                            <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/Contacts">Contacts</NavLink>
                         </li>
                     </ul>
                 </div>
-                <div className={css(styles.socials, styles.hover)}>
-                <IconContext.Provider value={{className: css(styles.socialIcon, styles.hover) }}>
-                    <a href={twitterLink}><FaTwitter/></a>
-                    <a href={instagramLink}><FaInstagram /></a>
-                    <a href={facebookLink}><FaFacebookF /></a>
-                    <a href={youtubeLink}><FaYoutube /></a>
-                </IconContext.Provider>    
+                <div className={ css(styles.socials, styles.hover) }>
+                    <IconContext.Provider value={ { className: css(styles.socialIcon, styles.hover) } }>
+                        <a href={ twitterLink }><FaTwitter/></a>
+                        <a href={ instagramLink }><FaInstagram /></a>
+                        <a href={ facebookLink }><FaFacebookF /></a>
+                        <a href={ youtubeLink }><FaYoutube /></a>
+                    </IconContext.Provider>    
                 </div>
                
             </div>
