@@ -8,9 +8,9 @@ class Content extends Component {
     return (
         <Switch>
             {/* <Route exact path='/' component={AFrame}/> */}
-            <Route path='/Home' component={ AFrame }/>
-            <Route path='/AboutUs' component={ AboutUs }/>
-            <Redirect to="/Home"/>
+            <Route path='/' component={ AFrame }/>
+            <Route path='/about-us' component={ AboutUs }/>
+            <Redirect to="/"/>
         </Switch>
     );
   }
