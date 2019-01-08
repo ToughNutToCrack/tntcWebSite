@@ -25,7 +25,7 @@ aframe.registerComponent('singrid', {
                 let colorPoint = '#424242'
                 if( xCoord> 0){
                     let module = j%4
-                    if(module === 0){ colorPoint = '#cfd0d1'}
+                    if(module === 0){ colorPoint = '#818285'}
                     if(module === 1){ colorPoint = '#000000'}
                     if(module === 2){ colorPoint = '#ed1c24'}
                     if(module === 3){ colorPoint = '#fcd703'}
@@ -82,7 +82,7 @@ aframe.registerComponent('singrid', {
     tick: function (time, timeDelta) {
         this.els.forEach(e => {
         //    e.object3D.position.y = 3 * Math.sin(Math.PI/4 * (e.object3D.position.x + time/200))
-            e.object3D.position.y =  Math.sin(1 * (-Math.abs(e.object3D.position.x ) + e.object3D.position.z + time/1000)) * 0.2
+            e.object3D.position.y =  Math.sin(1 * (e.object3D.position.z + time/1000)) * 0.2
             //let multycolor = rgbToHex(e.object3D.position.x, e.object3D.position.y, 0)
             //let color = e.object3D.position.x >0 ? multycolor : "#424242"  
 
