@@ -59,8 +59,8 @@ const animate = (level) => {
         autoplay: 'true',
         from: playerPosition,
         to: '0 3 0',
-        easing: 'easeInSine',
-        dur: '1000',
+        easing: 'linear',
+        dur: '800',
         autoplay: 'false'
     }
   )
@@ -72,8 +72,8 @@ const animate = (level) => {
         autoplay: 'true',
         from: playerRotation,
         to: '-90 0 0',
-        easing: 'easeInSine',
-        dur: '500',
+        easing: 'linear',
+        dur: '800',
         autoplay: 'false'
     }
   )
@@ -84,9 +84,9 @@ const animate = (level) => {
         property: 'position',
         autoplay: 'true',
         from: playerPosition,
-        to: '0 -5 0',
-        easing: 'easeInSine',
-        dur: '2000',
+        to: '0 -10 0',
+        easing: 'linear',
+        dur: '1000',
         autoplay: 'false'
     }
   )
@@ -103,14 +103,11 @@ const animate = (level) => {
   const animationRotate = initSpecialElement('a-timeline-animation', {
     select: '#player',
     name: 'rotate',
-    offset: '500'
-    
   })
 
   const animationMove1 = initSpecialElement('a-timeline-animation', {
     select: '#player',
-    name: 'move1',
-    offset: '500'
+    name: 'move1'
   })
 
   timeLine.appendChild(animationMove0)
