@@ -6,7 +6,7 @@ const mouseWheelHandler = (e, self) => {
     if (!throttling) {
         throttling = true
         self.el.emit('on-scroll', {direction}, false)
-        setTimeout(() => throttling = false, 2000)
+        setTimeout(() => throttling = false, 1000)
     }
 }
 

@@ -1,4 +1,5 @@
 import aframe from 'aframe'
+import 'aframe-animation-component'
 import { initElement, initSpecialElement } from '../lib/utils'
 
 const sinGrid = aframe.registerPrimitive('sin-grid', {
@@ -41,28 +42,33 @@ aframe.registerComponent('singrid', {
                     geometry: 'primitive:circle; radius:0.1'
                 })
 
-                const animationSize = initSpecialElement('a-animation', {
-                    attribute: 'scale',
-                    begin: 'mouseenter',
-                    direction: 'alternate',
-                    repeat: '1',
-                    to: '3 3 3',
-                    duration: '0.1'
-                })
+                sphere.setAttribute(
+                    'animation',
+                    {
+                        property: 'scale',
+                        startEvents: 'mouseenter',
+                        dir: 'alternate',
+                        loop: '1',
+                        from: '1 1 1',
+                        to: '3 3 3',
+                        dur: '500'
+                    }
+                )
 
-                const animationColor = initSpecialElement('a-animation', {
-                    attribute: 'color',
-                    begin: 'mouseenter',
-                    direction: 'alternate',
-                    repeat: '1',
-                    from: colorPoint,
-                    to: '#e85356',
-                    duration: '0.1'
-                })
+                sphere.setAttribute(
+                    'animation__color',
+                    {
+                        property: 'color',
+                        startEvents: 'mouseenter',
+                        dir: 'alternate',
+                        loop: '1',
+                        from: colorPoint,
+                        to: '#e85356',
+                        dur: '500'
+                    }
+                )
 
                 sphere.appendChild(circle)
-                sphere.appendChild(animationSize)
-                sphere.appendChild(animationColor)
 
                 points[ i+(j*cols) ] = sphere 
                                   
