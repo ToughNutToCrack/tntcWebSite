@@ -28,95 +28,107 @@ const animate = (level) => {
  
   console.log(assets, player, playerPosition, playerRotation)
 
-  // var tl = aframe.anime.timeline({
-  //   easing: 'easeOutExpo',
-  //   duration: 1000
-  // });
+  var tl = aframe.anime.timeline({
+    easing: 'easeOutExpo',
+    duration: 500
+  });
 
-  // tl.add({
-  //     targets: playerPosition,
-  //     x: 0,
-  //     y: 0,
-  //     z:-2
-  // }) 
-  // .add({
-  //   targets: playerRotation,
-  //   x: -90,
-  //   y: 0,
-  //   z: 0
-  // })    
-  // .add({
-  //   targets: playerPosition,
-  //   x: 0,
-  //   y: 0,
-  //   z: -4
+  tl.add({
+      targets: player.object3D.position,
+      x: 0,
+      y: 3,
+      z: 0,
+      easing: 'easeOutBack'
+  }) 
+  .add({
+    targets: player.object3D.rotation,
+    x: aframe.THREE.Math.degToRad(-90),
+    y: 0,
+    z: 0,
+    easing: 'easeOutQuart'
+  }, '+=200')    
+  .add({
+    targets: player.object3D.position,
+    x: 0,
+    y: -10,
+    z: 0,
+    easing: 'easeOutBack'
+  })
+
+  // player.setAttribute(
+  //   'animation__move0',
+  //   {
+  //       property: 'position',
+  //       autoplay: 'true',
+  //       from: playerPosition,
+  //       to: '0 3 0',
+  //       easing: 'easeOutBack',
+  //       dur: '800',
+  //       autoplay: 'false'
+  //   }
+  // )
+
+  // player.setAttribute(
+  //   'animation__rotate',
+  //   {
+  //       property: 'rotation',
+  //       autoplay: 'true',
+  //       from: playerRotation,
+  //       to: '-90 0 0',
+  //       easing: 'easeOutQuart',
+  //       dur: '800',
+  //       autoplay: 'false'
+  //   }
+  // )
+
+  // player.setAttribute(
+  //   'animation__move1',
+  //   {
+  //       property: 'position',
+  //       autoplay: 'true',
+  //       from: playerPosition,
+  //       to: '0 -10 0',
+  //       easing: 'easeOutBack',
+  //       dur: '1000',
+  //       autoplay: 'false'
+  //   }
+  // )
+
+  // const timeLine = initSpecialElement('a-timeline', {
+  //   id: 'timeLine'
   // })
 
-  player.setAttribute(
-    'animation__move0',
-    {
-        property: 'position',
-        autoplay: 'true',
-        from: playerPosition,
-        to: '0 3 0',
-        easing: 'easeOutBack',
-        dur: '800',
-        autoplay: 'false'
-    }
-  )
+  // const animationMove0 = initSpecialElement('a-timeline-animation', {
+  //   select: '#player',
+  //   name: 'move0'
+  // })
 
-  player.setAttribute(
-    'animation__rotate',
-    {
-        property: 'rotation',
-        autoplay: 'true',
-        from: playerRotation,
-        to: '-90 0 0',
-        easing: 'easeOutBack',
-        dur: '800',
-        autoplay: 'false'
-    }
-  )
+  // const animationRotate = initSpecialElement('a-timeline-animation', {
+  //   select: '#player',
+  //   name: 'rotate',
+  // })
 
-  player.setAttribute(
-    'animation__move1',
-    {
-        property: 'position',
-        autoplay: 'true',
-        from: playerPosition,
-        to: '0 -10 0',
-        easing: 'easeOutBack',
-        dur: '1000',
-        autoplay: 'false'
-    }
-  )
+  // const animationMove1 = initSpecialElement('a-timeline-animation', {
+  //   select: '#player',
+  //   name: 'move1'
+  // })
 
-  const timeLine = initSpecialElement('a-timeline', {
-    id: 'timeLine'
-  })
+  // timeLine.setAttribute(
+  //   'animation-timeline',
+  //   {
+  //     timeline: '#timeLine',
+  //     direction: 'alternate',
+  //     loop: '1'
+  //   }
+  // )
 
-  const animationMove0 = initSpecialElement('a-timeline-animation', {
-    select: '#player',
-    name: 'move0'
-  })
+  // timeLine.appendChild(animationMove0)
+  // timeLine.appendChild(animationRotate)
+  // timeLine.appendChild(animationMove1)
 
-  const animationRotate = initSpecialElement('a-timeline-animation', {
-    select: '#player',
-    name: 'rotate',
-  })
+  // assets.appendChild(timeLine)
 
-  const animationMove1 = initSpecialElement('a-timeline-animation', {
-    select: '#player',
-    name: 'move1'
-  })
-
-  timeLine.appendChild(animationMove0)
-  timeLine.appendChild(animationRotate)
-  timeLine.appendChild(animationMove1)
-
-  assets.appendChild(timeLine)
-
-  scene.setAttribute('animation-timeline__1', 'timeline: #timeLine')
+  // scene.setAttribute('animation-timeline__1', 'timeline: #timeLine')
   
 }
 

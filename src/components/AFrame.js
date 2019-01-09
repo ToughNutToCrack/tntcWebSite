@@ -6,6 +6,7 @@ import 'aframe'
 import sinGrid from '../aFrame/primitives/sinGrid'
 import scrollListener from '../aFrame/components/scroll-listener'
 import navigation from '../aFrame/systems/navigation'
+import logoHandler from '../aFrame/components/logo-handler'
 /* eslint-enable no-unused-vars */
 
 const styles = StyleSheet.create({
@@ -34,7 +35,8 @@ class AFrame extends Component {
                         <a-asset-item id="logo-mtl" src={process.env.PUBLIC_URL + '/assets/models/Scrittalogo.mtl'}></a-asset-item>
                     </a-assets>
                     <a-entity id="level0">
-                        <a-entity obj-model="obj: #logo-obj; mtl: #logo-mtl" position="0 2.5 -10" scale="1 1 1"></a-entity>
+                        {/* mtl: #logo-mtl */}
+                        <a-entity obj-model="obj: #logo-obj;" position="0 2.5 -10" material="color: #424242" scale="1 1 1" logo-handler></a-entity> 
                         <sin-grid></sin-grid>
                     </a-entity>
                     
@@ -49,7 +51,7 @@ class AFrame extends Component {
                     <a-entity id="level2"></a-entity>
 
                     <a-sky color="#FFFFFF"></a-sky>
-                    <a-entity id="player" position="0 0 0">
+                    <a-entity id="player" position="0 0 0" rotation="0 0 0">
                         <a-camera look-controls-enabled="false" wasd-controls-enabled="false"></a-camera>
                     </a-entity>
                 </a-scene>
