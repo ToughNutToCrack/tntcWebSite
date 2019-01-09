@@ -5,6 +5,7 @@
   "dependencies": {
     "aframe": "^0.8.2",
     "aframe-animation-component": "^5.1.2",
+    "aframe-animation-timeline-component": "^1.6.0",
     "aphrodite": "^2.2.3",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",

@@ -1,6 +1,6 @@
 import aframe from 'aframe'
 import 'aframe-animation-component'
-import { initElement, initSpecialElement } from '../lib/utils'
+import { initElement } from '../lib/utils'
 
 const sinGrid = aframe.registerPrimitive('sin-grid', {
     defaultComponents: {

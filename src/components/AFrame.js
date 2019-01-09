@@ -29,6 +29,7 @@ class AFrame extends Component {
         return ( 
             <div className={ css(styles.aFrame) }>
                 <a-scene fog="type: exponential; color: #FFF; near: 0.1" vr-mode-ui="enabled: false" scroll-listener="" cursor="rayOrigin: mouse">
+                    <a-assets></a-assets>
                     <sin-grid></sin-grid>
                     <a-sky color="#FFFFFF"></a-sky>
                     <a-entity id="player" position="0 0 0">
