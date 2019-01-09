@@ -59,7 +59,7 @@ const animate = (level) => {
         autoplay: 'true',
         from: playerPosition,
         to: '0 3 0',
-        easing: 'linear',
+        easing: 'easeOutBack',
         dur: '800',
         autoplay: 'false'
     }
@@ -72,7 +72,7 @@ const animate = (level) => {
         autoplay: 'true',
         from: playerRotation,
         to: '-90 0 0',
-        easing: 'linear',
+        easing: 'easeOutBack',
         dur: '800',
         autoplay: 'false'
     }
@@ -85,7 +85,7 @@ const animate = (level) => {
         autoplay: 'true',
         from: playerPosition,
         to: '0 -10 0',
-        easing: 'linear',
+        easing: 'easeOutBack',
         dur: '1000',
         autoplay: 'false'
     }
