@@ -29,7 +29,12 @@ class AFrame extends Component {
         return ( 
             <div className={ css(styles.aFrame) }>
                 <a-scene fog="type: exponential; color: #FFF; near: 0.1" vr-mode-ui="enabled: false" scroll-listener="" cursor="rayOrigin: mouse">
-                    <a-assets></a-assets>
+                    <a-assets>
+                        <a-asset-item id="logo-obj" src={process.env.PUBLIC_URL + '/assets/models/Scrittalogo.obj'}></a-asset-item>
+                        <a-asset-item id="logo-mtl" src={process.env.PUBLIC_URL + '/assets/models/Scrittalogo.mtl'}></a-asset-item>
+                    </a-assets>
+                    <a-entity obj-model="obj: #logo-obj; mtl: #logo-mtl" position="0 1 -10" scale="1 1 1"></a-entity>
+                    {/* <a-entity obj-model="obj: #logo-obj; mtl: #logo-mtl"></a-entity> */}
                     <sin-grid></sin-grid>
                     <a-sky color="#FFFFFF"></a-sky>
                     <a-entity id="player" position="0 0 0">
