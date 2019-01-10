@@ -22,7 +22,6 @@ const navigation = aframe.registerSystem('navigation', {
   }
 });  
 
-
 const animate = (level, direction) => {
   const player = document.querySelector('#player')
  
