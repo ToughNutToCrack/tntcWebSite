@@ -22,44 +22,48 @@ const navigation = aframe.registerSystem('navigation', {
   }
 });  
 
-const animate = (level, direction) => {
-  const player = document.querySelector('#player')
- 
-  const tl = aframe.anime.timeline();
-
-  tl.add({
-      targets: player.object3D.position,
-      x: 0,
-      y: 3,
-      z: 0,
-      duration: 500,
-      easing: 'easeOutQuart',
-      begin: function(anim) {
-        console.log('begin')
-        isMoving = true
-      }
-  }) 
-  .add({
-    targets: player.object3D.rotation,
+const clean = {
+  x: 0,
+  y: 0,
+  z: 0,
+  duration: 500,
+  easing: 'easeOutQuart',
+}
+const path = (el) => [
+  [{
+    ...clean,
+    targets: el.object3D.position,
+    y: 3,
+  },
+  {
+    ...clean,
+    targets: el.object3D.rotation,
     x: aframe.THREE.Math.degToRad(-90),
-    y: 0,
-    z: 0,
-    duration: 500,
-    easing: 'easeOutQuart'
-  })    
-  .add({
-    targets: player.object3D.position,
-    x: 0,
+  },
+  {
+    ...clean,
+    targets: el.object3D.position,
     y: -10,
-    z: 0,
-    duration: 500,
-    easing: 'easeOutQuart',
-    complete: function(anim) {
-      console.log('complete')
-      isMoving = false
-    }
+  }]
+]
+ 
+
+const animate = (level, d) => {
+  const player = document.querySelector('#player')
+
+  const tl = aframe.anime.timeline()
+  const steps = path(player)[0]
+
+  steps.forEach((step, i) => {
+    const s = { ...step }
+    
+    if( i == 0)
+      s.begin = () => isMoving = true
+    else if( i == steps.length-1)
+      s.complete = () => isMoving = false
+
+    tl.add(s)
   })
-  
 }
 
 export default navigation
