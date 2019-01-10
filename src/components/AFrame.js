@@ -22,6 +22,7 @@ class AFrame extends Component {
     componentDidMount() {
         const el = document.querySelector('a-scene')
         el.addEventListener('on-scroll', (e) => {
+            console.log('event', e)
             const direction = e.detail.direction
             el.systems['navigation'].move(direction)
         })
