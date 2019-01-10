@@ -29,41 +29,98 @@ const clean = {
   duration: 500,
   easing: 'easeOutQuart',
 }
-const path = (el) => [
-  [{
-    ...clean,
-    targets: el.object3D.position,
-    y: 3,
-  },
-  {
-    ...clean,
-    targets: el.object3D.rotation,
-    x: aframe.THREE.Math.degToRad(-90),
-  },
-  {
-    ...clean,
-    targets: el.object3D.position,
-    y: -10,
-  }]
-]
- 
+
+var paths = (el) => {return {
+    "0-1": {
+      steps:[
+        {
+          ...clean,
+          targets: el.object3D.position,
+          y: 3,
+        },
+        {
+          ...clean,
+          targets: el.object3D.rotation,
+          x: aframe.THREE.Math.degToRad(-90),
+        },
+        {
+          ...clean,
+          targets: el.object3D.position,
+          y: -10
+        }
+      ]
+    },
+    "1-0": {
+      steps:[
+        {
+          ...clean,
+          targets: el.object3D.position,
+          y: 3,
+        },
+        {
+          ...clean,
+          targets: el.object3D.rotation,
+          x: aframe.THREE.Math.degToRad(0),
+        },
+        {
+          ...clean,
+          targets: el.object3D.position,
+        }
+      ]
+    },
+    "1-2": {
+      steps:[
+        {
+          ...clean,
+          targets: el.object3D.position,
+          y: -14,
+          easing: 'easeInOutBack'
+        }
+      ]
+    },
+    "2-1": {
+      steps:[
+        {
+          ...clean,
+          targets: el.object3D.position,
+          y: -10,
+          easing: 'easeInOutBack'
+        }
+      ]
+    }
+  }
+}
 
 const animate = (level, d) => {
   const player = document.querySelector('#player')
 
-  const tl = aframe.anime.timeline()
-  const steps = path(player)[0]
+  const key = level + "-" + (level+d)
 
-  steps.forEach((step, i) => {
-    const s = { ...step }
-    
-    if( i == 0)
-      s.begin = () => isMoving = true
-    else if( i == steps.length-1)
-      s.complete = () => isMoving = false
+  console.log(level, d, key, paths(player) )
 
-    tl.add(s)
-  })
+  let p = paths(player)
+ 
+  if(key in p){
+    const tl = aframe.anime.timeline({
+      direction: 'normal',
+      autoplay: false
+    })
+  
+    const steps = p[key].steps
+  
+    steps.forEach((step, i) => {
+      const s = { ...step }
+      
+      if( i == 0)
+        s.begin = () => isMoving = true
+      if( i == steps.length-1)
+        s.complete = () => isMoving = false
+
+      tl.add(s)
+    })
+  
+    tl.play()
+  }
 }
 
 export default navigation
