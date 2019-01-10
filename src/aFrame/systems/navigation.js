@@ -73,7 +73,7 @@ var paths = (el) => {return {
         {
           ...clean,
           targets: el.object3D.position,
-          y: -14,
+          y: -30,
           easing: 'easeInOutBack'
         }
       ]
