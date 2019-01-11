@@ -8,6 +8,7 @@ import sinGrid from '../aFrame/primitives/sinGrid'
 import scrollListener from '../aFrame/components/scroll-listener'
 import navigation from '../aFrame/systems/navigation'
 import logoHandler from '../aFrame/components/logo-handler'
+import cloudPoint from '../aFrame/primitives/cloudPoint'
 /* eslint-enable no-unused-vars */
 
 const styles = StyleSheet.create({
@@ -45,8 +46,8 @@ class AFrame extends Component {
                         <sin-grid></sin-grid>
                     </a-entity>
 
-                    <a-entity id="level1-middle" position="0 -10 0" rotation="0 0 0">
-                        <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+                    <a-entity id="level1-middle" position="0 -11 -5" rotation="0 0 0">
+                       <cloud-point cloudpoint="point:15"></cloud-point>
                     </a-entity>
 
                     <a-plane id="level-1-filter" position="0 -3 0" rotation="-90 0 0" height="100" width="100" color="#fff"></a-plane>
@@ -63,10 +64,6 @@ class AFrame extends Component {
                         <a-image id="studioImg"src="#logoStudio" position="-3 2.5 -4" width="1" height="1.48"></a-image>
                         <a-image id="broadcastImg" src="#logoBroadcast" position="3 2.5 -4" width="1" height="1.48"></a-image>
 
-
-                        <a-dodecahedron color="#FF926B" position="-1 1 -5" radius="0.1"></a-dodecahedron>
-                        <a-dodecahedron color="#FF926B" position="-3 -1 -5" radius="0.1"></a-dodecahedron>
-                        <a-dodecahedron color="#FF926B" position="3 -1 -5" radius="0.1"></a-dodecahedron>
                     </a-entity>
 
                     <a-sky color="#fff"></a-sky>
