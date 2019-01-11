@@ -38,7 +38,7 @@ aframe.registerComponent('singrid', {
                 })
 
                 const circle = initElement('a-circle',{
-                    material: 'color: #000000; transparent: true; opacity: 0',
+                    material: 'color: #ffffff; transparent: true; opacity: 0',
                     geometry: 'primitive:circle; radius:0.1'
                 })
 

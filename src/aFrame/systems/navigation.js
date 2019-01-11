@@ -36,17 +36,33 @@ var paths = (el) => {return {
         {
           ...clean,
           targets: el.object3D.position,
-          y: 3,
+          y: 5,
+          duration: 400
         },
         {
           ...clean,
           targets: el.object3D.rotation,
           x: aframe.THREE.Math.degToRad(-90),
+          duration: 400
         },
         {
           ...clean,
           targets: el.object3D.position,
-          y: -10
+          y: -10,
+          duration: 400
+        },
+        {
+          ...clean,
+          targets: el.object3D.rotation,
+          x: aframe.THREE.Math.degToRad(0),
+          duration: 400
+        },
+        {
+          ...clean,
+          targets: el.object3D.position,
+          y: -10,
+          z: -20,
+          duration: 400 
         }
       ]
     },
@@ -55,16 +71,31 @@ var paths = (el) => {return {
         {
           ...clean,
           targets: el.object3D.position,
-          y: 3,
+          y: -10,
+          duration: 400 
+        },
+        {
+          ...clean,
+          targets: el.object3D.rotation,
+          x: aframe.THREE.Math.degToRad(-90),
+          duration: 400 
+        },
+        {
+          ...clean,
+          targets: el.object3D.position,
+          y: 5,
+          duration: 400 
         },
         {
           ...clean,
           targets: el.object3D.rotation,
           x: aframe.THREE.Math.degToRad(0),
+          duration: 400 
         },
         {
           ...clean,
           targets: el.object3D.position,
+          duration: 400 
         }
       ]
     },
@@ -73,7 +104,17 @@ var paths = (el) => {return {
         {
           ...clean,
           targets: el.object3D.position,
-          y: -30,
+          x: -0.5,
+          y: -15,
+          z: -20,
+          easing: 'easeInOutBack'
+        },
+        {
+          ...clean,
+          targets: el.object3D.position,
+          x: -0.5,
+          y: -15,
+          z: -40,
           easing: 'easeInOutBack'
         }
       ]
@@ -83,7 +124,16 @@ var paths = (el) => {return {
         {
           ...clean,
           targets: el.object3D.position,
+          x: -0.5,
+          y: -15,
+          z: -20,
+          easing: 'easeInOutBack'
+        },
+        {
+          ...clean,
+          targets: el.object3D.position,
           y: -10,
+          z: -20,
           easing: 'easeInOutBack'
         }
       ]
@@ -96,8 +146,6 @@ const animate = (level, d) => {
 
   const key = level + "-" + (level+d)
 
-  console.log(level, d, key, paths(player) )
-
   let p = paths(player)
  
   if(key in p){
@@ -105,8 +153,7 @@ const animate = (level, d) => {
       direction: 'normal',
       autoplay: false
     })
-  
-    const steps = p[key].steps
+    const steps = p[key].steps 
   
     steps.forEach((step, i) => {
       const s = { ...step }
@@ -118,7 +165,29 @@ const animate = (level, d) => {
 
       tl.add(s)
     })
-  
+
+
+    const filter = document.querySelector('#level-'+(level+d)+'-filter')
+    // if(filter){
+    //   const filtermaterial = filter.getAttribute('material')
+
+    //   const dir = (d >= 0)? 'linear' : 'alternate'
+
+    //   console.log(filter, filtermaterial)
+
+    //   filter.setAttribute(
+    //     'animation',
+    //     {
+    //         property: 'material.opacity',
+    //         dir: dir,
+    //         loop: '0',
+    //         from: '1',
+    //         to: '0',
+    //         dur: '2000'
+    //     }
+    //   )
+    // }
+
     tl.play()
   }
 }
