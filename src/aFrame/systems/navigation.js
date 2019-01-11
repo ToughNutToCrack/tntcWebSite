@@ -105,7 +105,7 @@ var paths = (el) => {return {
         {
           ...clean,
           targets: el.object3D.position,
-          x: -0.6,
+          x: -0.65,
           y: -15,
           z: -20,
           // easing: 'easeInOutBack'
@@ -113,7 +113,7 @@ var paths = (el) => {return {
         {
           ...clean,
           targets: el.object3D.position,
-          x: -0.6,
+          x: -0.65,
           y: -15,
           z: -40,
           // easing: 'easeInOutBack'
@@ -125,7 +125,7 @@ var paths = (el) => {return {
         {
           ...clean,
           targets: el.object3D.position,
-          x: -0.6,
+          x: -0.65,
           y: -15,
           z: -20,
           // easing: 'easeInOutBack'
