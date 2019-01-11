@@ -46,7 +46,7 @@ class AFrame extends Component {
                         <sin-grid></sin-grid>
                     </a-entity>
 
-                    <a-entity id="level1-middle" position="0 -11 -5" rotation="0 0 0">
+                    <a-entity id="level1-middle" position="0 -11 -10" rotation="0 0 0">
                        <cloud-point cloudpoint="point:15"></cloud-point>
                     </a-entity>
 
@@ -63,13 +63,13 @@ class AFrame extends Component {
                         <a-plane id="divisor" position="0 1.5 -4" rotation="0 0 0" width="0.01" height="3" color="#9E9E9E"></a-plane>
                         <a-image id="studioImg"src="#logoStudio" position="-3 2.5 -4" width="1" height="1.48"></a-image>
                         <a-image id="broadcastImg" src="#logoBroadcast" position="3 2.5 -4" width="1" height="1.48"></a-image>
-
+                        <cloud-point position="-4 2.5 -6" cloudpoint="maxx:2; maxy:3; maxz:0; offsety: -1.5; point:20; size:0.1"></cloud-point>
+                        <cloud-point position="4 2.5 -6" cloudpoint="maxx:2; maxy:3; maxz:0; offsety: -1.5; point:20; size:0.1; color:#818285, #000000, #ed1c24, #fcd703"></cloud-point>
                     </a-entity>
 
                     <a-sky color="#fff"></a-sky>
                     <a-entity id="player" position="0 0 0" rotation="0 0 0">
                         <a-camera look-controls-enabled="false" wasd-controls-enabled="false"></a-camera>
-
                     </a-entity>
                 </a-scene>
             </div>
