@@ -47,7 +47,7 @@ class AFrame extends Component {
                     </a-entity>
 
                     <a-entity id="level1-middle" position="0 -11 -10" rotation="0 0 0">
-                       <cloud-point cloudpoint="point:15"></cloud-point>
+                       <cloud-point cloudpoint="point:50; maxx:4; maxy:4; maxz:4;"></cloud-point>
                     </a-entity>
 
                     <a-plane id="level-1-filter" position="0 -3 0" rotation="-90 0 0" height="100" width="100" color="#fff"></a-plane>
@@ -59,7 +59,7 @@ class AFrame extends Component {
 
                     <a-plane id="level-2-filter" position="0 -15 -30" rotation="0 0 0" height="100" width="100" color="#fff"></a-plane>
 
-                    <a-entity id="level2" position="-0.5 -15 -40" rotation="0 0 0">
+                    <a-entity id="level2" position="-0.6 -15 -40" rotation="0 0 0">
                         <a-plane id="divisor" position="0 1.5 -4" rotation="0 0 0" width="0.01" height="3" color="#9E9E9E"></a-plane>
                         <a-image id="studioImg"src="#logoStudio" position="-3 2.5 -4" width="1" height="1.48"></a-image>
                         <a-image id="broadcastImg" src="#logoBroadcast" position="3 2.5 -4" width="1" height="1.48"></a-image>

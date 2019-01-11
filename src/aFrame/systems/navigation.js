@@ -26,8 +26,9 @@ const clean = {
   x: 0,
   y: 0,
   z: 0,
-  duration: 500,
-  easing: 'easeOutQuart',
+  duration: 1000,
+  easing: 'easeInOutQuart',
+  // easing: 'easeOutQuart',
 }
 
 var paths = (el) => {return {
@@ -37,32 +38,32 @@ var paths = (el) => {return {
           ...clean,
           targets: el.object3D.position,
           y: 5,
-          duration: 400
+          duration: 700
         },
         {
           ...clean,
           targets: el.object3D.rotation,
           x: aframe.THREE.Math.degToRad(-90),
-          duration: 400
+          duration: 700
         },
         {
           ...clean,
           targets: el.object3D.position,
           y: -10,
-          duration: 400
+          duration: 700
         },
         {
           ...clean,
           targets: el.object3D.rotation,
           x: aframe.THREE.Math.degToRad(0),
-          duration: 400
+          duration: 700
         },
         {
           ...clean,
           targets: el.object3D.position,
           y: -10,
           z: -20,
-          duration: 400 
+          duration: 700 
         }
       ]
     },
@@ -72,30 +73,30 @@ var paths = (el) => {return {
           ...clean,
           targets: el.object3D.position,
           y: -10,
-          duration: 400 
+          duration: 700 
         },
         {
           ...clean,
           targets: el.object3D.rotation,
           x: aframe.THREE.Math.degToRad(-90),
-          duration: 400 
+          duration: 700 
         },
         {
           ...clean,
           targets: el.object3D.position,
           y: 5,
-          duration: 400 
+          duration: 700 
         },
         {
           ...clean,
           targets: el.object3D.rotation,
           x: aframe.THREE.Math.degToRad(0),
-          duration: 400 
+          duration: 700 
         },
         {
           ...clean,
           targets: el.object3D.position,
-          duration: 400 
+          duration: 700 
         }
       ]
     },
@@ -104,18 +105,18 @@ var paths = (el) => {return {
         {
           ...clean,
           targets: el.object3D.position,
-          x: -0.5,
+          x: -0.6,
           y: -15,
           z: -20,
-          easing: 'easeInOutBack'
+          // easing: 'easeInOutBack'
         },
         {
           ...clean,
           targets: el.object3D.position,
-          x: -0.5,
+          x: -0.6,
           y: -15,
           z: -40,
-          easing: 'easeInOutBack'
+          // easing: 'easeInOutBack'
         }
       ]
     },
@@ -124,17 +125,17 @@ var paths = (el) => {return {
         {
           ...clean,
           targets: el.object3D.position,
-          x: -0.5,
+          x: -0.6,
           y: -15,
           z: -20,
-          easing: 'easeInOutBack'
+          // easing: 'easeInOutBack'
         },
         {
           ...clean,
           targets: el.object3D.position,
           y: -10,
           z: -20,
-          easing: 'easeInOutBack'
+          // easing: 'easeInOutBack'
         }
       ]
     }
