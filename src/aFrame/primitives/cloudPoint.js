@@ -20,7 +20,9 @@ aframe.registerComponent('cloudpoint', {
 
         size: {type: 'number', default: 0.3},
         point: {type: 'number', default: 7},
-        color: { type: 'array', default: [ '#FF926B', '#424242' ]}
+        color: { type: 'array', default: [ '#FF926B', '#424242' ]},
+        rotation: {type: 'boolean', default: true},
+        movement: {type: 'boolean', default: false}
     },
     init: function() {
 
@@ -30,6 +32,8 @@ aframe.registerComponent('cloudpoint', {
         const size = this.data.size
 
         const maxPoint = this.data.point
+
+        let prevPos = '0 0 0'
       
         for (let i = 0; i < maxPoint; i++) {
             const x = this.data.offsetx + Math.random() * (a - (-a) + 1) -a 
@@ -46,18 +50,36 @@ aframe.registerComponent('cloudpoint', {
                 radius: r,
                 position: pos
             })
+            
+            if(this.data.rotation){
+                point.setAttribute(
+                    'animation__rotation',
+                    {
+                        property: 'rotation',
+                        loop: 'true',
+                        easing: 'linear',
+                        from: '0 0 0',
+                        to: '0 360 0',
+                        dur: '5000'
+                    }
+                )
+            }
 
-            point.setAttribute(
-                'animation__rotation',
-                {
-                    property: 'rotation',
-                    loop: 'true',
-                    easing: 'linear',
-                    from: '0 0 0',
-                    to: '0 360 0',
-                    dur: '5000'
-                }
-            )
+            if(this.data.movement){
+                point.setAttribute(
+                    'animation__position',
+                    {
+                        property: 'position',
+                        loop: 'true',
+                        dir: 'alternate',
+                        easing: 'easeInOutBack',
+                        from: pos,
+                        to: prevPos,
+                        dur: '60000'
+                    }
+                )
+                prevPos = pos
+            }
     
             this.el.appendChild(point)
             
