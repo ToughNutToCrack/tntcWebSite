@@ -49,7 +49,7 @@ var paths = (el) => {return {
         {
           ...clean,
           targets: el.object3D.position,
-          y: -10,
+          y: -6,
           duration: 700
         },
         {
@@ -61,7 +61,7 @@ var paths = (el) => {return {
         {
           ...clean,
           targets: el.object3D.position,
-          y: -10,
+          y: -8,
           z: -20,
           duration: 700 
         }
@@ -72,7 +72,7 @@ var paths = (el) => {return {
         {
           ...clean,
           targets: el.object3D.position,
-          y: -10,
+          y: -8,
           duration: 700 
         },
         {
@@ -108,6 +108,7 @@ var paths = (el) => {return {
           x: -0.65,
           y: -15,
           z: -20,
+          duration: 800,
           // easing: 'easeInOutBack'
         },
         {
@@ -115,7 +116,8 @@ var paths = (el) => {return {
           targets: el.object3D.position,
           x: -0.65,
           y: -15,
-          z: -40,
+          z: -60,
+          duration: 800,
           // easing: 'easeInOutBack'
         }
       ]
@@ -128,13 +130,15 @@ var paths = (el) => {return {
           x: -0.65,
           y: -15,
           z: -20,
+          duration: 800,
           // easing: 'easeInOutBack'
         },
         {
           ...clean,
           targets: el.object3D.position,
-          y: -10,
+          y: -8,
           z: -20,
+          duration: 800,
           // easing: 'easeInOutBack'
         }
       ]

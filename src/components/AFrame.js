@@ -35,8 +35,20 @@ class AFrame extends Component {
                     <a-assets>
                         <a-asset-item id="logo-obj" src={process.env.PUBLIC_URL + '/assets/models/text3D/Scrittalogo.obj'}></a-asset-item>
                         <a-asset-item id="logo-mtl" src={process.env.PUBLIC_URL + '/assets/models/text3D/Scrittalogo.mtl'}></a-asset-item>
+
                         <a-asset-item id="towers-obj" src={process.env.PUBLIC_URL + '/assets/models/towers/TorriMedie.obj'}></a-asset-item>
                         <a-asset-item id="towers-mtl" src={process.env.PUBLIC_URL + '/assets/models/towers/TorriMedie.mtl'}></a-asset-item>
+
+                        <a-asset-item id="cloud-1-obj" src={process.env.PUBLIC_URL + '/assets/models/clouds/Cloud1.obj'}></a-asset-item>
+                        <a-asset-item id="cloud-1-mtl" src={process.env.PUBLIC_URL + '/assets/models/clouds/Cloud1.mtl'}></a-asset-item>
+
+                        <a-asset-item id="cloud-2-obj" src={process.env.PUBLIC_URL + '/assets/models/clouds/Cloud2.obj'}></a-asset-item>
+                        <a-asset-item id="cloud-2-mtl" src={process.env.PUBLIC_URL + '/assets/models/clouds/Cloud2.mtl'}></a-asset-item>
+
+                        <a-asset-item id="cloud-3-obj" src={process.env.PUBLIC_URL + '/assets/models/clouds/Cloud3.obj'}></a-asset-item>
+                        <a-asset-item id="cloud-3-mtl" src={process.env.PUBLIC_URL + '/assets/models/clouds/Cloud3.mtl'}></a-asset-item>
+
+
                         <img id="logoBroadcast" src={process.env.PUBLIC_URL + '/assets/images/LogoSoloFacciaBroadcast.png'}></img>
                         <img id="logoStudio" src={process.env.PUBLIC_URL + '/assets/images/LogoSoloFacciaStudio.png'}></img>
                     </a-assets>
@@ -50,16 +62,35 @@ class AFrame extends Component {
                        <cloud-point cloudpoint="point:50; maxx:4; maxy:4; maxz:4;"></cloud-point>
                     </a-entity>
 
-                    <a-plane id="level-1-filter" position="0 -3 0" rotation="-90 0 0" height="100" width="100" color="#fff"></a-plane>
+                    <a-plane id="level-1-filter" position="0 -3 0" rotation="-90 0 0" height="200" width="200" color="#fff"></a-plane>
 
                     <a-entity id="level1" position="0 -10 -20" rotation="0 0 0">
-                        <a-entity obj-model="obj: #towers-obj; mtl: #towers-mtl" material="color: #424242 ;fog: true" position="-3 -4 -10" rotation="0 20 0" scale="0.8 0.8 0.8"></a-entity> 
-                        {/* <a-entity position="0 2.25 -15" particle-system="preset: dust; size: 10; color: #000; blending:1"></a-entity> */}
+                        <a-entity obj-model="obj: #towers-obj; mtl: #towers-mtl"  position="-3 -4 -10" rotation="0 20 0" scale="0.8 0.8 0.8"></a-entity>
+                        <a-circle color="#CCC" position="0 -4 -10"  rotation="-90 0 0" radius="15"></a-circle>
+                        <a-entity obj-model="obj: #cloud-1-obj; mtl: #cloud-1-mtl" position="7 3 -12" rotation="0 0 0" scale="0.1 0.1 0.1"></a-entity>
+                        <a-entity obj-model="obj: #cloud-2-obj; mtl: #cloud-2-mtl" position="12 6 -15" rotation="0 0 0" scale="0.3 0.3 0.3"></a-entity>
+                        <a-entity obj-model="obj: #cloud-3-obj; mtl: #cloud-3-mtl" position="-13 5.5 -16" rotation="0 0 0" scale="0.5 0.3 0.1"></a-entity>
+                        {/* <a-entity position="3 0 -9" 
+                            particle-system=" 
+                                maxAge: 10;
+                                type: 1;
+                                positionSpread: -50 0 0;
+                                rotationAngle: 3.14;
+                                accelerationValue: 0 0 0; 
+                                accelerationSpread: 0 0 0;
+                                velocityValue: 0.5 0.3 0.2; 
+                                velocitySpread: 0.5 1 0.5; 
+                                size: 1; 
+                                color: #e85356; 
+                                blending:1;
+                                particleCount: 50;
+                                texture: https://cdn.rawgit.com/IdeaSpaceVR/aframe-particle-system-component/master/dist/images/smokeparticle.png"
+                        ></a-entity> */}
                     </a-entity>
 
-                    <a-plane id="level-2-filter" position="0 -15 -30" rotation="0 0 0" height="100" width="100" color="#fff"></a-plane>
+                    <a-plane id="level-2-filter" position="0 -15 -50" rotation="0 0 0" height="100" width="100" color="#fff"></a-plane>
 
-                    <a-entity id="level2" position="-0.65 -15 -40" rotation="0 0 0">
+                    <a-entity id="level2" position="-0.65 -15 -60" rotation="0 0 0">
                         <a-plane id="divisor" position="0 1.5 -4" rotation="0 0 0" width="0.01" height="3" color="#9E9E9E"></a-plane>
                         <a-image id="studioImg"src="#logoStudio" position="-3 2.5 -4" width="1" height="1.48"></a-image>
                         <a-image id="broadcastImg" src="#logoBroadcast" position="3 2.5 -4" width="1" height="1.48"></a-image>
