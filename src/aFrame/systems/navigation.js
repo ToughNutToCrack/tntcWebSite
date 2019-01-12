@@ -38,13 +38,13 @@ var paths = (el) => {return {
           ...clean,
           targets: el.object3D.position,
           y: 5,
-          duration: 700
+          duration: 500
         },
         {
           ...clean,
           targets: el.object3D.rotation,
           x: aframe.THREE.Math.degToRad(-90),
-          duration: 700
+          duration: 500
         },
         {
           ...clean,
@@ -73,13 +73,13 @@ var paths = (el) => {return {
           ...clean,
           targets: el.object3D.position,
           y: -8,
-          duration: 700 
+          duration: 500 
         },
         {
           ...clean,
           targets: el.object3D.rotation,
           x: aframe.THREE.Math.degToRad(-90),
-          duration: 700 
+          duration: 500 
         },
         {
           ...clean,

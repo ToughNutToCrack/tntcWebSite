@@ -94,7 +94,7 @@ class AFrame extends Component {
                         <a-plane id="divisor" position="0 1.5 -4" rotation="0 0 0" width="0.01" height="3" color="#9E9E9E"></a-plane>
                         <a-image id="studioImg"src="#logoStudio" position="-3 2.5 -4" width="1" height="1.48"></a-image>
                         <a-image id="broadcastImg" src="#logoBroadcast" position="3 2.5 -4" width="1" height="1.48"></a-image>
-                        <cloud-point position="-4 2.5 -6" cloudpoint="maxx:1.5; maxy:3; maxz:0; offsety: -1.5; point:30; size:0.07; movement: true; preset: 0"></cloud-point>
+                        <cloud-point position="-4 2.5 -6" cloudpoint="maxx:1.5; maxy:3; maxz:0; offsety: -1.5; point:30; size:0.07; movement: true; preset: 0 "></cloud-point>
                         <cloud-point position="4 2.5 -6" cloudpoint="maxx:1.5; maxy:3; maxz:0; offsety: -1.5; point:30; size:0.07; color:#818285, #000000, #ed1c24, #fcd703; movement: true; preset: 1"></cloud-point>
                     </a-entity>
 

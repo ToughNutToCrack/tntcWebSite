@@ -11,7 +11,7 @@ const logoHandler = aframe.registerComponent('logo-handler', {
         })
 
         this.el.setAttribute(
-            'animation',
+            'animation__scale',
             {
                 property: 'scale',
                 startEvents: 'click',
@@ -37,7 +37,6 @@ const logoHandler = aframe.registerComponent('logo-handler', {
         )
 
         this.el.appendChild(quad)
-
     }
 })
 
