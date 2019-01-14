@@ -25,7 +25,7 @@ aframe.registerComponent('singrid', {
                 // const zCoord = -6+(0.3*j)
 
                 const xCoord = -2.45+(0.1 * i)
-                const zCoord = -4+(0.1 * j)
+                const zCoord = -3+(0.1 * j)
 
                 let colorPoint = '#424242'
                 if( xCoord> 0){
@@ -106,20 +106,22 @@ aframe.registerComponent('singrid', {
                         e.object3D.position.y += 0.02 * (1/ (d +0.1) + 0.1)
                     }
                 }else{
-                    if(e.object3D.position.y > 0){
-                        e.object3D.position.y -=  0.1
-                    } 
-                    if(e.object3D.position.y < 0){
-                        e.object3D.position.y =  0
+                    let ycoord = Math.sin(e.object3D.position.z + time/1000) * 0.2
+                    if(e.object3D.position.y > ycoord+0.01){
+                         e.object3D.position.y -=  0.01
+                    }else if (e.object3D.position.y <= ycoord){
+                        e.object3D.position.y = ycoord
                     }
+
                 }
             }else{
-                if(e.object3D.position.y > 0){
-                    e.object3D.position.y -=  0.1
-                } 
-                if(e.object3D.position.y < 0){
-                    e.object3D.position.y =  0
-                }
+                e.object3D.position.y = Math.sin(e.object3D.position.z + time/1000) * 0.2
+                // if(e.object3D.position.y > 0){
+                //     e.object3D.position.y -=  0.1
+                // } 
+                // if(e.object3D.position.y < 0){
+                //     e.object3D.position.y =  0
+                // }
             }
         })
 

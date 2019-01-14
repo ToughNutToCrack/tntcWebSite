@@ -38,7 +38,8 @@ var paths = (el) => {return {
           ...clean,
           targets: el.object3D.position,
           y: 5,
-          duration: 500
+          duration: 500,
+          offset: '-=600'
         },
         {
           ...clean,
@@ -162,36 +163,19 @@ const animate = (level, d) => {
   
     steps.forEach((step, i) => {
       const s = { ...step }
-      
+
       if( i == 0)
         s.begin = () => isMoving = true
       if( i == steps.length-1)
         s.complete = () => isMoving = false
 
-      tl.add(s)
+      if('offset' in step){
+        tl.add(s, step.offset)
+      }else{
+        tl.add(s)
+      }
+      
     })
-
-
-    const filter = document.querySelector('#level-'+(level+d)+'-filter')
-    // if(filter){
-    //   const filtermaterial = filter.getAttribute('material')
-
-    //   const dir = (d >= 0)? 'linear' : 'alternate'
-
-    //   console.log(filter, filtermaterial)
-
-    //   filter.setAttribute(
-    //     'animation',
-    //     {
-    //         property: 'material.opacity',
-    //         dir: dir,
-    //         loop: '0',
-    //         from: '1',
-    //         to: '0',
-    //         dur: '2000'
-    //     }
-    //   )
-    // }
 
     tl.play()
   }
