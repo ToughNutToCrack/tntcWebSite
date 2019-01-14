@@ -27,20 +27,14 @@ const clean = {
   y: 0,
   z: 0,
   duration: 1000,
-  easing: 'easeInOutQuart',
+  easing: 'easeInQuad'
+  // easing: 'easeInOutQuart',
   // easing: 'easeOutQuart',
 }
 
 var paths = (el) => {return {
     "0-1": {
       steps:[
-        {
-          ...clean,
-          targets: el.object3D.position,
-          y: 5,
-          duration: 500,
-          offset: '-=600'
-        },
         {
           ...clean,
           targets: el.object3D.rotation,
@@ -51,20 +45,30 @@ var paths = (el) => {return {
           ...clean,
           targets: el.object3D.position,
           y: -6,
-          duration: 700
+          duration: 500
         },
         {
           ...clean,
           targets: el.object3D.rotation,
           x: aframe.THREE.Math.degToRad(0),
-          duration: 700
+          duration: 700,
+          offset: '-=700'
         },
         {
           ...clean,
           targets: el.object3D.position,
-          y: -8,
+          y: -10,
           z: -20,
-          duration: 700 
+          duration: 700,
+          offset: '-=700'
+        },
+        {
+          ...clean,
+          targets: el.object3D.position,
+          y: -10,
+          z: -35,
+          duration: 700,
+          easing: 'easeOutExpo'
         }
       ]
     },
@@ -73,32 +77,36 @@ var paths = (el) => {return {
         {
           ...clean,
           targets: el.object3D.position,
-          y: -8,
+          y: -10,
+          z: -5,
           duration: 500 
         },
         {
           ...clean,
           targets: el.object3D.rotation,
           x: aframe.THREE.Math.degToRad(-90),
-          duration: 500 
+          duration: 500
         },
         {
           ...clean,
           targets: el.object3D.position,
-          y: 5,
-          duration: 700 
+          z: -5,
+          duration: 700,
+          offset: '-=500'
         },
         {
           ...clean,
           targets: el.object3D.rotation,
           x: aframe.THREE.Math.degToRad(0),
-          duration: 700 
+          duration: 500,
+          offset: '-=100'
         },
         {
           ...clean,
           targets: el.object3D.position,
-          duration: 700 
-        }
+          duration: 400,
+          easing: 'easeOutExpo'
+        },
       ]
     },
     "1-2": {
@@ -108,18 +116,18 @@ var paths = (el) => {return {
           targets: el.object3D.position,
           x: -0.65,
           y: -15,
-          z: -20,
+          z: -35,
           duration: 800,
-          // easing: 'easeInOutBack'
+          easung: 'easeInOutSine'
         },
         {
           ...clean,
           targets: el.object3D.position,
           x: -0.65,
           y: -15,
-          z: -60,
+          z: -70,
           duration: 800,
-          // easing: 'easeInOutBack'
+          easing:'easeInOutSine'
         }
       ]
     },
@@ -130,17 +138,17 @@ var paths = (el) => {return {
           targets: el.object3D.position,
           x: -0.65,
           y: -15,
-          z: -20,
+          z: -35,
           duration: 800,
-          // easing: 'easeInOutBack'
+          easung: 'easeInOutSine'
         },
         {
           ...clean,
           targets: el.object3D.position,
-          y: -8,
-          z: -20,
+          y: -10,
+          z: -35,
           duration: 800,
-          // easing: 'easeInOutBack'
+          easung: 'easeInOutSine'
         }
       ]
     }
