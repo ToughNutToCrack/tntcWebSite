@@ -97,7 +97,7 @@ aframe.registerComponent('singrid', {
         this.els.forEach(e => {
             let d = Math.sqrt(Math.pow(e.object3D.position.x - this.selectedPoint.i, 2) + Math.pow(e.object3D.position.z - this.selectedPoint.j, 2))
             
-            let r = 1
+            let r = 0.5
             let maxY = 0.5
 
             if(this.selectedPoint.i != -100){
