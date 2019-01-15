@@ -99,7 +99,8 @@ var paths = (el) => {return {
           targets: el.object3D.rotation,
           x: aframe.THREE.Math.degToRad(0),
           duration: 500,
-          offset: '-=100'
+          offset: '-=100',
+          easing:'linear'
         },
         {
           ...clean,
