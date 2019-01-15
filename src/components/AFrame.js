@@ -69,11 +69,11 @@ class AFrame extends Component {
 
                     <a-entity id="level1" position="0 -20 -35" rotation="0 0 0">
                         <a-entity obj-model="obj: #towers-obj; mtl: #towers-mtl"  position="-3 -4 -10" rotation="0 20 0" scale="0.8 0.8 0.8"></a-entity>
-                        <a-circle color="#CCC" position="0 -4 -8.5"  rotation="-90 0 0" radius="15"></a-circle>
+                        <a-circle color="#CCC" position="0 -4 -10"  rotation="-90 0 0" radius="15"></a-circle>
                         <a-entity obj-model="obj: #cloud-1-obj; mtl: #cloud-1-mtl" position="7 3 -12" rotation="0 0 0" scale="0.1 0.1 0.1" parallax="rangex:0.2; rangey:0.2; "></a-entity>
                         <a-entity obj-model="obj: #cloud-2-obj; mtl: #cloud-2-mtl" position="12 6 -15" rotation="0 0 0" scale="0.3 0.3 0.3" parallax="rangex:0.1; rangey:0.1; speed:1"></a-entity>
                         <a-entity obj-model="obj: #cloud-3-obj; mtl: #cloud-3-mtl" position="-13 5.5 -16" rotation="0 0 0" scale="0.5 0.3 0.1" parallax="rangex:0.2; rangey:0.2; speed:1"></a-entity>
-                        <cloud-smoke position="0 4.5 -11" smoke-particles="particles:50; size:10; minx:-40; maxx:40; miny:-1; maxy:1; minz:-1; maxz:-5;"></cloud-smoke> 
+                        <cloud-smoke position="0 4.5 -10" smoke-particles="particles:50; size:10; minx:-40; maxx:40; miny:-1; maxy:1; minz:-1; maxz:-4;" parallax="rangex:1; rangey:1; speed:2.5"></cloud-smoke> 
                     </a-entity>
 
                     <a-plane id="level-2-filter" position="0 -25 -60" rotation="0 0 0" height="100" width="100" color="#fff"></a-plane>
