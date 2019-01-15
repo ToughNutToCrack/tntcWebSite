@@ -10,6 +10,7 @@ import navigation from '../aFrame/systems/navigation'
 import logoHandler from '../aFrame/components/logo-handler'
 import cloudPoint from '../aFrame/primitives/cloudPoint'
 import parallax from '../aFrame/components/parallax'
+import smoke from '../aFrame/primitives/smoke'
 /* eslint-enable no-unused-vars */
 
 const styles = StyleSheet.create({
@@ -52,6 +53,7 @@ class AFrame extends Component {
 
                         <img id="logoBroadcast" src={process.env.PUBLIC_URL + '/assets/images/LogoSoloFacciaBroadcast.png'}></img>
                         <img id="logoStudio" src={process.env.PUBLIC_URL + '/assets/images/LogoSoloFacciaStudio.png'}></img>
+                        <img id="smokeElement" src={process.env.PUBLIC_URL + '/assets/images/Smoke-Element.png'}></img>
                     </a-assets>
 
                     <a-entity id="level0">
@@ -70,23 +72,9 @@ class AFrame extends Component {
                         <a-circle color="#CCC" position="0 -4 -10"  rotation="-90 0 0" radius="15"></a-circle>
                         <a-entity obj-model="obj: #cloud-1-obj; mtl: #cloud-1-mtl" position="7 3 -12" rotation="0 0 0" scale="0.1 0.1 0.1" parallax="rangex:0.2; rangey:0.2; "></a-entity>
                         <a-entity obj-model="obj: #cloud-2-obj; mtl: #cloud-2-mtl" position="12 6 -15" rotation="0 0 0" scale="0.3 0.3 0.3" parallax="rangex:0.1; rangey:0.1; speed:1"></a-entity>
-                        <a-entity obj-model="obj: #cloud-3-obj; mtl: #cloud-3-mtl" position="-13 5.5 -16" rotation="0 0 0" scale="0.5 0.3 0.1" parallax="rangex:0.1; rangey:0.1; speed:0.5"></a-entity>
-                        {/* <a-entity position="3 0 -9" 
-                            particle-system=" 
-                                maxAge: 10;
-                                type: 1;
-                                positionSpread: -50 0 0;
-                                rotationAngle: 3.14;
-                                accelerationValue: 0 0 0; 
-                                accelerationSpread: 0 0 0;
-                                velocityValue: 0.5 0.3 0.2; 
-                                velocitySpread: 0.5 1 0.5; 
-                                size: 1; 
-                                color: #e85356; 
-                                blending:1;
-                                particleCount: 50;
-                                texture: https://cdn.rawgit.com/IdeaSpaceVR/aframe-particle-system-component/master/dist/images/smokeparticle.png"
-                        ></a-entity> */}
+                        <a-entity obj-model="obj: #cloud-3-obj; mtl: #cloud-3-mtl" position="-13 5.5 -16" rotation="0 0 0" scale="0.5 0.3 0.1" parallax="rangex:0.2; rangey:0.2; speed:1"></a-entity>
+                        {/* <cloud-smoke position="0 -2 -30"></cloud-smoke>  */}
+                        {/* smoke-particles="size:10; minx:-20; maxx:20; miny:-2; maxy:4; minz:-20; maxz:-30;" */}
                     </a-entity>
 
                     <a-plane id="level-2-filter" position="0 -15 -60" rotation="0 0 0" height="100" width="100" color="#fff"></a-plane>

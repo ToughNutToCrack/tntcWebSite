@@ -63,9 +63,6 @@ const parallax = aframe.registerComponent('parallax', {
         if(this.el.object3D.position.y < this.miny){
             this.el.object3D.position.y = this.miny
         }
-
-
-        console.log(this.maxx, this.maxy)
     }
 })
 
