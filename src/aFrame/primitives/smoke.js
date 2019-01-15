@@ -10,6 +10,7 @@ const smoke = aframe.registerPrimitive('cloud-smoke', {
 
 aframe.registerComponent('smoke-particles', {
     schema: {
+        color: { type: 'array', default: [ '#F5F5F5']},
         particles: {type: 'number', default: 100},
         size:{type: 'number', default: 20},
         maxx: {type: 'number', default: 10},
@@ -20,10 +21,7 @@ aframe.registerComponent('smoke-particles', {
         minz: {type: 'number', default: -10},
     },
     init: function() {
-        let particles = new Array(this.data.particles);
-
-        // let smokeTexture = aframe.THREE.ImageUtils.loadTexture(`${process.env.PUBLIC_URL }/assets/images/Smoke-Element.png`);
-        // let smokeMaterial = new aframe.THREE.MeshLambertMaterial({color: 0x00dddd, map: smokeTexture, transparent: true});
+        let particles = new Array(this.data.particles)
 
         for (let i = 0; i < this.data.particles; i++) {
 
@@ -34,12 +32,17 @@ aframe.registerComponent('smoke-particles', {
                
             let rot = `0 0 ${Math.random() * 360}`
 
+            const col = this.data.color[0]
+            if(this.data.color.length>1){
+                col = this.data.color[Math.floor(Math.random() * this.data.color.length)]
+            }
+
             const particle = initElement('a-entity',{
                 position: pos,
                 rotation: rot,
                 height: this.data.size,
                 width: this.data.size,
-                material: `color: #424242; transparent: true; src:#smokeElement;`,
+                material: `color:${col}; transparent: true; src:#smokeElement;`,
                 geometry: `primitive:plane; height: ${this.data.size}; width: ${this.data.size}`,
                 blendmode: 'mode: NormalBlending; depthWrite: false'
             })

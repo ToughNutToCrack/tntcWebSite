@@ -57,7 +57,7 @@ var paths = (el) => {return {
         {
           ...clean,
           targets: el.object3D.position,
-          y: -10,
+          y: -20,
           z: -20,
           duration: 700,
           offset: '-=700'
@@ -65,7 +65,7 @@ var paths = (el) => {return {
         {
           ...clean,
           targets: el.object3D.position,
-          y: -10,
+          y: -20,
           z: -35,
           duration: 700,
           easing: 'easeOutExpo'
@@ -77,7 +77,7 @@ var paths = (el) => {return {
         {
           ...clean,
           targets: el.object3D.position,
-          y: -10,
+          y: -20,
           z: -5,
           duration: 500 
         },
@@ -116,7 +116,7 @@ var paths = (el) => {return {
           ...clean,
           targets: el.object3D.position,
           x: -0.65,
-          y: -15,
+          y: -25,
           z: -35,
           duration: 800,
           easung: 'easeInOutSine'
@@ -125,7 +125,7 @@ var paths = (el) => {return {
           ...clean,
           targets: el.object3D.position,
           x: -0.65,
-          y: -15,
+          y: -25,
           z: -70,
           duration: 800,
           easing:'easeInOutSine'
@@ -138,7 +138,7 @@ var paths = (el) => {return {
           ...clean,
           targets: el.object3D.position,
           x: -0.65,
-          y: -15,
+          y: -25,
           z: -35,
           duration: 800,
           easung: 'easeInOutSine'
@@ -146,7 +146,7 @@ var paths = (el) => {return {
         {
           ...clean,
           targets: el.object3D.position,
-          y: -10,
+          y: -20,
           z: -35,
           duration: 800,
           easung: 'easeInOutSine'
