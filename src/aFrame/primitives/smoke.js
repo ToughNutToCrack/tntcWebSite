@@ -34,25 +34,14 @@ aframe.registerComponent('smoke-particles', {
                
             let rot = `0 0 ${Math.random() * 360}`
 
-            // const particle = initElement('a-entity',{
-            //     position: pos,
-            //     rotation: rot,
-            //     material: `color: #424242; transparent: true; src:#smokeElement;`,
-            //     geometry: `primitive:plane; height: ${this.data.size}; width: ${this.data.size}`,
-            //     blendmode: 'mode: MultiplyBlending '
-            // })
-
-            //src="#logoBroadcast" position="3 2.5 -4" width="1" height="1.48" 
-
             const particle = initElement('a-entity',{
                 position: pos,
                 rotation: rot,
                 height: this.data.size,
                 width: this.data.size,
-                // src: '#smokeElement',
-                material: `color: #424242; transparent: true; src:#smokeElement; opacity:0.5;`,
+                material: `color: #424242; transparent: true; src:#smokeElement;`,
                 geometry: `primitive:plane; height: ${this.data.size}; width: ${this.data.size}`,
-                // blendmode: 'mode: MultiplyBlending '
+                blendmode: 'mode: NormalBlending; depthWrite: false'
             })
 
             this.el.appendChild(particle)
@@ -70,19 +59,23 @@ aframe.registerComponent('smoke-particles', {
 
 aframe.registerComponent('blendmode', {
     schema: {
-      mode: {default: 'AdditiveBlending'} //Available Modes are: var blendings = [ "NoBlending", "NormalBlending", "AdditiveBlending", "SubtractiveBlending", "MultiplyBlending" ];
+        //Available Modes are: var blendings = [ "NoBlending", "NormalBlending", "AdditiveBlending", "SubtractiveBlending", "MultiplyBlending" ];
+        mode: {default: 'AdditiveBlending'},
+        depthWrite: {default: true}
     },
   
       dependencies: ['material'],
   
     update: function () {
       // entity data
-      var el = this.el;
-      var data = this.data;
+      var el = this.el
+      var data = this.data
   
         if (el.components.hasOwnProperty("material")) {
-            var mat = el.components.material.material;
-            mat.blending = aframe.THREE[data.mode];
+            var mat = el.components.material.material
+            mat.blending = aframe.THREE[data.mode]
+            mat.depthWrite = this.data.depthWrite
+            
         }
     }
 })
