@@ -10,39 +10,38 @@ const sinGrid = aframe.registerPrimitive('sin-grid', {
 
 aframe.registerComponent('singrid', {
     init: function() {
-
-        this.selectedPoint = {'i': -100, 'j': -100}
+        this.selectedPoint = { 'i': -100, 'j': -100 }
 
         const rows = 15
         const cols = 30
 
         var points = new Array(rows * cols);
 
-        for (let j=0; j<rows; j++){
+        for (let j = 0; j < rows; j++) {
             for (let i = 0; i < cols; i++) {
 
-                const xCoord = -7.25+(0.5 * i)
-                const zCoord = -6+(0.3*j)
+                const xCoord = -7.25 + (0.5 * i)
+                const zCoord = -6 + (0.3 * j)
 
                 // const xCoord = -2.45+(0.1 * i)
                 // const zCoord = -4+(0.1 * j)
 
                 let colorPoint = '#424242'
-                if( xCoord> 0){
+                if (xCoord > 0) {
                     const mod = j % 4
-                    if(mod === 0){ colorPoint = '#818285'}
-                    if(mod === 1){ colorPoint = '#000000'}
-                    if(mod === 2){ colorPoint = '#ed1c24'}
-                    if(mod === 3){ colorPoint = '#fcd703'}
+                    if (mod === 0) { colorPoint = '#818285' }
+                    if (mod === 1) { colorPoint = '#000000' }
+                    if (mod === 2) { colorPoint = '#ed1c24' }
+                    if (mod === 3) { colorPoint = '#fcd703' }
                 }
 
                 const sphere = initElement('a-sphere', {
-                    pos: { x: xCoord , y: 0, z: zCoord },
+                    pos: { x: xCoord, y: 0, z: zCoord },
                     radius: 0.01,
                     color: colorPoint
                 })
 
-                const circle = initElement('a-circle',{
+                const circle = initElement('a-circle', {
                     material: 'color: #ffffff; transparent: true; opacity: 0',
                     geometry: 'primitive:circle; radius:0.1'
                 })
@@ -74,13 +73,13 @@ aframe.registerComponent('singrid', {
                 )
 
                 sphere.appendChild(circle)
-                sphere.addEventListener("mouseenter", ()=> {
+                sphere.addEventListener('mouseenter', ()=> {
                     this.animFrom(xCoord, zCoord)
                 })
-                sphere.addEventListener("mouseleave", ()=> {
+                sphere.addEventListener('mouseleave', ()=> {
                     this.animFrom(-100, -100)
                 })
-                points[ i+(j*cols) ] = sphere 
+                points[i + (j * cols)] = sphere 
                                   
             }
         }
@@ -89,9 +88,9 @@ aframe.registerComponent('singrid', {
         this.els = points;
     },
 
-    tick: function (time, timeDelta) {
+    tick: function(time, timeDelta) {
         this.els.forEach(e => {
-            e.object3D.position.y = Math.sin(e.object3D.position.z + time/1000) * 0.2
+            e.object3D.position.y = Math.sin(e.object3D.position.z + time / 1000) * 0.2
         });
 
         // this.els.forEach(e => {
@@ -124,11 +123,10 @@ aframe.registerComponent('singrid', {
         //         }
         //     }
         // })
-
         
     },
-    animFrom: function(i, j){
-        this.selectedPoint = {'i': i, 'j': j}
+    animFrom: function(i, j) {
+        this.selectedPoint = { 'i': i, 'j': j }
     }
 })
 
