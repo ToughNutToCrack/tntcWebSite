@@ -10,22 +10,22 @@ const cloudPoint = aframe.registerPrimitive('cloud-point', {
 
 aframe.registerComponent('cloudpoint', {
     schema: {
-        debug: {type: 'boolean', default: false},
-        maxx: {type: 'number', default: 2},
-        maxy: {type: 'number', default: 2},
-        maxz: {type: 'number', default: 2},
+        debug: { type: 'boolean', default: false },
+        maxx: { type: 'number', default: 2 },
+        maxy: { type: 'number', default: 2 },
+        maxz: { type: 'number', default: 2 },
 
-        offsetx: {type: 'number', default: 0},
-        offsety: {type: 'number', default: 0},
-        offsetz: {type: 'number', default: 0},
+        offsetx: { type: 'number', default: 0 },
+        offsety: { type: 'number', default: 0 },
+        offsetz: { type: 'number', default: 0 },
 
-        preset: {type: 'number', default: -1},
+        preset: { type: 'number', default: -1 },
 
-        size: {type: 'number', default: 0.3},
-        point: {type: 'number', default: 7},
-        color: { type: 'array', default: [ '#FF926B', '#424242' ]},
-        rotation: {type: 'boolean', default: true},
-        movement: {type: 'boolean', default: false}
+        size: { type: 'number', default: 0.3 },
+        point: { type: 'number', default: 7 },
+        color: { type: 'array', default: [ '#FF926B', '#424242' ] },
+        rotation: { type: 'boolean', default: true },
+        movement: { type: 'boolean', default: false }
     },
     init: function() {
 
@@ -34,9 +34,9 @@ aframe.registerComponent('cloudpoint', {
         const c = this.data.maxz
         const size = this.data.size
 
-        const usePreset = this.data.preset > -1 && presets.length-1 >= this.data.preset
+        const usePreset = this.data.preset > -1 && presets.length - 1 >= this.data.preset
 
-        const maxPoint = (usePreset)? presets[this.data.preset].positions.length : this.data.point
+        const maxPoint = (usePreset) ? presets[this.data.preset].positions.length : this.data.point
 
         let prevPos = '0 0 0'
 
@@ -46,40 +46,39 @@ aframe.registerComponent('cloudpoint', {
             let y = 0 
             let z = 0
 
-            let pos = x + " " + y + " " + z
+            let pos = x + ' ' + y + ' ' + z
             let r = 0.1
 
-            if(usePreset){
+            if (usePreset) {
 
                 pos = presets[this.data.preset].positions[i]
-                r = (presets[this.data.preset].sizes.length-1 >= i)? presets[this.data.preset].sizes[i] : Math.random() * (size + 0.1) 
+                r = (presets[this.data.preset].sizes.length - 1 >= i) ? presets[this.data.preset].sizes[i] : Math.random() * (size + 0.1) 
 
-            }else{
+            } else {
 
-                x = this.data.offsetx + Math.random() * (a - (-a) + 1) -a 
-                y = this.data.offsety + Math.random() * (b - (-b) + 1) -b 
-                z = this.data.offsetz + Math.random() * (c - (-c) + 1) -c
+                x = this.data.offsetx + Math.random() * (a - (-a) + 1) - a 
+                y = this.data.offsety + Math.random() * (b - (-b) + 1) - b 
+                z = this.data.offsetz + Math.random() * (c - (-c) + 1) - c
 
-                pos = x + " " + y + " " + z
+                pos = x + ' ' + y + ' ' + z
 
                 r = Math.random() * (size + 0.1) 
 
             }
 
-            if(this.data.debug){
+            if (this.data.debug) {
                 console.log(pos)
             }
             
             const col = this.data.color[Math.floor(Math.random() * this.data.color.length)]
 
-
-            const point = initElement('a-dodecahedron',{
+            const point = initElement('a-dodecahedron', {
                 color: col,
                 radius: r,
                 position: pos
             })
             
-            if(this.data.rotation){
+            if (this.data.rotation) {
                 point.setAttribute(
                     'animation__rotation',
                     {
@@ -93,7 +92,7 @@ aframe.registerComponent('cloudpoint', {
                 )
             }
 
-            if(this.data.movement){
+            if (this.data.movement) {
 
                 point.setAttribute(
                     'animation__position',
@@ -114,17 +113,16 @@ aframe.registerComponent('cloudpoint', {
             
         }
 
-        if(this.data.debug){
-            console.log("-------------------")
+        if (this.data.debug) {
+            console.log('-------------------')
         }
-       
 
     }
 })
 
 const presets = [
     {
-        positions:[
+        positions: [
             '1.4110595138996915 -1.2403440864025188 0.39653995951559007',
              '2.0701201240237532 -0.727538516680668 0.35090449162389725',
              '1.02929549997733 0.9543887990629427 0.05233501268882912',
@@ -156,10 +154,10 @@ const presets = [
              '-0.9309916102489488 -1.71749999108629 0.03842683720571638',
              '-0.4853030419009068 -1.6157767054405783 0.38824835392578927'
         ],
-        sizes:[]
+        sizes: []
     },
     {
-        positions:[
+        positions: [
             '1.8615071967224308 0.6777750774818996 0.2544470636575522',
             ' -1.1956043357988397 1.429552256739374 0.6493611190206219',
             ' -0.14879036733616147 0.5246584399793797 0.9041869069689772',
@@ -192,7 +190,7 @@ const presets = [
             ' 0.45602327692752276 1.2939095059586423 0.6625886338305118'
         ],
 
-        sizes:[]
+        sizes: []
     }
 
 ]

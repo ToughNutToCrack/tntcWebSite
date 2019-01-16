@@ -1,7 +1,7 @@
 import aframe from 'aframe'
 
 function setAttributes(el, attrs) {
-    Object.keys(attrs).forEach(key => el.setAttribute(key, attrs[ key ]));
+    Object.keys(attrs).forEach(key => el.setAttribute(key, attrs[key]));
 }
 
 Element.prototype.addAttributes = function(args) {
@@ -28,7 +28,7 @@ function initElement(name, attrs) {
     )
 
     Object.keys(attrs).forEach(key => {
-        if (key !== 'pos' && key !== 'rot') { el.setAttribute(key, attrs[ key ]) }
+        if (key !== 'pos' && key !== 'rot') { el.setAttribute(key, attrs[key]) }
     })
 
     el.addAttributes(attrs)
@@ -40,7 +40,7 @@ function initSpecialElement(name, attrs) {
     const el = document.createElement(name)
 
     Object.keys(attrs).forEach(key => { 
-        el.setAttribute(key, attrs[ key ]) 
+        el.setAttribute(key, attrs[key]) 
     })
 
     el.addAttributes(attrs)
@@ -63,7 +63,7 @@ function getColor(uv, src) {
             canvas.width = img.width;
             canvas.height = img.height;
 
-            document.getElementsByTagName('body')[ 0 ].appendChild(canvas)
+            document.getElementsByTagName('body')[0].appendChild(canvas)
             canvas.getContext('2d').drawImage(img, 0, 0, img.width, img.height);
             var pixelData = canvas.getContext('2d').getImageData(coords.x, coords.y, 1, 1).data;
             canvas.remove()
@@ -72,7 +72,7 @@ function getColor(uv, src) {
     })
 }
 
-function scale (num, in_min, in_max, out_min, out_max) {
+function scale(num, in_min, in_max, out_min, out_max) {
     return (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
   

@@ -6,18 +6,18 @@ const MAX_LEVEL = 2
 let isMoving = false
 
 const navigation = aframe.registerSystem('navigation', {
-  init: function () {
+  init: function() {
     this.level = 0 
   },
-  move: function (direction) {
-    if(this.level + direction >= 0 && this.level + direction <= MAX_LEVEL) {
-      if(!isMoving){   
+  move: function(direction) {
+    if (this.level + direction >= 0 && this.level + direction <= MAX_LEVEL) {
+      if (!isMoving) {   
         animate(this.level, direction)
         this.level += direction
       }
     }
   },
-  _toggleMove: function(val){
+  _toggleMove: function(val) {
     this.isMoving = val
   }
 });  
@@ -32,9 +32,9 @@ const clean = {
   // easing: 'easeOutQuart',
 }
 
-var paths = (el) => {return {
-    "0-1": {
-      steps:[
+var paths = (el) => { return {
+    '0-1': {
+      steps: [
         {
           ...clean,
           targets: el.object3D.rotation,
@@ -72,8 +72,8 @@ var paths = (el) => {return {
         }
       ]
     },
-    "1-0": {
-      steps:[
+    '1-0': {
+      steps: [
         {
           ...clean,
           targets: el.object3D.position,
@@ -100,7 +100,7 @@ var paths = (el) => {return {
           targets: el.object3D.rotation,
           x: aframe.THREE.Math.degToRad(0),
           duration: 500,
-          easing:'linear'
+          easing: 'linear'
         },
         {
           ...clean,
@@ -110,8 +110,8 @@ var paths = (el) => {return {
         },
       ]
     },
-    "1-2": {
-      steps:[
+    '1-2': {
+      steps: [
         {
           ...clean,
           targets: el.object3D.position,
@@ -128,12 +128,12 @@ var paths = (el) => {return {
           y: -25,
           z: -70,
           duration: 500,
-          easing:'easeInOutSine'
+          easing: 'easeInOutSine'
         }
       ]
     },
-    "2-1": {
-      steps:[
+    '2-1': {
+      steps: [
         {
           ...clean,
           targets: el.object3D.position,
@@ -159,11 +159,11 @@ var paths = (el) => {return {
 const animate = (level, d) => {
   const player = document.querySelector('#player')
 
-  const key = level + "-" + (level+d)
+  const key = level + '-' + (level + d)
 
-  let p = paths(player)
+  const p = paths(player)
  
-  if(key in p){
+  if (key in p) {
     const tl = aframe.anime.timeline({
       direction: 'normal',
       autoplay: false
@@ -173,14 +173,14 @@ const animate = (level, d) => {
     steps.forEach((step, i) => {
       const s = { ...step }
 
-      if( i == 0)
+      if (i == 0)
         s.begin = () => isMoving = true
-      if( i == steps.length-1)
+      if (i == steps.length - 1)
         s.complete = () => isMoving = false
 
-      if('offset' in step){
+      if ('offset' in step) {
         tl.add(s, step.offset)
-      }else{
+      } else {
         tl.add(s)
       }
       

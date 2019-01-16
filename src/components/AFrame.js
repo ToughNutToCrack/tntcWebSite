@@ -35,25 +35,24 @@ class AFrame extends Component {
             <div className={ css(styles.aFrame) }>
                 <a-scene fog="type: exponential; color: #fff;" vr-mode-ui="enabled: false" scroll-listener="" cursor="rayOrigin: mouse">
                     <a-assets>
-                        <a-asset-item id="logo-obj" src={process.env.PUBLIC_URL + '/assets/models/text3D/Scrittalogo.obj'}></a-asset-item>
-                        <a-asset-item id="logo-mtl" src={process.env.PUBLIC_URL + '/assets/models/text3D/Scrittalogo.mtl'}></a-asset-item>
+                        <a-asset-item id="logo-obj" src={ process.env.PUBLIC_URL + '/assets/models/text3D/Scrittalogo.obj' }></a-asset-item>
+                        <a-asset-item id="logo-mtl" src={ process.env.PUBLIC_URL + '/assets/models/text3D/Scrittalogo.mtl' }></a-asset-item>
 
-                        <a-asset-item id="towers-obj" src={process.env.PUBLIC_URL + '/assets/models/towers/TorriMedie.obj'}></a-asset-item>
-                        <a-asset-item id="towers-mtl" src={process.env.PUBLIC_URL + '/assets/models/towers/TorriMedie.mtl'}></a-asset-item>
+                        <a-asset-item id="towers-obj" src={ process.env.PUBLIC_URL + '/assets/models/towers/TorriMedie.obj' }></a-asset-item>
+                        <a-asset-item id="towers-mtl" src={ process.env.PUBLIC_URL + '/assets/models/towers/TorriMedie.mtl' }></a-asset-item>
 
-                        <a-asset-item id="cloud-1-obj" src={process.env.PUBLIC_URL + '/assets/models/clouds/Cloud1.obj'}></a-asset-item>
-                        <a-asset-item id="cloud-1-mtl" src={process.env.PUBLIC_URL + '/assets/models/clouds/Cloud1.mtl'}></a-asset-item>
+                        <a-asset-item id="cloud-1-obj" src={ process.env.PUBLIC_URL + '/assets/models/clouds/Cloud1.obj' }></a-asset-item>
+                        <a-asset-item id="cloud-1-mtl" src={ process.env.PUBLIC_URL + '/assets/models/clouds/Cloud1.mtl' }></a-asset-item>
 
-                        <a-asset-item id="cloud-2-obj" src={process.env.PUBLIC_URL + '/assets/models/clouds/Cloud2.obj'}></a-asset-item>
-                        <a-asset-item id="cloud-2-mtl" src={process.env.PUBLIC_URL + '/assets/models/clouds/Cloud2.mtl'}></a-asset-item>
+                        <a-asset-item id="cloud-2-obj" src={ process.env.PUBLIC_URL + '/assets/models/clouds/Cloud2.obj' }></a-asset-item>
+                        <a-asset-item id="cloud-2-mtl" src={ process.env.PUBLIC_URL + '/assets/models/clouds/Cloud2.mtl' }></a-asset-item>
 
-                        <a-asset-item id="cloud-3-obj" src={process.env.PUBLIC_URL + '/assets/models/clouds/Cloud3.obj'}></a-asset-item>
-                        <a-asset-item id="cloud-3-mtl" src={process.env.PUBLIC_URL + '/assets/models/clouds/Cloud3.mtl'}></a-asset-item>
+                        <a-asset-item id="cloud-3-obj" src={ process.env.PUBLIC_URL + '/assets/models/clouds/Cloud3.obj' }></a-asset-item>
+                        <a-asset-item id="cloud-3-mtl" src={ process.env.PUBLIC_URL + '/assets/models/clouds/Cloud3.mtl' }></a-asset-item>
 
-
-                        <img id="logoBroadcast" src={process.env.PUBLIC_URL + '/assets/images/LogoSoloFacciaBroadcast.png'}></img>
-                        <img id="logoStudio" src={process.env.PUBLIC_URL + '/assets/images/LogoSoloFacciaStudio.png'}></img>
-                        <img id="smokeElement" src={process.env.PUBLIC_URL + '/assets/images/Smoke-Element.png'}></img>
+                        <img id="logoBroadcast" src={ process.env.PUBLIC_URL + '/assets/images/LogoSoloFacciaBroadcast.png' }></img>
+                        <img id="logoStudio" src={ process.env.PUBLIC_URL + '/assets/images/LogoSoloFacciaStudio.png' }></img>
+                        <img id="smokeElement" src={ process.env.PUBLIC_URL + '/assets/images/Smoke-Element.png' }></img>
                     </a-assets>
 
                     <a-entity id="level0">
@@ -62,7 +61,7 @@ class AFrame extends Component {
                     </a-entity>
 
                     <a-entity id="level1-middle" position="0 -20 -25" rotation="0 0 0">
-                       <cloud-point cloudpoint="point:50; maxx:5; maxy:4; maxz:10;"></cloud-point>
+                        <cloud-point cloudpoint="point:50; maxx:5; maxy:4; maxz:10;"></cloud-point>
                     </a-entity>
 
                     <a-plane id="level-1-filter" position="0 -3 0" rotation="-90 0 0" height="200" width="200" color="#fff"></a-plane>

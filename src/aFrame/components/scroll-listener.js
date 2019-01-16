@@ -5,7 +5,7 @@ const mouseWheelHandler = (e, self) => {
     const direction = Math.sign(e.wheelDelta);
     if (!throttling) {
         throttling = true
-        self.el.emit('on-scroll', {direction}, false)
+        self.el.emit('on-scroll', { direction }, false)
         setTimeout(() => {
             throttling = false
         }, 2000)

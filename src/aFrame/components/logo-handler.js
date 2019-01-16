@@ -5,7 +5,7 @@ import { initElement } from '../lib/utils'
 const logoHandler = aframe.registerComponent('logo-handler', {
     init: function() {
 
-        const quad = initElement('a-entity',{
+        const quad = initElement('a-entity', {
             material: 'color: #000000; transparent: true; opacity: 0',
             geometry: 'primitive:plane; height: 2; width: 14'
         })

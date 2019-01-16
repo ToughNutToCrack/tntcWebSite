@@ -33,17 +33,17 @@ const styles = StyleSheet.create({
         width: '70%',
         opacity: 1
     },
-    navs:{
+    navs: {
         textAlign: 'center',
         listStyleType: 'none',
         margin: 0,
         padding: 0,
         overflow: 'hidden'
     },
-    nav:{
+    nav: {
         display: 'inline-block',
     },
-    navLink:{
+    navLink: {
         fontFamily: '"Patua One", regular',
         color: '#9E9E9E',
         display: 'inline-block',
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
         fontWeight: 600,
         fontSize: 22,
     },
-    active:{
+    active: {
         color: '#424242',
     },
     socials: {
