@@ -19,25 +19,6 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '100%',
         backgroundColor: '#FFFFFF'
-    },
-    placeholder: {
-        position: 'fixed',
-        width: '100%',
-        height: '100%',
-        backgroundColor: 'white',
-        zIndex: 100,
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        color: '#424242',
-        fontSize: 90
-    },
-    placeon: {
-        opacity: 1
-    },
-    placeoff: {
-        transition: 'opacity 1s',
-        opacity: 0
     }
 })
 
@@ -50,20 +31,21 @@ class AFrame extends Component {
         const self = this
         const el = document.querySelector('a-scene')
         el.addEventListener('on-scroll', (e) => {
-            const direction = e.detail.direction
-            el.systems['navigation'].move(direction)
+            if (self.loaded) {
+                const direction = e.detail.direction
+                el.systems['navigation'].move(direction)
+            }
         })
         document.querySelector('a-scene').addEventListener('loaded', () => {
-            self.loaded = true
-            setTimeout(() => self.forceUpdate(), 1)
+            setTimeout(() => {
+                self.loaded = true
+                window.dispatchEvent(new Event('content-loaded'))
+            }, 1)
         })
     }
     render() {
         return ( 
             <div className={ css(styles.aFrame) }>
-                <div className={ css(styles.placeholder, this.loaded ? styles.placeoff : styles.placeon) }>
-
-                </div>
                 <a-scene fog="type: exponential; color: #fff;" vr-mode-ui="enabled: false" scroll-listener="" cursor="rayOrigin: mouse">
                     <a-assets>
                         <a-asset-item id="logo-obj" src={ process.env.PUBLIC_URL + '/assets/models/text3D/Scrittalogo.obj' }></a-asset-item>

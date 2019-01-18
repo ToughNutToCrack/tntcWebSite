@@ -3,6 +3,7 @@ import { StyleSheet, css } from 'aphrodite'
 
 import Header from './components/Header'
 import Content from './components/Content'
+import Placeholder from './components/Placeholder'
 
 const styles = StyleSheet.create({
     app: {
@@ -16,8 +17,9 @@ class App extends Component {
     render() {
         return ( 
             <div className={ css(styles.app) }>
-                <Header></Header>
-                <Content></Content>
+                <Placeholder />
+                <Header />
+                <Content />
             </div>
         );
     }

@@ -8,8 +8,8 @@ class Content extends Component {
     return (
         <Switch>
             {/* <Route exact path='/' component={AFrame}/> */}
-            <Route path='/' component={ AFrame }/>
-            <Route path='/about-us' component={ AboutUs }/>
+            <Route exact path='/' component={ AFrame }/>
+            <Route exact path='/about-us' component={ AboutUs }/>
             <Redirect to="/"/>
         </Switch>
     );
