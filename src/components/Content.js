@@ -1,17 +1,20 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
-import AFrame from './AFrame';
-import AboutUs from './AboutUs';
+import CacheRoute from 'react-router-cache-route'
+import AFrame from './AFrame'
+import AboutUs from './AboutUs'
 
 class Content extends Component {
   render() {
     return (
-        <Switch>
-            {/* <Route exact path='/' component={AFrame}/> */}
-            <Route exact path='/' component={ AFrame }/>
-            <Route exact path='/about-us' component={ AboutUs }/>
-            <Redirect to="/"/>
-        </Switch>
+      <>
+          <CacheRoute exact path="/" component={ AFrame } when="always" /> 
+          <Switch>
+              {/* <Route exact path='/' component={AFrame}/> */}
+              <Route exact path='/about-us' component={ AboutUs }/>
+              <Redirect to="/"/>
+          </Switch>
+      </>
     );
   }
 }
