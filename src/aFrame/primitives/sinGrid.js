@@ -54,7 +54,7 @@ aframe.registerComponent('singrid', {
                         dir: 'alternate',
                         loop: '1',
                         from: '1 1 1',
-                        to: '3 3 3',
+                        to: '5 5 5',
                         dur: '500'
                     }
                 )
