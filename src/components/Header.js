@@ -103,10 +103,10 @@ class Header extends Component {
                 </div>
                 <div className={ css(styles.socials, styles.hover) }>
                     <IconContext.Provider value={ { className: css(styles.socialIcon, styles.hover) } }>
-                        <a href={ twitterLink }><FaTwitter/></a>
-                        <a href={ instagramLink }><FaInstagram /></a>
-                        <a href={ facebookLink }><FaFacebookF /></a>
-                        <a href={ youtubeLink }><FaYoutube /></a>
+                        <a target="_blank" href={ twitterLink }><FaTwitter/></a>
+                        <a target="_blank" href={ instagramLink }><FaInstagram /></a>
+                        <a target="_blank" href={ facebookLink }><FaFacebookF /></a>
+                        <a target="_blank" href={ youtubeLink }><FaYoutube /></a>
                     </IconContext.Provider>    
                 </div>
                
