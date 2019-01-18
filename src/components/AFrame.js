@@ -83,7 +83,7 @@ class AFrame extends Component {
                     <a-entity id="level1" position="0 -20 -35" rotation="0 0 0">
                         <a-entity obj-model="obj: #towers-obj; mtl: #towers-mtl"  position="-3 -4 -10" rotation="0 20 0" scale="0.8 0.8 0.8"></a-entity>
                         <a-circle color="#CCC" position="0 -4 -10"  rotation="-90 0 0" radius="15"></a-circle>
-                        <a-image id="greetingsImg" src="#logoGreetings" position="6 0 -9" width="6" height="6" parallax="rangex:0.05; rangey:0.05; speed:0.1"></a-image>
+                        <a-image id="greetingsImg" src="#logoGreetings" position="6 0 -9" width="6" height="6" parallax="rangex:0.05; rangey:0.05; speed:0.1" alphatest= 'val: 0.5'></a-image>
                         <a-entity obj-model="obj: #cloud-1-obj; mtl: #cloud-1-mtl" position="7 3 -12" rotation="0 0 0" scale="0.1 0.1 0.1" parallax="rangex:0.2; rangey:0.2; "></a-entity>
                         <a-entity obj-model="obj: #cloud-2-obj; mtl: #cloud-2-mtl" position="12 6 -15" rotation="0 0 0" scale="0.3 0.3 0.3" parallax="rangex:0.1; rangey:0.1; speed:1"></a-entity>
                         <a-entity obj-model="obj: #cloud-3-obj; mtl: #cloud-3-mtl" position="-13 5.5 -16" rotation="0 0 0" scale="0.5 0.3 0.1" parallax="rangex:0.2; rangey:0.2; speed:1"></a-entity>

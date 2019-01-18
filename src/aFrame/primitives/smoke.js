@@ -71,13 +71,31 @@ aframe.registerComponent('blendmode', {
   
     update: function() {
       // entity data
-      var el = this.el
-      var data = this.data
+      const el = this.el
+      const data = this.data
   
         if (el.components.hasOwnProperty('material')) {
-            var mat = el.components.material.material
+            const mat = el.components.material.material
             mat.blending = aframe.THREE[data.mode]
             mat.depthWrite = this.data.depthWrite
+            
+        }
+    }
+})
+aframe.registerComponent('alphatest', {
+    schema: {
+        val: { type: 'number', default: 0 },
+    },
+  
+      dependencies: [ 'material' ],
+  
+    update: function() {
+      const el = this.el
+      const data = this.data
+  
+        if (el.components.hasOwnProperty('material')) {
+            const mat = el.components.material.material
+            mat.alphaTest = this.data.val
             
         }
     }
