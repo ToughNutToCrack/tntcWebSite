@@ -10,7 +10,7 @@ class Content extends Component {
           <AFrame />
           <Switch>
               <Route exact path='/about-us' component={ AboutUs }/>
-              <Redirect to="/"/>
+              {/* <Redirect to="/"/> */}
           </Switch>
       </>
     );

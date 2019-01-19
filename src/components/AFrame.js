@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
-import { StyleSheet, css } from 'aphrodite';
+import React, { Component } from 'react'
+import { StyleSheet, css } from 'aphrodite'
+import { withRouter } from 'react-router'
 import AFRAME from 'aframe'
 import 'aframe-particle-system-component'
 
@@ -11,6 +12,7 @@ import logoHandler from '../aFrame/components/logo-handler'
 import cloudPoint from '../aFrame/primitives/cloudPoint'
 import parallax from '../aFrame/components/parallax'
 import smoke from '../aFrame/primitives/smoke'
+import goto from '../aFrame/components/goto'
 /* eslint-enable no-unused-vars */
 
 const styles = StyleSheet.create({
@@ -30,19 +32,31 @@ class AFrame extends Component {
     componentDidMount() {
         const self = this
         const el = document.querySelector('a-scene')
+        const studio = document.querySelector(' a-image#studioImg')
+        const broadcast = document.querySelector('a-image#broadcastImg')
+
         el.addEventListener('on-scroll', (e) => {
             if (self.loaded) {
                 const direction = e.detail.direction
                 el.systems['navigation'].move(direction)
             }
         })
-        document.querySelector('a-scene').addEventListener('loaded', () => {
+
+        el.addEventListener('loaded', () => {
             setTimeout(() => {
                 self.loaded = true
                 window.dispatchEvent(new Event('content-loaded'))
             }, 1)
         })
+
+        studio.addEventListener('go-to', (e) => { this.redirectToTarget(e.detail.location) })
+        broadcast.addEventListener('go-to', (e) => { this.redirectToTarget(e.detail.location) })
+
     }
+    redirectToTarget = (target) => {
+        this.props.history.push(target)
+    }
+
     render() {
         return ( 
             <div className={ css(styles.aFrame) }>
@@ -83,7 +97,7 @@ class AFrame extends Component {
                     <a-entity id="level1" position="0 -20 -35" rotation="0 0 0">
                         <a-entity obj-model="obj: #towers-obj; mtl: #towers-mtl"  position="-3 -4 -10" rotation="0 20 0" scale="0.8 0.8 0.8"></a-entity>
                         <a-circle color="#CCC" position="0 -4 -10"  rotation="-90 0 0" radius="15"></a-circle>
-                        <a-image id="greetingsImg" src="#logoGreetings" position="6 0 -9" width="6" height="6" parallax="rangex:0.05; rangey:0.05; speed:0.1" alphatest= 'val: 0.5'></a-image>
+                        <a-image id="greetingsImg" src="#logoGreetings" position="5.5 0 -9" width="6" height="6" parallax="rangex:0.1; rangey:0.1; speed:0.5" alphatest= 'val: 0.5'></a-image>
                         <a-entity obj-model="obj: #cloud-1-obj; mtl: #cloud-1-mtl" position="7 3 -12" rotation="0 0 0" scale="0.1 0.1 0.1" parallax="rangex:0.2; rangey:0.2; "></a-entity>
                         <a-entity obj-model="obj: #cloud-2-obj; mtl: #cloud-2-mtl" position="12 6 -15" rotation="0 0 0" scale="0.3 0.3 0.3" parallax="rangex:0.1; rangey:0.1; speed:1"></a-entity>
                         <a-entity obj-model="obj: #cloud-3-obj; mtl: #cloud-3-mtl" position="-13 5.5 -16" rotation="0 0 0" scale="0.5 0.3 0.1" parallax="rangex:0.2; rangey:0.2; speed:1"></a-entity>
@@ -94,8 +108,8 @@ class AFrame extends Component {
 
                     <a-entity id="level2" position="-0.65 -25 -70" rotation="0 0 0">
                         <a-plane id="divisor" position="0 1.5 -4" rotation="0 0 0" width="0.01" height="3" color="#9E9E9E"></a-plane>
-                        <a-image id="studioImg"src="#logoStudio" position="-3 2.5 -4" width="2.8" height="3" parallax="rangex:0.05; rangey:0.05; speed:0.1"></a-image>
-                        <a-image id="broadcastImg" src="#logoBroadcast" position="3 2.5 -4" width="2.8" height="3" parallax="rangex:0.05; rangey:0.05; speed:0.1"></a-image>
+                        <a-image id="studioImg"src="#logoStudio" position="-3 2.5 -4" width="2.8" height="3" parallax="rangex:0.05; rangey:0.05; speed:0.1" goto="/studio" ></a-image>
+                        <a-image id="broadcastImg" src="#logoBroadcast" position="3 2.5 -4" width="2.8" height="3" parallax="rangex:0.05; rangey:0.05; speed:0.1" goto="/broadcast"></a-image>
                         <cloud-point position="-4 2.5 -6" cloudpoint="maxx:1.5; maxy:3; maxz:0; offsety: -1.5; point:30; size:0.07; movement: true; preset: 0 "></cloud-point>
                         <cloud-point position="4 2.5 -6" cloudpoint="maxx:1.5; maxy:3; maxz:0; offsety: -1.5; point:30; size:0.07; color:#818285, #000000, #ed1c24, #fcd703; movement: true; preset: 1"></cloud-point>
                     </a-entity>
@@ -110,4 +124,4 @@ class AFrame extends Component {
     }
 }
 
-export default AFrame;
+export default withRouter(AFrame)
