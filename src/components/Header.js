@@ -85,7 +85,7 @@ class Header extends Component {
                 <div className={ css(styles.navigation) }>
                     <ul className={ css(styles.navs) }>
                         <li className={ css(styles.nav) }>
-                            <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/">Home</NavLink>
+                            <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } exact to="/">Home</NavLink>
                         </li>
                         <li className={ css(styles.nav) }>
                             <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/studio">Studio</NavLink>
