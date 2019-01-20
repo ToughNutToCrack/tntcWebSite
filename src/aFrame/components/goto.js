@@ -8,7 +8,7 @@ const goto = aframe.registerComponent('goto', {
         const location = this.data
         const self = this
         this.el.addEventListener('click', (e) => { 
-            self.el.emit('go-to', { location }, false)
+            self.el.emit('go-to', { location }, true)
         })
 
     }
