@@ -9,6 +9,8 @@ const instagramLink = 'https://www.instagram.com/tntcproject/'
 const facebookLink = 'https://www.facebook.com/toughnutocrack/'
 const youtubeLink = 'https://www.youtube.com/channel/UCtj_LuYF9i5xkk4Q9EYamYA'
 
+// 880px compare menù
+
 const styles = StyleSheet.create({
     header: {
         position: 'fixed',
@@ -26,12 +28,16 @@ const styles = StyleSheet.create({
         fontSize: 36,
         fontWeight: 600,
         width: '15%',
-        opacity: 1
+        opacity: 1,
+        marginLeft: '10px'
     },
     navigation: {
         color: '#424242',
         width: '70%',
-        opacity: 1
+        opacity: 1,
+        '@media only screen and (max-width: 880px)': {
+            display: 'none'
+        }
     },
     navs: {
         textAlign: 'center',
@@ -61,12 +67,20 @@ const styles = StyleSheet.create({
         color: '#424242',
         fontSize: 24,
         width: '15%',
-        opacity: 1
+        opacity: 1,
+        '@media only screen and (max-width: 880px)': {
+            position: 'absolute',
+            right: '0px',
+            minWidth: '140px'
+        }
     },
     socialIcon: {
         color: '#424242',
-        width: '15%',
-        opacity: 1
+        width: '20%',
+        opacity: 1,
+        '@media only screen and (max-width: 590px)': {
+            
+        }
     },
     hover: {
         ':hover': {
