@@ -1,5 +1,5 @@
-import React from 'react';
-import { css, StyleSheet } from 'aphrodite';
+import React, { Component } from 'react'
+import { css, StyleSheet } from 'aphrodite'
 
 const styles = StyleSheet.create({
     fullpage: {
@@ -10,12 +10,15 @@ const styles = StyleSheet.create({
     }
 })
 
-function Page(props) {
-    return (
-        <div className={ css(styles.fullpage) }>
-            {props.children}
-        </div>
-    );
-  }
+class Page extends Component {
+
+    render() {
+        return (
+            <div className={ css(styles.fullpage) }>
+                {this.props.children}
+            </div>
+        )
+    }
+}
 
 export default Page

@@ -50,7 +50,6 @@ class AFrame extends Component {
         })
 
         el.addEventListener('go-to', (e) => { this.redirectToTarget(e.detail.location) })
-        // broadcast.addEventListener('go-to', (e) => { this.redirectToTarget(e.detail.location) })
 
     }
     redirectToTarget = (target) => {
