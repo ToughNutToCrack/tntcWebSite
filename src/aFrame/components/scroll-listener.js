@@ -14,7 +14,7 @@ const mouseWheelHandler = (e, self) => {
 
 const scrollListener = aframe.registerComponent('scroll-listener', {
     init: function() {
-        const myEl = window
+        const myEl = this.el
         
         if (myEl.addEventListener) {
             myEl.addEventListener('mousewheel', (e) => mouseWheelHandler(e, this), false) // IE9, Chrome, Safari, Opera
