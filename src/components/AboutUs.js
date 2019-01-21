@@ -4,11 +4,14 @@ import Page from './Page'
 
 const styles = StyleSheet.create({
     about: {
-        color: 'black',
+        backgroundColor: '#424242',
+        fontFamily: '"Patua One", regular',
+        color: 'white',
         height: '100%',
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        fontSize: 16
     }
 })
 class AboutUs extends Component {
