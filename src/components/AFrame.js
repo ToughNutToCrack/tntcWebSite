@@ -19,16 +19,25 @@ const styles = StyleSheet.create({
     aFrame: {
         position: 'absolute',
         width: '100%',
-        height: '100%',
-        backgroundColor: '#FFFFFF'
+        height: '100%'
     }
 })
 
 class AFrame extends Component {
+
     constructor(props) {
         super(props)
         this.loaded = false
+        
+        //Teoricamente da sottrarre l'altezza dell'Header
+        this.dAspect = 1920/(1080);
+        this.dFov = 80;
+
+        this.state = {
+            customFov : this.dFov
+        }
     }
+
     componentDidMount() {
         const self = this
         const el = document.querySelector('a-scene')
@@ -52,7 +61,22 @@ class AFrame extends Component {
         studio.addEventListener('go-to', (e) => { this.redirectToTarget(e.detail.location) })
         broadcast.addEventListener('go-to', (e) => { this.redirectToTarget(e.detail.location) })
 
+        window.addEventListener("resize", this.updateDimensions.bind(this));
+        this.updateDimensions();
     }
+
+    componentWillUnmount() {
+        window.removeEventListener("resize", this.updateDimensions.bind(this));
+    }
+
+    updateDimensions() {
+        var desFov = this.dFov;
+        var newRatio = window.innerWidth/(window.innerHeight);
+        if (newRatio <= this.dAspect)
+            desFov = this.dFov + (this.dFov - (this.dFov * newRatio)/this.dAspect);
+        this.setState({customFov: desFov});
+    }
+
     redirectToTarget = (target) => {
         this.props.history.push(target)
     }
@@ -60,7 +84,7 @@ class AFrame extends Component {
     render() {
         return ( 
             <div className={ css(styles.aFrame) }>
-                <a-scene fog="type: exponential; color: #fff;" vr-mode-ui="enabled: false" scroll-listener="" cursor="rayOrigin: mouse">
+                <a-scene embedded fog="type: exponential; color: #fff;" vr-mode-ui="enabled: false" scroll-listener="" cursor="rayOrigin: mouse">
                     <a-assets>
                         <a-asset-item id="logo-obj" src={ process.env.PUBLIC_URL + '/assets/models/text3D/Scrittalogo.obj' }></a-asset-item>
                         <a-asset-item id="logo-mtl" src={ process.env.PUBLIC_URL + '/assets/models/text3D/Scrittalogo.mtl' }></a-asset-item>
@@ -116,7 +140,7 @@ class AFrame extends Component {
 
                     <a-sky color="#fff"></a-sky>
                     <a-entity id="player" position="0 0 0" rotation="0 0 0">
-                        <a-camera look-controls-enabled="false" wasd-controls-enabled="false"></a-camera>
+                        <a-camera fov={this.state.customFov} look-controls-enabled="false" wasd-controls-enabled="false"></a-camera>
                     </a-entity>
                 </a-scene>
             </div>
