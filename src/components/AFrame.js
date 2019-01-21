@@ -29,20 +29,18 @@ class AFrame extends Component {
         super(props)
         this.loaded = false
         
-        //Teoricamente da sottrarre l'altezza dell'Header
-        this.dAspect = 1920/(1080);
+        // Teoricamente da sottrarre l'altezza dell'Header
+        this.dAspect = 1920 / (1080);
         this.dFov = 80;
 
         this.state = {
-            customFov : this.dFov
+            customFov: this.dFov
         }
     }
 
     componentDidMount() {
         const self = this
         const el = document.querySelector('a-scene')
-        const studio = document.querySelector(' a-image#studioImg')
-        const broadcast = document.querySelector('a-image#broadcastImg')
 
         el.addEventListener('on-scroll', (e) => {
             if (self.loaded) {
@@ -60,20 +58,20 @@ class AFrame extends Component {
 
         el.addEventListener('go-to', (e) => { this.redirectToTarget(e.detail.location) })
 
-        window.addEventListener("resize", this.updateDimensions.bind(this));
+        window.addEventListener('resize', this.updateDimensions.bind(this));
         this.updateDimensions();
     }
 
     componentWillUnmount() {
-        window.removeEventListener("resize", this.updateDimensions.bind(this));
+        window.removeEventListener('resize', this.updateDimensions.bind(this));
     }
 
     updateDimensions() {
         var desFov = this.dFov;
-        var newRatio = window.innerWidth/(window.innerHeight);
+        var newRatio = window.innerWidth / (window.innerHeight);
         if (newRatio <= this.dAspect)
-            desFov = this.dFov + (this.dFov - (this.dFov * newRatio)/this.dAspect);
-        this.setState({customFov: desFov});
+            desFov = this.dFov + (this.dFov - (this.dFov * newRatio) / this.dAspect);
+        this.setState({ customFov: desFov });
     }
 
     redirectToTarget = (target) => {
@@ -139,7 +137,7 @@ class AFrame extends Component {
 
                     <a-sky color="#fff"></a-sky>
                     <a-entity id="player" position="0 0 0" rotation="0 0 0">
-                        <a-camera fov={this.state.customFov} look-controls-enabled="false" wasd-controls-enabled="false"></a-camera>
+                        <a-camera fov={ this.state.customFov } look-controls-enabled="false" wasd-controls-enabled="false"></a-camera>
                     </a-entity>
                 </a-scene>
             </div>
