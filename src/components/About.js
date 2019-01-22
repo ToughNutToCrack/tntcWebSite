@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import { css, StyleSheet } from 'aphrodite'
 
-import Page from './Page'
-
 const styles = StyleSheet.create({
     container: {
-        scrollSnapType: 'y proximity',
-        overflowY: 'scroll'
+        scrollSnapType: 'y mandatory',
+        overflowY: 'scroll',
+        height: '100%',
+        width: '100%',
+        position: 'absolute',
     },
     wrapper: {
         fontFamily: '"Patua One", regular',
@@ -50,20 +51,18 @@ class About extends Component {
   render() {
     return (
         <div className={ css(styles.container) }>
-            <Page>
-                <div className={ css(styles.wrapper, styles.first) }>
-                    <div className={ css(styles.text) }>
-                        <p><span className={ css(styles.special1) }>ToughNutToCrack</span> is composed of two cores.</p>
-                        <p>Studio and Broadcast.</p>
-                    </div>
+            <div className={ css(styles.wrapper, styles.first) }>
+                <div className={ css(styles.text) }>
+                    <p><span className={ css(styles.special1) }>ToughNutToCrack</span> is composed of two cores.</p>
+                    <p>Studio and Broadcast.</p>
                 </div>
-                <div className={ css(styles.wrapper, styles.second) }>
-                    <div className={ css(styles.text) }>
-                        <p>We specialized in <span className={ css(styles.special2, styles.big) }>3D graphics </span> and in <span className={ css(styles.special2, styles.big) }>XR </span> software development. </p>
-                        <p className={ css(styles.little) }>With a focus on teaching and sharing our experiences.</p>
-                    </div>
+            </div>
+            <div className={ css(styles.wrapper, styles.second) }>
+                <div className={ css(styles.text) }>
+                    <p>We specialized in <span className={ css(styles.special2, styles.big) }>3D graphics </span> and in <span className={ css(styles.special2, styles.big) }>XR </span> software development. </p>
+                    <p className={ css(styles.little) }>With a focus on teaching and sharing our experiences.</p>
                 </div>
-            </Page>
+            </div>
         </div>
     );
   }
