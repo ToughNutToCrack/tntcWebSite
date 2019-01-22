@@ -24,7 +24,8 @@ const styles = StyleSheet.create({
         backgroundImage: `url(${ process.env.PUBLIC_URL}/assets/images/bw.png)`,
         height: '100%',
         width: '100%',
-        display: 'flex'
+        display: 'flex',
+        overflowX: 'hidden'
     },
     contactsContent: {
         backgroundColor: '#FFFFFF',
@@ -62,10 +63,10 @@ class Contacts extends Component {
     return (
         <Page>
             <div className={ css(styles.background) }>
-                <Slide right delay={ 500 } duration={ 500 }>
+                <Slide right delay={ 1000 } duration={ 500 }>
                     <div className={ css(styles.contacts) }>
                         <div className={ css(styles.contactsContent) }>
-                            <Fade bottom cascade delay={ 1000 } duration={ 500 }>
+                            <Fade bottom cascade delay={ 1500 } duration={ 500 }>
                                 <div className={ css(styles.outer) }>
                                     <div className={ css(styles.inner, styles.hover) }>
                                         <h2>Looking for informations?</h2>
