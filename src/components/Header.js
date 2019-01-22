@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
         position: 'fixed',
         width: '100%',
         height: '100px',
-        backgroundColor: 'rgba(255, 255, 255, 0.1)',
+        backgroundColor: 'rgba(255, 255, 255, 0)',
         display: 'flex',
         alignItems: 'center',
         opacity: 1,
@@ -95,7 +95,7 @@ class Header extends Component {
                             <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/broadcast">Broadcast</NavLink>
                         </li>
                         <li className={ css(styles.nav) }>
-                            <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/about-us">AboutUs</NavLink>
+                            <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/about">About</NavLink>
                         </li>
                         <li className={ css(styles.nav) }>
                             <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/contacts">Contacts</NavLink>

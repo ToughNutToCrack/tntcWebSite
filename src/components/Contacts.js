@@ -13,32 +13,42 @@ const youtubeLink = 'https://www.youtube.com/channel/UCtj_LuYF9i5xkk4Q9EYamYA'
 
 const styles = StyleSheet.create({
     contacts: {
-        backgroundColor: '#FFFFFF',
-        fontFamily: '"Patua One", regular',
-        color: '#424242',
-        height: '100%',
-        width: '50%',
         display: 'flex',
-        justifyContent: 'center',
+        justifyContent: 'flex-end',
         alignItems: 'center',
-        fontSize: 16
+        width: '100%',
+        height: '100%',
+        textAlign: 'center'
     },
     background: {
-        backgroundImage: `url(${ process.env.PUBLIC_URL}/assets/images/Montain.png)`,
+        backgroundImage: `url(${ process.env.PUBLIC_URL}/assets/images/bw.png)`,
         height: '100%',
         width: '100%',
         display: 'flex'
     },
     contactsContent: {
-        display: 'block'
+        backgroundColor: '#FFFFFF',
+        fontFamily: '"Patua One", regular',
+        color: '#424242',
+        width: '50%',
+        height: '100%',
+        fontSize: 16,
+        display: 'table-cell',
+        verticalAlign: 'middle'
+    },
+    outer: {
+        position: 'relative',
+        top: '25%'
     },
     inner: {
+        display: 'block',
         padding: '35px',
         fontSize: 22
     },
     socials: {
+        padding: '5px',
         color: '#424242',
-        fontSize: 24,
+        fontSize: 36,
         opacity: 1
     },
     hover: {
@@ -52,30 +62,32 @@ class Contacts extends Component {
     return (
         <Page>
             <div className={ css(styles.background) }>
-                <Slide left delay={ 500 } duration={ 500 }>
+                <Slide right delay={ 500 } duration={ 500 }>
                     <div className={ css(styles.contacts) }>
                         <div className={ css(styles.contactsContent) }>
                             <Fade bottom cascade delay={ 1000 } duration={ 500 }>
-                                <div className={ css(styles.inner, styles.hover) }>
-                                    <h2>Looking for informations?</h2>
-                                    <a>Get in touch</a>
-                                </div>
+                                <div className={ css(styles.outer) }>
+                                    <div className={ css(styles.inner, styles.hover) }>
+                                        <h2>Looking for informations?</h2>
+                                        <a>Get in touch</a>
+                                    </div>
 
-                                <div className={ css(styles.inner, styles.hover) }>
-                                    <h2>Create a project with us.</h2>
-                                    <a>Yeah, What are you looking for?</a>
-                                </div>
+                                    <div className={ css(styles.inner, styles.hover) }>
+                                        <h2>Create a project with us.</h2>
+                                        <a>Yeah, What are you looking for?</a>
+                                    </div>
 
-                                <div className={ css(styles.inner, styles.hover) }>
-                                    <h2>info@tntc.it</h2>
-                                </div>
-                        
-                                <IconContext.Provider value={ { className: css(styles.inner, styles.socials, styles.hover) } }>
-                                    <a target="_blank" href={ twitterLink }><FaTwitter/></a>
-                                    <a target="_blank" href={ instagramLink }><FaInstagram /></a>
-                                    <a target="_blank" href={ facebookLink }><FaFacebookF /></a>
-                                    <a target="_blank" href={ youtubeLink }><FaYoutube /></a>
-                                </IconContext.Provider>    
+                                    <div className={ css(styles.inner, styles.hover) }>
+                                        <h2>info@tntc.it</h2>
+                                    </div>
+                            
+                                    <IconContext.Provider value={ { className: css(styles.socials, styles.hover) } }>
+                                        <a target="_blank" href={ twitterLink }><FaTwitter/></a>
+                                        <a target="_blank" href={ instagramLink }><FaInstagram /></a>
+                                        <a target="_blank" href={ facebookLink }><FaFacebookF /></a>
+                                        <a target="_blank" href={ youtubeLink }><FaYoutube /></a>
+                                    </IconContext.Provider>  
+                                </div>  
                             </Fade>
                         </div>
                     </div>

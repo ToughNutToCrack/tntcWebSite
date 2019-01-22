@@ -6,7 +6,7 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import '../transitions/transitions.css'
 
 import AFrame from './AFrame'
-import AboutUs from './AboutUs'
+import About from './About'
 import Contacts from './Contacts'
 import Page from './Page';
 
@@ -19,7 +19,7 @@ class Content extends Component {
               <CSSTransition key={ this.props.location.key } timeout={ { enter: 300, exit: 300 } } classNames={ 'fade' }>
                   <Switch location={ this.props.location }>
                       <Route exact path='/contacts' component={ Contacts }/>
-                      <Route exact path='/about-us' component={ AboutUs }/>
+                      <Route exact path='/about' component={ About }/>
                   </Switch>
               </CSSTransition>
           </TransitionGroup>
@@ -37,7 +37,7 @@ class AFrameWrapper extends Component {
           <AFrame/>
           <Switch location={ this.props.location }>
               <Route exact path='/contacts' component={ Page }/>
-              <Route exact path='/about-us' component={ Page }/>
+              <Route exact path='/about' component={ Page }/>
           </Switch>
       </>
     )
