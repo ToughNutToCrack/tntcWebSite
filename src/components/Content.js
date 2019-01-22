@@ -2,28 +2,45 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 import { withRouter } from 'react-router'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
-import CacheRoute, { CacheSwitch } from 'react-router-cache-route'
+
+import '../transitions/transitions.css'
 
 import AFrame from './AFrame'
-import AboutUs from './AboutUs'
-import '../transitions/transitions.css'
+import About from './About'
+import Contacts from './Contacts'
+import Page from './Page';
 
 class Content extends Component {
   render() {
-    console.log('key', this.props.location.key)
     return (
       <>
-          <AFrame />
+          <AFrameWrapper/>
           <TransitionGroup>
               <CSSTransition key={ this.props.location.key } timeout={ { enter: 300, exit: 300 } } classNames={ 'fade' }>
                   <Switch location={ this.props.location }>
-                      <Route exact path='/about-us' component={ AboutUs }/>
-                      {/* <Redirect to="/"/> */}
+                      <Route exact path='/contacts' component={ Contacts }/>
+                      <Route exact path='/about' component={ About }/>
                   </Switch>
               </CSSTransition>
           </TransitionGroup>
+
+          {/* <Redirect to="/"/> */}
       </>
     );
+  }
+}
+
+class AFrameWrapper extends Component {
+  render() {
+    return (
+      <>
+          <AFrame/>
+          <Switch location={ this.props.location }>
+              <Route exact path='/contacts' component={ Page }/>
+              <Route exact path='/about' component={ Page }/>
+          </Switch>
+      </>
+    )
   }
 }
 

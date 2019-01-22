@@ -17,6 +17,7 @@ const scrollListener = aframe.registerComponent('scroll-listener', {
         const myEl = this.el
         
         if (myEl.addEventListener) {
+            // myEl.addEventListener('scroll', (e) => mouseWheelHandler(e, this), false)
             myEl.addEventListener('mousewheel', (e) => mouseWheelHandler(e, this), false) // IE9, Chrome, Safari, Opera
             myEl.addEventListener('DOMMouseScroll', (e) => mouseWheelHandler(e, this), false) // Firefox 
         } else myEl.attachEvent('onmousewheel', (e) => mouseWheelHandler(e, this)) // IE 6/7/8

@@ -9,14 +9,12 @@ const instagramLink = 'https://www.instagram.com/tntcproject/'
 const facebookLink = 'https://www.facebook.com/toughnutocrack/'
 const youtubeLink = 'https://www.youtube.com/channel/UCtj_LuYF9i5xkk4Q9EYamYA'
 
-// 880px compare menù
-
 const styles = StyleSheet.create({
     header: {
         position: 'fixed',
         width: '100%',
         height: '100px',
-        backgroundColor: '#FFFFFF',
+        backgroundColor: 'rgba(255, 255, 255, 0)',
         display: 'flex',
         alignItems: 'center',
         opacity: 1,
@@ -29,15 +27,12 @@ const styles = StyleSheet.create({
         fontWeight: 600,
         width: '15%',
         opacity: 1,
-        marginLeft: '10px'
+        textDecoration: 'none',
     },
     navigation: {
         color: '#424242',
         width: '70%',
-        opacity: 1,
-        '@media only screen and (max-width: 880px)': {
-            display: 'none'
-        }
+        opacity: 1
     },
     navs: {
         textAlign: 'center',
@@ -67,20 +62,12 @@ const styles = StyleSheet.create({
         color: '#424242',
         fontSize: 24,
         width: '15%',
-        opacity: 1,
-        '@media only screen and (max-width: 880px)': {
-            position: 'absolute',
-            right: '0px',
-            minWidth: '140px'
-        }
+        opacity: 1
     },
     socialIcon: {
         color: '#424242',
-        width: '20%',
-        opacity: 1,
-        '@media only screen and (max-width: 590px)': {
-            
-        }
+        width: '15%',
+        opacity: 1
     },
     hover: {
         ':hover': {
@@ -94,7 +81,7 @@ class Header extends Component {
         return ( 
             <div className={ css(styles.header) }>
                 <div className={ css(styles.title) }>
-                    TNTC
+                    <NavLink className={ css(styles.title) } exact to="/">TNTC</NavLink>
                 </div>
                 <div className={ css(styles.navigation) }>
                     <ul className={ css(styles.navs) }>
@@ -108,7 +95,7 @@ class Header extends Component {
                             <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/broadcast">Broadcast</NavLink>
                         </li>
                         <li className={ css(styles.nav) }>
-                            <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/about-us">AboutUs</NavLink>
+                            <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/about">About</NavLink>
                         </li>
                         <li className={ css(styles.nav) }>
                             <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/contacts">Contacts</NavLink>
