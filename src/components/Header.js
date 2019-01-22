@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
         position: 'fixed',
         width: '100%',
         height: '100px',
-        backgroundColor: '#FFFFFF',
+        backgroundColor: 'rgba(255, 255, 255, 0.1)',
         display: 'flex',
         alignItems: 'center',
         opacity: 1,
@@ -26,7 +26,8 @@ const styles = StyleSheet.create({
         fontSize: 36,
         fontWeight: 600,
         width: '15%',
-        opacity: 1
+        opacity: 1,
+        textDecoration: 'none',
     },
     navigation: {
         color: '#424242',
@@ -80,7 +81,7 @@ class Header extends Component {
         return ( 
             <div className={ css(styles.header) }>
                 <div className={ css(styles.title) }>
-                    TNTC
+                    <NavLink className={ css(styles.title) } exact to="/">TNTC</NavLink>
                 </div>
                 <div className={ css(styles.navigation) }>
                     <ul className={ css(styles.navs) }>
