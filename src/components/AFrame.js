@@ -14,6 +14,7 @@ import parallax from '../aFrame/components/parallax'
 import smoke from '../aFrame/primitives/smoke'
 import goto from '../aFrame/components/goto'
 /* eslint-enable no-unused-vars */
+import ScrollPls from './SrcollPls'
 
 const styles = StyleSheet.create({
     aFrame: {
@@ -140,6 +141,7 @@ class AFrame extends Component {
                         <a-camera fov={ this.state.customFov } look-controls-enabled="false" wasd-controls-enabled="false"></a-camera>
                     </a-entity>
                 </a-scene>
+                <ScrollPls color="#FF926B" />
             </div>
         );
     }

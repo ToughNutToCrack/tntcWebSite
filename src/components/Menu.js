@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import { StyleSheet, css } from 'aphrodite'
 import { NavLink } from 'react-router-dom'
-import { FaTwitter, FaFacebookF, FaYoutube, FaInstagram } from 'react-icons/fa'
+import { FaTwitter, FaFacebookF, FaYoutube, FaInstagram, FaBars } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
 
 const resizeKeyframes = {
     '0%': {
-        height: '60px'
+        height: '0%'
     },
     '100%': {
         height: '100%'
@@ -15,71 +15,54 @@ const resizeKeyframes = {
 
 const styles = StyleSheet.create({
     closeMenu: {
-        position: 'fixed',
-        width: '100%',
-        height: '60px',
-        bottom: '0px',
-        backgroundColor: '#FFFFFF',
+        position: 'absolute',
+        top: '0px',
+        display: 'none'
+    },
+    openMenu: {
+        animationName: [ resizeKeyframes ],
+        animationDuration: '0.2s',
+        animationIterationCount: '1',
+        backgroundColor: '#424242',
         opacity: 1,
         zIndex: 2,
+        position: 'fixed',
+        top: '100px',
+        width: '100%',
+        height: '100%',
+        color: 'white',
         display: 'none',
-        color: '#424242',
         '@media only screen and (max-width: 880px)': {
             display: 'block'
-        }    
-    },
-    title: {
-        fontFamily: '"Patua One", cursive',
-        fontSize: 36,
-        fontWeight: 600,
-        opacity: 1,
-        position: 'relative',
-        margin: '0 auto',
+        }
     },
     hover: {
         ':hover': {
             color: '#e85356'
         }
     },
-    isVisible: {
-        display: 'block'
-    },
-    isHidden: {
-        display: 'none'
-    },
-    resizeAnim: {
-        animationName: [ resizeKeyframes ],
-        animationDuration: '0.3s',
-        animationIterationCount: '1',
-        backgroundColor: '#424242',
-        opacity: 1,
-        zIndex: 2,
-        position: 'fixed',
-        width: '100%',
-        height: '100%',
-        bottom: '0px',
-        color: 'white'
-    },
-
     navigation: {
+        height: '100%',
         color: 'white',
-        position: 'relative',
-        margin: '0 auto',
-        opacity: 1
-    },
-    nav: {
-        display: 'inline-block',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
     },
     navLink: {
         fontFamily: '"Patua One", regular',
-        color: '#9E9E9E',
-        display: 'inline-block',
-        textAlign: 'center',
-        padding: '14px 16px',
+        color: 'white',
         textDecoration: 'none',
         textTransform: 'uppercase',
         fontWeight: 600,
         fontSize: 22,
+    },
+    navs: {
+        listStyleType: 'none',
+    },
+    nav: {
+        width: '100%',
+        display: 'block',
+        marginBottom: '50%'
     },
     active: {
         color: 'white',
@@ -99,7 +82,7 @@ const styles = StyleSheet.create({
         color: '#424242',
         width: '20%',
         opacity: 1
-    },
+    }
 })
 
 class Menu extends Component {
@@ -108,49 +91,35 @@ class Menu extends Component {
         super(props)
 
         this.state = {
-            isOpen: false
+            isOpen: this.props.isOpen
         }
-        
-        this.handleMenu = this.handleMenu.bind(this);
+
+        this.closeMenu = this.closeMenu.bind(this);
     }
 
-    handleMenu() {
-        this.setState({ isOpen: !this.state.isOpen });
+    closeMenu() {
+        this.setState({ isOpen: false });
     }
 
     render() {
         return ( 
-            <div className={ this.state.isOpen ? css(styles.resizeAnim) : css(styles.closeMenu) }>              
-                <div className={ css(styles.title, styles.hover) } onClick={ this.handleMenu } >
-                    Menu
-                </div>
+            <div className={ this.state.isOpen ? css(styles.openMenu) : css(styles.closeMenu) }>              
                 <div className={ css(styles.navigation) }>
-
-                    <ul>
+                    <ul className={ css(styles.navs) }>
                         <li className={ css(styles.nav) }>
-                            <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } exact to="/">Home</NavLink>
+                            <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } exact to="/" onClick={ this.closeMenu }>Home</NavLink>
                         </li>
-                    </ul>
-
-                    <ul>
                         <li className={ css(styles.nav) }>
-                            <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/studio">Studio</NavLink>
+                            <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/studio" onClick={ this.closeMenu }>Studio</NavLink>
                         </li>
-                    </ul>
-
-                    <ul>
                         <li className={ css(styles.nav) }>
-                            <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/broadcast">Broadcast</NavLink>
+                            <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/broadcast" onClick={ this.closeMenu }>Broadcast</NavLink>
                         </li>
-                    </ul>
-                    <ul>
                         <li className={ css(styles.nav) }>
-                            <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/about-us">AboutUs</NavLink>
+                            <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/about" onClick={ this.closeMenu }>About</NavLink>
                         </li>
-                    </ul>
-                    <ul>
                         <li className={ css(styles.nav) }>
-                            <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/contacts">Contacts</NavLink>
+                            <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/contacts" onClick={ this.closeMenu }>Contacts</NavLink>
                         </li>
                     </ul>
                 </div>

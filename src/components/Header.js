@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import { StyleSheet, css } from 'aphrodite'
-import { FaTwitter, FaFacebookF, FaYoutube, FaInstagram } from 'react-icons/fa'
+import { FaTwitter, FaFacebookF, FaYoutube, FaInstagram, FaBars } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
+import Menu from './Menu'
 
 const twitterLink = 'https://twitter.com/tntcproject'
 const instagramLink = 'https://www.instagram.com/tntcproject/'
@@ -23,7 +24,7 @@ const styles = StyleSheet.create({
     title: {
         fontFamily: '"Patua One", cursive',
         color: '#424242',
-        fontSize: 36,
+        fontSize: '36px',
         fontWeight: 600,
         width: '15%',
         opacity: 1,
@@ -32,7 +33,10 @@ const styles = StyleSheet.create({
     navigation: {
         color: '#424242',
         width: '70%',
-        opacity: 1
+        opacity: 1,
+        '@media only screen and (max-width: 880px)': {
+            display: 'none'
+        }
     },
     navs: {
         textAlign: 'center',
@@ -62,7 +66,10 @@ const styles = StyleSheet.create({
         color: '#424242',
         fontSize: 24,
         width: '15%',
-        opacity: 1
+        opacity: 1,
+        '@media only screen and (max-width: 880px)': {
+            display: 'none'
+        }
     },
     socialIcon: {
         color: '#424242',
@@ -74,9 +81,35 @@ const styles = StyleSheet.create({
             color: '#e85356'
         }
     },
+    hambContainer: {
+        display: 'none',
+        position: 'absolute',
+        right: '10px',
+        color: '#424242',
+        '@media only screen and (max-width: 880px)': {
+            display: 'block'
+        }
+    },
+    hamburger: {
+        width: '36px',
+        height: '36px'
+    }
 })
 
 class Header extends Component {
+
+    constructor(props) {
+        super(props);
+        this.openMenu = this.openMenu.bind(this);
+        this.state = {
+            isOpen: false
+        };
+    }
+
+    openMenu() {
+        this.setState({ isOpen: !this.state.isOpen });
+    }
+
     render() {
         return ( 
             <div className={ css(styles.header) }>
@@ -110,7 +143,10 @@ class Header extends Component {
                         <a target="_blank" href={ youtubeLink }><FaYoutube /></a>
                     </IconContext.Provider>    
                 </div>
-               
+                <div className={ css(styles.hambContainer, styles.hover) } onClick={ this.openMenu }>
+                    <FaBars className={ css(styles.hamburger) }/>
+                </div>
+                {this.state.isOpen && <Menu isOpen={ this.state.isOpen }/>}
             </div>
         );
     }

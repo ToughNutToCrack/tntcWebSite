@@ -8,7 +8,7 @@ import '../transitions/transitions.css'
 import AFrame from './AFrame'
 import About from './About'
 import Contacts from './Contacts'
-import Page from './Page';
+import Page from './Page'
 
 class Content extends Component {
   render() {
