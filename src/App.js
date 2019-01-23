@@ -18,7 +18,6 @@ class App extends Component {
     render() {
         return ( 
             <div className={ css(styles.app) }>
-                {/* <Loader /> */}
                 <Placeholder />
                 <Header /> 
                 <Content />  

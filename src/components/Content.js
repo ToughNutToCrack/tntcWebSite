@@ -31,16 +31,30 @@ class Content extends Component {
 }
 
 class AFrameWrapper extends Component {
+  constructor(props) {
+    super(props)
+    this.state = { loaderReady: false }
+  }
+  componentDidMount() {
+    const self = this
+    window.addEventListener('loader-ready', (e) => {
+        self.setState({ loaderReady: true })
+    })
+  }
   render() {
-    return (
-      <>
-          <AFrame/>
-          <Switch location={ this.props.location }>
-              <Route exact path='/contacts' component={ Page }/>
-              <Route exact path='/about' component={ Page }/>
-          </Switch>
-      </>
-    )
+    if (this.state.loaderReady) {
+      return (
+        <>
+            <AFrame/>
+            <Switch location={ this.props.location }>
+                <Route exact path='/contacts' component={ Page }/>
+                <Route exact path='/about' component={ Page }/>
+            </Switch>
+        </>
+      )
+    } else {
+      return (<></>)
+    }   
   }
 }
 

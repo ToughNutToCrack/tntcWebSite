@@ -17,21 +17,28 @@ const styles = StyleSheet.create({
       backgroundColor: '#424242'
   },
   path: {
-    strokeDasharray: '3000'
+      strokeDasharray: '3000'
   }
 })
 
 class Loader extends Component {
+    logFinished() {
+        console.log('fine--')
+        window.dispatchEvent(new Event('loader-ready'))
+    }  
+
   componentDidMount() {
-    AFRAME.anime({
+    const animation = AFRAME.anime({
         targets: '#line',
         strokeDashoffset: [ AFRAME.anime.setDashoffset, 0 ],
-        easing: 'linear',
-        duration: 10000,
-        delay: 2000,
+        easing: 'easeInOutSine',
+        duration: 2500,
+        delay: function(el, i) { return i * 250 },
         direction: 'normal',
-        loop: false
+        loop: false,
     })
+
+     animation.finished.then(this.logFinished);
 
   }
   render() {

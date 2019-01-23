@@ -44,7 +44,7 @@ class Placeholder extends Component {
                 self.setState({
                     loaded: true
                 })
-            }, 2000)
+            }, 1)
         })
 
     }
