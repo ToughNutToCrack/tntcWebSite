@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { StyleSheet, css } from 'aphrodite'
 import { NavLink } from 'react-router-dom'
-import { FaTwitter, FaFacebookF, FaYoutube, FaInstagram, FaBars } from 'react-icons/fa'
+import { FaTwitter, FaFacebookF, FaYoutube, FaInstagram } from 'react-icons/fa'
+import { IoIosClose } from 'react-icons/io'
 import { IconContext } from 'react-icons'
 
 const resizeKeyframes = {
@@ -27,7 +28,7 @@ const styles = StyleSheet.create({
         opacity: 1,
         zIndex: 2,
         position: 'fixed',
-        top: '100px',
+        top: '0px',
         width: '100%',
         height: '100%',
         color: 'white',
@@ -82,6 +83,16 @@ const styles = StyleSheet.create({
         color: '#424242',
         width: '20%',
         opacity: 1
+    },
+    closeIconContainer: {
+        position: 'absolute',
+        top: '10px',
+        right: '0px',
+        color: 'white',
+    },
+    closeIcon: {
+        width: '70px',
+        height: '70px'
     }
 })
 
@@ -99,11 +110,15 @@ class Menu extends Component {
 
     closeMenu() {
         this.setState({ isOpen: false });
+        window.dispatchEvent(new Event('close-menu'))
     }
 
     render() {
         return ( 
-            <div className={ this.state.isOpen ? css(styles.openMenu) : css(styles.closeMenu) }>              
+            <div className={ this.state.isOpen ? css(styles.openMenu) : css(styles.closeMenu) }>
+                <div className={ css(styles.closeIconContainer, styles.hover) } onClick={ this.closeMenu }>
+                    <IoIosClose className={ css(styles.closeIcon) }/>
+                </div>              
                 <div className={ css(styles.navigation) }>
                     <ul className={ css(styles.navs) }>
                         <li className={ css(styles.nav) }>

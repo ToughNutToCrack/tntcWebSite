@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
     hambContainer: {
         display: 'none',
         position: 'absolute',
-        right: '10px',
+        right: '20px',
         color: '#424242',
         '@media only screen and (max-width: 880px)': {
             display: 'block'
@@ -104,6 +104,13 @@ class Header extends Component {
         this.state = {
             isOpen: false
         };
+    }
+
+    componentDidMount() {
+        const self = this;
+        window.addEventListener('close-menu', (e) => {
+            self.setState({ isOpen: false })
+        })
     }
 
     openMenu() {
