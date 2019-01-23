@@ -18,7 +18,7 @@ const translateKeyframes = {
 const styles = StyleSheet.create({
   scollplsWrapper: {
     height: 80,
-    width: '100vw',
+    width: '100%',
     position: 'absolute',
     bottom: 0,
     transform: 'translateX(calc(50vw - 50%))',

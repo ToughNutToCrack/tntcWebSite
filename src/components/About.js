@@ -7,6 +7,7 @@ const styles = StyleSheet.create({
     container: {
         scrollSnapType: 'y mandatory',
         overflowY: 'scroll',
+        overflowX: 'hidden',
         height: '100%',
         width: '100%',
         position: 'absolute',
