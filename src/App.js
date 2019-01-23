@@ -4,7 +4,6 @@ import { StyleSheet, css } from 'aphrodite'
 import Header from './components/Header'
 import Content from './components/Content'
 import Placeholder from './components/Placeholder'
-import Menu from './components/Menu'
 
 const styles = StyleSheet.create({
     app: {
@@ -21,7 +20,6 @@ class App extends Component {
                 <Placeholder />
                 <Header />
                 <Content />
-                <Menu />
             </div>
         );
     }
