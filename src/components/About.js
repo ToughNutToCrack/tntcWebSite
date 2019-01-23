@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { css, StyleSheet } from 'aphrodite'
 
+import ScrollPls from './SrcollPls'
+
 const styles = StyleSheet.create({
     container: {
         scrollSnapType: 'y mandatory',
@@ -56,6 +58,7 @@ class About extends Component {
                     <p><span className={ css(styles.special1) }>ToughNutToCrack</span> is composed of two cores.</p>
                     <p>Studio and Broadcast.</p>
                 </div>
+                <ScrollPls color="#424242" />
             </div>
             <div className={ css(styles.wrapper, styles.second) }>
                 <div className={ css(styles.text) }>

@@ -110,7 +110,6 @@ class Header extends Component {
                         <a target="_blank" href={ youtubeLink }><FaYoutube /></a>
                     </IconContext.Provider>    
                 </div>
-               
             </div>
         );
     }
