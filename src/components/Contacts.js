@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import { css, StyleSheet } from 'aphrodite'
 import Slide from 'react-reveal/Slide'
-import Page from './Page'
 import Fade from 'react-reveal/Fade'
 import { FaTwitter, FaFacebookF, FaYoutube, FaInstagram } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
+
+import Page from './Page'
 
 const twitterLink = 'https://twitter.com/tntcproject'
 const instagramLink = 'https://www.instagram.com/tntcproject/'
