@@ -58,7 +58,7 @@ class About extends Component {
                     <p><span className={ css(styles.special1) }>ToughNutToCrack</span> is composed of two cores.</p>
                     <p>Studio and Broadcast.</p>
                 </div>
-                <ScrollPls color="#424242" />
+                <ScrollPls color='#424242' visible={ true } />
             </div>
             <div className={ css(styles.wrapper, styles.second) }>
                 <div className={ css(styles.text) }>

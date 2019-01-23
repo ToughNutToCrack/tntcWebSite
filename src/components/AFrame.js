@@ -47,6 +47,9 @@ class AFrame extends Component {
             if (self.loaded) {
                 const direction = e.detail.direction
                 el.systems['navigation'].move(direction)
+                if (el.systems['navigation'].level > 0) {      
+                    window.dispatchEvent(new Event('stop-scroll-pls'))
+                }
             }
         })
 
@@ -55,6 +58,13 @@ class AFrame extends Component {
                 self.loaded = true
                 window.dispatchEvent(new Event('content-loaded'))
             }, 1)
+
+            setTimeout(() => {
+                if (el.systems['navigation'].level == 0) {
+                    window.dispatchEvent(new Event('scroll-pls'))
+                }
+            }, 5000)
+            
         })
 
         el.addEventListener('go-to', (e) => { this.redirectToTarget(e.detail.location) })
@@ -141,7 +151,7 @@ class AFrame extends Component {
                         <a-camera fov={ this.state.customFov } look-controls-enabled="false" wasd-controls-enabled="false"></a-camera>
                     </a-entity>
                 </a-scene>
-                <ScrollPls color="#FF926B" />
+                <ScrollPls color='#FF926B' visible={ false }/>
             </div>
         );
     }

@@ -41,11 +41,22 @@ class ScrollPls extends Component {
         color: props.color
       }
     })
+    this.state = { show: props.visible }
+    
+  }
+  componentDidMount() {
+    const self = this
+    window.addEventListener('scroll-pls', (e) => {
+        self.setState({ show: true })
+    })
+    window.addEventListener('stop-scroll-pls', (e) => {
+        self.setState({ show: false })
+    })
   }
   render() {
     return (
         <div className={ css(styles.scollplsWrapper) }>
-            <Fade delay={ 5000 } duration={ 100 }>
+            <Fade when={ this.state.show } duration={ 300 }>
                 <FaChevronDown className={ css(styles.scrollArrow, this.styles.scrollArrowColor) } />
             </Fade>
         </div>
