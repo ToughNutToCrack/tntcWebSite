@@ -5,6 +5,11 @@ import { FaTwitter, FaFacebookF, FaYoutube, FaInstagram } from 'react-icons/fa'
 import { IoIosClose } from 'react-icons/io'
 import { IconContext } from 'react-icons'
 
+const twitterLink = 'https://twitter.com/tntcproject'
+const instagramLink = 'https://www.instagram.com/tntcproject/'
+const facebookLink = 'https://www.facebook.com/toughnutocrack/'
+const youtubeLink = 'https://www.youtube.com/channel/UCtj_LuYF9i5xkk4Q9EYamYA'
+
 const resizeKeyframes = {
     '0%': {
         height: '0%'
@@ -43,7 +48,7 @@ const styles = StyleSheet.create({
         }
     },
     navigation: {
-        height: '100%',
+        height: '80%',
         color: 'white',
         display: 'flex',
         justifyContent: 'center',
@@ -66,23 +71,7 @@ const styles = StyleSheet.create({
         marginBottom: '50%'
     },
     active: {
-        color: 'white',
-    },
-    socials: {
-        color: '#424242',
-        fontSize: 24,
-        width: '15%',
-        opacity: 1,
-        '@media only screen and (max-width: 880px)': {
-            position: 'absolute',
-            right: '0px',
-            minWidth: '140px'
-        }
-    },
-    socialIcon: {
-        color: '#424242',
-        width: '20%',
-        opacity: 1
+        color: '#FF926B',
     },
     closeIconContainer: {
         position: 'absolute',
@@ -93,7 +82,13 @@ const styles = StyleSheet.create({
     closeIcon: {
         width: '70px',
         height: '70px'
-    }
+    },
+    socials: {
+        padding: '5px',
+        color: '#FF926B',
+        fontSize: 36,
+        opacity: 1
+    },
 })
 
 class Menu extends Component {
@@ -116,9 +111,11 @@ class Menu extends Component {
     render() {
         return ( 
             <div className={ this.state.isOpen ? css(styles.openMenu) : css(styles.closeMenu) }>
+                
                 <div className={ css(styles.closeIconContainer, styles.hover) } onClick={ this.closeMenu }>
                     <IoIosClose className={ css(styles.closeIcon) }/>
                 </div>              
+
                 <div className={ css(styles.navigation) }>
                     <ul className={ css(styles.navs) }>
                         <li className={ css(styles.nav) }>
@@ -138,7 +135,18 @@ class Menu extends Component {
                         </li>
                     </ul>
                 </div>
+
+                <div>
+                    <IconContext.Provider value={ { className: css(styles.socials, styles.hover) } }>
+                        <a target="_blank" href={ twitterLink }><FaTwitter/></a>
+                        <a target="_blank" href={ instagramLink }><FaInstagram /></a>
+                        <a target="_blank" href={ facebookLink }><FaFacebookF /></a>
+                        <a target="_blank" href={ youtubeLink }><FaYoutube /></a>
+                    </IconContext.Provider> 
+                </div>
+
             </div>
+            
         );
     }
 }
