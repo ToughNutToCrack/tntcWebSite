@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { StyleSheet, css } from 'aphrodite'
+import Loader from './Loader';
 
 const opacityKeyframes = {
     'from': {
@@ -39,14 +40,18 @@ class Placeholder extends Component {
     componentDidMount() {
         const self = this
         window.addEventListener('content-loaded', ()=> {
-            self.setState({
-                loaded: true
-            })
+            setTimeout(() => {
+                self.setState({
+                    loaded: true
+                })
+            }, 2000)
         })
 
     }
     render() {
-        return  <div className={ css(styles.placeholder, this.state.loaded ? styles.placeoff : null) } />
+        return  <div className={ css(styles.placeholder, this.state.loaded ? styles.placeoff : null) } > 
+            <Loader />
+        </div>
     }
 }
 
