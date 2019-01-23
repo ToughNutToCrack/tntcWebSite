@@ -1,6 +1,6 @@
 import aframe from 'aframe'
 import 'aframe-animation-component'
-import { initElement, initSpecialElement } from '../lib/utils'
+import { initElement } from '../lib/utils'
 
 const smoke = aframe.registerPrimitive('cloud-smoke', {
     defaultComponents: {
@@ -70,7 +70,6 @@ aframe.registerComponent('blendmode', {
       dependencies: [ 'material' ],
   
     update: function() {
-      // entity data
       const el = this.el
       const data = this.data
   
@@ -91,7 +90,6 @@ aframe.registerComponent('alphatest', {
   
     update: function() {
       const el = this.el
-      const data = this.data
   
         if (el.components.hasOwnProperty('material')) {
             const mat = el.components.material.material

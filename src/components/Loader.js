@@ -23,7 +23,6 @@ const styles = StyleSheet.create({
 
 class Loader extends Component {
     logFinished() {
-        console.log('fine--')
         window.dispatchEvent(new Event('loader-ready'))
     }  
 

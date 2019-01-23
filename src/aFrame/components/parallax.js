@@ -24,10 +24,10 @@ const parallax = aframe.registerComponent('parallax', {
     },
     mousehandler(x, y) {
 
-        if (this.currentX == '') 
+        if (this.currentX === '') 
             this.currentX = x
 
-        if (this.currentY == '') 
+        if (this.currentY === '') 
             this.currentY = y
 
         const xdiff = x - this.currentX

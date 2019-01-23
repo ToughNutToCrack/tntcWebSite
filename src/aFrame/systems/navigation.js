@@ -199,9 +199,9 @@ const animate = (level, d) => {
     steps.forEach((step, i) => {
       const s = { ...step }
 
-      if (i == 0)
+      if (i === 0)
         s.begin = () => isMoving = true
-      if (i == steps.length - 1)
+      if (i === steps.length - 1)
         s.complete = () => isMoving = false
 
       if ('offset' in step) {
