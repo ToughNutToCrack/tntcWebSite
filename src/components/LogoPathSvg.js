@@ -22,7 +22,7 @@ class LogoPathSvg extends Component {
         targets: '#line',
         strokeDashoffset: [ AFRAME.anime.setDashoffset, 0 ],
         easing: 'easeInOutSine',
-        duration: 8000,
+        duration: 6000,
         delay: function(el, i) { return i * 250 },
         direction: 'normal',
         loop: false,
