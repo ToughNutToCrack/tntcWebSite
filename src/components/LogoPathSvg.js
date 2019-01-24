@@ -10,28 +10,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center'
   },
-  point: {
-      width: '15px',
-      height: '15px',
-      borderRadius: '50%',
-      backgroundColor: '#424242'
-  },
   path: {
       strokeDasharray: '3000'
   }
 })
 
-class Loader extends Component {
-    logFinished() {
-        window.dispatchEvent(new Event('loader-ready'))
-    }  
+class LogoPathSvg extends Component {
 
   componentDidMount() {
     const animation = AFRAME.anime({
         targets: '#line',
         strokeDashoffset: [ AFRAME.anime.setDashoffset, 0 ],
         easing: 'easeInOutSine',
-        duration: 2500,
+        duration: 8000,
         delay: function(el, i) { return i * 250 },
         direction: 'normal',
         loop: false,
@@ -43,9 +34,8 @@ class Loader extends Component {
   render() {
     return (
         <div className={ css(styles.wrapper) }>
-
             <svg className={ css(styles.svg) } width="7.32222in" height="3.03333in"viewBox="0 0 659 273">
-                <path id='line' className={ css(styles.path) } fill="#FFFFFF" stroke="#424242" strokeWidth="3" strokeMiterlimit="100" 
+                <path id='line' className={ css(styles.path) } fill={ this.props.colorIn } stroke={ this.props.colorOut } strokeWidth="3" strokeMiterlimit="100" 
             d="M 572.62,206.96
            C 560.62,211.21 559.12,230.99 570.25,237.88
              575.25,240.88 586.75,241.26 593.25,238.51
@@ -187,4 +177,4 @@ class Loader extends Component {
   }
 }
 
-export default Loader
+export default LogoPathSvg

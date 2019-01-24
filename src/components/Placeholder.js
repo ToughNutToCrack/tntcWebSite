@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import { StyleSheet, css } from 'aphrodite'
-import Loader from './Loader';
-
 const opacityKeyframes = {
     'from': {
         opacity: 1

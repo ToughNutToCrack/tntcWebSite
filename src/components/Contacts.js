@@ -6,6 +6,7 @@ import { FaTwitter, FaFacebookF, FaYoutube, FaInstagram } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
 
 import Page from './Page'
+import LogoPathSvg from './LogoPathSvg'
 
 const twitterLink = 'https://twitter.com/tntcproject'
 const instagramLink = 'https://www.instagram.com/tntcproject/'
@@ -22,7 +23,8 @@ const styles = StyleSheet.create({
         textAlign: 'center'
     },
     background: {
-        backgroundImage: `url(${ process.env.PUBLIC_URL}/assets/images/bw.png)`,
+        // backgroundImage: `url(${ process.env.PUBLIC_URL}/assets/images/bw.png)`,
+        backgroundColor: '#424242',
         height: '100%',
         width: '100%',
         display: 'flex',
@@ -32,7 +34,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#FFFFFF',
         fontFamily: '"Patua One", regular',
         color: '#424242',
-        width: '50%',
+        width: '100%',
         height: '100%',
         fontSize: 16,
         display: 'table-cell',
@@ -64,6 +66,7 @@ class Contacts extends Component {
     return (
         <Page>
             <div className={ css(styles.background) }>
+                <LogoPathSvg colorIn='#424242' colorOut='#ffffff' />
                 <Slide right delay={ 1000 } duration={ 500 }>
                     <div className={ css(styles.contacts) }>
                         <div className={ css(styles.contactsContent) }>
