@@ -49,9 +49,7 @@ class Placeholder extends Component {
 
     }
     render() {
-        return  <div className={ css(styles.placeholder, this.state.loaded ? styles.placeoff : null) } > 
-            <Loader />
-        </div>
+        return  <div className={ css(styles.placeholder, this.state.loaded ? styles.placeoff : null) } >  </div>
     }
 }
 

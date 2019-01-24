@@ -9,6 +9,8 @@ import AFrame from './AFrame'
 import About from './About'
 import Contacts from './Contacts'
 import Page from './Page'
+import Studio from './Studio';
+import Broadcast from './Broadcast';
 
 class Content extends Component {
   render() {
@@ -18,6 +20,8 @@ class Content extends Component {
           <TransitionGroup>
               <CSSTransition key={ this.props.location.key } timeout={ { enter: 300, exit: 300 } } classNames={ 'fade' }>
                   <Switch location={ this.props.location }>
+                      <Route exact path='/studio' component={ Studio }/>
+                      <Route exact path='/broadcast' component={ Broadcast }/>
                       <Route exact path='/contacts' component={ Contacts }/>
                       <Route exact path='/about' component={ About }/>
                   </Switch>
@@ -31,30 +35,18 @@ class Content extends Component {
 }
 
 class AFrameWrapper extends Component {
-  constructor(props) {
-    super(props)
-    this.state = { loaderReady: false }
-  }
-  componentDidMount() {
-    const self = this
-    window.addEventListener('loader-ready', (e) => {
-        self.setState({ loaderReady: true })
-    })
-  }
   render() {
-    if (this.state.loaderReady) {
-      return (
-        <>
-            <AFrame/>
-            <Switch location={ this.props.location }>
-                <Route exact path='/contacts' component={ Page }/>
-                <Route exact path='/about' component={ Page }/>
-            </Switch>
-        </>
-      )
-    } else {
-      return (<></>)
-    }   
+    return (
+      <>
+          <AFrame/>
+          <Switch location={ this.props.location }>
+              <Route exact path='/studio' component={ Page }/>
+              <Route exact path='/broadcast' component={ Page }/>
+              <Route exact path='/contacts' component={ Page }/>
+              <Route exact path='/about' component={ Page }/>
+          </Switch>
+      </>
+    )  
   }
 }
 

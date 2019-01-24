@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        fontSize: 40,
+        fontSize: 32,
         scrollSnapAlign: 'start'
     },
     first: {
@@ -56,7 +56,7 @@ class About extends Component {
         <div className={ css(styles.container) }>
             <div className={ css(styles.wrapper, styles.first) }>
                 <div className={ css(styles.text) }>
-                    <p><span className={ css(styles.special1) }>ToughNutToCrack</span> is composed of two cores.</p>
+                    <p><span className={ css(styles.special1, styles.big) }>ToughNutToCrack</span> is composed of two cores.</p>
                     <p>Studio and Broadcast.</p>
                 </div>
                 <ScrollPls color='#424242' visible={ true } />
