@@ -16,6 +16,22 @@ import goto from '../aFrame/components/goto'
 /* eslint-enable no-unused-vars */
 import ScrollPls from './SrcollPls'
 
+import Scrittalogo from '../assets/models/text3D/ScrittaLogo.obj'
+import ScrittalogoMat from '../assets/models/text3D/ScrittaLogo.mtl'
+import Torri from '../assets/models/towers/TorriMedie.obj'
+import TorriMat from '../assets/models/towers/TorriMedie.mtl'
+import Cloud1 from '../assets/models/clouds/Cloud1.obj'
+import Cloud1Mat from '../assets/models/clouds/Cloud1.mtl'
+import Cloud2 from '../assets/models/clouds/Cloud2.obj'
+import Cloud2Mat from '../assets/models/clouds/Cloud2.mtl'
+import Cloud3 from '../assets/models/clouds/Cloud3.obj'
+import Cloud3Mat from '../assets/models/clouds/Cloud3.mtl'
+
+import LogoBroadcast from '../assets/images/LogoSoloFacciaBroadcast.png'
+import LogoStudio from '../assets/images/LogoSoloFacciaStudio.png'
+import GreetingsImage from '../assets/images/Greetings.png'
+import SmokeImage from '../assets/images/Smoke-Element.png'
+
 const styles = StyleSheet.create({
     aFrame: {
         position: 'absolute',
@@ -94,25 +110,25 @@ class AFrame extends Component {
             <div className={ css(styles.aFrame) }>
                 <a-scene embedded fog="type: exponential; color: #fff;" vr-mode-ui="enabled: false" scroll-listener="" cursor="rayOrigin: mouse">
                     <a-assets>
-                        <a-asset-item id="logo-obj" src={ process.env.PUBLIC_URL + '/assets/models/text3D/Scrittalogo.obj' }></a-asset-item>
-                        <a-asset-item id="logo-mtl" src={ process.env.PUBLIC_URL + '/assets/models/text3D/Scrittalogo.mtl' }></a-asset-item>
+                        <a-asset-item id="logo-obj" src={ Scrittalogo }></a-asset-item>
+                        <a-asset-item id="logo-mtl" src={ ScrittalogoMat }></a-asset-item>
 
-                        <a-asset-item id="towers-obj" src={ process.env.PUBLIC_URL + '/assets/models/towers/TorriMedie.obj' }></a-asset-item>
-                        <a-asset-item id="towers-mtl" src={ process.env.PUBLIC_URL + '/assets/models/towers/TorriMedie.mtl' }></a-asset-item>
+                        <a-asset-item id="towers-obj" src={ Torri }></a-asset-item>
+                        <a-asset-item id="towers-mtl" src={ TorriMat }></a-asset-item>
 
-                        <a-asset-item id="cloud-1-obj" src={ process.env.PUBLIC_URL + '/assets/models/clouds/Cloud1.obj' }></a-asset-item>
-                        <a-asset-item id="cloud-1-mtl" src={ process.env.PUBLIC_URL + '/assets/models/clouds/Cloud1.mtl' }></a-asset-item>
+                        <a-asset-item id="cloud-1-obj" src={ Cloud1 }></a-asset-item>
+                        <a-asset-item id="cloud-1-mtl" src={ Cloud1Mat }></a-asset-item>
 
-                        <a-asset-item id="cloud-2-obj" src={ process.env.PUBLIC_URL + '/assets/models/clouds/Cloud2.obj' }></a-asset-item>
-                        <a-asset-item id="cloud-2-mtl" src={ process.env.PUBLIC_URL + '/assets/models/clouds/Cloud2.mtl' }></a-asset-item>
+                        <a-asset-item id="cloud-2-obj" src={ Cloud2 }></a-asset-item>
+                        <a-asset-item id="cloud-2-mtl" src={ Cloud2Mat }></a-asset-item>
 
-                        <a-asset-item id="cloud-3-obj" src={ process.env.PUBLIC_URL + '/assets/models/clouds/Cloud3.obj' }></a-asset-item>
-                        <a-asset-item id="cloud-3-mtl" src={ process.env.PUBLIC_URL + '/assets/models/clouds/Cloud3.mtl' }></a-asset-item>
+                        <a-asset-item id="cloud-3-obj" src={ Cloud3 }></a-asset-item>
+                        <a-asset-item id="cloud-3-mtl" src={ Cloud3Mat }></a-asset-item>
 
-                        <img id="logoBroadcast" src={ process.env.PUBLIC_URL + '/assets/images/LogoSoloFacciaBroadcast.png' }></img>
-                        <img id="logoStudio" src={ process.env.PUBLIC_URL + '/assets/images/LogoSoloFacciaStudio.png' }></img>
-                        <img id="logoGreetings" src={ process.env.PUBLIC_URL + '/assets/images/Greetings.png' }></img>
-                        <img id="smokeElement" src={ process.env.PUBLIC_URL + '/assets/images/Smoke-Element.png' }></img>
+                        <img id="logoBroadcast" src={ LogoBroadcast }></img>
+                        <img id="logoStudio" src={ LogoStudio }></img>
+                        <img id="logoGreetings" src={ GreetingsImage }></img>
+                        <img id="smokeElement" src={ SmokeImage }></img>
                     </a-assets>
 
                     <a-entity id="level0">
