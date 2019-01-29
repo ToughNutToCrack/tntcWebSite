@@ -92,7 +92,18 @@ const styles = StyleSheet.create({
     textOrange: {
         color: '#FF926B'
     },
+    textRight: {
+        textAlign: 'right',
+        padding: '20px',
+        paddingRight: '100px'
+    },
+    textLeft: {
+        textAlign: 'left',
+        padding: '20px',
+        paddingLeft: '100px'
+    },
     imageContainer: {
+        paddingTop: '100px',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -130,7 +141,7 @@ class Broadcast extends Component {
             <div className={ css(styles.divisionsWrapper, styles.white) }>
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.paddingTop) }>   
-                        <p><span className={ css(styles.textOrange, styles.big) }>Talks</span></p>
+                        <p className={ css(styles.textLeft) }><span className={ css(styles.textOrange, styles.big) }>Talks</span></p>
                         <p>TESTO</p>
                     </div>
                 </div>
@@ -149,7 +160,7 @@ class Broadcast extends Component {
                 </div>
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.paddingTop) }>
-                        <p><span className={ css(styles.textOrange, styles.big) }>Game Jam</span></p>
+                        <p className={ css(styles.textRight) }><span className={ css(styles.textOrange, styles.big) }>Game Jam</span></p>
                         <p>TESTO</p>
                     </div>
                 </div>
@@ -158,7 +169,7 @@ class Broadcast extends Component {
             <div className={ css(styles.divisionsWrapper, styles.white) }>
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.paddingTop) }>
-                        <p><span className={ css(styles.textOrange, styles.big) }>Courses</span></p>
+                        <p className={ css(styles.textLeft) }><span className={ css(styles.textOrange, styles.big) }>Courses</span></p>
                         <p>TESTO</p>
                     </div>
                 </div>
@@ -186,7 +197,7 @@ class Broadcast extends Component {
                 </div>
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.paddingTop) }>
-                        <p><span className={ css(styles.textOrange, styles.big) }>Youtube</span></p>
+                        <p className={ css(styles.textRight) }><span className={ css(styles.textOrange, styles.big) }>Youtube</span></p>
                         <p>TESTO</p>
                     </div>
                 </div>
