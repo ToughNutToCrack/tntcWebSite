@@ -57,6 +57,7 @@ class ScrollPls extends Component {
     return (
         <div className={ css(styles.scollplsWrapper) }>
             <Fade when={ this.state.show } duration={ 300 }>
+                <p>{this.props.text}</p>
                 <FaChevronDown className={ css(styles.scrollArrow, this.styles.scrollArrowColor) } />
             </Fade>
         </div>

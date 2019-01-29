@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { css, StyleSheet } from 'aphrodite'
-import Fade from 'react-reveal/Fade'
 
 import ScrollPls from './SrcollPls'
 
@@ -34,9 +33,14 @@ const styles = StyleSheet.create({
         fontSize: 32,
         scrollSnapAlign: 'start'
     },
+    divisionHeader: {
+        width: '100%',
+        height: '30%',
+        float: 'left',
+    },
     division: {
-        width: '33.3%',
-        height: '100%',
+        width: '50%',
+        height: '70%',
         float: 'left',
     },
     black: {
@@ -74,8 +78,14 @@ const styles = StyleSheet.create({
     little: {
         fontSize: 26
     },
+    normal: {
+        fontSize: 32
+    },
     textRed: {
         color: '#ed1c24'
+    },
+    textOrange: {
+        color: '#FF926B'
     }
 })
 
@@ -83,52 +93,61 @@ class Studio extends Component {
   render() {
     return (
         <div className={ css(styles.container) }>
-            <div className={ css(styles.wrapper, styles.section, styles.grey) }>
+            <div className={ css(styles.wrapper, styles.section, styles.white) }>
                 <div className={ css(styles.text) }>
-                    <p><span className={ css(styles.textRed, styles.big) }>Studio</span></p>
-                    <p> xr, desktop, web, mobile, videogame and more.</p>
+                    <p>With <span className={ css(styles.textRed, styles.big) }>Studio </span>  we realize project toghether starting from your ideas.</p>
+                    <p className={ css(styles.little) }>We have a thing for a great design. </p>
                 </div>
-                <ScrollPls color='#ffffff' visible={ true } />
+                <ScrollPls color='#424242' visible={ true } />
             </div>
 
             <div className={ css(styles.wrapper, styles.section, styles.white) }>
-                <Fade right>
-                    <div className={ css(styles.text) }>
-                        <p><span className={ css(styles.textRed, styles.big) }>XR</span></p>
-                    </div>
-                </Fade>
+                <div className={ css(styles.text) }>
+                    <p><span className={ css(styles.textOrange, styles.big) }>Our main services</span></p>
+                    <p>3D visualizzation </p>
+                    <p>Configurator </p>
+                    <p>Training experience </p>
+                    <p>Videogames </p>
+                    <p>Animated Video </p>
+                    <p>Custom experiences</p>
+                </div>
+                {/* <ScrollPls color='#424242' visible={ true } text={"EXAMPLES"} /> */}
             </div>
 
-            <div className={ css(styles.wrapper, styles.section, styles.white) }>
-                <Fade left>
-                    <div className={ css(styles.text) }>
-                        <p><span className={ css(styles.textRed, styles.big) }>desktop</span></p>
+            <div className={ css(styles.divisionsWrapper, styles.white) }>
+                <div className={ css(styles.divisionHeader) }>
+                    <div className={ css(styles.paddingTop) }>
+                        <p><span className={ css(styles.textOrange, styles.big) }>Realistic AR application</span></p>
                     </div>
-                </Fade>
+                </div>
+                <div className={ css(styles.division) }>
+                    <div className={ css(styles.paddingTop) }>
+                        <p>TESTO</p>
+                    </div>
+                </div>
+                <div className={ css(styles.division) }>
+                    <div className={ css(styles.paddingTop) }>
+                        <p>IMMAGINE</p>
+                    </div>
+                </div>
             </div>
 
-            <div className={ css(styles.wrapper, styles.section, styles.white) }>
-                <Fade right>
-                    <div className={ css(styles.text) }>
-                        <p><span className={ css(styles.textRed, styles.big) }>web</span></p>
+            <div className={ css(styles.divisionsWrapper, styles.white) }>
+                <div className={ css(styles.divisionHeader) }>
+                    <div className={ css(styles.paddingTop) }>
+                        <p><span className={ css(styles.textOrange, styles.big) }>Tailored study for each experience</span></p>
                     </div>
-                </Fade>
-            </div>
-
-            <div className={ css(styles.wrapper, styles.section, styles.white) }>
-                <Fade right>
-                    <div className={ css(styles.text) }>
-                        <p><span className={ css(styles.textRed, styles.big) }>mobile</span></p>
+                </div>
+                <div className={ css(styles.division) }>
+                    <div className={ css(styles.paddingTop) }>
+                        <p>IMMAGINE</p>
                     </div>
-                </Fade>
-            </div>
-
-            <div className={ css(styles.wrapper, styles.section, styles.white) }>
-                <Fade right>
-                    <div className={ css(styles.text) }>
-                        <p><span className={ css(styles.textRed, styles.big) }>videogames</span></p>
+                </div>
+                <div className={ css(styles.division) }>
+                    <div className={ css(styles.paddingTop) }>
+                        <p>TESTO</p>
                     </div>
-                </Fade>
+                </div>
             </div>
 
         </div>

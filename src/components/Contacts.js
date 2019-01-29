@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     },
     background: {
         // backgroundImage: `url(${ process.env.PUBLIC_URL}/assets/images/bw.png)`,
-        backgroundColor: '#424242',
+        backgroundColor: '#FF926B',
         height: '100%',
         width: '100%',
         display: 'flex',
