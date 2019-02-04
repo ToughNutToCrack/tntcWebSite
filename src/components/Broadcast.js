@@ -102,8 +102,8 @@ const styles = StyleSheet.create({
         padding: '20px',
         paddingLeft: '100px'
     },
-    imageContainer: {
-        paddingTop: '100px',
+    innerDivision: {
+        // paddingTop: '100px',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -138,7 +138,7 @@ class Broadcast extends Component {
                 <ScrollPls color='#424242' visible={ true } />
             </div>
 
-            <div className={ css(styles.divisionsWrapper, styles.white) }>
+            {/* <div className={ css(styles.divisionsWrapper, styles.white) }>
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.paddingTop) }>   
                         <p className={ css(styles.textLeft) }><span className={ css(styles.textOrange, styles.big) }>Talks</span></p>
@@ -146,35 +146,63 @@ class Broadcast extends Component {
                     </div>
                 </div>
                 <div className={ css(styles.division) }>
-                    <div className={ css(styles.imageContainer) }>
+                    <div className={ css(styles.innerDivision) }>
                         <img className={ css(styles.center) } src={ talksImg }/>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             <div className={ css(styles.divisionsWrapper, styles.white) }>
                 <div className={ css(styles.division) }>
-                    <div className={ css(styles.imageContainer) }>
+                    <div className={ css(styles.innerDivision) }>
+                        <div>
+                            <p><span className={ css(styles.textOrange, styles.big) }>Game Jam</span></p>
+                            <p>TNTC Game Jam è una competizione aperta a tutti.</p>
+                            <p>Consiste nel creare un videogioco in 4 giorni rispettando un tema. Al termine della competizione i vari team 
+                                consegneranno il gioco tramite l'apposito form di upload.</p>
+                            <p>Il team che vincerà verrà informato tramite e-mail e reso pubblico sui social, potrà poi riscuotere il premio in palio.</p>
+                            <p>La partecipazione alla Jam è totalmente gratuita.</p>
+                            <p>Sei interessato? Scarica il regolamento.</p>
+                        </div>
+                    </div>    
+                </div>
+                <div className={ css(styles.division) }>
+                    <div className={ css(styles.innerDivision) }>
                         <img className={ css(styles.center) }  src={ gameJamImg }/>
                     </div>
                 </div>
+            </div>
+
+            <div className={ css(styles.divisionsWrapper, styles.white) }>
                 <div className={ css(styles.division) }>
-                    <div className={ css(styles.paddingTop) }>
-                        <p className={ css(styles.textRight) }><span className={ css(styles.textOrange, styles.big) }>Game Jam</span></p>
-                        <p>TESTO</p>
+                    <div className={ css(styles.innerDivision) }>
+                        <img className={ css(styles.center) }  src={ youtubeImg }/>
                     </div>
+                </div>
+                <div className={ css(styles.division) }>
+                    <div className={ css(styles.innerDivision) }>
+                        <div>
+                            <p><span className={ css(styles.textOrange, styles.big) }>YouTube</span></p>
+                            <p>Utilizziamo YouTube come principale mezzo di condivisione.</p>
+                            <p>Ogni venerdí pubblichiamo un nuovo video riguardante il tema dello sviluppo videoludico.</p>
+                            <p>Troverete tutorial, consigli, tools, e molto altro.</p>
+                        </div>
+                    </div>  
                 </div>
             </div>
 
             <div className={ css(styles.divisionsWrapper, styles.white) }>
                 <div className={ css(styles.division) }>
-                    <div className={ css(styles.paddingTop) }>
-                        <p className={ css(styles.textLeft) }><span className={ css(styles.textOrange, styles.big) }>Courses</span></p>
-                        <p>TESTO</p>
-                    </div>
+                    <div className={ css(styles.innerDivision) }>
+                        <div>
+                            <p><span className={ css(styles.textOrange, styles.big) }>Courses</span></p>
+                            <p>La formazione nell'ambito dei videogame e del 3D è un argomento che ci sta molto a cuore.</p>
+                            <p>Ci occupiamo della realizzazione di corsi online e dal vivo.</p>
+                        </div>
+                    </div>  
                 </div>
                 <div className={ css(styles.division) }>
-                    <div className={ css(styles.imageContainer) }>
+                    <div className={ css(styles.innerDivision) }>
                         <iframe 
                     className={ css(styles.youtubeVideo) }
                     width="90%" 
@@ -185,20 +213,6 @@ class Broadcast extends Component {
 
                         <img className={ css(styles.width90) } src={ courseImg }/>
 
-                    </div>
-                </div>
-            </div>
-
-            <div className={ css(styles.divisionsWrapper, styles.white) }>
-                <div className={ css(styles.division) }>
-                    <div className={ css(styles.imageContainer) }>
-                        <img className={ css(styles.center) }  src={ youtubeImg }/>
-                    </div>
-                </div>
-                <div className={ css(styles.division) }>
-                    <div className={ css(styles.paddingTop) }>
-                        <p className={ css(styles.textRight) }><span className={ css(styles.textOrange, styles.big) }>Youtube</span></p>
-                        <p>TESTO</p>
                     </div>
                 </div>
             </div>
