@@ -114,7 +114,7 @@ class Studio extends Component {
                 {/* <ScrollPls color='#424242' visible={ true } text={"EXAMPLES"} /> */}
             </div>
 
-            <div className={ css(styles.divisionsWrapper, styles.white) }>
+            {/* <div className={ css(styles.divisionsWrapper, styles.white) }>
                 <div className={ css(styles.divisionHeader) }>
                     <div className={ css(styles.paddingTop) }>
                         <p><span className={ css(styles.textOrange, styles.big) }>Realistic AR application</span></p>
@@ -148,7 +148,7 @@ class Studio extends Component {
                         <p>TESTO</p>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
         </div>
     );
