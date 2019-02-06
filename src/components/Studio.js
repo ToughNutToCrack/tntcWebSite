@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        fontSize: 32,
+        fontSize: '3vw',
         scrollSnapAlign: 'start'
     },
     section: {
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
         fontFamily: '"Patua One", regular',
         height: '100%',
         width: '100%',
-        fontSize: 32,
+        fontSize: '3vw',
         scrollSnapAlign: 'start'
     },
     divisionHeader: {
@@ -73,13 +73,13 @@ const styles = StyleSheet.create({
         paddingTop: '150px'
     },
     big: {
-        fontSize: 40
+        fontSize: '5vw'
     },
     little: {
-        fontSize: 26
+        fontSize: '2vw'
     },
     normal: {
-        fontSize: 32
+        fontSize: '3vw'
     },
     textRed: {
         color: '#ed1c24'

@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        fontSize: 32,
+        fontSize: '3vw',
         scrollSnapAlign: 'start'
     },
     first: {
@@ -37,10 +37,10 @@ const styles = StyleSheet.create({
         display: 'block'
     },
     big: {
-        fontSize: 40
+        fontSize: '5vw'
     },
     little: {
-        fontSize: 26
+        fontSize: '2vw'
     },
     special1: {
         color: '#424242'

@@ -21,7 +21,10 @@ const styles = StyleSheet.create({
         width: '100%',
         display: 'flex',
         overflowX: 'hidden',
-        flexDirection: 'row'
+        flexDirection: 'row',
+        '@media screen and (max-width: 880px)': {
+            backgroundColor: '#FFFFFF',
+        }
     },
     void: {
         display: 'flex',
@@ -43,6 +46,7 @@ const styles = StyleSheet.create({
         order: 2,
         '@media screen and (max-width: 880px)': {
             width: '100%',
+            height: '100%',
             order: 1
         }
     },
@@ -54,7 +58,8 @@ const styles = StyleSheet.create({
         height: '100%',
         fontSize: 16,
         display: 'table-cell',
-        verticalAlign: 'middle'
+        verticalAlign: 'middle',
+        overflowY: 'scroll'
     },
  
     outer: {
