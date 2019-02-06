@@ -84,7 +84,7 @@ class Contacts extends Component {
         <Page>
             <div className={ css(styles.background) }>
                 {/* <LogoPathSvg colorIn='#424242' colorOut='#ffffff' /> */}
-                <Slide right delay={ 1000 } duration={ 500 }>
+                <Slide right delay={ 0 } duration={ 500 }>
                     <div className={ css(styles.void) }>
                         <LogoPathSvg colorIn='#424242' colorOut='#ffffff' /> 
                     </div>
