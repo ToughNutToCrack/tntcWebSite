@@ -14,21 +14,37 @@ const facebookLink = 'https://www.facebook.com/toughnutocrack/'
 const youtubeLink = 'https://www.youtube.com/channel/UCtj_LuYF9i5xkk4Q9EYamYA'
 
 const styles = StyleSheet.create({
-    contacts: {
-        display: 'flex',
-        justifyContent: 'flex-end',
-        alignItems: 'center',
-        width: '100%',
-        height: '100%',
-        textAlign: 'center'
-    },
     background: {
         // backgroundImage: `url(${ process.env.PUBLIC_URL}/assets/images/bw.png)`,
         backgroundColor: '#FF926B',
         height: '100%',
         width: '100%',
         display: 'flex',
-        overflowX: 'hidden'
+        overflowX: 'hidden',
+        flexDirection: 'row'
+    },
+    void: {
+        display: 'flex',
+        width: '50%',
+        height: '100%',
+        order: 1,
+        '@media screen and (max-width: 880px)': {
+            order: 2,
+            display: 'none'
+        }
+    },
+    contacts: {
+        display: 'flex',
+        justifyContent: 'flex-end',
+        alignItems: 'center',
+        width: '50%',
+        height: '100%',
+        textAlign: 'center',
+        order: 2,
+        '@media screen and (max-width: 880px)': {
+            width: '100%',
+            order: 1
+        }
     },
     contactsContent: {
         backgroundColor: '#FFFFFF',
@@ -40,6 +56,7 @@ const styles = StyleSheet.create({
         display: 'table-cell',
         verticalAlign: 'middle'
     },
+ 
     outer: {
         position: 'relative',
         top: '25%'
@@ -66,8 +83,11 @@ class Contacts extends Component {
     return (
         <Page>
             <div className={ css(styles.background) }>
-                <LogoPathSvg colorIn='#424242' colorOut='#ffffff' />
+                {/* <LogoPathSvg colorIn='#424242' colorOut='#ffffff' /> */}
                 <Slide right delay={ 1000 } duration={ 500 }>
+                    <div className={ css(styles.void) }>
+                        <LogoPathSvg colorIn='#424242' colorOut='#ffffff' /> 
+                    </div>
                     <div className={ css(styles.contacts) }>
                         <div className={ css(styles.contactsContent) }>
                             <Fade bottom cascade delay={ 1500 } duration={ 500 }>
