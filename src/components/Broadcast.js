@@ -147,6 +147,12 @@ const styles = StyleSheet.create({
     width90: {
         width: '90%'
     },
+    width60: {
+        width: '90%',
+        '@media screen and (max-height: 700px)': {
+            width: '60%'
+        }
+    },
     youtubeVideo: {
         marginBottom: '50px'
     }
@@ -195,7 +201,7 @@ class Broadcast extends Component {
                 </div>
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
-                        <img className={ css(styles.center) }  src={ gameJamImg }/>
+                        <img className={ css(styles.center, styles.width60) }  src={ gameJamImg }/>
                     </div>
                 </div>
             </div>
@@ -203,7 +209,7 @@ class Broadcast extends Component {
             <div className={ css(styles.divisionsWrapper, styles.white) }>
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
-                        <img className={ css(styles.center, styles.responsiveTop) }  src={ youtubeImg }/>
+                        <img className={ css(styles.center, styles.responsiveTop, styles.width60) }  src={ youtubeImg }/>
                     </div>
                 </div>
                 <div className={ css(styles.division) }>
@@ -234,14 +240,14 @@ class Broadcast extends Component {
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
                         <iframe 
-                    className={ css(styles.youtubeVideo) }
+                    className={ css(styles.youtubeVideo, styles.width60) }
                     width="90%" 
                     height="50%"
                     src="https://www.youtube.com/embed/hTHy2L2bqCs" 
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" >
                         </iframe>
                         <a href="https://www.udemy.com/game-development-professionale-con-unity-3d-e-c/?couponCode=NUTTY-WEBSITE">
-                            <img className={ css(styles.width90) } src={ courseImg }/>
+                            <img className={ css(styles.width60) } src={ courseImg }/>
                         </a>
                     </div>
                 </div>
