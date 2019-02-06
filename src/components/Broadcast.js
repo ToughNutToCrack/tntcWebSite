@@ -44,9 +44,42 @@ const styles = StyleSheet.create({
         float: 'left',
     },
     division: {
-        width: '50%',
         height: '100%',
         float: 'left',
+        width: '50%',
+        minWidth: '100px',
+        fontSize: 32,
+        verticalAlign: 'center',
+        '@media screen and (max-width: 880px)': {
+            width: '100%',
+            height: '50%',
+            fontSize: 20,
+        }
+    },
+    innerDivision: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: '100%',
+        width: '100%',
+        flexDirection: 'column',
+        '@media screen and (max-width: 880px)': {
+            height: '90%'
+        }
+    },
+    center: {
+        display: 'inline-block',
+        verticalAlign: 'middle',
+        margin: 'auto',
+        width: '90%',
+        '@media screen and (max-width: 880px)': {
+            width: '80%'
+        }
+    },
+    responsiveTop: {
+        '@media screen and (max-width: 880px)': {
+            paddingTop: '150px'
+        }
     },
     black: {
         backgroundColor: '#000000',
@@ -105,21 +138,6 @@ const styles = StyleSheet.create({
         padding: '20px',
         paddingLeft: '100px'
     },
-    innerDivision: {
-        // paddingTop: '100px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        height: '100%',
-        width: '100%',
-        flexDirection: 'column'
-    },
-    center: {
-        display: 'inline-block',
-        verticalAlign: 'middle',
-        margin: 'auto',
-        width: '90%'
-    },
     width90: {
         width: '90%'
     },
@@ -158,7 +176,7 @@ class Broadcast extends Component {
             <div className={ css(styles.divisionsWrapper, styles.white) }>
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
-                        <div>
+                        <div className={ css(styles.responsiveTop) }>
                             <p><span className={ css(styles.textOrange, styles.big) }>Game Jam</span></p>
                             <p>TNTC Game Jam è una competizione aperta a tutti.</p>
                             <p>Consiste nel creare un videogioco in 4 giorni rispettando un tema. Al termine della competizione i vari team 
@@ -179,12 +197,12 @@ class Broadcast extends Component {
             <div className={ css(styles.divisionsWrapper, styles.white) }>
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
-                        <img className={ css(styles.center) }  src={ youtubeImg }/>
+                        <img className={ css(styles.center, styles.responsiveTop) }  src={ youtubeImg }/>
                     </div>
                 </div>
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
-                        <div>
+                        <div className={ css(styles.paddingTop) }>
                             <p><span className={ css(styles.textOrange, styles.big) }>YouTube</span></p>
                             <p>Utilizziamo YouTube come principale mezzo di condivisione.</p>
                             <p>Ogni venerdí pubblichiamo un nuovo video riguardante il tema dello sviluppo videoludico.</p>
@@ -198,7 +216,7 @@ class Broadcast extends Component {
             <div className={ css(styles.divisionsWrapper, styles.white) }>
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
-                        <div>
+                        <div className={ css(styles.responsiveTop) }>
                             <p><span className={ css(styles.textOrange, styles.big) }>Courses</span></p>
                             <p>La formazione nell'ambito dei videogame e del 3D è un argomento che ci sta molto a cuore.</p>
                             <p>Ci occupiamo della realizzazione di corsi online e dal vivo.</p>
