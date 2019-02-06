@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom'
 import { FaTwitter, FaFacebookF, FaYoutube, FaInstagram } from 'react-icons/fa'
 import { IoIosClose } from 'react-icons/io'
 import { IconContext } from 'react-icons'
+import Fade from 'react-reveal/Fade';
 
 const twitterLink = 'https://twitter.com/tntcproject'
 const instagramLink = 'https://www.instagram.com/tntcproject/'
@@ -19,18 +20,51 @@ const resizeKeyframes = {
     }
 }
 
+const opacityKeyframes = {
+    'from': {
+        opacity: '1'
+    },
+    'to%': {
+        opacity: '0'
+    }
+}
+
 const styles = StyleSheet.create({
-    closeMenu: {
-        position: 'absolute',
-        top: '0px',
-        display: 'none'
+    // closeMenu: {
+    //     position: 'absolute',
+    //     top: '0px',
+    //     display: 'none',
+    // },
+    menu: {
+        display: 'flex',
+        width: '100%',
+        height: '100%',
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     openMenu: {
         animationName: [ resizeKeyframes ],
-        animationDuration: '0.2s',
+        animationDuration: '0.3s',
         animationIterationCount: '1',
         backgroundColor: '#424242',
-        opacity: 1,
+        // opacity: 1,
+        zIndex: 2,
+        position: 'fixed',
+        top: '0px',
+        width: '100%',
+        height: '100%',
+        color: 'white',
+        display: 'none',
+        '@media only screen and (max-width: 880px)': {
+            display: 'block'
+        }
+    },
+    closeMenu: {
+        animationName: [ opacityKeyframes ],
+        animationDuration: '0.3s',
+        animationIterationCount: '1',
+        opacity: 0,
+        backgroundColor: '#424242',
         zIndex: 2,
         position: 'fixed',
         top: '0px',
@@ -64,11 +98,12 @@ const styles = StyleSheet.create({
     },
     navs: {
         listStyleType: 'none',
+        paddingInlineStart: '0px'
     },
     nav: {
         width: '100%',
         display: 'block',
-        marginBottom: '50%'
+        marginBottom: '50%',
     },
     active: {
         color: '#FF926B',
@@ -78,6 +113,7 @@ const styles = StyleSheet.create({
         top: '10px',
         right: '0px',
         color: 'white',
+        zIndex: '100'
     },
     closeIcon: {
         width: '70px',
@@ -105,17 +141,21 @@ class Menu extends Component {
 
     closeMenu() {
         this.setState({ isOpen: false });
-        window.dispatchEvent(new Event('close-menu'))
+        setTimeout(() => {
+            window.dispatchEvent(new Event('close-menu')) },
+        300)
     }
 
     render() {
         return ( 
-            <div className={ this.state.isOpen ? css(styles.openMenu) : css(styles.closeMenu) }>
-                
+            // <Fade top when={this.state.isOpen} duration="300" >
+            <div className={ this.state.isOpen ? css(styles.openMenu) : css(styles.closeMenu) }> 
+                {/* <div className={css(styles.openMenu) }> */}
+
                 <div className={ css(styles.closeIconContainer, styles.hover) } onClick={ this.closeMenu }>
                     <IoIosClose className={ css(styles.closeIcon) }/>
                 </div>              
-
+                
                 <div className={ css(styles.navigation) }>
                     <ul className={ css(styles.navs) }>
                         <li className={ css(styles.nav) }>
@@ -144,9 +184,8 @@ class Menu extends Component {
                         <a target="_blank" href={ youtubeLink }><FaYoutube /></a>
                     </IconContext.Provider> 
                 </div>
-
-            </div>
-            
+            </div>  
+            // </Fade>          
         );
     }
 }
