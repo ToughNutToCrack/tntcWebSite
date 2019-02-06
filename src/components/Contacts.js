@@ -47,7 +47,8 @@ const styles = StyleSheet.create({
         '@media screen and (max-width: 880px)': {
             width: '100%',
             height: '100%',
-            order: 1
+            order: 1,
+            top: '0'
         }
     },
     contactsContent: {
@@ -69,7 +70,10 @@ const styles = StyleSheet.create({
     inner: {
         display: 'block',
         padding: '35px',
-        fontSize: 22
+        fontSize: 22,
+        '@media screen and (max-width: 880px)': {
+            fontSize: '3vw',
+        }
     },
     socials: {
         padding: '5px',

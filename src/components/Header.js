@@ -21,6 +21,9 @@ const styles = StyleSheet.create({
         opacity: 1,
         zIndex: 2
     },
+    logoHeader: {
+        padding: '20px'
+    },
     title: {
         fontFamily: '"Patua One", cursive',
         color: '#424242',
@@ -120,7 +123,7 @@ class Header extends Component {
     render() {
         return ( 
             <div className={ css(styles.header) }>
-                <div className={ css(styles.title) }>
+                <div className={ css(styles.title, styles.logoHeader) }>
                     <NavLink className={ css(styles.title) } exact to="/">TNTC</NavLink>
                 </div>
                 <div className={ css(styles.navigation) }>
