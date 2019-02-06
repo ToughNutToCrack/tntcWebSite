@@ -154,7 +154,10 @@ const styles = StyleSheet.create({
         }
     },
     youtubeVideo: {
-        marginBottom: '50px'
+        marginBottom: '50px',
+        '@media screen and (max-height: 700px)': {
+            marginBottom: '5px',
+        }
     }
 
 })
