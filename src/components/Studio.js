@@ -30,8 +30,7 @@ const styles = StyleSheet.create({
         fontFamily: '"Patua One", regular',
         height: '100%',
         width: '100%',
-        fontSize: '3vw',
-        scrollSnapAlign: 'start'
+        fontSize: '3vh'
     },
     divisionHeader: {
         width: '100%',
@@ -66,8 +65,16 @@ const styles = StyleSheet.create({
     box: {
         boxSizing: 'border-box'
     },
+    mainText: {
+        display: 'block',
+    },
     text: {
-        display: 'block'
+        display: 'block',
+        fontSize: '3vh',
+        scrollSnapAlign: 'start',
+        '@media screen and (max-width: 880px)': {
+            fontSize: '3vw',
+        }
     },
     paddingTop: {
         paddingTop: '150px'
@@ -94,7 +101,7 @@ class Studio extends Component {
     return (
         <div className={ css(styles.container) }>
             <div className={ css(styles.wrapper, styles.section, styles.white) }>
-                <div className={ css(styles.text) }>
+                <div className={ css(styles.mainText) }>
                     <p>With <span className={ css(styles.textRed, styles.big) }>Studio </span>  we realize project toghether starting from your ideas.</p>
                     <p className={ css(styles.little) }>We have a thing for a great design. </p>
                 </div>

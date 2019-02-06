@@ -4,7 +4,6 @@ import { NavLink } from 'react-router-dom'
 import { FaTwitter, FaFacebookF, FaYoutube, FaInstagram } from 'react-icons/fa'
 import { IoIosClose } from 'react-icons/io'
 import { IconContext } from 'react-icons'
-import Fade from 'react-reveal/Fade';
 
 const twitterLink = 'https://twitter.com/tntcproject'
 const instagramLink = 'https://www.instagram.com/tntcproject/'

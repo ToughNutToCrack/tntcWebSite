@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
         float: 'left',
         width: '50%',
         minWidth: '100px',
-        fontSize: '2vw',
+        fontSize: '3vh',
         verticalAlign: 'center',
         '@media screen and (max-width: 880px)': {
             width: '100%',
@@ -81,6 +81,11 @@ const styles = StyleSheet.create({
             paddingTop: '150px'
         }
     },
+    // hideInLandscape:{
+    //     '@media screen and (orientation:landscape)': {
+    //         display: 'none'
+    //     }
+    // },
     black: {
         backgroundColor: '#000000',
         color: '#ffffff',
@@ -203,7 +208,7 @@ class Broadcast extends Component {
                 </div>
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
-                        <div className={ css(styles.paddingTop) }>
+                        <div>
                             <p><span className={ css(styles.textOrange, styles.big) }>YouTube</span></p>
                             <p>Utilizziamo YouTube come principale mezzo di condivisione.</p>
                             <p>Ogni venerdí pubblichiamo un nuovo video riguardante il tema dello sviluppo videoludico.</p>
