@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
         color: '#424242',
         width: '70%',
         opacity: 1,
-        '@media only screen and (max-width: 880px)': {
+        '@media only screen and (max-width: 880px) and (orientation: portrait)': {
             display: 'none'
         }
     },
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
         textDecoration: 'none',
         textTransform: 'uppercase',
         fontWeight: 600,
-        fontSize: 22,
+        fontSize: '2vw',
     },
     active: {
         color: '#424242',
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
         fontSize: 24,
         width: '15%',
         opacity: 1,
-        '@media only screen and (max-width: 880px)': {
+        '@media only screen and (max-width: 880px) and (orientation: portrait)': {
             display: 'none'
         }
     },
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
         position: 'absolute',
         right: '20px',
         color: '#424242',
-        '@media only screen and (max-width: 880px)': {
+        '@media only screen and (max-width: 880px) and (orientation: portrait)': {
             display: 'block'
         }
     },

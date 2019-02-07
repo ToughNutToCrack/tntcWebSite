@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
         height: '100%',
         color: 'white',
         display: 'none',
-        '@media only screen and (max-width: 880px)': {
+        '@media only screen and (max-width: 880px) and (orientation: portrait)': {
             display: 'block'
         }
     },
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
         height: '100%',
         color: 'white',
         display: 'none',
-        '@media only screen and (max-width: 880px)': {
+        '@media only screen and (max-width: 880px) and (orientation: portrait)': {
             display: 'block'
         }
     },
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
         textDecoration: 'none',
         textTransform: 'uppercase',
         fontWeight: 600,
-        fontSize: 22,
+        fontSize: '3vh',
     },
     navs: {
         listStyleType: 'none',
