@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
+/* eslint-disable no-unused-vars */
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+/* eslint-enable no-unused-vars */
 import { withRouter } from 'react-router'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 
@@ -20,6 +22,7 @@ class Content extends Component {
           <TransitionGroup>
               <CSSTransition key={ this.props.location.key } timeout={ { enter: 300, exit: 300 } } classNames={ 'fade' }>
                   <Switch location={ this.props.location }>
+                      {/* <Route exact path='/' component={AFrame} /> */}
                       <Route exact path='/studio' component={ Studio }/>
                       <Route exact path='/broadcast' component={ Broadcast }/>
                       <Route exact path='/contacts' component={ Contacts }/>
