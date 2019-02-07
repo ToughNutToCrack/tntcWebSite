@@ -3,7 +3,7 @@ import { css, StyleSheet } from 'aphrodite'
 
 import ScrollPls from './SrcollPls'
 
-import talksImg from '../assets/images/photo/talk.jpg'
+// import talksImg from '../assets/images/photo/talk.jpg'
 import gameJamImg from '../assets/images/photo/GameJam.png'
 import courseImg from '../assets/images/photo/Course.jpg'
 import youtubeImg from '../assets/images/photo/YT.jpg'
@@ -198,13 +198,13 @@ class Broadcast extends Component {
                                 consegneranno il gioco tramite l'apposito form di upload.</p>
                             <p>Il team che vincerà verrà informato tramite e-mail e reso pubblico sui social, potrà poi riscuotere il premio in palio.</p>
                             <p>La partecipazione alla Jam è totalmente gratuita.</p>
-                            <p>Sei interessato? <a className={ css(styles.textOrange, styles.noDecoration) } href="#"> Scarica il regolamento.</a></p>
+                            <p>Sei interessato? <a className={ css(styles.textOrange, styles.noDecoration) } href="/download"> Scarica il regolamento.</a></p>
                         </div>
                     </div>    
                 </div>
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
-                        <img className={ css(styles.center, styles.width60) }  src={ gameJamImg }/>
+                        <img className={ css(styles.center, styles.width60) }  src={ gameJamImg } alt=""/>
                     </div>
                 </div>
             </div>
@@ -212,7 +212,7 @@ class Broadcast extends Component {
             <div className={ css(styles.divisionsWrapper, styles.white) }>
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
-                        <img className={ css(styles.center, styles.responsiveTop, styles.width60) }  src={ youtubeImg }/>
+                        <img className={ css(styles.center, styles.responsiveTop, styles.width60) }  src={ youtubeImg } alt=""/>
                     </div>
                 </div>
                 <div className={ css(styles.division) }>
@@ -244,13 +244,14 @@ class Broadcast extends Component {
                     <div className={ css(styles.innerDivision) }>
                         <iframe 
                     className={ css(styles.youtubeVideo, styles.width60) }
+                    title="GameDevelopment"
                     width="90%" 
                     height="50%"
                     src="https://www.youtube.com/embed/hTHy2L2bqCs" 
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" >
                         </iframe>
                         <a href="https://www.udemy.com/game-development-professionale-con-unity-3d-e-c/?couponCode=NUTTY-WEBSITE">
-                            <img className={ css(styles.width60) } src={ courseImg }/>
+                            <img className={ css(styles.width60) } src={ courseImg } alt=""/>
                         </a>
                     </div>
                 </div>

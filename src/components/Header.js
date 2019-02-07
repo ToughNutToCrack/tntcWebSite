@@ -147,10 +147,10 @@ class Header extends Component {
                 </div>
                 <div className={ css(styles.socials, styles.hover) }>
                     <IconContext.Provider value={ { className: css(styles.socialIcon, styles.hover) } }>
-                        <a target="_blank" href={ twitterLink }><FaTwitter/></a>
-                        <a target="_blank" href={ instagramLink }><FaInstagram /></a>
-                        <a target="_blank" href={ facebookLink }><FaFacebookF /></a>
-                        <a target="_blank" href={ youtubeLink }><FaYoutube /></a>
+                        <a target="_blank" rel="noopener noreferrer" href={ twitterLink }><FaTwitter/></a>
+                        <a target="_blank" rel="noopener noreferrer" href={ instagramLink }><FaInstagram /></a>
+                        <a target="_blank" rel="noopener noreferrer" href={ facebookLink }><FaFacebookF /></a>
+                        <a target="_blank" rel="noopener noreferrer" href={ youtubeLink }><FaYoutube /></a>
                     </IconContext.Provider>    
                 </div>
                 <div className={ css(styles.hambContainer, styles.hover) } onClick={ this.openMenu }>

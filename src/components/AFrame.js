@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import { StyleSheet, css } from 'aphrodite'
 import { withRouter } from 'react-router'
-import AFRAME from 'aframe'
-import 'aframe-particle-system-component'
 
 /* eslint-disable no-unused-vars */
+import AFRAME from 'aframe'
 import sinGrid from '../aFrame/primitives/sinGrid'
 import scrollListener from '../aFrame/components/scroll-listener'
 import navigation from '../aFrame/systems/navigation'
@@ -14,6 +13,9 @@ import parallax from '../aFrame/components/parallax'
 import smoke from '../aFrame/primitives/smoke'
 import goto from '../aFrame/components/goto'
 /* eslint-enable no-unused-vars */
+
+// import 'aframe-particle-system-component'
+
 import ScrollPls from './SrcollPls'
 
 import Scrittalogo from '../assets/models/text3D/ScrittaLogo.obj'
@@ -76,7 +78,7 @@ class AFrame extends Component {
             }, 1)
 
             setTimeout(() => {
-                if (el.systems['navigation'].level == 0) {
+                if (el.systems['navigation'].level === 0) {
                     window.dispatchEvent(new Event('scroll-pls'))
                 }
             }, 5000)
@@ -125,14 +127,14 @@ class AFrame extends Component {
                         <a-asset-item id="cloud-3-obj" src={ Cloud3 }></a-asset-item>
                         <a-asset-item id="cloud-3-mtl" src={ Cloud3Mat }></a-asset-item>
 
-                        <img id="logoBroadcast" src={ LogoBroadcast }></img>
-                        <img id="logoStudio" src={ LogoStudio }></img>
-                        <img id="logoGreetings" src={ GreetingsImage }></img>
-                        <img id="smokeElement" src={ SmokeImage }></img>
+                        <img id="logoBroadcast" src={ LogoBroadcast } alt=""></img>
+                        <img id="logoStudio" src={ LogoStudio } alt=""></img>
+                        <img id="logoGreetings" src={ GreetingsImage } alt=""></img>
+                        <img id="smokeElement" src={ SmokeImage } alt=""></img>
                     </a-assets>
 
                     <a-entity id="level0">
-                        <a-entity obj-model="obj: #logo-obj;" position="0 2.5 -10" material="color: #424242" scale="1 1 1" logo-handler ></a-entity> 
+                        <a-entity obj-model="obj: #logo-obj;" position="0 2.5 -10" material="color: #424242" scale="1 1 1" logo-handler="" ></a-entity> 
                         <sin-grid></sin-grid>
                     </a-entity>
 

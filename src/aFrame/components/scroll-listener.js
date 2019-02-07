@@ -18,7 +18,7 @@ const mouseWheelHandler = (e, self) => {
     }
 }
 
-const previous = window.scrollY
+// const previous = window.scrollY
 const touchhandler = (self, d) => {
     const direction = d
 
