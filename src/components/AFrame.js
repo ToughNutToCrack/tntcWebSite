@@ -141,11 +141,11 @@ class AFrame extends Component {
                     <a-entity id="level1-middle" position="0 -20 -25" rotation="0 0 0">
                         <cloud-point cloudpoint="point:50; maxx:5; maxy:4; maxz:10;"></cloud-point>
                     </a-entity>
-
+                    
                     <a-plane id="level-1-filter" position="0 -3 0" rotation="-90 0 0" height="200" width="200" color="#fff"></a-plane>
 
                     <a-entity id="level1" position="0 -20 -35" rotation="0 0 0">
-                        <a-entity obj-model="obj: #towers-obj; mtl: #towers-mtl"  position="-3 -4 -10" rotation="0 20 0" scale="0.8 0.8 0.8"></a-entity>
+                        {/* <a-entity obj-model="obj: #towers-obj; mtl: #towers-mtl"  position="-3 -4 -10" rotation="0 20 0" scale="0.8 0.8 0.8"></a-entity> */}
                         <a-circle color="#CCC" position="0 -4 -10"  rotation="-90 0 0" radius="15"></a-circle>
                         <a-image id="greetingsImg" src="#logoGreetings" position="5.5 0 -9" width="6" height="6" parallax="rangex:0.1; rangey:0.1; speed:0.5" alphatest= 'val: 0.5'></a-image>
                         <a-entity obj-model="obj: #cloud-1-obj; mtl: #cloud-1-mtl" position="7 3 -12" rotation="0 0 0" scale="0.1 0.1 0.1" parallax="rangex:0.2; rangey:0.2; "></a-entity>
@@ -153,7 +153,7 @@ class AFrame extends Component {
                         <a-entity obj-model="obj: #cloud-3-obj; mtl: #cloud-3-mtl" position="-13 5.5 -16" rotation="0 0 0" scale="0.5 0.3 0.1" parallax="rangex:0.2; rangey:0.2; speed:1"></a-entity>
                         <cloud-smoke position="0 4.5 -10" smoke-particles="particles:80; size:10; minx:-100; maxx:100; miny:-1; maxy:1; minz:-1; maxz:-4;" parallax="rangex:1; rangey:1; speed:2.5"></cloud-smoke> 
                     </a-entity>
-
+                   
                     <a-plane id="level-2-filter" position="0 -25 -60" rotation="0 0 0" height="100" width="100" color="#fff"></a-plane>
 
                     <a-entity id="level2" position="-0.65 -25 -70" rotation="0 0 0">
@@ -167,7 +167,7 @@ class AFrame extends Component {
                     <a-sky color="#fff"></a-sky>
                     <a-entity id="player" position="0 0 0" rotation="0 0 0">
                         <a-camera fov={ this.state.customFov } look-controls-enabled="false" wasd-controls-enabled="false"></a-camera>
-                    </a-entity>
+                    </a-entity> 
                 </a-scene>
                 <ScrollPls color='#FF926B' visible={ false }/>
             </div>
