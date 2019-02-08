@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
         display: 'flex',
         overflowX: 'hidden',
         flexDirection: 'row',
-        '@media screen and (max-width: 880px)': {
+        '@media screen and (max-width: 880px) and (orientation: portrait)': {
             backgroundColor: '#FFFFFF',
         }
     },
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
         width: '50%',
         height: '100%',
         order: 1,
-        '@media screen and (max-width: 880px)': {
+        '@media screen and (max-width: 880px) and (orientation: portrait)': {
             order: 2,
             display: 'none'
         }
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
         height: '100%',
         textAlign: 'center',
         order: 2,
-        '@media screen and (max-width: 880px)': {
+        '@media screen and (max-width: 880px) and (orientation: portrait)': {
             width: '100%',
             height: '100%',
             order: 1,
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
         display: 'block',
         padding: '35px',
         fontSize: 22,
-        '@media screen and (max-width: 880px)': {
+        '@media screen and (max-width: 880px) and (orientation: portrait)': {
             fontSize: '3vw',
         }
     },

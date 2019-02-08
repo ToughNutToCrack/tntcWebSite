@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
         minWidth: '100px',
         fontSize: '3vh',
         verticalAlign: 'center',
-        '@media screen and (max-width: 880px)': {
+        '@media screen and (max-width: 880px) and (orientation: portrait)': {
             width: '100%',
             height: '50%',
             fontSize: '3vw',
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
         height: '100%',
         width: '100%',
         flexDirection: 'column',
-        '@media screen and (max-width: 880px)': {
+        '@media screen and (max-width: 880px) and (orientation: portrait)': {
             height: '90%'
         }
     },
@@ -72,12 +72,12 @@ const styles = StyleSheet.create({
         verticalAlign: 'middle',
         margin: 'auto',
         width: '90%',
-        '@media screen and (max-width: 880px)': {
+        '@media screen and (max-width: 880px) and (orientation: portrait)': {
             width: '80%'
         }
     },
     responsiveTop: {
-        '@media screen and (max-width: 880px)': {
+        '@media screen and (max-width: 880px) and (orientation: portrait)': {
             paddingTop: '150px'
         }
     },

@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
         display: 'block',
         fontSize: '3vh',
         scrollSnapAlign: 'start',
-        '@media screen and (max-width: 880px)': {
+        '@media screen and (max-width: 880px) and (orientation: portrait)': {
             fontSize: '3vw',
         }
     },
