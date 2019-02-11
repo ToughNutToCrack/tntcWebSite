@@ -111,19 +111,31 @@ const styles = StyleSheet.create({
     },
     text: {
         display: 'block',
-        fontSize: '3vw'
+        fontSize: '3vw',
+        '@media only screen and (min-width: 880px) and (orientation: landscape)': {
+            fontSize: '30px',
+        }
     },
     paddingTop: {
         paddingTop: '150px'
     },
     big: {
-        fontSize: '5vW'
+        fontSize: '5vW',
+        '@media only screen and (min-width: 880px) and (orientation: landscape)': {
+            fontSize: '40px',
+        }
     },
     little: {
-        fontSize: '1vw'
+        fontSize: '2vw',
+        '@media only screen and (min-width: 880px) and (orientation: landscape)': {
+            fontSize: '22px',
+        }
     },
     normal: {
-        fontSize: '3vW'
+        fontSize: '3vW',
+        '@media only screen and (min-width: 880px) and (orientation: landscape)': {
+            fontSize: '30px',
+        }
     },
     textRed: {
         color: '#ed1c24'

@@ -87,6 +87,13 @@ const styles = StyleSheet.create({
             color: '#e85356'
         }
     },
+    link: {
+        textDecoration: 'none',
+        color: '#424242',
+        ':hover': {
+            color: '#e85356'
+        }
+    }
 })
 class Contacts extends Component {
   render() {
@@ -100,19 +107,19 @@ class Contacts extends Component {
                     </div>
                     <div className={ css(styles.contacts) }>
                         <div className={ css(styles.contactsContent) }>
-                            <Fade bottom cascade delay={ 1500 } duration={ 500 }>
+                            <Fade bottom cascade delay={ 500 } duration={ 500 }>
                                 <div className={ css(styles.outer) }>
-                                    <div className={ css(styles.inner, styles.hover) }>
+                                    <div className={ css(styles.inner) }>
                                         <h2>Looking for informations?</h2>
-                                        <a href="mailto:info@tntc.it">Get in touch</a>
+                                        <a className={ css(styles.link) } href="mailto:info@tntc.it">Get in touch</a>
                                     </div>
 
-                                    <div className={ css(styles.inner, styles.hover) }>
+                                    <div className={ css(styles.inner) }>
                                         <h2>Create a project with us.</h2>
-                                        <a href="mailto:info@tntc.it">Yeah, What are you looking for?</a>
+                                        <a className={ css(styles.link) } href="mailto:info@tntc.it">Yeah, What are you looking for?</a>
                                     </div>
 
-                                    <div className={ css(styles.inner, styles.hover) }>
+                                    <div className={ css(styles.inner) }>
                                         <h2>info@tntc.it</h2>
                                     </div>
                             

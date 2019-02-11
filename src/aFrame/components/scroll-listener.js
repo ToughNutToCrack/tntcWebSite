@@ -43,9 +43,9 @@ const scrollListener = aframe.registerComponent('scroll-listener', {
         window.addEventListener('touchend', (e) => {
            const te = e.changedTouches[0].clientY;
            if (ts > te + 5) {
-                touchhandler(this, -1);
-           } else if (ts < te - 5) {
                 touchhandler(this, 1);
+           } else if (ts < te - 5) {
+                touchhandler(this, -1);
            }
         })
         

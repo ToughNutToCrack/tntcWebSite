@@ -70,23 +70,37 @@ const styles = StyleSheet.create({
     },
     text: {
         display: 'block',
-        fontSize: '3vh',
+        
         scrollSnapAlign: 'start',
-        '@media screen and (max-width: 880px) and (orientation: portrait)': {
-            fontSize: '3vw',
+        // fontSize: '3vh',
+        // '@media screen and (max-width: 880px) and (orientation: portrait)': {
+        //     fontSize: '3vw',
+        // }
+        fontSize: '3vw',
+        '@media only screen and (min-width: 880px) and (orientation: landscape)': {
+            fontSize: '30px',
         }
     },
     paddingTop: {
         paddingTop: '150px'
     },
     big: {
-        fontSize: '5vw'
+        fontSize: '5vW',
+        '@media only screen and (min-width: 880px) and (orientation: landscape)': {
+            fontSize: '40px',
+        }
     },
     little: {
-        fontSize: '2vw'
+        fontSize: '2vw',
+        '@media only screen and (min-width: 880px) and (orientation: landscape)': {
+            fontSize: '22px',
+        }
     },
     normal: {
-        fontSize: '3vw'
+        fontSize: '3vW',
+        '@media only screen and (min-width: 880px) and (orientation: landscape)': {
+            fontSize: '30px',
+        }
     },
     textRed: {
         color: '#ed1c24'
@@ -103,12 +117,18 @@ class Studio extends Component {
             <div className={ css(styles.wrapper, styles.section, styles.white) }>
                 <div className={ css(styles.mainText) }>
                     <p>With <span className={ css(styles.textRed, styles.big) }>Studio </span>  we realize project toghether starting from your ideas.</p>
-                    <p className={ css(styles.little) }>We have a thing for a great design. </p>
+                    <p><span className={ css(styles.textOrange) }>Our main services</span></p>
+                    <p className={ css(styles.little) }>3D visualizzation </p>
+                    <p className={ css(styles.little) }>Configurator </p>
+                    <p className={ css(styles.little) }> Training experience </p>
+                    <p className={ css(styles.little) }>Videogames </p>
+                    <p className={ css(styles.little) }>Animated Video </p>
+                    <p className={ css(styles.little) }>Custom experiences</p>
                 </div>
                 <ScrollPls color='#424242' visible={ true } />
             </div>
 
-            <div className={ css(styles.wrapper, styles.section, styles.white) }>
+            {/* <div className={ css(styles.wrapper, styles.section, styles.white) }>
                 <div className={ css(styles.text) }>
                     <p><span className={ css(styles.textOrange, styles.big) }>Our main services</span></p>
                     <p>3D visualizzation </p>
@@ -118,8 +138,7 @@ class Studio extends Component {
                     <p>Animated Video </p>
                     <p>Custom experiences</p>
                 </div>
-                {/* <ScrollPls color='#424242' visible={ true } text={"EXAMPLES"} /> */}
-            </div>
+            </div> */}
 
             {/* <div className={ css(styles.divisionsWrapper, styles.white) }>
                 <div className={ css(styles.divisionHeader) }>

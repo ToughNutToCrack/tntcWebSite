@@ -61,6 +61,9 @@ const styles = StyleSheet.create({
         textTransform: 'uppercase',
         fontWeight: 600,
         fontSize: '2vw',
+        '@media only screen and (min-width: 880px) and (orientation: landscape)': {
+            fontSize: '22px',
+        }
     },
     active: {
         color: '#424242',
