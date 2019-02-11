@@ -34,13 +34,29 @@ const styles = StyleSheet.create({
         color: '#424242',
     },
     text: {
-        display: 'block'
+        display: 'block',
+        fontSize: '3vw',
+        '@media only screen and (min-width: 880px) and (orientation: landscape)': {
+            fontSize: '30px',
+        }
     },
     big: {
-        fontSize: '5vw'
+        fontSize: '5vW',
+        '@media only screen and (min-width: 880px) and (orientation: landscape)': {
+            fontSize: '40px',
+        }
     },
     little: {
-        fontSize: '2vw'
+        fontSize: '2vw',
+        '@media only screen and (min-width: 880px) and (orientation: landscape)': {
+            fontSize: '22px',
+        }
+    },
+    normal: {
+        fontSize: '3vW',
+        '@media only screen and (min-width: 880px) and (orientation: landscape)': {
+            fontSize: '30px',
+        }
     },
     special1: {
         color: '#424242'
