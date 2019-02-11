@@ -4,7 +4,7 @@ import Slide from 'react-reveal/Slide'
 import Fade from 'react-reveal/Fade'
 import { FaTwitter, FaFacebookF, FaYoutube, FaInstagram } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
-
+import ImgBologna from '../assets/images/Bologna.jpg'
 import Page from './Page'
 import LogoPathSvg from './LogoPathSvg'
 
@@ -15,8 +15,6 @@ const youtubeLink = 'https://www.youtube.com/channel/UCtj_LuYF9i5xkk4Q9EYamYA'
 
 const styles = StyleSheet.create({
     background: {
-        // backgroundImage: `url(${ process.env.PUBLIC_URL}/assets/images/bw.png)`,
-        backgroundColor: '#FF926B',
         height: '100%',
         width: '100%',
         display: 'flex',
@@ -27,6 +25,9 @@ const styles = StyleSheet.create({
         }
     },
     void: {
+        backgroundImage: `url(${ImgBologna})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
         display: 'flex',
         width: '50%',
         height: '100%',
@@ -95,7 +96,7 @@ class Contacts extends Component {
                 {/* <LogoPathSvg colorIn='#424242' colorOut='#ffffff' /> */}
                 <Slide right delay={ 0 } duration={ 500 }>
                     <div className={ css(styles.void) }>
-                        <LogoPathSvg colorIn='#424242' colorOut='#ffffff' /> 
+                        {/* <LogoPathSvg colorIn='#424242' colorOut='#ffffff' />*/}
                     </div>
                     <div className={ css(styles.contacts) }>
                         <div className={ css(styles.contactsContent) }>

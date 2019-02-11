@@ -110,7 +110,7 @@ class AFrame extends Component {
     render() {
         return ( 
             <div className={ css(styles.aFrame) }>
-                <a-scene embedded fog="type: exponential; color: #fff;" vr-mode-ui="enabled: false" scroll-listener="" cursor="rayOrigin: mouse">
+                <a-scene embedded fog="type: exponential; color: #fff;" vr-mode-ui="enabled: false" scroll-listener="" cursor="rayOrigin: mouse" stats>
                     <a-assets>
                         <a-asset-item id="logo-obj" src={ Scrittalogo }></a-asset-item>
                         <a-asset-item id="logo-mtl" src={ ScrittalogoMat }></a-asset-item>
@@ -134,7 +134,7 @@ class AFrame extends Component {
                     </a-assets>
 
                     <a-entity id="level0">
-                        <a-entity obj-model="obj: #logo-obj;" position="0 2.5 -10" material="color: #424242" scale="1 1 1" logo-handler="" ></a-entity> 
+                        <a-entity obj-model="obj: #logo-obj;" position="0 2.5 -10" material="color: #424242" scale="1 1 1" logo-handler="" ></a-entity>
                         <sin-grid></sin-grid>
                     </a-entity>
 
@@ -145,7 +145,7 @@ class AFrame extends Component {
                     <a-plane id="level-1-filter" position="0 -3 0" rotation="-90 0 0" height="200" width="200" color="#fff"></a-plane>
 
                     <a-entity id="level1" position="0 -20 -35" rotation="0 0 0">
-                        {/* <a-entity obj-model="obj: #towers-obj; mtl: #towers-mtl"  position="-3 -4 -10" rotation="0 20 0" scale="0.8 0.8 0.8"></a-entity> */}
+                        <a-entity obj-model="obj: #towers-obj; mtl: #towers-mtl"  position="-3 -4 -10" rotation="0 20 0" scale="0.8 0.8 0.8"></a-entity>
                         <a-circle color="#CCC" position="0 -4 -10"  rotation="-90 0 0" radius="15"></a-circle>
                         <a-image id="greetingsImg" src="#logoGreetings" position="5.5 0 -9" width="6" height="6" parallax="rangex:0.1; rangey:0.1; speed:0.5" alphatest= 'val: 0.5'></a-image>
                         <a-entity obj-model="obj: #cloud-1-obj; mtl: #cloud-1-mtl" position="7 3 -12" rotation="0 0 0" scale="0.1 0.1 0.1" parallax="rangex:0.2; rangey:0.2; "></a-entity>
