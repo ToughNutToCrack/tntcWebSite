@@ -67,6 +67,10 @@ const styles = StyleSheet.create({
     },
     mainText: {
         display: 'block',
+        fontSize: '3vw',
+        '@media only screen and (min-width: 880px) and (orientation: landscape)': {
+            fontSize: '30px',
+        }
     },
     text: {
         display: 'block',
@@ -117,12 +121,12 @@ class Studio extends Component {
             <div className={ css(styles.wrapper, styles.section, styles.white) }>
                 <div className={ css(styles.mainText) }>
                     <p>With <span className={ css(styles.textRed, styles.big) }>Studio </span>  we realize project toghether starting from your ideas.</p>
-                    <p><span className={ css(styles.textOrange) }>Our main services</span></p>
-                    <p className={ css(styles.little) }>3D visualizzation </p>
-                    <p className={ css(styles.little) }>Configurator </p>
-                    <p className={ css(styles.little) }> Training experience </p>
-                    <p className={ css(styles.little) }>Videogames </p>
-                    <p className={ css(styles.little) }>Animated Video </p>
+                    {/* <p><span className={ css(styles.textOrange) }>Our main services</span></p>*/}
+                    <p className={ css(styles.little) }>3D Visualization</p>
+                    <p className={ css(styles.little) }>Configurators</p>
+                    <p className={ css(styles.little) }>Training experience</p>
+                    <p className={ css(styles.little) }>Videogames</p>
+                    <p className={ css(styles.little) }>Animated Video</p>
                     <p className={ css(styles.little) }>Custom experiences</p>
                 </div>
                 <ScrollPls color='#424242' visible={ true } />
