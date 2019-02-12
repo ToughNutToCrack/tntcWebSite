@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { css, StyleSheet } from 'aphrodite'
 
 import ScrollPls from './SrcollPls'
+import Gallery from './Gallery'
 
 const styles = StyleSheet.create({
     container: {
@@ -70,6 +71,7 @@ const styles = StyleSheet.create({
         fontSize: '3vw',
         '@media only screen and (min-width: 880px) and (orientation: landscape)': {
             fontSize: '30px',
+            
         }
     },
     text: {
@@ -96,8 +98,9 @@ const styles = StyleSheet.create({
     },
     little: {
         fontSize: '2vw',
-        '@media only screen and (min-width: 880px) and (orientation: landscape)': {
-            fontSize: '22px',
+        '@media only screen and (min-width: 880px) and (max-width: 1920px) and (orientation: landscape)': {
+            // fontSize: '22px',
+            fontSize: '2.5vh'
         }
     },
     normal: {
@@ -130,6 +133,10 @@ class Studio extends Component {
                     <p className={ css(styles.little) }>Custom experiences</p>
                 </div>
                 <ScrollPls color='#424242' visible={ true } />
+            </div>
+
+            <div className={ css(styles.wrapper, styles.section, styles.white) }>
+                <Gallery></Gallery>
             </div>
 
             {/* <div className={ css(styles.wrapper, styles.section, styles.white) }>
