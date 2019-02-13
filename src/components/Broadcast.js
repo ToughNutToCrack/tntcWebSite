@@ -79,6 +79,12 @@ const styles = StyleSheet.create({
     responsiveTop: {
         '@media screen and (max-width: 880px) and (orientation: portrait)': {
             paddingTop: '150px'
+        },
+        '@media screen and (min-width: 530px) and (max-width: 812px)': {
+            fontSize: '2vh'
+        },
+        '@media screen and (min-height: 403px) and (max-height: 565px)': {
+            fontSize: '2vh'
         }
     },
     // hideInLandscape:{
@@ -163,6 +169,12 @@ const styles = StyleSheet.create({
         width: '90%',
         '@media screen and (max-height: 700px)': {
             width: '60%'
+        },
+        '@media screen and (min-width: 530px) and (max-width: 812px)': {
+            width: '60%'
+        },
+        '@media screen and (min-height: 403px) and (max-height: 565px)': {
+            width: '40%'
         }
     },
     youtubeVideo: {
