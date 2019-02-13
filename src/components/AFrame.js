@@ -110,7 +110,7 @@ class AFrame extends Component {
     render() {
         return ( 
             <div className={ css(styles.aFrame) }>
-                <a-scene embedded fog="type: exponential; color: #fff;" vr-mode-ui="enabled: false" scroll-listener="" cursor="rayOrigin: mouse" stats>
+                <a-scene embedded fog="type: exponential; color: #fff;" vr-mode-ui="enabled: false" scroll-listener="" cursor="rayOrigin: mouse" inspector="url: xxx">
                     <a-assets>
                         <a-asset-item id="logo-obj" src={ Scrittalogo }></a-asset-item>
                         <a-asset-item id="logo-mtl" src={ ScrittalogoMat }></a-asset-item>

@@ -101,10 +101,11 @@ class Contacts extends Component {
         <Page>
             <div className={ css(styles.background) }>
                 {/* <LogoPathSvg colorIn='#424242' colorOut='#ffffff' /> */}
+               
+                <div className={ css(styles.void) }>
+                    {/* <LogoPathSvg colorIn='#424242' colorOut='#ffffff' />*/}
+                </div>
                 <Slide right delay={ 0 } duration={ 500 }>
-                    <div className={ css(styles.void) }>
-                        {/* <LogoPathSvg colorIn='#424242' colorOut='#ffffff' />*/}
-                    </div>
                     <div className={ css(styles.contacts) }>
                         <div className={ css(styles.contactsContent) }>
                             <Fade bottom cascade delay={ 500 } duration={ 500 }>
