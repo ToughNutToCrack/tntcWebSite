@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
         '@media screen and (max-width: 880px) and (orientation: portrait)': {
             paddingTop: '150px'
         },
-        '@media screen and (min-width: 530px) and (max-width: 812px)': {
+        '@media screen and (min-width: 530px) and (max-width: 880px)': {
             fontSize: '2vh'
         },
         '@media screen and (min-height: 403px) and (max-height: 565px)': {
