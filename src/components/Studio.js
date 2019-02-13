@@ -123,13 +123,13 @@ class Studio extends Component {
         <div className={ css(styles.container) }>
             <div className={ css(styles.wrapper, styles.section, styles.white) }>
                 <div className={ css(styles.mainText) }>
-                    <p>With <span className={ css(styles.textRed, styles.big) }>Studio </span>  we realize project toghether starting from your ideas.</p>
+                    <p>With <span className={ css(styles.textRed, styles.big) }>Studio </span> division realizes project based on your ideas.</p>
                     {/* <p><span className={ css(styles.textOrange) }>Our main services</span></p>*/}
                     <p className={ css(styles.little) }>3D Visualization</p>
                     <p className={ css(styles.little) }>Configurators</p>
-                    <p className={ css(styles.little) }>Training experience</p>
+                    <p className={ css(styles.little) }>Training experiences</p>
                     <p className={ css(styles.little) }>Videogames</p>
-                    <p className={ css(styles.little) }>Animated Video</p>
+                    <p className={ css(styles.little) }>Animated Videos</p>
                     <p className={ css(styles.little) }>Custom experiences</p>
                 </div>
                 <ScrollPls color='#424242' visible={ true } />

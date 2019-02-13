@@ -74,15 +74,18 @@ class About extends Component {
                 <div className={ css(styles.text) }>
                     <p><span className={ css(styles.special1, styles.big) }>ToughNutToCrack</span> is composed of two cores.</p>
                     <p>Studio and Broadcast.</p>
+                    <p></p><p></p>
+                    <p className={ css(styles.little) }>Our specialization is <span className={ css(styles.special1, styles.big) }>3D</span> and <span className={ css(styles.special1, styles.big) }>XR </span> software development. </p>
+                    <p className={ css(styles.little) }>With focus on teaching and sharing our experiences.</p>
                 </div>
-                <ScrollPls color='#424242' visible={ true } />
+                {/* <ScrollPls color='#424242' visible={ true } />*/}
             </div>
-            <div className={ css(styles.wrapper, styles.second) }>
+            {/* <div className={ css(styles.wrapper, styles.second) }>
                 <div className={ css(styles.text) }>
-                    <p>We specialized in <span className={ css(styles.special2, styles.big) }>3D graphics </span> and in <span className={ css(styles.special2, styles.big) }>XR </span> software development. </p>
-                    <p className={ css(styles.little) }>With a focus on teaching and sharing our experiences.</p>
+                    <p>Our specialization is <span className={ css(styles.special2, styles.big) }>3D</span> and <span className={ css(styles.special2, styles.big) }>XR </span> software development. </p>
+                    <p className={ css(styles.little) }>With focus on teaching and sharing our experiences.</p>
                 </div>
-            </div>
+            </div>*/}
         </div>
     );
   }

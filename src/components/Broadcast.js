@@ -181,7 +181,7 @@ class Broadcast extends Component {
             <div className={ css(styles.wrapper, styles.section, styles.white) }>
                 <div className={ css(styles.text) }>
                     <p><span className={ css(styles.textRed, styles.big) }>Broadcast</span> is our sharing and learning division.</p>
-                    <p> We love create courses and educational contents to share our passion and experiences.</p>
+                    <p> We love to create courses and educational contents to share our passion and experiences.</p>
                 </div>
                 <ScrollPls color='#424242' visible={ true } />
             </div>
@@ -205,12 +205,12 @@ class Broadcast extends Component {
                     <div className={ css(styles.innerDivision) }>
                         <div className={ css(styles.responsiveTop) }>
                             <p><span className={ css(styles.textOrange, styles.big) }>Game Jam</span></p>
-                            <p>TNTC Game Jam è una competizione aperta a tutti.</p>
-                            <p>Consiste nel creare un videogioco in 4 giorni rispettando un tema. Al termine della competizione i vari team 
-                                consegneranno il gioco tramite l'apposito form di upload.</p>
-                            <p>Il team che vincerà verrà informato tramite e-mail e reso pubblico sui social, potrà poi riscuotere il premio in palio.</p>
-                            <p>La partecipazione alla Jam è totalmente gratuita.</p>
-                            <p>Sei interessato? <a className={ css(styles.textOrange, styles.noDecoration) } href="/download"> Scarica il regolamento.</a></p>
+                            <p>TNTC Game Jam is a contest opens to everybody loves to develop videogames.</p>
+                            <p>The partecipant has to create a videogame based on a theme. 
+                               At the end of the granted days, teams upload their creation so that we can review them.</p>
+                            <p>The winner team is announced on our socials pages and receives a special prize.</p>
+                            <p>Partecipation to the Game Jam is completely free.</p>
+                            <p>Updates on the first event will be published on our socials. Follow us</p>
                         </div>
                     </div>    
                 </div>
@@ -231,10 +231,10 @@ class Broadcast extends Component {
                     <div className={ css(styles.innerDivision) }>
                         <div>
                             <p><span className={ css(styles.textOrange, styles.big) }>YouTube</span></p>
-                            <p>Utilizziamo YouTube come principale mezzo di condivisione.</p>
-                            <p>Ogni venerdí pubblichiamo un nuovo video riguardante il tema dello sviluppo videoludico.</p>
-                            <p>Potrete trovare tutorial, consigli, tools, e molto altro.</p>
-                            <p><a className={ css(styles.textOrange, styles.noDecoration) } href="https://www.youtube.com/channel/UCtj_LuYF9i5xkk4Q9EYamYA?sub_confirmation=1"> Iscriviti.</a></p>
+                            <p>On Youtube we share our passion about game development.</p>
+                            <p>Here you can find tutorials, suggestions, tools and more.</p>
+                            <p>New video published every Friday.</p>
+                            <p><a className={ css(styles.textOrange, styles.noDecoration) } href="https://www.youtube.com/channel/UCtj_LuYF9i5xkk4Q9EYamYA?sub_confirmation=1"> Subscribe.</a></p>
                         </div>
                     </div>  
                 </div>
@@ -245,10 +245,10 @@ class Broadcast extends Component {
                     <div className={ css(styles.innerDivision) }>
                         <div className={ css(styles.responsiveTop) }>
                             <p><span className={ css(styles.textOrange, styles.big) }>Courses</span></p>
-                            <p>La formazione nell'ambito dei videogame e del 3D è un argomento che ci sta molto a cuore.</p>
-                            <p>Ci occupiamo della realizzazione di corsi online e dal vivo.</p>
-                            <p>Il nostro scopo è condividere le conoscenze che abbiamo acquisito e far avvicinare altri a questo mondo!</p>
-                            <p>Sei curioso? <a className={ css(styles.textOrange, styles.noDecoration) } href="https://www.udemy.com/game-development-professionale-con-unity-3d-e-c/?couponCode=NUTTY-WEBSITE"> Guarda i nostri corsi.</a></p>
+                            <p>Teaching development of 3D applications and videogames is something we love to do.
+                               So we create and organize courses about this topics.</p>
+                            <p>Our goal is to share our knowledges and attract peoples to this field of work.</p>
+                            <p>Are you curious? <a className={ css(styles.textOrange, styles.noDecoration) } href="https://www.udemy.com/game-development-professionale-con-unity-3d-e-c/?couponCode=NUTTY-WEBSITE"> Check out our course!</a></p>
                         </div>
                     </div>  
                 </div>
