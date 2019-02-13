@@ -119,7 +119,7 @@ class AFrame extends Component {
     render() {
         return ( 
             <div className={ css(styles.aFrame) }>
-                <a-scene embedded fog="type: exponential; color: #fff;" vr-mode-ui="enabled: false" scroll-listener="" cursor="rayOrigin: mouse">
+                <a-scene embedded fog="type: exponential; color: #fff;" vr-mode-ui="enabled: false" scroll-listener="" cursor="rayOrigin: mouse" inspector="url: xxx">
                     <a-assets>
                         <a-asset-item id="logo-obj" src={ Scrittalogo }></a-asset-item>
                         <a-asset-item id="logo-mtl" src={ ScrittalogoMat }></a-asset-item>
@@ -167,8 +167,8 @@ class AFrame extends Component {
 
                     <a-entity id="level2" position="-0.65 -25 -70" rotation="0 0 0">
                         <a-plane id="divisor" position="0 1.5 -4" rotation={ this.state.isPortMobile ? '0 90 0' : '0 0 0' } width="0.01" height="3" color="#9E9E9E"></a-plane>
-                        <a-image id="studioImg"src="#logoStudio" position={ this.state.isPortMobile ? '0 5 -4' : '-3 2.5 -4' } width={ this.state.isPortMobile ? '4.5' : '2.5' } height={ this.state.isPortMobile ? '4.7' : '2.7' } parallax={ this.state.isPortMobile ? 'rangex:0; rangey:0; speed:0' : 'rangex:0.05; rangey:0.05; speed:0.1' } goto="/studio" ></a-image>
-                        <a-image id="broadcastImg" src="#logoBroadcast" position={ this.state.isPortMobile ? '0 -1 -4' : '3 2.5 -4' } width={ this.state.isPortMobile ? '4.5' : '2.5' } height={ this.state.isPortMobile ? '4.7' : '2.7' } parallax={ this.state.isPortMobile ? 'rangex:0; rangey:0; speed:0' : 'rangex:0.05; rangey:0.05; speed:0.1' } goto="/broadcast"></a-image>
+                        <a-image id="studioImg"src="#logoStudio" position={ this.state.isPortMobile ? '0 5 -4' : '-3 2.5 -4' } width={ this.state.isPortMobile ? '4.5' : '2.5' } height={ this.state.isPortMobile ? '4.7' : '2.7' } goto="/studio" ></a-image>
+                        <a-image id="broadcastImg" src="#logoBroadcast" position={ this.state.isPortMobile ? '0 -1 -4' : '3 2.5 -4' } width={ this.state.isPortMobile ? '4.5' : '2.5' } height={ this.state.isPortMobile ? '4.7' : '2.7' } goto="/broadcast"></a-image>
                         <cloud-point position={ this.state.isPortMobile ? '0 5 -6' : '-4 2.5 -6' } cloudpoint="maxx:1.5; maxy:3; maxz:0; offsety: -1.5; point:30; size:0.07; movement: true; preset: 0"></cloud-point>
                         <cloud-point position={ this.state.isPortMobile ? '0 -1 -6' : '4 2.5 -6' } cloudpoint="maxx:1.5; maxy:3; maxz:0; offsety: -1.5; point:30; size:0.07; color:#818285, #000000, #ed1c24, #fcd703; movement: true; preset: 1"></cloud-point>
                     </a-entity>
