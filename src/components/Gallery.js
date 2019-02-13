@@ -32,11 +32,6 @@ const styles = StyleSheet.create({
 })
 
 class Gallery extends Component {
-
-    _renderCustomControls() {
-        return <a href='' className='image-gallery-custom-action' onClick={ this._customAction.bind(this) }/>
-        }
-
     render() {
 
         const images = [
@@ -54,7 +49,13 @@ class Gallery extends Component {
         return (
             <div className={ css(styles.wrapper) }>
                 <div className={ css(styles.inner) }>
-                    <ImageGallery items={ images } showThumbnails={ false } showBullets={ true } showNav={ false } autoPlay={ true } lazyLoad={ true } showPlayButton={ false } />
+                    <ImageGallery 
+                      items={ images } 
+                      showThumbnails={ false } 
+                      showBullets={ true } 
+                      showNav={ false }
+                      lazyLoad={ true } 
+                      showPlayButton={ false } />
                 </div>
             </div>
         )
