@@ -15,6 +15,9 @@ const youtubeLink = 'https://www.youtube.com/channel/UCtj_LuYF9i5xkk4Q9EYamYA'
 
 const styles = StyleSheet.create({
     background: {
+        backgroundImage: `url(${ImgBologna})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
         height: '100%',
         width: '100%',
         display: 'flex',
@@ -25,9 +28,6 @@ const styles = StyleSheet.create({
         }
     },
     void: {
-        backgroundImage: `url(${ImgBologna})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
         display: 'flex',
         width: '50%',
         height: '100%',
