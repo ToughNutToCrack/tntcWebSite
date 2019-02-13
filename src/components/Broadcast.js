@@ -125,6 +125,12 @@ const styles = StyleSheet.create({
     paddingTop: {
         paddingTop: '150px'
     },
+    paddingLeft: {
+        paddingLeft: '10px'
+    },
+    paddingRight: {
+        paddingRight: '10px'
+    },
     big: {
         fontSize: '5vW',
         '@media only screen and (min-width: 880px) and (orientation: landscape)': {
@@ -215,7 +221,7 @@ class Broadcast extends Component {
             <div className={ css(styles.divisionsWrapper, styles.white) }>
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
-                        <div className={ css(styles.responsiveTop) }>
+                        <div className={ css(styles.responsiveTop, styles.paddingLeft, styles.paddingRight) }>
                             <p><span className={ css(styles.textOrange, styles.big) }>Game Jam</span></p>
                             <p>TNTC Game Jam is a contest opens to everybody loves to develop videogames.</p>
                             <p>The partecipant has to create a videogame based on a theme. 
@@ -241,7 +247,7 @@ class Broadcast extends Component {
                 </div>
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
-                        <div>
+                        <div className={ css(styles.paddingLeft, styles.paddingRight) }>
                             <p><span className={ css(styles.textOrange, styles.big) }>YouTube</span></p>
                             <p>On Youtube we share our passion about game development.</p>
                             <p>Here you can find tutorials, suggestions, tools and more.</p>
@@ -255,7 +261,7 @@ class Broadcast extends Component {
             <div className={ css(styles.divisionsWrapper, styles.white) }>
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
-                        <div className={ css(styles.responsiveTop) }>
+                        <div className={ css(styles.responsiveTop, styles.paddingLeft, styles.paddingRight) }>
                             <p><span className={ css(styles.textOrange, styles.big) }>Courses</span></p>
                             <p>Teaching development of 3D applications and videogames is something we love to do.
                                So we create and organize courses about this topics.</p>
