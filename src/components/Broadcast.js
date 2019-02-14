@@ -10,7 +10,7 @@ import youtubeImg from '../assets/images/photo/YT.jpg'
 
 const styles = StyleSheet.create({
     container: {
-        scrollSnapType: 'y mandatory',
+        // scrollSnapType: 'y mandatory',
         overflowY: 'scroll',
         overflowX: 'hidden',
         height: '100%',
@@ -24,19 +24,19 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: '2vw',
-        scrollSnapAlign: 'start'
+        // scrollSnapAlign: 'start'
     },
     section: {
         width: '100%',
         height: '100%',
-        scrollSnapAlign: 'start'
+        // scrollSnapAlign: 'start'
     },
     divisionsWrapper: {
         fontFamily: '"Patua One", regular',
         height: '100%',
         width: '100%',
         fontSize: '2vw',
-        scrollSnapAlign: 'start'
+        // scrollSnapAlign: 'start'
     },
     divisionHeader: {
         width: '100%',
@@ -112,6 +112,10 @@ const styles = StyleSheet.create({
         backgroundColor: '#fcd703',
         color: '#000000',
     },
+    orange: {
+        backgroundColor: '#FF926B',
+        color: '#ffffff',
+    },
     box: {
         boxSizing: 'border-box'
     },
@@ -126,10 +130,10 @@ const styles = StyleSheet.create({
         paddingTop: '150px'
     },
     paddingLeft: {
-        paddingLeft: '10px'
+        paddingLeft: '20px'
     },
     paddingRight: {
-        paddingRight: '10px'
+        paddingRight: '20px'
     },
     big: {
         fontSize: '5vW',
@@ -154,6 +158,9 @@ const styles = StyleSheet.create({
     },
     textOrange: {
         color: '#FF926B'
+    },
+    textBlack: {
+        color: '#000000'
     },
     noDecoration: {
         textDecoration: 'none'
@@ -218,17 +225,18 @@ class Broadcast extends Component {
                 </div>
             </div> */}
 
-            <div className={ css(styles.divisionsWrapper, styles.white) }>
+            <div className={ css(styles.divisionsWrapper, styles.orange) }>
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
                         <div className={ css(styles.responsiveTop, styles.paddingLeft, styles.paddingRight) }>
-                            <p><span className={ css(styles.textOrange, styles.big) }>Game Jam</span></p>
+                            <p><span className={ css(styles.textBlack, styles.big) }>Game Jam</span></p>
                             <p>TNTC Game Jam is a contest opens to everybody loves to develop videogames.</p>
                             <p>The partecipant has to create a videogame based on a theme. 
                                At the end of the granted days, teams upload their creation so that we can review them.</p>
                             <p>The winner team is announced on our socials pages and receives a special prize.</p>
                             <p>Partecipation to the Game Jam is completely free.</p>
-                            <p>Updates on the first event will be published on our socials. Follow us</p>
+                            <p>Updates on the first event will be published on our socials.</p> 
+                            <p>Follow us</p>
                         </div>
                     </div>    
                 </div>
@@ -239,7 +247,7 @@ class Broadcast extends Component {
                 </div>
             </div>
 
-            <div className={ css(styles.divisionsWrapper, styles.white) }>
+            <div className={ css(styles.divisionsWrapper, styles.orange) }>
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
                         <img className={ css(styles.center, styles.responsiveTop, styles.width60) }  src={ youtubeImg } alt=""/>
@@ -248,25 +256,25 @@ class Broadcast extends Component {
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
                         <div className={ css(styles.paddingLeft, styles.paddingRight) }>
-                            <p><span className={ css(styles.textOrange, styles.big) }>YouTube</span></p>
+                            <p><span className={ css(styles.textBlack, styles.big) }>YouTube</span></p>
                             <p>On Youtube we share our passion about game development.</p>
                             <p>Here you can find tutorials, suggestions, tools and more.</p>
                             <p>New video published every Friday.</p>
-                            <p><a className={ css(styles.textOrange, styles.noDecoration) } href="https://www.youtube.com/channel/UCtj_LuYF9i5xkk4Q9EYamYA?sub_confirmation=1"> Subscribe.</a></p>
+                            <p><a className={ css(styles.textBlack, styles.noDecoration) } href="https://www.youtube.com/channel/UCtj_LuYF9i5xkk4Q9EYamYA?sub_confirmation=1"> Subscribe.</a></p>
                         </div>
                     </div>  
                 </div>
             </div>
 
-            <div className={ css(styles.divisionsWrapper, styles.white) }>
+            <div className={ css(styles.divisionsWrapper, styles.orange) }>
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
                         <div className={ css(styles.responsiveTop, styles.paddingLeft, styles.paddingRight) }>
-                            <p><span className={ css(styles.textOrange, styles.big) }>Courses</span></p>
+                            <p><span className={ css(styles.textBlack, styles.big) }>Courses</span></p>
                             <p>Teaching development of 3D applications and videogames is something we love to do.
                                So we create and organize courses about this topics.</p>
                             <p>Our goal is to share our knowledges and attract peoples to this field of work.</p>
-                            <p>Are you curious? <a className={ css(styles.textOrange, styles.noDecoration) } href="https://www.udemy.com/game-development-professionale-con-unity-3d-e-c/?couponCode=NUTTY-WEBSITE"> Check out our course!</a></p>
+                            <p>Are you curious? <a className={ css(styles.textBlack, styles.noDecoration) } href="https://www.udemy.com/game-development-professionale-con-unity-3d-e-c/?couponCode=NUTTY-WEBSITE"> Check out our course!</a></p>
                         </div>
                     </div>  
                 </div>

@@ -6,7 +6,7 @@ import Gallery from './Gallery'
 
 const styles = StyleSheet.create({
     container: {
-        scrollSnapType: 'y mandatory',
+        // scrollSnapType: 'y mandatory',
         overflowY: 'scroll',
         overflowX: 'hidden',
         height: '100%',
@@ -20,12 +20,12 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: '3vw',
-        scrollSnapAlign: 'start'
+        // scrollSnapAlign: 'start'
     },
     section: {
         width: '100%',
         height: '100%',
-        scrollSnapAlign: 'start'
+        // scrollSnapAlign: 'start'
     },
     divisionsWrapper: {
         fontFamily: '"Patua One", regular',
@@ -52,7 +52,8 @@ const styles = StyleSheet.create({
         color: '#424242',
     },
     grey: {
-        backgroundColor: '#424242',
+        // backgroundColor: '#424242',
+        backgroundColor: '#9E9E9E',
         color: '#ffffff',
     },
     red: {
@@ -114,6 +115,13 @@ const styles = StyleSheet.create({
     },
     textOrange: {
         color: '#FF926B'
+    },
+    imageGalleryContainer: {
+        marginTop: '100px',
+        width: '90%',
+        height: 'auto',
+        overflow: 'hidden',
+        display: 'flex'
     }
 })
 
@@ -135,9 +143,21 @@ class Studio extends Component {
                 <ScrollPls color='#424242' visible={ true } />
             </div>
 
-            <div className={ css(styles.wrapper, styles.section, styles.white) }>
-                <Gallery></Gallery>
+            <div className={ css(styles.wrapper, styles.section, styles.grey) }>
+                <img className={ css(styles.imageGalleryContainer) } src='http://lorempixel.com/1920/1080/city/1//'alt=''/>
             </div>
+
+            <div className={ css(styles.wrapper, styles.section, styles.grey) }>
+                <img className={ css(styles.imageGalleryContainer) } src='http://lorempixel.com/1920/1080/city/2//'alt=''/>
+            </div>
+
+            <div className={ css(styles.wrapper, styles.section, styles.grey) }>
+                <img className={ css(styles.imageGalleryContainer) } src='http://lorempixel.com/1920/1080/city/3//'alt=''/>
+            </div>
+
+            {/* <div className={ css(styles.wrapper, styles.section, styles.white) }>
+                <Gallery></Gallery>
+            </div> */}
 
             {/* <div className={ css(styles.wrapper, styles.section, styles.white) }>
                 <div className={ css(styles.text) }>
