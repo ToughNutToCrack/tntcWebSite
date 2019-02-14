@@ -105,10 +105,10 @@ class Contacts extends Component {
                 <div className={ css(styles.void) }>
                     {/* <LogoPathSvg colorIn='#424242' colorOut='#ffffff' />*/}
                 </div>
-                <Slide right delay={ 0 } duration={ 500 }>
+                <Slide right delay={ 0 } duration={ 1000 }>
                     <div className={ css(styles.contacts) }>
                         <div className={ css(styles.contactsContent) }>
-                            <Fade bottom cascade delay={ 500 } duration={ 500 }>
+                            <Fade bottom cascade delay={ 1000 } duration={ 500 }>
                                 <div className={ css(styles.outer) }>
                                     <div className={ css(styles.inner) }>
                                         <h2>Looking for informations?</h2>
