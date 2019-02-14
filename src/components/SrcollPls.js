@@ -36,6 +36,8 @@ const styles = StyleSheet.create({
 class ScrollPls extends Component {
   constructor(props) {
     super(props)
+    this.setShowTrue = this.setShowTrue.bind(this);
+    this.setShowFalse = this.setShowFalse.bind(this);
     this.styles = StyleSheet.create({
       scrollArrowColor: {
         color: props.color
@@ -44,14 +46,18 @@ class ScrollPls extends Component {
     this.state = { show: props.visible }
     
   }
+
+  setShowTrue() {
+    this.setState({ show: true })
+  }
+
+  setShowFalse() {
+    this.setState({ show: false })
+  }
+
   componentDidMount() {
-    const self = this
-    window.addEventListener('scroll-pls', (e) => {
-        self.setState({ show: true })
-    })
-    window.addEventListener('stop-scroll-pls', (e) => {
-        self.setState({ show: false })
-    })
+    window.addEventListener('scroll-pls', this.setShowTrue)
+    window.addEventListener('stop-scroll-pls', this.setShowFalse)
   }
   render() {
     return (
@@ -62,6 +68,11 @@ class ScrollPls extends Component {
             </Fade>
         </div>
     );
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll-pls', this.setShowTrue)
+    window.removeEventListener('stop-scroll-pls', this.setShowFalse)
   }
 }
 
