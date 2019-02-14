@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
         position: 'fixed',
         width: '100%',
         height: '100px',
-        backgroundColor: 'rgba(255, 255, 255, 0)',
+        backgroundColor: 'rgba(255, 255, 255, 1)',
         display: 'flex',
         alignItems: 'center',
         opacity: 1,
