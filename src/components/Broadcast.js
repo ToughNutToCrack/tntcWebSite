@@ -6,6 +6,7 @@ import ScrollPls from './SrcollPls'
 // import talksImg from '../assets/images/photo/talk.jpg'
 import gameJamImg from '../assets/images/photo/GameJam.png'
 import courseImg from '../assets/images/photo/Course.jpg'
+import courseLogoImg from '../assets/images/photo/Courses.png'
 import youtubeImg from '../assets/images/photo/Youtube.png'
 
 const styles = StyleSheet.create({
@@ -280,21 +281,21 @@ class Broadcast extends Component {
                 </div>
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
-                        <iframe 
+                        {/* <iframe 
                     className={ css(styles.youtubeVideo, styles.width60) }
                     title="GameDevelopment"
                     width="90%" 
                     height="50%"
                     src="https://www.youtube.com/embed/hTHy2L2bqCs" 
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" >
-                        </iframe>
-                        <a href="https://www.udemy.com/game-development-professionale-con-unity-3d-e-c/?couponCode=NUTTY-WEBSITE">
-                            <img className={ css(styles.width60) } src={ courseImg } alt=""/>
-                        </a>
+                        </iframe> */}
+                        <img className={ css(styles.center, styles.responsiveTop, styles.width60) }  src={ courseLogoImg } alt=""/>
                     </div>
                 </div>
+                <a href="https://www.udemy.com/game-development-professionale-con-unity-3d-e-c/?couponCode=NUTTY-WEBSITE">
+                    <img className={ css(styles.width60) } src={ courseImg } alt=""/>
+                </a>
             </div>
-
         </div>
     );
   }
