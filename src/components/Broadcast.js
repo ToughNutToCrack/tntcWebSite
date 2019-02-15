@@ -6,7 +6,7 @@ import ScrollPls from './SrcollPls'
 // import talksImg from '../assets/images/photo/talk.jpg'
 import gameJamImg from '../assets/images/photo/GameJam.png'
 import courseImg from '../assets/images/photo/Course.jpg'
-import youtubeImg from '../assets/images/photo/YT.jpg'
+import youtubeImg from '../assets/images/photo/Youtube.png'
 
 const styles = StyleSheet.create({
     container: {
