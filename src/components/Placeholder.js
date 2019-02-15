@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { StyleSheet, css } from 'aphrodite'
+
 const opacityKeyframes = {
     'from': {
         opacity: 1
@@ -16,6 +17,9 @@ const styles = StyleSheet.create({
         height: '100%',
         backgroundColor: 'white',
         zIndex: 100,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     placeoff: {
         animationName: [ opacityKeyframes ],
@@ -25,6 +29,23 @@ const styles = StyleSheet.create({
         transition: 'z-index 1s',
         zIndex: 0
     },
+    text: {
+        fontFamily: '"Patua One", regular',
+        color: '#424242',
+        fontSize: '3vW',
+        '@media only screen and (min-width: 880px) and (orientation: landscape)': {
+            fontSize: '30px',
+        }
+    },
+    textOrange: {
+        color: '#FF926B'
+    },
+    big: {
+        fontSize: '5vW',
+        '@media only screen and (min-width: 880px) and (orientation: landscape)': {
+            fontSize: '40px',
+        }
+    }
 
 })
 
@@ -47,7 +68,11 @@ class Placeholder extends Component {
 
     }
     render() {
-        return  <div className={ css(styles.placeholder, this.state.loaded ? styles.placeoff : null) } >  </div>
+        return (
+            <div className={ css(styles.placeholder, this.state.loaded ? styles.placeoff : null) } >
+                <div className={ css(styles.text) }> <p>This is the place where <span className={ css(styles.textOrange, styles.big) }>Nutty</span> lives.</p> </div>
+            </div>
+        )
     }
 }
 
