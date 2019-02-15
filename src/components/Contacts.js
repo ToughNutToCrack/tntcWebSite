@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         '@media screen and (max-width: 880px) and (orientation: portrait)': {
             backgroundColor: '#FFFFFF',
+            backgroundImage: 'none',
         }
     },
     void: {
