@@ -11,8 +11,8 @@ import AFrame from './AFrame'
 import About from './About'
 import Contacts from './Contacts'
 import Page from './Page'
-import Studio from './Studio';
-import Broadcast from './Broadcast';
+import Studio from './Studio'
+import Broadcast from './Broadcast'
 
 class Content extends Component {
   render() {
