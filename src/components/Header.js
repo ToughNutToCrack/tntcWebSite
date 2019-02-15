@@ -21,6 +21,17 @@ const styles = StyleSheet.create({
         opacity: 1,
         zIndex: 2
     },
+    headerTransparent: {
+        position: 'fixed',
+        width: '100%',
+        height: '100px',
+        backgroundColor: 'rgba(255, 255, 255, 0)',
+        display: 'flex',
+        alignItems: 'center',
+        opacity: 1,
+        zIndex: 2
+    },
+
     logoHeader: {
         padding: '20px'
     },
@@ -125,7 +136,7 @@ class Header extends Component {
 
     render() {
         return ( 
-            <div className={ css(styles.header) }>
+            <div className={ css(window.location.pathname === '/' ? styles.headerTransparent : styles.header) }>
                 <div className={ css(styles.title, styles.logoHeader) }>
                     <NavLink className={ css(styles.title) } exact to="/">TNTC</NavLink>
                 </div>
