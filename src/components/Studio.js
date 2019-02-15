@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { css, StyleSheet } from 'aphrodite'
 
 import ScrollPls from './SrcollPls'
-import Gallery from './Gallery'
 
 const styles = StyleSheet.create({
     container: {
