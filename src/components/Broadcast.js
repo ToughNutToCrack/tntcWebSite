@@ -248,7 +248,7 @@ class Broadcast extends Component {
                 </div>
             </div>
 
-            <div className={ css(styles.divisionsWrapper, styles.orange) }>
+            <div className={ css(styles.divisionsWrapper, styles.grey) }>
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
                         <img className={ css(styles.center, styles.responsiveTop, styles.width60) }  src={ youtubeImg } alt=""/>
@@ -257,11 +257,11 @@ class Broadcast extends Component {
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
                         <div className={ css(styles.paddingLeft, styles.paddingRight) }>
-                            <p><span className={ css(styles.textBlack, styles.big) }>YouTube</span></p>
+                            <p><span className={ css(styles.textOrange, styles.big) }>YouTube</span></p>
                             <p>On Youtube we share our passion about game development.</p>
                             <p>Here you can find tutorials, suggestions, tools and more.</p>
                             <p>New video published every Friday.</p>
-                            <p><a className={ css(styles.textBlack, styles.noDecoration) } href="https://www.youtube.com/channel/UCtj_LuYF9i5xkk4Q9EYamYA?sub_confirmation=1"> Subscribe.</a></p>
+                            <p><a className={ css(styles.textOrange, styles.noDecoration) } href="https://www.youtube.com/channel/UCtj_LuYF9i5xkk4Q9EYamYA?sub_confirmation=1"> Subscribe.</a></p>
                         </div>
                     </div>  
                 </div>

@@ -6,7 +6,6 @@ import { FaTwitter, FaFacebookF, FaYoutube, FaInstagram } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
 import ImgBologna from '../assets/images/Bologna.jpg'
 import Page from './Page'
-import LogoPathSvg from './LogoPathSvg'
 
 const twitterLink = 'https://twitter.com/tntcproject'
 const instagramLink = 'https://www.instagram.com/tntcproject/'
@@ -101,11 +100,8 @@ class Contacts extends Component {
     return (
         <Page>
             <div className={ css(styles.background) }>
-                {/* <LogoPathSvg colorIn='#424242' colorOut='#ffffff' /> */}
                
-                <div className={ css(styles.void) }>
-                    {/* <LogoPathSvg colorIn='#424242' colorOut='#ffffff' />*/}
-                </div>
+                <div className={ css(styles.void) }></div>
                 <Slide right delay={ 0 } duration={ 1000 }>
                     <div className={ css(styles.contacts) }>
                         <div className={ css(styles.contactsContent) }>

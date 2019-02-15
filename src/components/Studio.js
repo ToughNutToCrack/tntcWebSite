@@ -51,8 +51,8 @@ const styles = StyleSheet.create({
         color: '#424242',
     },
     grey: {
-        // backgroundColor: '#424242',
-        backgroundColor: '#9E9E9E',
+        backgroundColor: '#424242',
+        // backgroundColor: '#9E9E9E',
         color: '#ffffff',
     },
     red: {
@@ -62,6 +62,10 @@ const styles = StyleSheet.create({
     yellow: {
         backgroundColor: '#fcd703',
         color: '#000000',
+    },
+    orange: {
+        backgroundColor: '#FF926B',
+        color: '#ffffff',
     },
     box: {
         boxSizing: 'border-box'
@@ -100,7 +104,10 @@ const styles = StyleSheet.create({
         fontSize: '2vw',
         '@media only screen and (min-width: 880px) and (max-width: 1920px) and (orientation: landscape)': {
             // fontSize: '22px',
-            fontSize: '2.5vh'
+            fontSize: '3vh'
+        },
+        '@media only screen and (min-width: 880px) and (orientation: portrait)': {
+            fontSize: '3vw',
         }
     },
     normal: {
@@ -147,7 +154,7 @@ class Studio extends Component {
                 <img className={ css(styles.imageGalleryContainer) } src='http://lorempixel.com/1920/1080/city/1//'alt=''/>
             </div>
 
-            <div className={ css(styles.wrapper, styles.section, styles.grey) }>
+            <div className={ css(styles.wrapper, styles.section, styles.orange) }>
                 <img className={ css(styles.imageGalleryContainer) } src='http://lorempixel.com/1920/1080/city/2//'alt=''/>
             </div>
 
