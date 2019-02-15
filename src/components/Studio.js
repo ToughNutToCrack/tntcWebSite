@@ -120,6 +120,7 @@ const styles = StyleSheet.create({
         marginTop: '100px',
         width: '90%',
         height: 'auto',
+        maxWidth: '1280px',
         overflow: 'hidden',
         display: 'flex'
     }
