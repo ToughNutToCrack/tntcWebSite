@@ -150,10 +150,10 @@ class Studio extends Component {
                     <p className={ css(styles.little) }>Animated Videos</p>
                     <p className={ css(styles.little) }>Custom experiences</p>
                 </div>
-                <ScrollPls color='#424242' visible={ true } />
+                {/* <ScrollPls color='#424242' visible={ true } /> */}
             </div>
 
-            <div className={ css(styles.wrapper, styles.section, styles.grey) }>
+            {/* <div className={ css(styles.wrapper, styles.section, styles.grey) }>
                 <img className={ css(styles.imageGalleryContainer) } src='http://lorempixel.com/1920/1080/city/1//'alt=''/>
             </div>
 
@@ -163,7 +163,7 @@ class Studio extends Component {
 
             <div className={ css(styles.wrapper, styles.section, styles.grey) }>
                 <img className={ css(styles.imageGalleryContainer) } src='http://lorempixel.com/1920/1080/city/3//'alt=''/>
-            </div>
+            </div> */}
 
             {/* <div className={ css(styles.wrapper, styles.section, styles.white) }>
                 <Gallery></Gallery>

@@ -88,11 +88,6 @@ const styles = StyleSheet.create({
             fontSize: '2vh'
         }
     },
-    // hideInLandscape:{
-    //     '@media screen and (orientation:landscape)': {
-    //         display: 'none'
-    //     }
-    // },
     black: {
         backgroundColor: '#000000',
         color: '#ffffff',
@@ -211,21 +206,6 @@ class Broadcast extends Component {
                 </div>
                 <ScrollPls color='#424242' visible={ true } />
             </div>
-
-            {/* <div className={ css(styles.divisionsWrapper, styles.white) }>
-                <div className={ css(styles.division) }>
-                    <div className={ css(styles.paddingTop) }>   
-                        <p className={ css(styles.textLeft) }><span className={ css(styles.textOrange, styles.big) }>Talks</span></p>
-                        <p>TESTO</p>
-                    </div>
-                </div>
-                <div className={ css(styles.division) }>
-                    <div className={ css(styles.innerDivision) }>
-                        <img className={ css(styles.center) } src={ talksImg }/>
-                    </div>
-                </div>
-            </div> */}
-
             <div className={ css(styles.divisionsWrapper, styles.orange) }>
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
@@ -248,7 +228,7 @@ class Broadcast extends Component {
                 </div>
             </div>
 
-            <div className={ css(styles.divisionsWrapper, styles.grey) }>
+            <div className={ css(styles.divisionsWrapper, styles.white) }>
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
                         <img className={ css(styles.center, styles.responsiveTop, styles.width60) }  src={ youtubeImg } alt=""/>
@@ -275,26 +255,15 @@ class Broadcast extends Component {
                             <p>Teaching development of 3D applications and videogames is something we love to do.
                                So we create and organize courses about this topics.</p>
                             <p>Our goal is to share our knowledges and attract peoples to this field of work.</p>
-                            <p>Are you curious? <a className={ css(styles.textBlack, styles.noDecoration) } href="https://www.udemy.com/game-development-professionale-con-unity-3d-e-c/?couponCode=NUTTY-WEBSITE"> Check out our course!</a></p>
+                            <p>Are you curious? <a className={ css(styles.textBlack, styles.noDecoration) } href="https://www.udemy.com/game-development-professionale-con-unity-3d-e-c/?couponCode=NUTTY-WEBSITE"> Check out our Best Seller course!</a></p>
                         </div>
                     </div>  
                 </div>
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
-                        {/* <iframe 
-                    className={ css(styles.youtubeVideo, styles.width60) }
-                    title="GameDevelopment"
-                    width="90%" 
-                    height="50%"
-                    src="https://www.youtube.com/embed/hTHy2L2bqCs" 
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" >
-                        </iframe> */}
                         <img className={ css(styles.center, styles.responsiveTop, styles.width60) }  src={ courseLogoImg } alt=""/>
                     </div>
                 </div>
-                <a href="https://www.udemy.com/game-development-professionale-con-unity-3d-e-c/?couponCode=NUTTY-WEBSITE">
-                    <img className={ css(styles.width60) } src={ courseImg } alt=""/>
-                </a>
             </div>
         </div>
     );
