@@ -97,7 +97,9 @@ const styles = StyleSheet.create({
     },
     navs: {
         listStyleType: 'none',
-        paddingInlineStart: '0px'
+        paddingInlineStart: '0px',
+        padding: '0px',
+        margin: '0px'
     },
     nav: {
         width: '100%',
