@@ -108,6 +108,9 @@ const styles = StyleSheet.create({
         },
         '@media only screen and (min-width: 880px) and (orientation: portrait)': {
             fontSize: '3vw',
+        },
+        '@media only screen and (max-width: 530px)': {
+            fontSize: '4vw',
         }
     },
     normal: {
@@ -138,7 +141,7 @@ class Studio extends Component {
         <div className={ css(styles.container) }>
             <div className={ css(styles.wrapper, styles.section, styles.white) }>
                 <div className={ css(styles.mainText) }>
-                    <p>With <span className={ css(styles.textRed, styles.big) }>Studio </span> division realizes project based on your ideas.</p>
+                    <p className={ css(styles.little) }>With <span className={ css(styles.textRed, styles.big) }>Studio </span> division realizes project based on your ideas.</p>
                     {/* <p><span className={ css(styles.textOrange) }>Our main services</span></p>*/}
                     <p className={ css(styles.little) }>3D Visualization</p>
                     <p className={ css(styles.little) }>Configurators</p>
