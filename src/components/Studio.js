@@ -14,8 +14,11 @@ import Shader3 from '../assets/images/studio/Shader3.jpg'
 
 import AR1 from '../assets/images/studio/AR1.jpg'
 import AR2 from '../assets/images/studio/AR2.jpg'
+import AR3 from '../assets/images/studio/AR3.jpg'
 
 import Game1 from '../assets/images/studio/Game1.jpg'
+import Game2 from '../assets/images/studio/Game2.jpg'
+import Game3 from '../assets/images/studio/Game3.jpg'
 
 const styles = StyleSheet.create({
     container: {
@@ -148,10 +151,13 @@ const styles = StyleSheet.create({
     },
     imagesText: {
         fontFamily: '"Patua One", regular',
-        fontSize: '3vw',
+        fontSize: '2vw',
         display: 'block',
         position: 'relative',
-        top: '50px'
+        top: '50px',
+        '@media only screen and (max-width: 880px) and (orientation: portrait)': {
+            fontSize: '3vw',
+        }
     },
     imagesContainer: {
         display: 'flex',
@@ -185,8 +191,8 @@ const styles = StyleSheet.create({
         maxHeight: '300px',
         height: '30vh',
         '@media only screen and (max-width: 880px) and (orientation: portrait)': {
-            // maxWidth: '30vh',
-            // width: '30vh',
+            maxHeight: '200px',
+            height: '20vh',
         },
     }
 })
@@ -334,6 +340,19 @@ class Studio extends Component {
                             } }
                         />
                     </div>
+                    <div className={ css(styles.singleImageContainer) }>
+                        <ImageZoom
+                            image={ {
+                                src: AR3,
+                                alt: '',
+                                className: css(styles.singleVerticalImage)
+                            } }
+                            zoomImage={ {
+                                src: AR3,
+                                alt: ''
+                            } }
+                        />
+                    </div>
                 </div>
             </div>
 
@@ -351,6 +370,34 @@ class Studio extends Component {
                             } }
                             zoomImage={ {
                                 src: Game1,
+                                alt: ''
+                            } }
+                        />
+                    </div>
+
+                    <div className={ css(styles.singleImageContainer) }>
+                        <ImageZoom
+                            image={ {
+                                src: Game2,
+                                alt: '',
+                                className: css(styles.singleImage)
+                            } }
+                            zoomImage={ {
+                                src: Game2,
+                                alt: ''
+                            } }
+                        />
+                    </div>
+
+                    <div className={ css(styles.singleImageContainer) }>
+                        <ImageZoom
+                            image={ {
+                                src: Game3,
+                                alt: '',
+                                className: css(styles.singleImage)
+                            } }
+                            zoomImage={ {
+                                src: Game3,
                                 alt: ''
                             } }
                         />
