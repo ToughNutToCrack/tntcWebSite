@@ -1,7 +1,12 @@
 import React, { Component } from 'react'
 import { css, StyleSheet } from 'aphrodite'
+import ImageZoom from 'react-medium-image-zoom'
 
 import ScrollPls from './SrcollPls'
+
+import Car1 from '../assets/images/studio/Car1.jpg'
+import Car2 from '../assets/images/studio/Car2.jpg'
+import Car3 from '../assets/images/studio/Car3.jpg'
 
 const styles = StyleSheet.create({
     container: {
@@ -81,7 +86,7 @@ const styles = StyleSheet.create({
     text: {
         display: 'block',
         
-        scrollSnapAlign: 'start',
+        // scrollSnapAlign: 'start',
         // fontSize: '3vh',
         // '@media screen and (max-width: 880px) and (orientation: portrait)': {
         //     fontSize: '3vw',
@@ -132,6 +137,22 @@ const styles = StyleSheet.create({
         maxWidth: '1280px',
         overflow: 'hidden',
         display: 'flex'
+    },
+    imagesContainer: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexWrap: 'wrap',
+        flex: '100%',
+        padding: '20px'
+    },
+    singleImageContainer: {
+        padding: '20px'
+    },
+    singleImage: {
+        maxWidth: '350px',
+        height: 'auto',
+        // padding: '20px',
     }
 })
 
@@ -142,7 +163,6 @@ class Studio extends Component {
             <div className={ css(styles.wrapper, styles.section, styles.white) }>
                 <div className={ css(styles.mainText) }>
                     <p className={ css(styles.little) }>With <span className={ css(styles.textRed, styles.big) }>Studio </span> division realizes project based on your ideas.</p>
-                    {/* <p><span className={ css(styles.textOrange) }>Our main services</span></p>*/}
                     <p className={ css(styles.little) }>3D Visualization</p>
                     <p className={ css(styles.little) }>Configurators</p>
                     <p className={ css(styles.little) }>Training experiences</p>
@@ -150,71 +170,67 @@ class Studio extends Component {
                     <p className={ css(styles.little) }>Animated Videos</p>
                     <p className={ css(styles.little) }>Custom experiences</p>
                 </div>
-                {/* <ScrollPls color='#424242' visible={ true } /> */}
-            </div>
-
-            {/* <div className={ css(styles.wrapper, styles.section, styles.grey) }>
-                <img className={ css(styles.imageGalleryContainer) } src='http://lorempixel.com/1920/1080/city/1//'alt=''/>
-            </div>
-
-            <div className={ css(styles.wrapper, styles.section, styles.orange) }>
-                <img className={ css(styles.imageGalleryContainer) } src='http://lorempixel.com/1920/1080/city/2//'alt=''/>
+                <ScrollPls color='#424242' visible={ true } />
             </div>
 
             <div className={ css(styles.wrapper, styles.section, styles.grey) }>
-                <img className={ css(styles.imageGalleryContainer) } src='http://lorempixel.com/1920/1080/city/3//'alt=''/>
-            </div> */}
-
-            {/* <div className={ css(styles.wrapper, styles.section, styles.white) }>
-                <Gallery></Gallery>
-            </div> */}
-
-            {/* <div className={ css(styles.wrapper, styles.section, styles.white) }>
-                <div className={ css(styles.text) }>
-                    <p><span className={ css(styles.textOrange, styles.big) }>Our main services</span></p>
-                    <p>3D visualizzation </p>
-                    <p>Configurator </p>
-                    <p>Training experience </p>
-                    <p>Videogames </p>
-                    <p>Animated Video </p>
-                    <p>Custom experiences</p>
-                </div>
-            </div> */}
-
-            {/* <div className={ css(styles.divisionsWrapper, styles.white) }>
-                <div className={ css(styles.divisionHeader) }>
-                    <div className={ css(styles.paddingTop) }>
-                        <p><span className={ css(styles.textOrange, styles.big) }>Realistic AR application</span></p>
+                <div className={ css(styles.imagesContainer) }>
+                    <div className={ css(styles.singleImageContainer) }>
+                        <ImageZoom
+                            image={ {
+                                src: Car1,
+                                alt: '',
+                                className: css(styles.singleImage)
+                            } }
+                            zoomImage={ {
+                                src: Car1,
+                                alt: ''
+                            } }
+                        />
                     </div>
-                </div>
-                <div className={ css(styles.division) }>
-                    <div className={ css(styles.paddingTop) }>
-                        <p>TESTO</p>
+                    <div className={ css(styles.singleImageContainer) }>
+                        <ImageZoom
+                            image={ {
+                                src: Car2,
+                                alt: '',
+                                className: css(styles.singleImage)
+                            } }
+                            zoomImage={ {
+                                src: Car2,
+                                alt: ''
+                            } }
+                        />
                     </div>
-                </div>
-                <div className={ css(styles.division) }>
-                    <div className={ css(styles.paddingTop) }>
-                        <p>IMMAGINE</p>
+                    <div className={ css(styles.singleImageContainer) }>
+                        <ImageZoom
+                            image={ {
+                                src: Car3,
+                                alt: '',
+                                className: css(styles.singleImage)
+                            } }
+                            zoomImage={ {
+                                src: Car3,
+                                alt: ''
+                            } }
+                        />
                     </div>
+
+                    {/* <img className={ css(styles.singleImage) } src={Car1} alt=''/>
+                    <img className={ css(styles.singleImage) } src={Car2} alt=''/>
+                    <img className={ css(styles.singleImage) } src={Car3} alt=''/> */}
                 </div>
             </div>
 
-            <div className={ css(styles.divisionsWrapper, styles.white) }>
-                <div className={ css(styles.divisionHeader) }>
-                    <div className={ css(styles.paddingTop) }>
-                        <p><span className={ css(styles.textOrange, styles.big) }>Tailored study for each experience</span></p>
-                    </div>
-                </div>
-                <div className={ css(styles.division) }>
-                    <div className={ css(styles.paddingTop) }>
-                        <p>IMMAGINE</p>
-                    </div>
-                </div>
-                <div className={ css(styles.division) }>
-                    <div className={ css(styles.paddingTop) }>
-                        <p>TESTO</p>
-                    </div>
-                </div>
+            {/* <div className={ css(styles.wrapper, styles.section, styles.grey) }>
+                <img className={ css(styles.imageGalleryContainer) } src={Car1} alt=''/>
+            </div>
+
+            <div className={ css(styles.wrapper, styles.section, styles.orange) }>
+                <img className={ css(styles.imageGalleryContainer) } src={Car2} alt=''/>
+            </div>
+
+            <div className={ css(styles.wrapper, styles.section, styles.grey) }>
+                <img className={ css(styles.imageGalleryContainer) } src={Car3} alt=''/>
             </div> */}
 
         </div>
