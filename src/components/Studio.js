@@ -149,19 +149,25 @@ const styles = StyleSheet.create({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        flexWrap: 'wrap',
+        // flexWrap: 'wrap',
+        flexDirection: 'row',
         flex: '100%',
         maxWidth: '100%',
         padding: '20px',
+        '@media only screen and (max-width: 880px) and (orientation: portrait)': {
+            flexDirection: 'column'
+        },
     },
     singleImageContainer: {
         padding: '20px'
     },
     singleImage: {
+        width: '30vw',
         maxWidth: '400px',
         height: 'auto',
         '@media only screen and (max-width: 880px) and (orientation: portrait)': {
             maxWidth: '30vh',
+            width: '30vh',
         },
     }
 })
