@@ -107,16 +107,20 @@ const styles = StyleSheet.create({
     },
     little: {
         fontSize: '2vw',
-        '@media only screen and (min-width: 880px) and (max-width: 1920px) and (orientation: landscape)': {
-            // fontSize: '22px',
+        '@media only screen and (min-width: 880px) and (max-width: 1280px) and (orientation: landscape)': {
+            // fontSize: '15px',
+            fontSize: '2vh'
+        },
+        '@media only screen and (min-width: 1280px) and (orientation: landscape)': {
+            // fontSize: '15px',
             fontSize: '3vh'
         },
         '@media only screen and (min-width: 880px) and (orientation: portrait)': {
             fontSize: '3vw',
         },
-        '@media only screen and (max-width: 530px)': {
-            fontSize: '4vw',
-        }
+        // '@media only screen and (max-width: 530px)': {
+        //     fontSize: '4vw',
+        // }
     },
     normal: {
         fontSize: '3vW',
@@ -138,21 +142,27 @@ const styles = StyleSheet.create({
         overflow: 'hidden',
         display: 'flex'
     },
+    overflow: {
+        overflow: 'hidden'
+    },
     imagesContainer: {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         flexWrap: 'wrap',
         flex: '100%',
-        padding: '20px'
+        maxWidth: '100%',
+        padding: '20px',
     },
     singleImageContainer: {
         padding: '20px'
     },
     singleImage: {
-        maxWidth: '350px',
+        maxWidth: '400px',
         height: 'auto',
-        // padding: '20px',
+        '@media only screen and (max-width: 880px) and (orientation: portrait)': {
+            maxWidth: '30vh',
+        },
     }
 })
 
@@ -162,7 +172,7 @@ class Studio extends Component {
         <div className={ css(styles.container) }>
             <div className={ css(styles.wrapper, styles.section, styles.white) }>
                 <div className={ css(styles.mainText) }>
-                    <p className={ css(styles.little) }>With <span className={ css(styles.textRed, styles.big) }>Studio </span> division realizes project based on your ideas.</p>
+                    <p>With <span className={ css(styles.textRed, styles.big) }>Studio </span> division realizes project based on your ideas.</p>
                     <p className={ css(styles.little) }>3D Visualization</p>
                     <p className={ css(styles.little) }>Configurators</p>
                     <p className={ css(styles.little) }>Training experiences</p>
@@ -173,7 +183,7 @@ class Studio extends Component {
                 <ScrollPls color='#424242' visible={ true } />
             </div>
 
-            <div className={ css(styles.wrapper, styles.section, styles.grey) }>
+            <div className={ css(styles.wrapper, styles.section, styles.grey, styles.overflow) }>
                 <div className={ css(styles.imagesContainer) }>
                     <div className={ css(styles.singleImageContainer) }>
                         <ImageZoom
