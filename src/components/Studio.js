@@ -154,7 +154,7 @@ const styles = StyleSheet.create({
         fontSize: '2vw',
         display: 'block',
         position: 'relative',
-        top: '50px',
+        top: '150px',
         '@media only screen and (max-width: 880px) and (orientation: portrait)': {
             fontSize: '3vw',
         }
@@ -168,10 +168,10 @@ const styles = StyleSheet.create({
         flex: '100%',
         maxWidth: '100%',
         padding: '20px',
-        marginTop: '200px',
+        marginTop: '300px',
         '@media only screen and (max-width: 880px) and (orientation: portrait)': {
             flexDirection: 'column',
-            marginTop: '50px',
+            marginTop: '150px',
         },
     },
     singleImageContainer: {
@@ -183,7 +183,7 @@ const styles = StyleSheet.create({
         height: 'auto',
         '@media only screen and (max-width: 880px) and (orientation: portrait)': {
             maxWidth: '30vh',
-            width: '30vh',
+            width: '25vh',
         },
     },
     singleVerticalImage: {
@@ -192,7 +192,7 @@ const styles = StyleSheet.create({
         height: '30vh',
         '@media only screen and (max-width: 880px) and (orientation: portrait)': {
             maxHeight: '200px',
-            height: '20vh',
+            height: '15vh',
         },
     }
 })
