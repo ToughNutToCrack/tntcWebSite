@@ -8,6 +8,13 @@ import Car1 from '../assets/images/studio/Car1.jpg'
 import Car2 from '../assets/images/studio/Car2.jpg'
 import Car3 from '../assets/images/studio/Car3.jpg'
 
+import Shader1 from '../assets/images/studio/Shader1.jpg'
+import Shader2 from '../assets/images/studio/Shader2.png'
+import Shader3 from '../assets/images/studio/Shader3.jpg'
+
+import AR1 from '../assets/images/studio/AR1.jpg'
+import AR2 from '../assets/images/studio/AR2.jpg'
+
 const styles = StyleSheet.create({
     container: {
         // scrollSnapType: 'y mandatory',
@@ -230,24 +237,96 @@ class Studio extends Component {
                             } }
                         />
                     </div>
-
-                    {/* <img className={ css(styles.singleImage) } src={Car1} alt=''/>
-                    <img className={ css(styles.singleImage) } src={Car2} alt=''/>
-                    <img className={ css(styles.singleImage) } src={Car3} alt=''/> */}
                 </div>
             </div>
 
-            {/* <div className={ css(styles.wrapper, styles.section, styles.grey) }>
-                <img className={ css(styles.imageGalleryContainer) } src={Car1} alt=''/>
+            <div className={ css(styles.wrapper, styles.section, styles.white, styles.overflow) }>
+                <div className={ css(styles.imagesContainer) }>
+                    <div className={ css(styles.singleImageContainer) }>
+                        <ImageZoom
+                            image={ {
+                                src: Shader1,
+                                alt: '',
+                                className: css(styles.singleImage)
+                            } }
+                            zoomImage={ {
+                                src: Shader1,
+                                alt: ''
+                            } }
+                        />
+                    </div>
+                    <div className={ css(styles.singleImageContainer) }>
+                        <ImageZoom
+                            image={ {
+                                src: Shader2,
+                                alt: '',
+                                className: css(styles.singleImage)
+                            } }
+                            zoomImage={ {
+                                src: Shader2,
+                                alt: ''
+                            } }
+                        />
+                    </div>
+                    <div className={ css(styles.singleImageContainer) }>
+                        <ImageZoom
+                            image={ {
+                                src: Shader3,
+                                alt: '',
+                                className: css(styles.singleImage)
+                            } }
+                            zoomImage={ {
+                                src: Shader3,
+                                alt: ''
+                            } }
+                        />
+                    </div>
+                </div>
             </div>
 
-            <div className={ css(styles.wrapper, styles.section, styles.orange) }>
-                <img className={ css(styles.imageGalleryContainer) } src={Car2} alt=''/>
+            <div className={ css(styles.wrapper, styles.section, styles.grey, styles.overflow) }>
+                <div className={ css(styles.imagesContainer) }>
+                    <div className={ css(styles.singleImageContainer) }>
+                        <ImageZoom
+                            image={ {
+                                src: AR1,
+                                alt: '',
+                                className: css(styles.singleImage)
+                            } }
+                            zoomImage={ {
+                                src: AR1,
+                                alt: ''
+                            } }
+                        />
+                    </div>
+                    <div className={ css(styles.singleImageContainer) }>
+                        <ImageZoom
+                            image={ {
+                                src: AR2,
+                                alt: '',
+                                className: css(styles.singleImage)
+                            } }
+                            zoomImage={ {
+                                src: AR2,
+                                alt: ''
+                            } }
+                        />
+                    </div>
+                    {/* <div className={ css(styles.singleImageContainer) }>
+                        <ImageZoom
+                            image={ {
+                                src: Car3,
+                                alt: '',
+                                className: css(styles.singleImage)
+                            } }
+                            zoomImage={ {
+                                src: Car3,
+                                alt: ''
+                            } }
+                        />
+                    </div> */}
+                </div>
             </div>
-
-            <div className={ css(styles.wrapper, styles.section, styles.grey) }>
-                <img className={ css(styles.imageGalleryContainer) } src={Car3} alt=''/>
-            </div> */}
 
         </div>
     );
