@@ -15,6 +15,8 @@ import Shader3 from '../assets/images/studio/Shader3.jpg'
 import AR1 from '../assets/images/studio/AR1.jpg'
 import AR2 from '../assets/images/studio/AR2.jpg'
 
+import Game1 from '../assets/images/studio/Game1.jpg'
+
 const styles = StyleSheet.create({
     container: {
         // scrollSnapType: 'y mandatory',
@@ -141,16 +143,15 @@ const styles = StyleSheet.create({
     textOrange: {
         color: '#FF926B'
     },
-    imageGalleryContainer: {
-        marginTop: '100px',
-        width: '90%',
-        height: 'auto',
-        maxWidth: '1280px',
-        overflow: 'hidden',
-        display: 'flex'
-    },
     overflow: {
         overflow: 'hidden'
+    },
+    imagesText: {
+        fontFamily: '"Patua One", regular',
+        fontSize: '3vw',
+        display: 'block',
+        position: 'relative',
+        top: '50px'
     },
     imagesContainer: {
         display: 'flex',
@@ -161,8 +162,10 @@ const styles = StyleSheet.create({
         flex: '100%',
         maxWidth: '100%',
         padding: '20px',
+        marginTop: '200px',
         '@media only screen and (max-width: 880px) and (orientation: portrait)': {
-            flexDirection: 'column'
+            flexDirection: 'column',
+            marginTop: '50px',
         },
     },
     singleImageContainer: {
@@ -176,6 +179,15 @@ const styles = StyleSheet.create({
             maxWidth: '30vh',
             width: '30vh',
         },
+    },
+    singleVerticalImage: {
+        width: 'auto',
+        maxHeight: '300px',
+        height: '30vh',
+        '@media only screen and (max-width: 880px) and (orientation: portrait)': {
+            // maxWidth: '30vh',
+            // width: '30vh',
+        },
     }
 })
 
@@ -185,7 +197,7 @@ class Studio extends Component {
         <div className={ css(styles.container) }>
             <div className={ css(styles.wrapper, styles.section, styles.white) }>
                 <div className={ css(styles.mainText) }>
-                    <p>With <span className={ css(styles.textRed, styles.big) }>Studio </span> division realizes project based on your ideas.</p>
+                    <p><span className={ css(styles.textRed, styles.big) }>Studio </span> division realizes project based on your ideas.</p>
                     <p className={ css(styles.little) }>3D Visualization</p>
                     <p className={ css(styles.little) }>Configurators</p>
                     <p className={ css(styles.little) }>Training experiences</p>
@@ -196,8 +208,12 @@ class Studio extends Component {
                 <ScrollPls color='#424242' visible={ true } />
             </div>
 
-            <div className={ css(styles.wrapper, styles.section, styles.grey, styles.overflow) }>
+            <div className={ css(styles.section, styles.grey, styles.overflow) }>
+                <div className={ css(styles.imagesText) }>
+                    <p>Visualize your products, no matter what.</p> <p>We guide you through new technologies. </p>
+                </div>
                 <div className={ css(styles.imagesContainer) }>
+                    
                     <div className={ css(styles.singleImageContainer) }>
                         <ImageZoom
                             image={ {
@@ -240,7 +256,10 @@ class Studio extends Component {
                 </div>
             </div>
 
-            <div className={ css(styles.wrapper, styles.section, styles.white, styles.overflow) }>
+            <div className={ css(styles.section, styles.white, styles.overflow) }>
+                <div className={ css(styles.imagesText) }>
+                    <p>Shader development let us customize how your models are represented.</p> <p>We create tailored solutions based on your needs.</p>
+                </div>
                 <div className={ css(styles.imagesContainer) }>
                     <div className={ css(styles.singleImageContainer) }>
                         <ImageZoom
@@ -258,12 +277,12 @@ class Studio extends Component {
                     <div className={ css(styles.singleImageContainer) }>
                         <ImageZoom
                             image={ {
-                                src: Shader2,
+                                src: Shader3,
                                 alt: '',
                                 className: css(styles.singleImage)
                             } }
                             zoomImage={ {
-                                src: Shader2,
+                                src: Shader3,
                                 alt: ''
                             } }
                         />
@@ -271,12 +290,12 @@ class Studio extends Component {
                     <div className={ css(styles.singleImageContainer) }>
                         <ImageZoom
                             image={ {
-                                src: Shader3,
+                                src: Shader2,
                                 alt: '',
                                 className: css(styles.singleImage)
                             } }
                             zoomImage={ {
-                                src: Shader3,
+                                src: Shader2,
                                 alt: ''
                             } }
                         />
@@ -284,14 +303,17 @@ class Studio extends Component {
                 </div>
             </div>
 
-            <div className={ css(styles.wrapper, styles.section, styles.grey, styles.overflow) }>
+            <div className={ css(styles.section, styles.grey, styles.overflow) }>
+                <div className={ css(styles.imagesText) }>
+                    <p>Handheld Augmented Reality is changing how we perceive the world.</p>  <p>See the difference.</p>
+                </div>
                 <div className={ css(styles.imagesContainer) }>
                     <div className={ css(styles.singleImageContainer) }>
                         <ImageZoom
                             image={ {
                                 src: AR1,
                                 alt: '',
-                                className: css(styles.singleImage)
+                                className: css(styles.singleVerticalImage)
                             } }
                             zoomImage={ {
                                 src: AR1,
@@ -304,7 +326,7 @@ class Studio extends Component {
                             image={ {
                                 src: AR2,
                                 alt: '',
-                                className: css(styles.singleImage)
+                                className: css(styles.singleVerticalImage)
                             } }
                             zoomImage={ {
                                 src: AR2,
@@ -312,19 +334,27 @@ class Studio extends Component {
                             } }
                         />
                     </div>
-                    {/* <div className={ css(styles.singleImageContainer) }>
+                </div>
+            </div>
+
+            <div className={ css(styles.section, styles.white, styles.overflow) }>
+                <div className={ css(styles.imagesText) }>
+                    <p>Videogames are art.</p>
+                </div>
+                <div className={ css(styles.imagesContainer) }>
+                    <div className={ css(styles.singleImageContainer) }>
                         <ImageZoom
                             image={ {
-                                src: Car3,
+                                src: Game1,
                                 alt: '',
                                 className: css(styles.singleImage)
                             } }
                             zoomImage={ {
-                                src: Car3,
+                                src: Game1,
                                 alt: ''
                             } }
                         />
-                    </div> */}
+                    </div>
                 </div>
             </div>
 
