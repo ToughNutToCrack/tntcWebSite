@@ -158,7 +158,10 @@ const styles = StyleSheet.create({
         '@media only screen and (max-width: 880px) and (orientation: portrait)': {
             fontSize: '2vw',
             top: '100px',
-        }
+        },
+        '@media only screen and (max-height: 600px) and (orientation: landscape)': {
+            top: '50px'
+        },
     },
     imagesContainer: {
         display: 'flex',
@@ -173,10 +176,13 @@ const styles = StyleSheet.create({
         '@media only screen and (max-width: 880px) and (orientation: portrait)': {
             flexDirection: 'column',
             // marginTop: '10px',
-        },
+        }
     },
     singleImageContainer: {
-        padding: '20px'
+        padding: '20px',
+        '@media only screen and (max-height: 600px) and (orientation: landscape)': {
+            paddingBottom: '200px'
+        },
     },
     singleImage: {
         width: '30vw',
@@ -185,6 +191,12 @@ const styles = StyleSheet.create({
         '@media only screen and (max-width: 880px) and (orientation: portrait)': {
             maxWidth: '30vh',
             width: '25vh',
+        },
+        '@media only screen and (max-height: 600px) and (orientation: landscape)': {
+            width: '18vw'
+        },
+        '@media only screen and (max-height: 400px) and (orientation: landscape)': {
+            display: 'none'
         },
     },
     singleVerticalImage: {
@@ -195,6 +207,12 @@ const styles = StyleSheet.create({
             maxHeight: '200px',
             height: '15vh',
         },
+        '@media only screen and (max-height: 600px) and (orientation: landscape)': {
+            height: '22vh'
+        },
+        '@media only screen and (max-height: 400px) and (orientation: landscape)': {
+            display: 'none'
+        }
     },
     scrollWrapper: {
         height: 80,
