@@ -145,9 +145,9 @@ const styles = StyleSheet.create({
     normal: {
         fontFamily: '"Patua One", regular',
         fontSize: '2vW',
-        '@media only screen and (min-width: 880px) and (orientation: landscape)': {
-            fontSize: '35px',
-        }
+        // '@media only screen and (min-width: 880px) and (orientation: landscape)': {
+        //     fontSize: '35px',
+        // }
     },
     textRed: {
         color: '#ed1c24'
@@ -201,7 +201,7 @@ class Broadcast extends Component {
         <div className={ css(styles.container) }>
             <div className={ css(styles.wrapper, styles.section, styles.white) }>
                 <div className={ css(styles.text) }>
-                    <p className={ css(styles.normal) }><span className={ css(styles.textRed, styles.big) }>Broadcast</span> is our sharing and learning division.</p>
+                    <p className={ css(styles.normal) }><span className={ css(styles.textRed) }>Broadcast</span> is our sharing and learning division.</p>
                     <p className={ css(styles.normal) }> We love to create courses and educational contents to share our passion and experiences.</p>
                 </div>
                 <ScrollPls color='#424242' visible={ true } />

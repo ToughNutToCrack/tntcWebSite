@@ -382,7 +382,7 @@ class Studio extends Component {
                 </div>
             </div>
 
-            <div className={ css(styles.section, styles.white, styles.overflow) }>
+            {/* <div className={ css(styles.section, styles.white, styles.overflow) }>
                 <div className={ css(styles.imagesText) }>
                     <p>Videogames are <span className= { css(styles.textOrange, styles.normal) }>art.</span></p>
                 </div>
@@ -429,7 +429,7 @@ class Studio extends Component {
                         />
                     </div>
                 </div>
-            </div>
+            </div> */}
 
         </div>
     );
