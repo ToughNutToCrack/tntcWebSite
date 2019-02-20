@@ -70,20 +70,18 @@ const styles = StyleSheet.create({
     center: {
         display: 'inline-block',
         verticalAlign: 'middle',
-        margin: 'auto',
-        width: '90%',
-        '@media screen and (max-width: 880px) and (orientation: portrait)': {
-            width: '80%'
-        }
+        margin: 'auto'
     },
     responsiveTop: {
         '@media screen and (max-width: 880px) and (orientation: portrait)': {
             paddingTop: '150px'
-        },
+        }
+    },
+    responsiveFont: {
         '@media screen and (min-width: 530px) and (max-width: 880px)': {
             fontSize: '2vh'
         },
-        '@media screen and (min-height: 403px) and (max-height: 565px)': {
+        '@media screen and (min-height: 332px) and (max-height: 565px)': {
             fontSize: '2vh'
         }
     },
@@ -146,7 +144,7 @@ const styles = StyleSheet.create({
     },
     normal: {
         fontFamily: '"Patua One", regular',
-        fontSize: '3vW',
+        fontSize: '2vW',
         '@media only screen and (min-width: 880px) and (orientation: landscape)': {
             fontSize: '35px',
         }
@@ -177,15 +175,15 @@ const styles = StyleSheet.create({
         width: '90%'
     },
     width60: {
-        width: '90%',
+        width: '70%',
         '@media screen and (max-height: 700px)': {
             width: '60%'
         },
-        '@media screen and (min-width: 530px) and (max-width: 812px)': {
-            width: '60%'
+        '@media screen and (min-width: 530px) and (max-width: 880px)': {
+            width: '55%'
         },
-        '@media screen and (min-height: 403px) and (max-height: 565px)': {
-            width: '40%'
+        '@media screen and (min-height: 332px) and (max-height: 650px) and (orientation: portrait)': {
+            width: '25%'
         }
     },
     youtubeVideo: {
@@ -211,7 +209,7 @@ class Broadcast extends Component {
             <div className={ css(styles.divisionsWrapper, styles.orange) }>
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
-                        <div className={ css(styles.responsiveTop, styles.paddingLeft, styles.paddingRight) }>
+                        <div className={ css(styles.responsiveFont, styles.responsiveTop, styles.paddingLeft, styles.paddingRight) }>
                             <p><span className={ css(styles.textBlack, styles.big) }>Game Jam</span></p>
                             <p>TNTC Game Jam is a contest opens to everybody loves to develop videogames.</p>
                             <p>The partecipant has to create a videogame based on a theme. 
@@ -233,12 +231,12 @@ class Broadcast extends Component {
             <div className={ css(styles.divisionsWrapper, styles.white) }>
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
-                        <img className={ css(styles.center, styles.responsiveTop, styles.width60) }  src={ youtubeImg } alt=""/>
+                        <img className={ css(styles.center, styles.width60) }  src={ youtubeImg } alt=""/>
                     </div>
                 </div>
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
-                        <div className={ css(styles.paddingLeft, styles.paddingRight) }>
+                        <div className={ css(styles.responsiveFont, styles.paddingLeft, styles.paddingRight) }>
                             <p><span className={ css(styles.textOrange, styles.big) }>YouTube</span></p>
                             <p>On Youtube we share our passion about game development.</p>
                             <p>Here you can find tutorials, suggestions, tools and more.</p>
@@ -252,7 +250,7 @@ class Broadcast extends Component {
             <div className={ css(styles.divisionsWrapper, styles.orange) }>
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
-                        <div className={ css(styles.responsiveTop, styles.paddingLeft, styles.paddingRight) }>
+                        <div className={ css(styles.responsiveFont, styles.responsiveTop, styles.paddingLeft, styles.paddingRight) }>
                             <p><span className={ css(styles.textBlack, styles.big) }>Courses</span></p>
                             <p>Teaching development of 3D applications and videogames is something we love to do.
                                So we create and organize courses about this topics.</p>
@@ -263,7 +261,7 @@ class Broadcast extends Component {
                 </div>
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
-                        <img className={ css(styles.center, styles.responsiveTop, styles.width60) }  src={ courseLogoImg } alt=""/>
+                        <img className={ css(styles.center, styles.width60) }  src={ courseLogoImg } alt=""/>
                     </div>
                 </div>
             </div>

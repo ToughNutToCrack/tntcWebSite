@@ -146,8 +146,7 @@ class AFrame extends Component {
     }
 
     render() {
-        if (browser && browser.name !== 'safari') { 
-            console.log(browser.name);
+        if (browser && browser.name !== 'safari') {
             return ( 
                 <div className={ css(styles.aFrame) }>
                     <a-scene embedded fog="type: exponential; color: #fff;" vr-mode-ui="enabled: false" scroll-listener="" cursor="rayOrigin: mouse" inspector="url: xxx">
