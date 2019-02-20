@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
         overflowX: 'hidden',
         height: '100%',
         width: '100%',
-        position: 'absolute',
+        position: 'absolute'
     },
     wrapper: {
         fontFamily: '"HeadLand One", serif',
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     },
     responsiveTop: {
         '@media screen and (max-width: 880px) and (orientation: portrait)': {
-            paddingTop: '150px'
+            paddingTop: '30%'
         }
     },
     responsiveFont: {
@@ -79,6 +79,9 @@ const styles = StyleSheet.create({
         },
         '@media screen and (min-height: 332px) and (max-height: 565px)': {
             fontSize: '2vh'
+        },
+        '@media screen and (min-width: 0px) and (max-width: 331px)': {
+            fontSize: '1.5vh'
         }
     },
     black: {
@@ -108,25 +111,9 @@ const styles = StyleSheet.create({
     box: {
         boxSizing: 'border-box'
     },
-    text: {
-        display: 'block',
-        fontSize: '3vw',
-        '@media only screen and (min-width: 880px) and (orientation: landscape)': {
-            fontSize: '30px',
-        }
-    },
-    paddingTop: {
-        paddingTop: '150px'
-    },
-    paddingLeft: {
-        paddingLeft: '20px'
-    },
-    paddingRight: {
-        paddingRight: '20px'
-    },
     big: {
         fontFamily: '"Patua One", regular',
-        fontSize: '5vW',
+        fontSize: '4vW',
         '@media only screen and (min-width: 880px) and (orientation: landscape)': {
             fontSize: '40px',
         }
@@ -146,7 +133,10 @@ const styles = StyleSheet.create({
         },
         '@media only screen and (max-width: 440px)': {
             fontSize: '4vw',
-        }
+        },
+        '@media only screen and (max-height: 300px)': {
+            fontSize: '4vh',
+        },
     },
     textRed: {
         color: '#ed1c24'
@@ -170,9 +160,6 @@ const styles = StyleSheet.create({
         padding: '20px',
         paddingLeft: '100px'
     },
-    width90: {
-        width: '90%'
-    },
     width60: {
         width: '55%',
         '@media screen and (max-height: 700px)': {
@@ -183,6 +170,14 @@ const styles = StyleSheet.create({
         },
         '@media screen and (min-height: 332px) and (max-height: 650px) and (orientation: portrait)': {
             width: '25%'
+        },
+        '@media screen and (max-height: 400px) and (orientation: landscape)': {
+            width: '25%'
+        }
+    },
+    hideObject: {
+        '@media screen and (max-height: 460px) and (max-width: 426px) and (orientation: portrait)': {
+            display: 'none'
         }
     },
     youtubeVideo: {
@@ -199,7 +194,7 @@ class Broadcast extends Component {
     return (
         <div className={ css(styles.container) }>
             <div className={ css(styles.wrapper, styles.section, styles.white) }>
-                <div className={ css(styles.text) }>
+                <div>
                     <p className={ css(styles.normal) }><span className={ css(styles.textRed) }>Broadcast</span> is our sharing and learning division.</p>
                     <p className={ css(styles.normal) }> We love to create courses and educational contents to share our passion and experiences.</p>
                 </div>
@@ -218,7 +213,7 @@ class Broadcast extends Component {
                         </div>
                     </div>    
                 </div>
-                <div className={ css(styles.division) }>
+                <div className={ css(styles.division, styles.hideObject) }>
                     <div className={ css(styles.innerDivision) }>
                         <img className={ css(styles.center, styles.width60) }  src={ gameJamImg } alt=""/>
                     </div>
@@ -228,12 +223,7 @@ class Broadcast extends Component {
             <div className={ css(styles.divisionsWrapper, styles.white) }>
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
-                        <img className={ css(styles.center, styles.width60) }  src={ youtubeImg } alt=""/>
-                    </div>
-                </div>
-                <div className={ css(styles.division) }>
-                    <div className={ css(styles.innerDivision) }>
-                        <div className={ css(styles.responsiveFont, styles.paddingLeft, styles.paddingRight) }>
+                        <div className={ css(styles.responsiveFont, styles.responsiveTop, styles.paddingLeft, styles.paddingRight) }>
                             <p><span className={ css(styles.textOrange, styles.big) }>YouTube</span></p>
                             <p>On Youtube we share our passion about game development.</p>
                             <p>Here you can find tutorials, suggestions, tools and more.</p>
@@ -241,6 +231,11 @@ class Broadcast extends Component {
                             <p><a className={ css(styles.textOrange, styles.noDecoration) } href="https://www.youtube.com/channel/UCtj_LuYF9i5xkk4Q9EYamYA?sub_confirmation=1"> Subscribe.</a></p>
                         </div>
                     </div>  
+                </div>
+                <div className={ css(styles.division, styles.hideObject) }>
+                    <div className={ css(styles.innerDivision) }>
+                        <img className={ css(styles.center, styles.width60) }  src={ youtubeImg } alt=""/>
+                    </div>
                 </div>
             </div>
 
@@ -256,7 +251,7 @@ class Broadcast extends Component {
                         </div>
                     </div>  
                 </div>
-                <div className={ css(styles.division) }>
+                <div className={ css(styles.division, styles.hideObject) }>
                     <div className={ css(styles.innerDivision) }>
                         <img className={ css(styles.center, styles.width60) }  src={ courseLogoImg } alt=""/>
                     </div>
