@@ -138,17 +138,17 @@ const styles = StyleSheet.create({
         }
     },
     little: {
-        fontFamily: '"HeadLand One", serif',
+        fontFamily: '"Patua One", regular',
         fontSize: '2vw',
         '@media only screen and (min-width: 880px) and (orientation: landscape)': {
             fontSize: '22px',
         }
     },
     normal: {
-        fontFamily: '"HeadLand One", serif',
+        fontFamily: '"Patua One", regular',
         fontSize: '3vW',
         '@media only screen and (min-width: 880px) and (orientation: landscape)': {
-            fontSize: '30px',
+            fontSize: '35px',
         }
     },
     textRed: {
@@ -203,8 +203,8 @@ class Broadcast extends Component {
         <div className={ css(styles.container) }>
             <div className={ css(styles.wrapper, styles.section, styles.white) }>
                 <div className={ css(styles.text) }>
-                    <p><span className={ css(styles.textRed, styles.big) }>Broadcast</span> is our sharing and learning division.</p>
-                    <p> We love to create courses and educational contents to share our passion and experiences.</p>
+                    <p className={ css(styles.normal) }><span className={ css(styles.textRed, styles.big) }>Broadcast</span> is our sharing and learning division.</p>
+                    <p className={ css(styles.normal) }> We love to create courses and educational contents to share our passion and experiences.</p>
                 </div>
                 <ScrollPls color='#424242' visible={ true } />
             </div>
@@ -219,7 +219,7 @@ class Broadcast extends Component {
                             <p>The winner team is announced on our socials pages and receives a special prize.</p>
                             <p>Partecipation to the Game Jam is completely free.</p>
                             <p>Updates on the first event will be published on our socials.</p> 
-                            <p>Follow us</p>
+                            <p>Follow us.</p>
                         </div>
                     </div>    
                 </div>
@@ -243,7 +243,7 @@ class Broadcast extends Component {
                             <p>On Youtube we share our passion about game development.</p>
                             <p>Here you can find tutorials, suggestions, tools and more.</p>
                             <p>New video published every Friday.</p>
-                            <p><a className={ css(styles.textOrange, styles.noDecoration) } href="https://www.youtube.com/channel/UCtj_LuYF9i5xkk4Q9EYamYA?sub_confirmation=1"> Subscribe.</a></p>
+                            <p><a className={ css(styles.textOrange, styles.noDecoration, styles.normal) } href="https://www.youtube.com/channel/UCtj_LuYF9i5xkk4Q9EYamYA?sub_confirmation=1"> Subscribe.</a></p>
                         </div>
                     </div>  
                 </div>

@@ -93,7 +93,10 @@ const styles = StyleSheet.create({
         ':hover': {
             color: '#e85356'
         }
-    }
+    },
+    textOrange: {
+        color: '#FF926B'
+    },
 })
 class Contacts extends Component {
   render() {
@@ -117,7 +120,7 @@ class Contacts extends Component {
                                         <a className={ css(styles.link) } href="mailto:info@tntc.it">What are you looking for?</a>
                                     </div>
 
-                                    <div className={ css(styles.inner) }>
+                                    <div className={ css(styles.inner, styles.textOrange) }>
                                         <h2>info@tntc.it</h2>
                                     </div>
                             
