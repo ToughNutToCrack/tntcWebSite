@@ -157,7 +157,7 @@ const styles = StyleSheet.create({
         top: '150px',
         '@media only screen and (max-width: 880px) and (orientation: portrait)': {
             fontSize: '2vw',
-            top: '10px',
+            top: '100px',
         }
     },
     imagesContainer: {
@@ -169,10 +169,10 @@ const styles = StyleSheet.create({
         flex: '100%',
         maxWidth: '100%',
         padding: '20px',
-        marginTop: '300px',
+        // marginTop: '300px',
         '@media only screen and (max-width: 880px) and (orientation: portrait)': {
             flexDirection: 'column',
-            marginTop: '10px',
+            // marginTop: '10px',
         },
     },
     singleImageContainer: {
@@ -227,8 +227,7 @@ class Studio extends Component {
                 <div className={ css(styles.imagesText) }>
                     <p>Visualize <span className= { css(styles.textOrange, styles.normal) }>your products</span>, no matter what.</p> <p>We guide you through new technologies. </p>
                 </div>
-                <div className={ css(styles.imagesContainer) }>
-                    
+                <div className={ css(styles.imagesContainer, styles.wrapper) }>
                     <div className={ css(styles.singleImageContainer) }>
                         <ImageZoom
                             image={ {
@@ -275,7 +274,7 @@ class Studio extends Component {
                 <div className={ css(styles.imagesText) }>
                     <p>Shader development let us <span className= { css(styles.textOrange, styles.normal) }>customize</span> how your models are represented.</p> <p>We create tailored solutions <span className= { css(styles.textOrange, styles.normal) }>based on your needs.</span></p>
                 </div>
-                <div className={ css(styles.imagesContainer) }>
+                <div className={ css(styles.imagesContainer, styles.wrapper) }>
                     <div className={ css(styles.singleImageContainer) }>
                         <ImageZoom
                             image={ {
@@ -322,7 +321,7 @@ class Studio extends Component {
                 <div className={ css(styles.imagesText) }>
                     <p>Handheld Augmented Reality is changing how we perceive the world.</p>  <p>See the <span className= { css(styles.textOrange, styles.normal) }>difference.</span></p>
                 </div>
-                <div className={ css(styles.imagesContainer) }>
+                <div className={ css(styles.imagesContainer, styles.wrapper) }>
                     <div className={ css(styles.singleImageContainer) }>
                         <ImageZoom
                             image={ {
@@ -369,7 +368,7 @@ class Studio extends Component {
                 <div className={ css(styles.imagesText) }>
                     <p>Videogames are <span className= { css(styles.textOrange, styles.normal) }>art.</span></p>
                 </div>
-                <div className={ css(styles.imagesContainer) }>
+                <div className={ css(styles.imagesContainer, styles.wrapper) }>
                     <div className={ css(styles.singleImageContainer) }>
                         <ImageZoom
                             image={ {
