@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
         position: 'absolute',
     },
     wrapper: {
-        fontFamily: '"Patua One", regular',
+        fontFamily: '"HeadLand One", serif',
         height: '100%',
         display: 'flex',
         justifyContent: 'center',
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
         // scrollSnapAlign: 'start'
     },
     divisionsWrapper: {
-        fontFamily: '"Patua One", regular',
+        fontFamily: '"HeadLand One", serif',
         height: '100%',
         width: '100%',
         fontSize: '2vw',
@@ -131,18 +131,21 @@ const styles = StyleSheet.create({
         paddingRight: '20px'
     },
     big: {
+        fontFamily: '"Patua One", regular',
         fontSize: '5vW',
         '@media only screen and (min-width: 880px) and (orientation: landscape)': {
             fontSize: '40px',
         }
     },
     little: {
+        fontFamily: '"HeadLand One", serif',
         fontSize: '2vw',
         '@media only screen and (min-width: 880px) and (orientation: landscape)': {
             fontSize: '22px',
         }
     },
     normal: {
+        fontFamily: '"HeadLand One", serif',
         fontSize: '3vW',
         '@media only screen and (min-width: 880px) and (orientation: landscape)': {
             fontSize: '30px',
