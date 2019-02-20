@@ -157,6 +157,7 @@ const styles = StyleSheet.create({
         top: '150px',
         '@media only screen and (max-width: 880px) and (orientation: portrait)': {
             fontSize: '3vw',
+            top: '10px',
         }
     },
     imagesContainer: {
@@ -171,7 +172,7 @@ const styles = StyleSheet.create({
         marginTop: '300px',
         '@media only screen and (max-width: 880px) and (orientation: portrait)': {
             flexDirection: 'column',
-            marginTop: '150px',
+            marginTop: '10px',
         },
     },
     singleImageContainer: {
