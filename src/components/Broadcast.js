@@ -33,7 +33,8 @@ const styles = StyleSheet.create({
     },
     divisionsWrapper: {
         fontFamily: '"HeadLand One", serif',
-        height: '100%',
+        height: 'calc(100% - 100px)',
+        // height: '100%',
         width: '100%',
         fontSize: '2vw',
         // scrollSnapAlign: 'start'
