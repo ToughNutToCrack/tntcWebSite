@@ -49,15 +49,9 @@ const styles = StyleSheet.create({
         width: '100%',
         fontSize: '3vh'
     },
-    divisionHeader: {
-        width: '100%',
-        height: '30%',
-        float: 'left',
-    },
     division: {
-        width: '50%',
-        height: '70%',
-        float: 'left',
+        width: '100%',
+        height: 'calc(100% - 100px)'
     },
     black: {
         backgroundColor: '#000000',
@@ -154,28 +148,37 @@ const styles = StyleSheet.create({
         fontSize: '1.5vw',
         display: 'block',
         position: 'relative',
-        top: '150px',
+        top: '50px',
         '@media only screen and (max-width: 880px) and (orientation: portrait)': {
             fontSize: '2vw',
-            top: '100px',
+            top: '5vh',
         },
         '@media only screen and (max-height: 600px) and (orientation: landscape)': {
-            top: '50px'
+            top: '20px'
         },
     },
     imagesContainer: {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        // flexWrap: 'wrap',
         flexDirection: 'row',
         flex: '100%',
         maxWidth: '100%',
         padding: '20px',
-        // marginTop: '300px',
         '@media only screen and (max-width: 880px) and (orientation: portrait)': {
-            flexDirection: 'column',
-            // marginTop: '10px',
+            flexDirection: 'column'
+        }
+    },
+    imagesContainerVertical: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'row',
+        flex: '100%',
+        maxWidth: '100%',
+        padding: '20px',
+        '@media only screen and (max-width: 880px) and (orientation: portrait)': {
+            flexDirection: 'row'
         }
     },
     singleImageContainer: {
@@ -183,6 +186,9 @@ const styles = StyleSheet.create({
         '@media only screen and (max-height: 600px) and (orientation: landscape)': {
             paddingBottom: '200px'
         },
+        '@media only screen and (max-width: 880px) and (orientation: portrait)': {
+            padding: '10px'
+        }
     },
     singleImage: {
         width: '30vw',
@@ -190,7 +196,8 @@ const styles = StyleSheet.create({
         height: 'auto',
         '@media only screen and (max-width: 880px) and (orientation: portrait)': {
             maxWidth: '30vh',
-            width: '25vh',
+            width: 'auto',
+            height: '12vh',
         },
         '@media only screen and (max-height: 600px) and (orientation: landscape)': {
             width: '18vw'
@@ -204,8 +211,9 @@ const styles = StyleSheet.create({
         maxHeight: '300px',
         height: '30vh',
         '@media only screen and (max-width: 880px) and (orientation: portrait)': {
-            maxHeight: '200px',
-            height: '15vh',
+            maxHeight: '300px',
+            height: 'auto',
+            width: '25vW',
         },
         '@media only screen and (max-height: 600px) and (orientation: landscape)': {
             height: '22vh'
@@ -241,7 +249,7 @@ class Studio extends Component {
                 </div>
             </div>
 
-            <div className={ css(styles.section, styles.grey, styles.overflow) }>
+            <div className={ css(styles.division, styles.grey, styles.overflow) }>
                 <div className={ css(styles.imagesText) }>
                     <p>Visualize <span className= { css(styles.textOrange, styles.normal) }>your products</span>, no matter what.</p> <p>We guide you through new technologies. </p>
                 </div>
@@ -288,7 +296,7 @@ class Studio extends Component {
                 </div>
             </div>
 
-            <div className={ css(styles.section, styles.white, styles.overflow) }>
+            <div className={ css(styles.division, styles.white, styles.overflow) }>
                 <div className={ css(styles.imagesText) }>
                     <p>Shader development let us <span className= { css(styles.textOrange, styles.normal) }>customize</span> how your models are represented.</p> <p>We create tailored solutions <span className= { css(styles.textOrange, styles.normal) }>based on your needs.</span></p>
                 </div>
@@ -335,11 +343,11 @@ class Studio extends Component {
                 </div>
             </div>
 
-            <div className={ css(styles.section, styles.grey, styles.overflow) }>
+            <div className={ css(styles.division, styles.grey, styles.overflow) }>
                 <div className={ css(styles.imagesText) }>
                     <p>Handheld Augmented Reality is changing how we perceive the world.</p>  <p>See the <span className= { css(styles.textOrange, styles.normal) }>difference.</span></p>
                 </div>
-                <div className={ css(styles.imagesContainer, styles.wrapper) }>
+                <div className={ css(styles.imagesContainerVertical, styles.wrapper) }>
                     <div className={ css(styles.singleImageContainer) }>
                         <ImageZoom
                             image={ {

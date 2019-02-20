@@ -33,7 +33,8 @@ const styles = StyleSheet.create({
     },
     divisionsWrapper: {
         fontFamily: '"HeadLand One", serif',
-        height: '100%',
+        height: 'calc(100% - 100px)',
+        // height: '100%',
         width: '100%',
         fontSize: '2vw',
         // scrollSnapAlign: 'start'
@@ -182,8 +183,8 @@ const styles = StyleSheet.create({
         '@media screen and (max-height: 700px)': {
             width: '60%'
         },
-        '@media screen and (min-width: 530px) and (max-width: 880px)': {
-            width: '55%'
+        '@media screen and (min-width: 530px) and (max-width: 880px) and (orientation: portrait)': {
+            width: '40%'
         },
         '@media screen and (min-height: 332px) and (max-height: 650px) and (orientation: portrait)': {
             width: '25%'
