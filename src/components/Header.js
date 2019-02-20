@@ -93,6 +93,9 @@ const styles = StyleSheet.create({
         width: '15%',
         opacity: 1
     },
+    singleSocialIcon: {
+        padding: '3px'
+    },
     hover: {
         ':hover': {
             color: '#e85356'
@@ -161,10 +164,10 @@ class Header extends Component {
                 </div>
                 <div className={ css(styles.socials, styles.hover) }>
                     <IconContext.Provider value={ { className: css(styles.socialIcon, styles.hover) } }>
-                        <a target="_blank" rel="noopener noreferrer" href={ twitterLink }><FaTwitter/></a>
-                        <a target="_blank" rel="noopener noreferrer" href={ instagramLink }><FaInstagram /></a>
-                        <a target="_blank" rel="noopener noreferrer" href={ facebookLink }><FaFacebookF /></a>
-                        <a target="_blank" rel="noopener noreferrer" href={ youtubeLink }><FaYoutube /></a>
+                        <a className={ css(styles.singleSocialIcon) } target="_blank" rel="noopener noreferrer" href={ twitterLink }><FaTwitter/></a>
+                        <a className={ css(styles.singleSocialIcon) } target="_blank" rel="noopener noreferrer" href={ instagramLink }><FaInstagram /></a>
+                        <a className={ css(styles.singleSocialIcon) } target="_blank" rel="noopener noreferrer" href={ facebookLink }><FaFacebookF /></a>
+                        <a className={ css(styles.singleSocialIcon) } target="_blank" rel="noopener noreferrer" href={ youtubeLink }><FaYoutube /></a>
                     </IconContext.Provider>    
                 </div>
                 <div className={ css(styles.hambContainer, styles.hover) } onClick={ this.openMenu }>

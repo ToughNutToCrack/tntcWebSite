@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
         position: 'absolute',
     },
     wrapper: {
-        fontFamily: '"Patua One", regular',
+        fontFamily: '"HeadLand One", serif', 
         height: '100%',
         display: 'flex',
         justifyContent: 'center',
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
         // scrollSnapAlign: 'start'
     },
     divisionsWrapper: {
-        fontFamily: '"Patua One", regular',
+        fontFamily: '"HeadLand One", serif',
         height: '100%',
         width: '100%',
         fontSize: '3vh'
@@ -112,12 +112,14 @@ const styles = StyleSheet.create({
         paddingTop: '150px'
     },
     big: {
+        fontFamily: '"Patua One", regular',
         fontSize: '5vW',
         '@media only screen and (min-width: 880px) and (orientation: landscape)': {
             fontSize: '40px',
         }
     },
     little: {
+        fontFamily: '"HeadLand One", serif',
         fontSize: '2vw',
         '@media only screen and (min-width: 880px) and (max-width: 1280px) and (orientation: landscape)': {
             // fontSize: '15px',
@@ -125,19 +127,17 @@ const styles = StyleSheet.create({
         },
         '@media only screen and (min-width: 1280px) and (orientation: landscape)': {
             // fontSize: '15px',
-            fontSize: '3vh'
+            fontSize: '2.5vh'
         },
         '@media only screen and (min-width: 880px) and (orientation: portrait)': {
             fontSize: '3vw',
-        },
-        // '@media only screen and (max-width: 530px)': {
-        //     fontSize: '4vw',
-        // }
+        }
     },
     normal: {
-        fontSize: '3vW',
+        fontFamily: '"Patua One", regular',
+        fontSize: '4vW',
         '@media only screen and (min-width: 880px) and (orientation: landscape)': {
-            fontSize: '30px',
+            fontSize: '35px',
         }
     },
     textRed: {
@@ -150,13 +150,13 @@ const styles = StyleSheet.create({
         overflow: 'hidden'
     },
     imagesText: {
-        fontFamily: '"Patua One", regular',
-        fontSize: '2vw',
+        fontFamily: '"HeadLand One", serif',
+        fontSize: '1.5vw',
         display: 'block',
         position: 'relative',
         top: '150px',
         '@media only screen and (max-width: 880px) and (orientation: portrait)': {
-            fontSize: '3vw',
+            fontSize: '2vw',
             top: '10px',
         }
     },
@@ -204,7 +204,7 @@ class Studio extends Component {
         <div className={ css(styles.container) }>
             <div className={ css(styles.wrapper, styles.section, styles.white) }>
                 <div className={ css(styles.mainText) }>
-                    <p><span className={ css(styles.textRed, styles.big) }>Studio </span> division realizes project based on your ideas.</p>
+                    <p className={ css(styles.normal) }><span className={ css(styles.textRed, styles.big) }>Studio </span> division realizes project based on your ideas.</p>
                     <p className={ css(styles.little) }>3D Visualization</p>
                     <p className={ css(styles.little) }>Configurators</p>
                     <p className={ css(styles.little) }>Training experiences</p>
@@ -217,7 +217,7 @@ class Studio extends Component {
 
             <div className={ css(styles.section, styles.grey, styles.overflow) }>
                 <div className={ css(styles.imagesText) }>
-                    <p>Visualize your products, no matter what.</p> <p>We guide you through new technologies. </p>
+                    <p>Visualize <span className= { css(styles.textOrange, styles.normal) }>your products</span>, no matter what.</p> <p>We guide you through new technologies. </p>
                 </div>
                 <div className={ css(styles.imagesContainer) }>
                     
@@ -265,7 +265,7 @@ class Studio extends Component {
 
             <div className={ css(styles.section, styles.white, styles.overflow) }>
                 <div className={ css(styles.imagesText) }>
-                    <p>Shader development let us customize how your models are represented.</p> <p>We create tailored solutions based on your needs.</p>
+                    <p>Shader development let us <span className= { css(styles.textOrange, styles.normal) }>customize</span> how your models are represented.</p> <p>We create tailored solutions <span className= { css(styles.textOrange, styles.normal) }>based on your needs.</span></p>
                 </div>
                 <div className={ css(styles.imagesContainer) }>
                     <div className={ css(styles.singleImageContainer) }>
@@ -312,7 +312,7 @@ class Studio extends Component {
 
             <div className={ css(styles.section, styles.grey, styles.overflow) }>
                 <div className={ css(styles.imagesText) }>
-                    <p>Handheld Augmented Reality is changing how we perceive the world.</p>  <p>See the difference.</p>
+                    <p>Handheld Augmented Reality is changing how we perceive the world.</p>  <p>See the <span className= { css(styles.textOrange, styles.normal) }>difference.</span></p>
                 </div>
                 <div className={ css(styles.imagesContainer) }>
                     <div className={ css(styles.singleImageContainer) }>
@@ -359,7 +359,7 @@ class Studio extends Component {
 
             <div className={ css(styles.section, styles.white, styles.overflow) }>
                 <div className={ css(styles.imagesText) }>
-                    <p>Videogames are art.</p>
+                    <p>Videogames are <span className= { css(styles.textOrange, styles.normal) }>art.</span></p>
                 </div>
                 <div className={ css(styles.imagesContainer) }>
                     <div className={ css(styles.singleImageContainer) }>

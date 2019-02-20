@@ -257,7 +257,7 @@ class Broadcast extends Component {
                             <p>Teaching development of 3D applications and videogames is something we love to do.
                                So we create and organize courses about this topics.</p>
                             <p>Our goal is to share our knowledges and attract peoples to this field of work.</p>
-                            <p>Are you curious? <a className={ css(styles.textBlack, styles.noDecoration) } href="https://www.udemy.com/game-development-professionale-con-unity-3d-e-c/?couponCode=NUTTY-WEBSITE"> Check out our Best Seller course!</a></p>
+                            <p>Are you curious? <a className={ css(styles.textBlack, styles.noDecoration, styles.normal) } href="https://www.udemy.com/game-development-professionale-con-unity-3d-e-c/?couponCode=NUTTY-WEBSITE"> Check out our Best Seller course!</a></p>
                         </div>
                     </div>  
                 </div>
