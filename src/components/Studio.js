@@ -195,6 +195,12 @@ const styles = StyleSheet.create({
             maxHeight: '200px',
             height: '15vh',
         },
+    },
+    scrollWrapper: {
+        height: 80,
+        width: '100%',
+        position: 'absolute',
+        bottom: 15,
     }
 })
 
@@ -212,7 +218,9 @@ class Studio extends Component {
                     <p className={ css(styles.little) }>Animated Videos</p>
                     <p className={ css(styles.little) }>Custom experiences</p>
                 </div>
-                <ScrollPls color='#424242' visible={ true } />
+                <div className={ css(styles.scrollWrapper) }>
+                    <ScrollPls color='#424242' visible={ true } />
+                </div>
             </div>
 
             <div className={ css(styles.section, styles.grey, styles.overflow) }>
