@@ -145,9 +145,12 @@ const styles = StyleSheet.create({
     normal: {
         fontFamily: '"Patua One", regular',
         fontSize: '2vW',
-        // '@media only screen and (min-width: 880px) and (orientation: landscape)': {
-        //     fontSize: '35px',
-        // }
+        '@media only screen and (max-width: 880px)': {
+            fontSize: '3vw',
+        },
+        '@media only screen and (max-width: 440px)': {
+            fontSize: '4vw',
+        }
     },
     textRed: {
         color: '#ed1c24'
@@ -241,7 +244,7 @@ class Broadcast extends Component {
                             <p>On Youtube we share our passion about game development.</p>
                             <p>Here you can find tutorials, suggestions, tools and more.</p>
                             <p>New video published every Friday.</p>
-                            <p><a className={ css(styles.textOrange, styles.noDecoration, styles.normal) } href="https://www.youtube.com/channel/UCtj_LuYF9i5xkk4Q9EYamYA?sub_confirmation=1"> Subscribe.</a></p>
+                            <p><a className={ css(styles.textOrange, styles.noDecoration) } href="https://www.youtube.com/channel/UCtj_LuYF9i5xkk4Q9EYamYA?sub_confirmation=1"> Subscribe.</a></p>
                         </div>
                     </div>  
                 </div>
@@ -255,7 +258,7 @@ class Broadcast extends Component {
                             <p>Teaching development of 3D applications and videogames is something we love to do.
                                So we create and organize courses about this topics.</p>
                             <p>Our goal is to share our knowledges and attract peoples to this field of work.</p>
-                            <p>Are you curious? <a className={ css(styles.textBlack, styles.noDecoration, styles.normal) } href="https://www.udemy.com/game-development-professionale-con-unity-3d-e-c/?couponCode=NUTTY-WEBSITE"> Check out our Best Seller course!</a></p>
+                            <p>Are you curious? <a className={ css(styles.textBlack, styles.noDecoration) } href="https://www.udemy.com/game-development-professionale-con-unity-3d-e-c/?couponCode=NUTTY-WEBSITE"> Check out our Best Seller course!</a></p>
                         </div>
                     </div>  
                 </div>
