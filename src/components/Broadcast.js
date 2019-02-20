@@ -147,6 +147,9 @@ const styles = StyleSheet.create({
     textBlack: {
         color: '#000000'
     },
+    textGrey: {
+        color: '#424242'
+    },
     noDecoration: {
         textDecoration: 'none'
     },
@@ -213,7 +216,7 @@ class Broadcast extends Component {
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
                         <div className={ css(styles.responsiveFont, styles.responsiveTop, styles.paddingLeft, styles.paddingRight) }>
-                            <p><span className={ css(styles.textBlack, styles.big) }>Game Jam</span></p>
+                            <p><span className={ css(styles.textGrey, styles.big) }>Game Jam</span></p>
                             <p>TNTC Game Jam is a contest opens to everybody loves to develop videogames.</p>
                             <p>The partecipant has to create a videogame based on a theme. 
                                At the end of the granted days, teams upload their creation so that we can review them.</p>
@@ -252,11 +255,11 @@ class Broadcast extends Component {
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
                         <div className={ css(styles.responsiveFont, styles.responsiveTop, styles.paddingLeft, styles.paddingRight) }>
-                            <p><span className={ css(styles.textBlack, styles.big) }>Courses</span></p>
+                            <p><span className={ css(styles.textGrey, styles.big) }>Courses</span></p>
                             <p>Teaching development of 3D applications and videogames is something we love to do.
                                So we create and organize courses about this topics.</p>
                             <p>Our goal is to share our knowledges and attract peoples to this field of work.</p>
-                            <p>Are you curious? <a className={ css(styles.textBlack, styles.noDecoration) } href="https://www.udemy.com/game-development-professionale-con-unity-3d-e-c/?couponCode=NUTTY-WEBSITE"> Check out our Best Seller course!</a></p>
+                            <p>Are you curious? <a className={ css(styles.textGrey, styles.noDecoration) } href="https://www.udemy.com/game-development-professionale-con-unity-3d-e-c/?couponCode=NUTTY-WEBSITE"> Check out our Best Seller course!</a></p>
                         </div>
                     </div>  
                 </div>
