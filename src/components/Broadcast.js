@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
         fontFamily: '"Patua One", regular',
         fontSize: '4vW',
         '@media only screen and (min-width: 880px) and (orientation: landscape)': {
-            fontSize: '40px',
+            fontSize: '3vw',
         }
     },
     little: {
@@ -172,6 +172,9 @@ const styles = StyleSheet.create({
             width: '25%'
         },
         '@media screen and (max-height: 400px) and (orientation: landscape)': {
+            width: '35%'
+        },
+        '@media screen and (max-height: 200px) and (orientation: landscape)': {
             width: '25%'
         }
     },
@@ -185,6 +188,12 @@ const styles = StyleSheet.create({
         '@media screen and (max-height: 700px)': {
             marginBottom: '5px',
         }
+    },
+    paddingRight: {
+        paddingRight: '20px'
+    },
+    paddingLeft: {
+        paddingLeft: '20px'
     }
 
 })
