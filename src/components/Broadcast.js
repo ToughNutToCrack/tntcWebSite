@@ -10,7 +10,6 @@ import youtubeImg from '../assets/images/photo/Youtube.png'
 
 const styles = StyleSheet.create({
     container: {
-        // scrollSnapType: 'y mandatory',
         overflowY: 'scroll',
         overflowX: 'hidden',
         height: '100%',
@@ -23,21 +22,17 @@ const styles = StyleSheet.create({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        fontSize: '2vw',
-        // scrollSnapAlign: 'start'
+        fontSize: '2vw'
     },
     section: {
         width: '100%',
-        height: '100%',
-        // scrollSnapAlign: 'start'
+        height: '100%'
     },
     divisionsWrapper: {
         fontFamily: '"HeadLand One", serif',
         height: 'calc(100% - 100px)',
-        // height: '100%',
         width: '100%',
-        fontSize: '2vw',
-        // scrollSnapAlign: 'start'
+        fontSize: '2vw'
     },
     divisionHeader: {
         width: '100%',
@@ -179,11 +174,11 @@ const styles = StyleSheet.create({
         width: '90%'
     },
     width60: {
-        width: '70%',
+        width: '55%',
         '@media screen and (max-height: 700px)': {
-            width: '60%'
+            width: '55%'
         },
-        '@media screen and (min-width: 530px) and (max-width: 880px) and (orientation: portrait)': {
+        '@media screen and (max-width: 880px) and (orientation: portrait)': {
             width: '40%'
         },
         '@media screen and (min-height: 332px) and (max-height: 650px) and (orientation: portrait)': {
@@ -219,9 +214,7 @@ class Broadcast extends Component {
                             <p>The partecipant has to create a videogame based on a theme. 
                                At the end of the granted days, teams upload their creation so that we can review them.</p>
                             <p>The winner team is announced on our socials pages and receives a special prize.</p>
-                            <p>Partecipation to the Game Jam is completely free.</p>
                             <p>Updates on the first event will be published on our socials.</p> 
-                            <p>Follow us.</p>
                         </div>
                     </div>    
                 </div>
