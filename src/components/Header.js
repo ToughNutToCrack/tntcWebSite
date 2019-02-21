@@ -137,9 +137,16 @@ class Header extends Component {
         this.setState({ isOpen: !this.state.isOpen });
     }
 
+    isHome() {
+        if (window.location.pathname !== '/studio' && window.location.pathname !== '/broadcast' && window.location.pathname !== '/contacts') {
+            return styles.headerTransparent
+        }
+        return styles.header
+    }
+
     render() {
         return ( 
-            <div className={ css(window.location.pathname === '/' ? styles.headerTransparent : styles.header) }>
+            <div className={ css(this.isHome()) }>
                 <div className={ css(styles.title, styles.logoHeader) }>
                     <NavLink className={ css(styles.title) } exact to="/">TNTC</NavLink>
                 </div>
