@@ -275,7 +275,7 @@ class Broadcast extends Component {
                 </div>
                 <div className={ css(styles.division, styles.hideObject) }>
                     <div className={ css(styles.innerDivision) }>
-                        <a hreft="https://www.udemy.com/game-development-professionale-con-unity-3d-e-c/?couponCode=NUTTY-WEBSITE"><img className={ css(styles.center, styles.width60) }  src={ courseLogoImg } alt=""/></a>
+                        <a href="https://www.udemy.com/game-development-professionale-con-unity-3d-e-c/?couponCode=NUTTY-WEBSITE"><img className={ css(styles.center, styles.width60) }  src={ courseLogoImg } alt=""/></a>
                     </div>
                 </div>
             </div>
