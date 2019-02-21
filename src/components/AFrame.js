@@ -149,7 +149,7 @@ class AFrame extends Component {
         if (browser && browser.name !== 'safari') {
             return ( 
                 <div className={ css(styles.aFrame) }>
-                    <a-scene embedded fog="type: exponential; color: #fff;" vr-mode-ui="enabled: false" scroll-listener="" cursor="rayOrigin: mouse" inspector="url: xxx">
+                    <a-scene embedded fog="type: exponential; color: #fff;" vr-mode-ui="enabled: false" scroll-listener="" cursor="rayOrigin: mouse" inspector="url: xxx" visible={ window.location.pathname === '/' ? 'true' : 'false' }>
                         <a-assets>
                             <a-asset-item id="logo-obj" src={ Scrittalogo }></a-asset-item>
                             <a-asset-item id="logo-mtl" src={ ScrittalogoMat }></a-asset-item>
