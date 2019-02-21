@@ -30,24 +30,18 @@ const styles = StyleSheet.create({
         position: 'absolute',
     },
     wrapper: {
-        fontFamily: '"HeadLand One", serif', 
         height: '100%',
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: '3vw',
-        // scrollSnapAlign: 'start'
+        alignItems: 'center'
     },
     section: {
         width: '100%',
-        height: '100%',
-        // scrollSnapAlign: 'start'
+        height: '100%'
     },
     divisionsWrapper: {
-        fontFamily: '"HeadLand One", serif',
-        height: '100%',
+        height: 'calc(100% - 100px)',
         width: '100%',
-        fontSize: '3vh'
     },
     division: {
         width: '100%',
@@ -63,7 +57,6 @@ const styles = StyleSheet.create({
     },
     grey: {
         backgroundColor: '#424242',
-        // backgroundColor: '#9E9E9E',
         color: '#ffffff',
     },
     red: {
@@ -91,12 +84,6 @@ const styles = StyleSheet.create({
     },
     text: {
         display: 'block',
-        
-        // scrollSnapAlign: 'start',
-        // fontSize: '3vh',
-        // '@media screen and (max-width: 880px) and (orientation: portrait)': {
-        //     fontSize: '3vw',
-        // }
         fontSize: '3vw',
         '@media only screen and (min-width: 880px) and (orientation: landscape)': {
             fontSize: '30px',
@@ -106,32 +93,65 @@ const styles = StyleSheet.create({
         paddingTop: '150px'
     },
     big: {
-        fontFamily: '"Patua One", regular',
-        fontSize: '5vW',
+        fontSize: '4vW',
         '@media only screen and (min-width: 880px) and (orientation: landscape)': {
-            fontSize: '40px',
-        }
-    },
-    little: {
-        fontFamily: '"HeadLand One", serif',
-        fontSize: '2vw',
-        '@media only screen and (min-width: 880px) and (max-width: 1280px) and (orientation: landscape)': {
-            // fontSize: '15px',
-            fontSize: '2vh'
-        },
-        '@media only screen and (min-width: 1280px) and (orientation: landscape)': {
-            // fontSize: '15px',
-            fontSize: '2.5vh'
-        },
-        '@media only screen and (min-width: 880px) and (orientation: portrait)': {
             fontSize: '3vw',
         }
     },
-    normal: {
-        fontFamily: '"Patua One", regular',
-        fontSize: '4vW',
+    little: {
+        fontSize: '2vw',
         '@media only screen and (min-width: 880px) and (orientation: landscape)': {
-            fontSize: '35px',
+            fontSize: '22px',
+        }
+    },
+    normal: {
+        fontSize: '2vW',
+        '@media only screen and (max-width: 880px)': {
+            fontSize: '3vw',
+        },
+        '@media only screen and (max-width: 440px)': {
+            fontSize: '4vw',
+        },
+        '@media only screen and (max-height: 400px)': {
+            fontSize: '4vh',
+            lineHeight: '5px'
+        },
+    },
+    normalxs: {
+        fontSize: '1.3vW',
+        '@media only screen and (max-width: 880px)': {
+            fontSize: '2vw',
+        },
+        '@media only screen and (max-width: 440px)': {
+            fontSize: '3vw',
+        },
+        '@media only screen and (max-height: 440px)': {
+            fontSize: '3vh',
+            lineHeight: '5px'
+        },
+    },
+    responsiveFont: {
+        position: 'relative',
+        top: '10%',
+        fontSize: '3.5vh',
+        '@media screen and (min-width: 530px) and (max-width: 880px)': {
+            fontSize: '3vh'
+        },
+        '@media screen and (min-height: 332px) and (max-height: 565px)': {
+            fontSize: '3vh'
+        },
+        '@media screen and (min-width: 0px) and (max-width: 331px)': {
+            fontSize: '2.5vh'
+        }
+    },
+    responsiveTop: {
+        '@media screen and (max-width: 880px) and (orientation: portrait)': {
+            paddingTop: '30%'
+        }
+    },
+    hideObject: {
+        '@media screen and (max-height: 460px) and (max-width: 426px) and (orientation: portrait)': {
+            display: 'none'
         }
     },
     textRed: {
@@ -144,7 +164,6 @@ const styles = StyleSheet.create({
         overflow: 'hidden'
     },
     imagesText: {
-        fontFamily: '"HeadLand One", serif',
         fontSize: '1.5vw',
         display: 'block',
         position: 'relative',
@@ -164,7 +183,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         flex: '100%',
         maxWidth: '100%',
-        padding: '20px',
+        position: 'relative',
+        bottom: '10%',
         '@media only screen and (max-width: 880px) and (orientation: portrait)': {
             flexDirection: 'column'
         }
@@ -176,48 +196,29 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         flex: '100%',
         maxWidth: '100%',
-        padding: '20px',
+        position: 'relative',
+        bottom: '10%',
         '@media only screen and (max-width: 880px) and (orientation: portrait)': {
             flexDirection: 'row'
         }
     },
+    center: {
+        verticalAlign: 'middle'
+    },
     singleImageContainer: {
-        padding: '20px',
-        '@media only screen and (max-height: 600px) and (orientation: landscape)': {
-            paddingBottom: '200px'
-        },
-        '@media only screen and (max-width: 880px) and (orientation: portrait)': {
-            padding: '10px'
-        }
+        paddingLeft: '5px',
+        paddingRight: '5px'
     },
     singleImage: {
         width: '30vw',
-        maxWidth: '400px',
         height: 'auto',
-        '@media only screen and (max-width: 880px) and (orientation: portrait)': {
-            maxWidth: '30vh',
-            width: 'auto',
-            height: '12vh',
-        },
-        '@media only screen and (max-height: 600px) and (orientation: landscape)': {
-            width: '18vw'
-        },
         '@media only screen and (max-height: 400px) and (orientation: landscape)': {
             display: 'none'
         },
     },
     singleVerticalImage: {
         width: 'auto',
-        maxHeight: '300px',
         height: '30vh',
-        '@media only screen and (max-width: 880px) and (orientation: portrait)': {
-            maxHeight: '300px',
-            height: 'auto',
-            width: '25vW',
-        },
-        '@media only screen and (max-height: 600px) and (orientation: landscape)': {
-            height: '22vh'
-        },
         '@media only screen and (max-height: 400px) and (orientation: landscape)': {
             display: 'none'
         }
@@ -227,6 +228,12 @@ const styles = StyleSheet.create({
         width: '100%',
         position: 'absolute',
         bottom: 15,
+    },
+    font1: {
+        fontFamily: '"HeadLand One", serif'
+    },
+    font2: {
+        fontFamily: '"Patua One", regular'
     }
 })
 
@@ -234,15 +241,15 @@ class Studio extends Component {
   render() {
     return (
         <div className={ css(styles.container) }>
-            <div className={ css(styles.wrapper, styles.section, styles.white) }>
-                <div className={ css(styles.mainText) }>
-                    <p className={ css(styles.normal) }><span className={ css(styles.textRed, styles.big) }>Studio </span> division realizes project based on your ideas.</p>
-                    <p className={ css(styles.little) }>3D Visualization</p>
-                    <p className={ css(styles.little) }>Configurators</p>
-                    <p className={ css(styles.little) }>Training experiences</p>
-                    <p className={ css(styles.little) }>Videogames</p>
-                    <p className={ css(styles.little) }>Animated Videos</p>
-                    <p className={ css(styles.little) }>Custom experiences</p>
+            <div className={ css(styles.wrapper, styles.section, styles.white, styles.font1) }>
+                <div>
+                    <p className={ css(styles.normal, styles.font2) }><span className={ css(styles.textRed) }>Studio </span> division realizes project based on your ideas.</p>
+                    <p className={ css(styles.normalxs) }>3D Visualization</p>
+                    <p className={ css(styles.normalxs) }>Configurators</p>
+                    <p className={ css(styles.normalxs) }>Training experiences</p>
+                    <p className={ css(styles.normalxs) }>Videogames</p>
+                    <p className={ css(styles.normalxs) }>Animated Videos</p>
+                    <p className={ css(styles.normalxs) }>Custom experiences</p>
                 </div>
                 <div className={ css(styles.scrollWrapper) }>
                     <ScrollPls color='#424242' visible={ true } />
@@ -250,10 +257,10 @@ class Studio extends Component {
             </div>
 
             <div className={ css(styles.division, styles.grey, styles.overflow) }>
-                <div className={ css(styles.imagesText) }>
-                    <p>Visualize <span className= { css(styles.textOrange, styles.normal) }>your products</span>, no matter what.</p> <p>We guide you through new technologies. </p>
+                <div className={ css(styles.responsiveFont) }>
+                    <p>Visualize <span className= { css(styles.textOrange) }>your products</span>, no matter what.</p> <p>We guide you through new technologies. </p>
                 </div>
-                <div className={ css(styles.imagesContainer, styles.wrapper) }>
+                <div className={ css(styles.imagesContainer, styles.wrapper, styles.hideObject, styles.center) }>
                     <div className={ css(styles.singleImageContainer) }>
                         <ImageZoom
                             image={ {
@@ -297,10 +304,10 @@ class Studio extends Component {
             </div>
 
             <div className={ css(styles.division, styles.white, styles.overflow) }>
-                <div className={ css(styles.imagesText) }>
-                    <p>Shader development let us <span className= { css(styles.textOrange, styles.normal) }>customize</span> how your models are represented.</p> <p>We create tailored solutions <span className= { css(styles.textOrange, styles.normal) }>based on your needs.</span></p>
+                <div className={ css(styles.responsiveFont) }>
+                    <p>Shader development let us <span className= { css(styles.textOrange) }>customize</span> how your models are represented.</p> <p>We create tailored solutions <span className= { css(styles.textOrange) }>based on your needs.</span></p>
                 </div>
-                <div className={ css(styles.imagesContainer, styles.wrapper) }>
+                <div className={ css(styles.imagesContainer, styles.wrapper, styles.hideObject) }>
                     <div className={ css(styles.singleImageContainer) }>
                         <ImageZoom
                             image={ {
@@ -344,10 +351,10 @@ class Studio extends Component {
             </div>
 
             <div className={ css(styles.division, styles.grey, styles.overflow) }>
-                <div className={ css(styles.imagesText) }>
-                    <p>Handheld Augmented Reality is changing how we perceive the world.</p>  <p>See the <span className= { css(styles.textOrange, styles.normal) }>difference.</span></p>
+                <div className={ css(styles.responsiveFont) }>
+                    <p>Handheld Augmented Reality is changing how we perceive the world.</p>  <p>See the <span className= { css(styles.textOrange) }>difference.</span></p>
                 </div>
-                <div className={ css(styles.imagesContainerVertical, styles.wrapper) }>
+                <div className={ css(styles.imagesContainerVertical, styles.wrapper, styles.hideObject) }>
                     <div className={ css(styles.singleImageContainer) }>
                         <ImageZoom
                             image={ {
