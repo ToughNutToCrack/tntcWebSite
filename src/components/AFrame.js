@@ -145,11 +145,18 @@ class AFrame extends Component {
         this.props.history.push(target)
     }
 
+    isHome() {
+        if (window.location.pathname !== '/studio' && window.location.pathname !== '/broadcast' && window.location.pathname !== '/contacts') {
+            return 'true'
+        }
+        return 'false'
+    }
+
     render() {
         if (browser && browser.name !== 'safari') {
             return ( 
                 <div className={ css(styles.aFrame) }>
-                    <a-scene embedded fog="type: exponential; color: #fff;" vr-mode-ui="enabled: false" scroll-listener="" cursor="rayOrigin: mouse" inspector="url: xxx" visible={ window.location.pathname === '/' ? 'true' : 'false' }>
+                    <a-scene embedded fog="type: exponential; color: #fff;" vr-mode-ui="enabled: false" scroll-listener="" cursor="rayOrigin: mouse" inspector="url: xxx" visible={ this.isHome() }>
                         <a-assets>
                             <a-asset-item id="logo-obj" src={ Scrittalogo }></a-asset-item>
                             <a-asset-item id="logo-mtl" src={ ScrittalogoMat }></a-asset-item>
