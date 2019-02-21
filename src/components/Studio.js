@@ -101,6 +101,9 @@ const styles = StyleSheet.create({
             fontSize: '4vh',
             lineHeight: '5px'
         },
+        '@media screen and (max-height: 460px) and (max-width: 426px) and (orientation: portrait)': {
+            lineHeight: '20px'
+        }
     },
     normalxs: {
         fontSize: '1.3vW',
@@ -113,22 +116,11 @@ const styles = StyleSheet.create({
         '@media only screen and (max-height: 440px)': {
             fontSize: '3vh',
             lineHeight: '5px'
-        },
+        }
     },
     responsiveFont: {
         position: 'relative',
         top: '10%',
-        // fontSize: '3.5vh',
-        // '@media screen and (min-width: 530px) and (max-width: 880px)': {
-        //     fontSize: '3vh'
-        // },
-        // '@media screen and (min-height: 332px) and (max-height: 565px)': {
-        //     fontSize: '3vh'
-        // },
-        // '@media screen and (min-width: 0px) and (max-width: 331px)': {
-        //     fontSize: '2.5vh'
-        // }
-
         fontSize: '1.5vW',
         '@media only screen and (max-width: 880px)': {
             fontSize: '2vw',
@@ -141,7 +133,8 @@ const styles = StyleSheet.create({
             lineHeight: '5px'
         },
         '@media screen and (max-height: 460px) and (max-width: 426px) and (orientation: portrait)': {
-            top: '50%'
+            top: '30%',
+            lineHeight: '20px'
         },
 
     },
@@ -164,20 +157,6 @@ const styles = StyleSheet.create({
     overflow: {
         overflow: 'hidden'
     },
-    // imagesText: {
-    //     fontSize: '1.5vw',
-    //     display: 'block',
-    //     position: 'relative',
-    //     top: '50px',
-    //     '@media only screen and (max-width: 880px) and (orientation: portrait)': {
-    //         fontSize: '2vw',
-    //         top: '5vh',
-    //     },
-    //     '@media only screen and (max-height: 600px) and (orientation: landscape)': {
-    //         top: '20px'
-    //     },
-     
-    // },
     imagesContainer: {
         display: 'flex',
         justifyContent: 'center',
@@ -200,16 +179,14 @@ const styles = StyleSheet.create({
         maxWidth: '100%',
         position: 'relative',
         bottom: '10%',
-        '@media only screen and (max-width: 880px) and (orientation: portrait)': {
-            flexDirection: 'row'
+        '@media only screen and (max-width: 400px) and (orientation: portrait)': {
+            flexDirection: 'column'
         }
     },
     center: {
         verticalAlign: 'middle'
     },
     singleImageContainer: {
-        // paddingLeft: '5px',
-        // paddingRight: '5px',
         padding: '5px'
     },
     singleImage: {
@@ -229,9 +206,15 @@ const styles = StyleSheet.create({
     },
     singleVerticalImage: {
         width: 'auto',
-        height: '30vh',
+        height: '40vh',
         '@media only screen and (max-height: 400px) and (orientation: landscape)': {
             display: 'none'
+        },
+        '@media only screen and (max-width: 800px) and (orientation: portrait)': {
+            height: '25vh'
+        },
+        '@media only screen and (max-width: 400px) and (orientation: portrait)': {
+            height: '15vh'
         }
     },
     scrollWrapper: {
@@ -269,7 +252,7 @@ class Studio extends Component {
 
             <div className={ css(styles.division, styles.grey, styles.overflow, styles.font1) }>
                 <div className={ css(styles.responsiveFont) }>
-                    <p>Visualize <span className= { css(styles.textOrange, styles.font2, styles.big) }>your products</span>, no matter what.</p> <p>We guide you through new technologies. </p>
+                    <p>Visualize <span className= { css(styles.textOrange) }>your products</span>, no matter what.</p> <p>We guide you through new technologies. </p>
                 </div>
                 <div className={ css(styles.imagesContainer, styles.wrapper, styles.hideObject, styles.center) }>
                     <div className={ css(styles.singleImageContainer) }>
@@ -316,7 +299,7 @@ class Studio extends Component {
 
             <div className={ css(styles.division, styles.white, styles.overflow, styles.font1) }>
                 <div className={ css(styles.responsiveFont) }>
-                    <p>Shader development let us <span className= { css(styles.textOrange, styles.font2, styles.big) }>customize</span> how your models are represented.</p> <p>We create tailored solutions <span className= { css(styles.textOrange, styles.font2, styles.big) }>based on your needs.</span></p>
+                    <p>Shader development let us <span className= { css(styles.textOrange) }>customize</span> how your models are represented.</p> <p>We create tailored solutions <span className= { css(styles.textOrange) }>based on your needs.</span></p>
                 </div>
                 <div className={ css(styles.imagesContainer, styles.wrapper, styles.hideObject) }>
                     <div className={ css(styles.singleImageContainer) }>
@@ -363,7 +346,7 @@ class Studio extends Component {
 
             <div className={ css(styles.division, styles.grey, styles.overflow, styles.font1) }>
                 <div className={ css(styles.responsiveFont) }>
-                    <p>Handheld Augmented Reality is changing how we perceive the world.</p>  <p>See the <span className= { css(styles.textOrange, styles.font2, styles.big) }>difference.</span></p>
+                    <p>Handheld Augmented Reality is changing how we perceive the world.</p>  <p>See the <span className= { css(styles.textOrange) }>difference.</span></p>
                 </div>
                 <div className={ css(styles.imagesContainerVertical, styles.wrapper, styles.hideObject) }>
                     <div className={ css(styles.singleImageContainer) }>
