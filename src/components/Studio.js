@@ -178,10 +178,7 @@ const styles = StyleSheet.create({
         flex: '100%',
         maxWidth: '100%',
         position: 'relative',
-        bottom: '10%',
-        '@media only screen and (max-width: 400px) and (orientation: portrait)': {
-            flexDirection: 'column'
-        }
+        bottom: '10%'
     },
     center: {
         verticalAlign: 'middle'
