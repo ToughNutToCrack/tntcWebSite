@@ -74,6 +74,10 @@ const styles = StyleSheet.create({
         }
     },
     responsiveFont: {
+        fontSize: '2vw',
+        '@media screen and (min-width: 1200px) and (orientation: landscape)': {
+            fontSize: '1.5vw',
+        },
         '@media screen and (min-width: 530px) and (max-width: 880px)': {
             fontSize: '2vh'
         },
