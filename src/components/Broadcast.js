@@ -237,7 +237,7 @@ class Broadcast extends Component {
                 </div>
                 <div className={ css(styles.division, styles.hideObject) }>
                     <div className={ css(styles.innerDivision) }>
-                        <img className={ css(styles.center, styles.width60) }  src={ gameJamImg } alt=""/>
+                        <a href="https://www.youtube.com/channel/UCtj_LuYF9i5xkk4Q9EYamYA"><img className={ css(styles.center, styles.width60) }  src={ gameJamImg } alt=""/></a>
                     </div>
                 </div>
             </div>
@@ -256,7 +256,7 @@ class Broadcast extends Component {
                 </div>
                 <div className={ css(styles.division, styles.hideObject) }>
                     <div className={ css(styles.innerDivision) }>
-                        <img className={ css(styles.center, styles.width60) }  src={ youtubeImg } alt=""/>
+                        <a href="https://www.youtube.com/channel/UCtj_LuYF9i5xkk4Q9EYamYA?sub_confirmation=1"><img className={ css(styles.center, styles.width60) }  src={ youtubeImg } alt=""/></a>
                     </div>
                 </div>
             </div>
@@ -275,7 +275,7 @@ class Broadcast extends Component {
                 </div>
                 <div className={ css(styles.division, styles.hideObject) }>
                     <div className={ css(styles.innerDivision) }>
-                        <img className={ css(styles.center, styles.width60) }  src={ courseLogoImg } alt=""/>
+                        <a hreft="https://www.udemy.com/game-development-professionale-con-unity-3d-e-c/?couponCode=NUTTY-WEBSITE"><img className={ css(styles.center, styles.width60) }  src={ courseLogoImg } alt=""/></a>
                     </div>
                 </div>
             </div>

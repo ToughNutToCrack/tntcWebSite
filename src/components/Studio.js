@@ -16,9 +16,9 @@ import AR1 from '../assets/images/studio/AR1.jpg'
 import AR2 from '../assets/images/studio/AR2.jpg'
 import AR3 from '../assets/images/studio/AR3.jpg'
 
-import Game1 from '../assets/images/studio/Game1.jpg'
-import Game2 from '../assets/images/studio/Game2.jpg'
-import Game3 from '../assets/images/studio/Game3.jpg'
+// import Game1 from '../assets/images/studio/Game1.jpg'
+// import Game2 from '../assets/images/studio/Game2.jpg'
+// import Game3 from '../assets/images/studio/Game3.jpg'
 
 const styles = StyleSheet.create({
     container: {
