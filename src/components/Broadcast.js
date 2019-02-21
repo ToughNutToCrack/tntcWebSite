@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
             fontSize: '2vh'
         },
         '@media screen and (min-height: 0px) and (max-height: 331px)': {
-            fontSize: '4vh'
+            fontSize: '2.5vh'
         },
         '@media screen and (min-width: 0px) and (max-width: 331px)': {
             fontSize: '1.5vh'
@@ -179,12 +179,15 @@ const styles = StyleSheet.create({
             width: '40%'
         },
         '@media screen and (min-height: 332px) and (max-height: 650px) and (orientation: portrait)': {
-            width: '40%'
+            width: '35%'
         },
         '@media screen and (max-height: 400px) and (orientation: landscape)': {
             width: '35%'
         },
-        '@media screen and (max-height: 200px) and (orientation: landscape)': {
+        '@media screen and (min-width: 1000px) and (max-height: 400px) and (orientation: landscape)': {
+            width: '15%'
+        },
+        '@media screen and and (max-width: 1000px) and (max-height: 200px) and (orientation: landscape)': {
             width: '25%'
         }
     },
@@ -223,7 +226,7 @@ class Broadcast extends Component {
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
                         <div className={ css(styles.responsiveFont, styles.responsiveTop, styles.paddingLeft, styles.paddingRight) }>
-                            <p><span className={ css(styles.textGrey, styles.big) }>Game Jam</span></p>
+                            <p><span className={ css(styles.textGrey, styles.normal) }>Game Jam</span></p>
                             <p>TNTC Game Jam is a contest opens to everybody loves to develop videogames.</p>
                             <p>The partecipant has to create a videogame based on a theme. 
                                At the end of the granted days, teams upload their creation so that we can review them.</p>
@@ -243,7 +246,7 @@ class Broadcast extends Component {
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
                         <div className={ css(styles.responsiveFont, styles.responsiveTop, styles.paddingLeft, styles.paddingRight) }>
-                            <p><span className={ css(styles.textOrange, styles.big) }>YouTube</span></p>
+                            <p><span className={ css(styles.textOrange, styles.normal) }>YouTube</span></p>
                             <p>On Youtube we share our passion about game development.</p>
                             <p>Here you can find tutorials, suggestions, tools and more.</p>
                             <p>New video published every Friday.</p>
@@ -262,7 +265,7 @@ class Broadcast extends Component {
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
                         <div className={ css(styles.responsiveFont, styles.responsiveTop, styles.paddingLeft, styles.paddingRight) }>
-                            <p><span className={ css(styles.textGrey, styles.big) }>Courses</span></p>
+                            <p><span className={ css(styles.textGrey, styles.normal) }>Courses</span></p>
                             <p>Teaching development of 3D applications and videogames is something we love to do.
                                So we create and organize courses about this topics.</p>
                             <p>Our goal is to share our knowledges and attract peoples to this field of work.</p>
