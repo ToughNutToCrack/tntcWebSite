@@ -209,9 +209,6 @@ const styles = StyleSheet.create({
         },
         '@media only screen and (max-width: 800px) and (orientation: portrait)': {
             height: '25vh'
-        },
-        '@media only screen and (max-width: 400px) and (orientation: portrait)': {
-            height: '15vh'
         }
     },
     scrollWrapper: {
