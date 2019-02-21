@@ -84,6 +84,9 @@ const styles = StyleSheet.create({
         '@media screen and (min-height: 332px) and (max-height: 565px)': {
             fontSize: '2vh'
         },
+        '@media screen and (min-height: 0px) and (max-height: 331px)': {
+            fontSize: '4vh'
+        },
         '@media screen and (min-width: 0px) and (max-width: 331px)': {
             fontSize: '1.5vh'
         }
@@ -176,7 +179,7 @@ const styles = StyleSheet.create({
             width: '40%'
         },
         '@media screen and (min-height: 332px) and (max-height: 650px) and (orientation: portrait)': {
-            width: '25%'
+            width: '40%'
         },
         '@media screen and (max-height: 400px) and (orientation: landscape)': {
             width: '35%'

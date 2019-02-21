@@ -35,6 +35,12 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center'
     },
+    mainWrapper: {
+        '@media only screen and (max-height: 330px)': {
+            position: 'relative',
+            top: '10%'
+        }
+    },
     section: {
         width: '100%',
         height: '100%'
@@ -136,7 +142,10 @@ const styles = StyleSheet.create({
             top: '30%',
             lineHeight: '20px'
         },
-
+        '@media only screen and (max-height: 400px) and (orientation: landscape)': {
+            top: '38%',
+            lineHeight: '10px'
+        }
     },
     responsiveTop: {
         '@media screen and (max-width: 880px) and (orientation: portrait)': {
@@ -230,7 +239,7 @@ class Studio extends Component {
     return (
         <div className={ css(styles.container) }>
             <div className={ css(styles.wrapper, styles.section, styles.white, styles.font1) }>
-                <div>
+                <div className={ css(styles.mainWrapper) }>
                     <p className={ css(styles.normal, styles.font2) }><span className={ css(styles.textRed) }>Studio </span> division realizes project based on your ideas.</p>
                     <p className={ css(styles.normalxs) }>3D Visualization</p>
                     <p className={ css(styles.normalxs) }>Configurators</p>
