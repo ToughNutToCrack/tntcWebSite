@@ -241,6 +241,7 @@ class Studio extends Component {
             <div className={ css(styles.wrapper, styles.section, styles.white, styles.font1) }>
                 <div className={ css(styles.mainWrapper) }>
                     <p className={ css(styles.normal, styles.font2) }><span className={ css(styles.textRed) }>Studio </span> division realizes project based on your ideas.</p>
+                    <p className={ css(styles.normalxs) }>Virtual and Augmented Reality</p>
                     <p className={ css(styles.normalxs) }>3D Visualization</p>
                     <p className={ css(styles.normalxs) }>Configurators</p>
                     <p className={ css(styles.normalxs) }>Training experiences</p>
