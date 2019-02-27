@@ -14,12 +14,18 @@ const styles = StyleSheet.create({
 })
 
 class App extends Component {
+
+    isThree() {
+        if (window.location.pathname !== '/three')
+          return <><Placeholder /><Header /><Content /></>
+        else 
+          return <></>
+    }
+    
     render() {
         return ( 
             <div className={ css(styles.app) }>
-                <Placeholder />
-                <Header /> 
-                <Content />  
+                {this.isThree()}
             </div>
         );
     }
