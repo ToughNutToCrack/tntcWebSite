@@ -9,7 +9,7 @@ const twitterLink = 'https://twitter.com/tntcproject'
 const instagramLink = 'https://www.instagram.com/tntcproject/'
 const facebookLink = 'https://www.facebook.com/toughnutocrack/'
 const youtubeLink = 'https://www.youtube.com/channel/UCtj_LuYF9i5xkk4Q9EYamYA'
-const arLink = 'https://toughnuttocrack.it/arjs/'
+const arLink = 'https://toughnuttocrack.it/business-cards-ar/'
 
 const styles = StyleSheet.create({
     header: {
