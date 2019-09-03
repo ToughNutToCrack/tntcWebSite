@@ -85,7 +85,16 @@ class AFrame extends Component {
 
     componentDidMount() {
         const self = this
-        if (browser && browser.name !== 'safari') { 
+        if (browser && browser.name === 'safari') { 
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    self.loaded = true
+                    window.dispatchEvent(new Event('content-loaded'))
+                }, 1)
+            })
+
+        } else {
+           
             const el = document.querySelector('a-scene')
 
             el.addEventListener('on-scroll', (e) => {
@@ -108,18 +117,12 @@ class AFrame extends Component {
                     if (el.systems['navigation'].level === 0) {
                         window.dispatchEvent(new Event('scroll-pls'))
                     }
-                }, 5000)
+                }, 500)
                 
             })
 
             el.addEventListener('go-to', (e) => { this.redirectToTarget(e.detail.location) })
-        } else {
-            window.addEventListener('load', () => {
-                setTimeout(() => {
-                    self.loaded = true
-                    window.dispatchEvent(new Event('content-loaded'))
-                }, 1)
-            })
+
         }
 
         window.addEventListener('resize', this.updateDimensions.bind(this));
@@ -153,7 +156,14 @@ class AFrame extends Component {
     }
 
     render() {
-        if (browser && browser.name !== 'safari') {
+        if (browser && browser.name === 'safari') {
+            return (
+                <div className={ css(styles.safariContainer) }>
+                    <p className={ css(styles.safariText) }> {browser.name.charAt(0).toUpperCase() + browser.name.substring(1)}?? Use another browser to see how cool it's our main page!</p>
+                </div>
+            )
+
+        } else {
             return ( 
                 <div className={ css(styles.aFrame) }>
                     <a-scene embedded fog="type: exponential; color: #fff;" vr-mode-ui="enabled: false" scroll-listener="" cursor="rayOrigin: mouse" inspector="url: xxx" visible={ this.isHome() }>
@@ -218,12 +228,7 @@ class AFrame extends Component {
                     <ScrollPls color='#FF926B' visible={ false }/>
                 </div>
             )
-        } else {
-            return (
-                <div className={ css(styles.safariContainer) }>
-                    <p className={ css(styles.safariText) }> {browser.name.charAt(0).toUpperCase() + browser.name.substring(1)}?? Use another browser to see how cool it's our main page!</p>
-                </div>
-            )
+
         }
     }
 }
