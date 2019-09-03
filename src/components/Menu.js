@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { StyleSheet, css } from 'aphrodite'
 import { NavLink } from 'react-router-dom'
-import { FaTwitter, FaFacebookF, FaYoutube, FaInstagram } from 'react-icons/fa'
+import { FaTwitter, FaFacebookF, FaYoutube, FaInstagram, FaExpand } from 'react-icons/fa'
 import { IoIosClose } from 'react-icons/io'
 import { IconContext } from 'react-icons'
 
@@ -9,6 +9,7 @@ const twitterLink = 'https://twitter.com/tntcproject'
 const instagramLink = 'https://www.instagram.com/tntcproject/'
 const facebookLink = 'https://www.facebook.com/toughnutocrack/'
 const youtubeLink = 'https://www.youtube.com/channel/UCtj_LuYF9i5xkk4Q9EYamYA'
+const arLink = 'https://toughnuttocrack.it/arjs/'
 
 const resizeKeyframes = {
     '0%': {
@@ -185,6 +186,7 @@ class Menu extends Component {
                         <a target="_blank" rel="noopener noreferrer" href={ instagramLink }><FaInstagram /></a>
                         <a target="_blank" rel="noopener noreferrer" href={ facebookLink }><FaFacebookF /></a>
                         <a target="_blank" rel="noopener noreferrer" href={ youtubeLink }><FaYoutube /></a>
+                        <a target="_blank" rel="noopener noreferrer" href={ arLink }><FaExpand /></a>
                     </IconContext.Provider> 
                 </div>
             </div>  

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import { StyleSheet, css } from 'aphrodite'
-import { FaTwitter, FaFacebookF, FaYoutube, FaInstagram, FaBars } from 'react-icons/fa'
+import { FaTwitter, FaFacebookF, FaYoutube, FaInstagram, FaBars, FaExpand } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
 import Menu from './Menu'
 
@@ -9,6 +9,7 @@ const twitterLink = 'https://twitter.com/tntcproject'
 const instagramLink = 'https://www.instagram.com/tntcproject/'
 const facebookLink = 'https://www.facebook.com/toughnutocrack/'
 const youtubeLink = 'https://www.youtube.com/channel/UCtj_LuYF9i5xkk4Q9EYamYA'
+const arLink = 'https://toughnuttocrack.it/arjs/'
 
 const styles = StyleSheet.create({
     header: {
@@ -175,6 +176,7 @@ class Header extends Component {
                         <a className={ css(styles.singleSocialIcon) } target="_blank" rel="noopener noreferrer" href={ instagramLink }><FaInstagram /></a>
                         <a className={ css(styles.singleSocialIcon) } target="_blank" rel="noopener noreferrer" href={ facebookLink }><FaFacebookF /></a>
                         <a className={ css(styles.singleSocialIcon) } target="_blank" rel="noopener noreferrer" href={ youtubeLink }><FaYoutube /></a>
+                        <a className={ css(styles.singleSocialIcon) } target="_blank" rel="noopener noreferrer" href={ arLink }><FaExpand /></a>
                     </IconContext.Provider>    
                 </div>
                 <div className={ css(styles.hambContainer, styles.hover) } onClick={ this.openMenu }>

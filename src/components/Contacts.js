@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { css, StyleSheet } from 'aphrodite'
 import Slide from 'react-reveal/Slide'
 import Fade from 'react-reveal/Fade'
-import { FaTwitter, FaFacebookF, FaYoutube, FaInstagram } from 'react-icons/fa'
+import { FaTwitter, FaFacebookF, FaYoutube, FaInstagram, FaExpand } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
 import ImgBologna from '../assets/images/Bologna.jpg'
 import Page from './Page'
@@ -11,6 +11,7 @@ const twitterLink = 'https://twitter.com/tntcproject'
 const instagramLink = 'https://www.instagram.com/tntcproject/'
 const facebookLink = 'https://www.facebook.com/toughnutocrack/'
 const youtubeLink = 'https://www.youtube.com/channel/UCtj_LuYF9i5xkk4Q9EYamYA'
+const arLink = 'https://toughnuttocrack.it/arjs/'
 
 const styles = StyleSheet.create({
     background: {
@@ -110,9 +111,15 @@ class Contacts extends Component {
                         <div className={ css(styles.contactsContent) }>
                             <Fade bottom cascade delay={ 1000 } duration={ 500 }>
                                 <div className={ css(styles.outer) }>
+                                    
                                     <div className={ css(styles.inner) }>
                                         <h2>Looking for informations?</h2>
-                                        <a className={ css(styles.link) } href="mailto:info@tntc.it">Get in touch</a>
+                                        <div>
+                                            <a className={ css(styles.link) } href="https://toughnuttocrack.it/service/CartaDeiServizi.pdf">Services in detail (ITA)</a>
+                                        </div>
+                                        <div>
+                                            <a className={ css(styles.link) } href="https://toughnuttocrack.it/service/CartaDeiServiziEN.pdf">Services in detail (EN)</a>
+                                        </div>
                                     </div>
 
                                     <div className={ css(styles.inner) }>
@@ -129,6 +136,7 @@ class Contacts extends Component {
                                         <a target="_blank" rel="noopener noreferrer" href={ instagramLink }><FaInstagram /></a>
                                         <a target="_blank" rel="noopener noreferrer" href={ facebookLink }><FaFacebookF /></a>
                                         <a target="_blank" rel="noopener noreferrer" href={ youtubeLink }><FaYoutube /></a>
+                                        <a target="_blank" rel="noopener noreferrer" href={ arLink }><FaExpand /></a>
                                     </IconContext.Provider>  
                                 </div>  
                             </Fade>
