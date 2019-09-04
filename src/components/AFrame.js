@@ -34,6 +34,7 @@ import LogoBroadcast from '../assets/images/LogoSoloFacciaBroadcast.png'
 import LogoStudio from '../assets/images/LogoSoloFacciaStudio.png'
 import GreetingsImage from '../assets/images/Greetings.png'
 import SmokeImage from '../assets/images/Smoke-Element.png'
+import pivaImage from '../assets/images/PIVA.png'
 
 const styles = StyleSheet.create({
     aFrame: {
@@ -187,6 +188,8 @@ class AFrame extends Component {
                             <img id="logoStudio" src={ LogoStudio } alt=""></img>
                             <img id="logoGreetings" src={ GreetingsImage } alt=""></img>
                             <img id="smokeElement" src={ SmokeImage } alt=""></img>
+                            <img id="pIVA" src={ pivaImage } alt=""></img>
+
                         </a-assets>
 
                         <a-entity id="level0">
@@ -218,6 +221,7 @@ class AFrame extends Component {
                             <a-image id="broadcastImg" src="#logoBroadcast" position={ this.state.isPortMobile ? '0 -1 -4' : '3 2.5 -4' } width={ this.state.isPortMobile ? '4.5' : '2.5' } height={ this.state.isPortMobile ? '4.7' : '2.7' } goto="/broadcast"></a-image>
                             <cloud-point position={ this.state.isPortMobile ? '0 5 -6' : '-4 2.5 -6' } cloudpoint="maxx:1.5; maxy:3; maxz:0; offsety: -1.5; point:30; size:0.07; movement: true; preset: 0"></cloud-point>
                             <cloud-point position={ this.state.isPortMobile ? '0 -1 -6' : '4 2.5 -6' } cloudpoint="maxx:1.5; maxy:3; maxz:0; offsety: -1.5; point:30; size:0.07; color:#818285, #000000, #ed1c24, #fcd703; movement: true; preset: 1"></cloud-point>
+                            <a-image id="pivaImage" src="#pIVA" position={ this.state.isPortMobile ? '0 -8 -6'  : '0 -2 -6' } width={ this.state.isPortMobile ? '18' : '10' } height={ this.state.isPortMobile ? '6' : '3.3' } parallax="rangex:0.1; rangey:0.1; speed:0.1" alphatest= 'val: 0.5'></a-image>
                         </a-entity>
 
                         <a-sky color="#fff"></a-sky>

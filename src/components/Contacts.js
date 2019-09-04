@@ -140,7 +140,7 @@ class Contacts extends Component {
                                     </IconContext.Provider>  
 
                                     <div className={ css(styles.inner) }>
-                                        <a>Matteo Barldi P.IVA 03837730369</a>
+                                        <a>Matteo Baraldi P.IVA 03837730369</a>
                                         <br></br>
                                         <a>Erik Minarini P.IVA 03749901207 </a>
                                     </div>
