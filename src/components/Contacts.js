@@ -138,6 +138,12 @@ class Contacts extends Component {
                                         <a target="_blank" rel="noopener noreferrer" href={ youtubeLink }><FaYoutube /></a>
                                         <a target="_blank" rel="noopener noreferrer" href={ arLink }><FaExpand /></a>
                                     </IconContext.Provider>  
+
+                                    <div className={ css(styles.inner) }>
+                                        <a>Matteo Barldi P.IVA 03837730369</a>
+                                        <br></br>
+                                        <a>Erik Minarini P.IVA 03749901207 </a>
+                                    </div>
                                 </div>  
                             </Fade>
                         </div>
