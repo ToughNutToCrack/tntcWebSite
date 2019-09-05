@@ -127,6 +127,15 @@ const styles = StyleSheet.create({
         fontSize: 36,
         opacity: 1
     },
+    inner: {
+        fontFamily: '"Patua One", regular',
+        display: 'block',
+        padding: '35px',
+        fontSize: 22,
+        '@media screen and (max-width: 880px) and (orientation: portrait)': {
+            fontSize: '3vw',
+        }
+    }
 })
 
 class Menu extends Component {
