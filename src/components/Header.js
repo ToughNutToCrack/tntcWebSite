@@ -1,14 +1,16 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import { StyleSheet, css } from 'aphrodite'
-import { FaTwitter, FaFacebookF, FaYoutube, FaInstagram, FaBars, FaExpand } from 'react-icons/fa'
+import { FaTwitter, FaYoutube, FaInstagram, FaBars, FaGithub } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
 import Menu from './Menu'
 
 const twitterLink = 'https://twitter.com/tntcproject'
 const instagramLink = 'https://www.instagram.com/tntcproject/'
-const facebookLink = 'https://www.facebook.com/toughnutocrack/'
-const youtubeLink = 'https://www.youtube.com/channel/UCtj_LuYF9i5xkk4Q9EYamYA'
+const youtubeLink = 'https://www.youtube.com/channel/UCTR740iIPwfu7Pz_BoCEJ-g'
+const githubLink = 'https://github.com/ToughNutToCrack'
+
+// OLD Business card AR effect
 const arLink = 'https://toughnuttocrack.it/business-cards-ar/'
 
 const styles = StyleSheet.create({
@@ -162,9 +164,6 @@ class Header extends Component {
                         <li className={ css(styles.nav) }>
                             <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/broadcast">Broadcast</NavLink>
                         </li>
-                        {/* <li className={ css(styles.nav) }>
-                            <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/about">About</NavLink>
-                        </li>*/}
                         <li className={ css(styles.nav) }>
                             <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/contacts">Contacts</NavLink>
                         </li>
@@ -174,9 +173,8 @@ class Header extends Component {
                     <IconContext.Provider value={ { className: css(styles.socialIcon, styles.hover) } }>
                         <a className={ css(styles.singleSocialIcon) } target="_blank" rel="noopener noreferrer" href={ twitterLink }><FaTwitter/></a>
                         <a className={ css(styles.singleSocialIcon) } target="_blank" rel="noopener noreferrer" href={ instagramLink }><FaInstagram /></a>
-                        <a className={ css(styles.singleSocialIcon) } target="_blank" rel="noopener noreferrer" href={ facebookLink }><FaFacebookF /></a>
                         <a className={ css(styles.singleSocialIcon) } target="_blank" rel="noopener noreferrer" href={ youtubeLink }><FaYoutube /></a>
-                        <a className={ css(styles.singleSocialIcon) } target="_blank" rel="noopener noreferrer" href={ arLink }><FaExpand /></a>
+                        <a className={ css(styles.singleSocialIcon) } target="_blank" rel="noopener noreferrer" href={ githubLink }><FaGithub /></a>
                     </IconContext.Provider>    
                 </div>
                 <div className={ css(styles.hambContainer, styles.hover) } onClick={ this.openMenu }>

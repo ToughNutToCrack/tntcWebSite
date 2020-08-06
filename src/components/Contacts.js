@@ -2,16 +2,15 @@ import React, { Component } from 'react'
 import { css, StyleSheet } from 'aphrodite'
 import Slide from 'react-reveal/Slide'
 import Fade from 'react-reveal/Fade'
-import { FaTwitter, FaFacebookF, FaYoutube, FaInstagram, FaExpand } from 'react-icons/fa'
+import { FaTwitter, FaGithub, FaYoutube, FaInstagram } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
 import ImgBologna from '../assets/images/Bologna.jpg'
 import Page from './Page'
 
 const twitterLink = 'https://twitter.com/tntcproject'
 const instagramLink = 'https://www.instagram.com/tntcproject/'
-const facebookLink = 'https://www.facebook.com/toughnutocrack/'
-const youtubeLink = 'https://www.youtube.com/channel/UCtj_LuYF9i5xkk4Q9EYamYA'
-const arLink = 'https://toughnuttocrack.it/business-cards-ar/'
+const youtubeLink = 'https://www.youtube.com/channel/UCTR740iIPwfu7Pz_BoCEJ-g'
+const githubLink = 'https://github.com/ToughNutToCrack'
 
 const styles = StyleSheet.create({
     background: {
@@ -134,9 +133,8 @@ class Contacts extends Component {
                                     <IconContext.Provider value={ { className: css(styles.socials, styles.hover) } }>
                                         <a target="_blank" rel="noopener noreferrer" href={ twitterLink }><FaTwitter/></a>
                                         <a target="_blank" rel="noopener noreferrer" href={ instagramLink }><FaInstagram /></a>
-                                        <a target="_blank" rel="noopener noreferrer" href={ facebookLink }><FaFacebookF /></a>
                                         <a target="_blank" rel="noopener noreferrer" href={ youtubeLink }><FaYoutube /></a>
-                                        <a target="_blank" rel="noopener noreferrer" href={ arLink }><FaExpand /></a>
+                                        <a target="_blank" rel="noopener noreferrer" href={ githubLink }><FaGithub /></a>
                                     </IconContext.Provider>  
 
                                     <div className={ css(styles.inner) }>
