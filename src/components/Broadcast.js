@@ -34,7 +34,8 @@ const styles = StyleSheet.create({
         fontFamily: '"HeadLand One", serif',
         height: 'calc(100% - 100px)',
         width: '100%',
-        fontSize: '2vw'
+        fontSize: '2vw',
+        display: 'inline-table'
     },
     divisionHeader: {
         width: '100%',
@@ -72,7 +73,7 @@ const styles = StyleSheet.create({
     },
     responsiveTop: {
         '@media screen and (max-width: 880px) and (orientation: portrait)': {
-            paddingTop: '30%'
+            paddingTop: '10%'
         }
     },
     responsiveFont: {
@@ -80,17 +81,14 @@ const styles = StyleSheet.create({
         '@media screen and (min-width: 1200px) and (orientation: landscape)': {
             fontSize: '1.5vw',
         },
-        '@media screen and (min-width: 530px) and (max-width: 880px)': {
-            fontSize: '2vh'
+        '@media screen and (min-width: 0px) and (max-width: 880px)': {
+            fontSize: '1.5vh'
         },
         '@media screen and (min-height: 332px) and (max-height: 565px)': {
-            fontSize: '2vh'
+            fontSize: '1.5vh'
         },
         '@media screen and (min-height: 0px) and (max-height: 331px)': {
             fontSize: '2.5vh'
-        },
-        '@media screen and (min-width: 0px) and (max-width: 331px)': {
-            fontSize: '1.5vh'
         }
     },
     black: {
@@ -191,7 +189,7 @@ const styles = StyleSheet.create({
             width: '55%'
         },
         '@media screen and (max-width: 880px) and (orientation: portrait)': {
-            width: '40%'
+            width: '35%'
         },
         '@media screen and (min-height: 332px) and (max-height: 650px) and (orientation: portrait)': {
             width: '35%'
@@ -229,13 +227,16 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         alignItems: 'center'
     },
+    videoWrapper2: {
+        fontFamily: '"HeadLand One", serif',
+        height: '100%',
+        marginTop: '200px',
+        width: '100%',
+        fontSize: '2vw',
+        display: 'inline-table'
+    },
     videoDiv: {
-        display: 'inline-block',
-        width: '50%',
-        marginLeft: '2%',
-        '@media screen and (max-width: 880px) and (orientation: portrait)': {
-            width: '80%',
-        }
+        padding: '10px',
     },
     videoText: {
         display: 'inline-block',
@@ -248,13 +249,13 @@ class Broadcast extends Component {
   render() {
     return (
         <div className={ css(styles.container) }>
-            <div className={ css(styles.videowrapper) }>
-                <div className={ css(styles.videoDiv) }>
+            <div className={ css(styles.videoWrapper2) }>
+                <div className={ css(styles.center, styles.videoDiv) }>
                     <video width="100%" autoPlay loop>
                         <source src={ broadcastVideo } type="video/mp4" />
                     </video>
                 </div>
-                <div className={ css(styles.videoText) }>
+                <div className={ css(styles.center, styles.videoDiv) }>
                     <div>
                         <p className={ css(styles.normal) }><span className={ css(styles.textRed) }>Broadcast</span> is our sharing and learning division.</p>
                         <p className={ css(styles.normalxs) }>Youtube Channel</p>
@@ -269,11 +270,11 @@ class Broadcast extends Component {
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
                         <div className={ css(styles.responsiveFont, styles.responsiveTop, styles.paddingLeft, styles.paddingRight) }>
-                            <p><span className={ css(styles.textGrey, styles.normal) }>YouTube</span></p>
+                            <p><span className={ css(styles.textGrey, styles.normal, styles.responsiveFont) }>YouTube</span></p>
                             <p>On Youtube, we share our passion for game development.
                                Here you can find tutorials, suggestions, tools, and more.
                                Our YT page is a way to challenge ourselves continually, and constructively shows our professional skills. </p>
-                            <p><a className={ css(styles.textGrey, styles.normal) } href="https://www.youtube.com/channel/UCtj_LuYF9i5xkk4Q9EYamYA?sub_confirmation=1"> Subscribe.</a></p>
+                            <p><a className={ css(styles.textGrey, styles.normal, styles.responsiveFont) } href="https://www.youtube.com/channel/UCtj_LuYF9i5xkk4Q9EYamYA?sub_confirmation=1"> Subscribe.</a></p>
                             <a href="https://www.youtube.com/channel/UCtj_LuYF9i5xkk4Q9EYamYA?sub_confirmation=1"><img className={ css(styles.center, styles.width60) }  src={ youtubeImg } alt=""/></a>
                         </div>
                     </div>
@@ -282,71 +283,14 @@ class Broadcast extends Component {
                     <div className={ css(styles.innerDivision) }>
                         <div className={ css(styles.responsiveFont, styles.responsiveTop, styles.paddingLeft, styles.paddingRight) }>
                             <a href="https://www.udemy.com/game-development-professionale-con-unity-3d-e-c/?couponCode=NUTTY-WEBSITE"><img className={ css(styles.center, styles.width60) }  src={ courseLogoImg } alt=""/></a>
-                            <p><span className={ css(styles.textGrey, styles.normal) }>Courses</span></p>
+                            <p><span className={ css(styles.textGrey, styles.normal, styles.responsiveFont) }>Courses</span></p>
                             <p>Teaching the development of 3D applications and videogames is one of our aims.
                                Contact us if you need to organize classrooms about these topics or if you are in search of speakers for an event.</p>
-                            <p><a className={ css(styles.textGrey, styles.normal) } href="https://www.udemy.com/game-development-professionale-con-unity-3d-e-c/?couponCode=NUTTY-WEBSITE"> Check out our Best Seller course!</a></p>
+                            <p><a className={ css(styles.textGrey, styles.normal, styles.responsiveFont) } href="https://www.udemy.com/game-development-professionale-con-unity-3d-e-c/?couponCode=NUTTY-WEBSITE"> Check out our Best Seller course!</a></p>
                         </div>
                     </div>
                 </div>
             </div>
-            {/* <div className={ css(styles.divisionsWrapper, styles.orange) }>
-                <div className={ css(styles.division) }>
-                    <div className={ css(styles.innerDivision) }>
-                        <div className={ css(styles.responsiveFont, styles.responsiveTop, styles.paddingLeft, styles.paddingRight) }>
-                            <p><span className={ css(styles.textGrey, styles.normal) }>Game Jam</span></p>
-                            <p>TNTC Game Jam is a contest opens to everybody loves to develop videogames.</p>
-                            <p>The partecipant has to create a videogame based on a theme.
-                               At the end of the granted days, teams upload their creation so that we can review them.</p>
-                            <p>The winner team is announced on our socials pages and receives a special prize.</p>
-                            <p>Updates on the first event will be published on our socials.</p>
-                        </div>
-                    </div>
-                </div>
-                <div className={ css(styles.division, styles.hideObject) }>
-                    <div className={ css(styles.innerDivision) }>
-                        <a href="https://www.youtube.com/channel/UCtj_LuYF9i5xkk4Q9EYamYA"><img className={ css(styles.center, styles.width60) }  src={ gameJamImg } alt=""/></a>
-                    </div>
-                </div>
-            </div> */}
-            {/*
-            <div className={ css(styles.divisionsWrapper, styles.white) }>
-                <div className={ css(styles.division) }>
-                    <div className={ css(styles.innerDivision) }>
-                        <div className={ css(styles.responsiveFont, styles.responsiveTop, styles.paddingLeft, styles.paddingRight) }>
-                            <p><span className={ css(styles.textOrange, styles.normal) }>YouTube</span></p>
-                            <p>On Youtube we share our passion about game development.</p>
-                            <p>Here you can find tutorials, suggestions, tools and more.</p>
-                            <p>New video published every Friday.</p>
-                            <p><a className={ css(styles.textOrange, styles.noDecoration) } href="https://www.youtube.com/channel/UCtj_LuYF9i5xkk4Q9EYamYA?sub_confirmation=1"> Subscribe.</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div className={ css(styles.division, styles.hideObject) }>
-                    <div className={ css(styles.innerDivision) }>
-                        <a href="https://www.youtube.com/channel/UCtj_LuYF9i5xkk4Q9EYamYA?sub_confirmation=1"><img className={ css(styles.center, styles.width60) }  src={ youtubeImg } alt=""/></a>
-                    </div>
-                </div>
-            </div>
-
-            <div className={ css(styles.divisionsWrapper, styles.orange) }>
-                <div className={ css(styles.division) }>
-                    <div className={ css(styles.innerDivision) }>
-                        <div className={ css(styles.responsiveFont, styles.responsiveTop, styles.paddingLeft, styles.paddingRight) }>
-                            <p><span className={ css(styles.textGrey, styles.normal) }>Courses</span></p>
-                            <p>Teaching development of 3D applications and videogames is something we love to do.
-                               So we create and organize courses about this topics.</p>
-                            <p>Our goal is to share our knowledges and attract peoples to this field of work.</p>
-                            <p>Are you curious? <a className={ css(styles.textGrey, styles.noDecoration) } href="https://www.udemy.com/game-development-professionale-con-unity-3d-e-c/?couponCode=NUTTY-WEBSITE"> Check out our Best Seller course!</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div className={ css(styles.division, styles.hideObject) }>
-                    <div className={ css(styles.innerDivision) }>
-                        <a href="https://www.udemy.com/game-development-professionale-con-unity-3d-e-c/?couponCode=NUTTY-WEBSITE"><img className={ css(styles.center, styles.width60) }  src={ courseLogoImg } alt=""/></a>
-                    </div>
-                </div>
-            </div> */}
         </div>
     );
   }
