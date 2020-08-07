@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { css, StyleSheet } from 'aphrodite'
 import Slide from 'react-reveal/Slide'
 import Fade from 'react-reveal/Fade'
-import { FaTwitter, FaGithub, FaYoutube, FaInstagram } from 'react-icons/fa'
+import { FaTwitter, FaGithub, FaYoutube, FaInstagram, FaDiscord } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
 import ImgBologna from '../assets/images/Bologna.jpg'
 import Page from './Page'
@@ -11,6 +11,7 @@ const twitterLink = 'https://twitter.com/tntcproject'
 const instagramLink = 'https://www.instagram.com/tntcproject/'
 const youtubeLink = 'https://www.youtube.com/channel/UCTR740iIPwfu7Pz_BoCEJ-g'
 const githubLink = 'https://github.com/ToughNutToCrack'
+const discordLink = 'https://discord.gg/Z8QD8uF'
 
 const styles = StyleSheet.create({
     background: {
@@ -135,6 +136,7 @@ class Contacts extends Component {
                                         <a target="_blank" rel="noopener noreferrer" href={ instagramLink }><FaInstagram /></a>
                                         <a target="_blank" rel="noopener noreferrer" href={ youtubeLink }><FaYoutube /></a>
                                         <a target="_blank" rel="noopener noreferrer" href={ githubLink }><FaGithub /></a>
+                                        <a target="_blank" rel="noopener noreferrer" href={ discordLink }><FaDiscord /></a>
                                     </IconContext.Provider>  
 
                                     <div className={ css(styles.inner) }>

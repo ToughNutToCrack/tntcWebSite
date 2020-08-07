@@ -3,9 +3,7 @@ import { css, StyleSheet } from 'aphrodite'
 
 import ScrollPls from './SrcollPls'
 
-// import talksImg from '../assets/images/photo/talk.jpg'
-import gameJamImg from '../assets/images/photo/GameJam.png'
-import courseLogoImg from '../assets/images/photo/Courses.png'
+import courseLogoImg from '../assets/images/photo/studio1.jpg.png'
 import youtubeImg from '../assets/images/photo/Youtube.png'
 
 import broadcastVideo from '../assets/video/broadcast.mp4'
@@ -79,7 +77,7 @@ const styles = StyleSheet.create({
     responsiveFont: {
         fontSize: '2vw',
         '@media screen and (min-width: 1200px) and (orientation: landscape)': {
-            fontSize: '1.5vw',
+            fontSize: '1.2vw',
         },
         '@media screen and (min-width: 0px) and (max-width: 880px)': {
             fontSize: '1.5vh'
@@ -221,13 +219,7 @@ const styles = StyleSheet.create({
     paddingLeft: {
         paddingLeft: '20px'
     },
-    videowrapper: {
-        height: '100%',
-        display: 'flex',
-        textAlign: 'center',
-        alignItems: 'center'
-    },
-    videoWrapper2: {
+    videoWrapper: {
         fontFamily: '"HeadLand One", serif',
         height: '100%',
         marginTop: '200px',
@@ -237,19 +229,14 @@ const styles = StyleSheet.create({
     },
     videoDiv: {
         padding: '10px',
-    },
-    videoText: {
-        display: 'inline-block',
-        width: '50%'
     }
-
 })
 
 class Broadcast extends Component {
   render() {
     return (
         <div className={ css(styles.container) }>
-            <div className={ css(styles.videoWrapper2) }>
+            <div className={ css(styles.videoWrapper) }>
                 <div className={ css(styles.center, styles.videoDiv) }>
                     <video width="100%" autoPlay loop>
                         <source src={ broadcastVideo } type="video/mp4" />
@@ -283,9 +270,10 @@ class Broadcast extends Component {
                     <div className={ css(styles.innerDivision) }>
                         <div className={ css(styles.responsiveFont, styles.responsiveTop, styles.paddingLeft, styles.paddingRight) }>
                             <a href="https://www.udemy.com/game-development-professionale-con-unity-3d-e-c/?couponCode=NUTTY-WEBSITE"><img className={ css(styles.center, styles.width60) }  src={ courseLogoImg } alt=""/></a>
-                            <p><span className={ css(styles.textGrey, styles.normal, styles.responsiveFont) }>Courses</span></p>
+                            <p><span className={ css(styles.textGrey, styles.normal, styles.responsiveFont) }>Courses & Community</span></p>
                             <p>Teaching the development of 3D applications and videogames is one of our aims.
                                Contact us if you need to organize classrooms about these topics or if you are in search of speakers for an event.</p>
+                            <p> Join our Discord Community and talk directly to us and to passionate about game development! </p>
                             <p><a className={ css(styles.textGrey, styles.normal, styles.responsiveFont) } href="https://www.udemy.com/game-development-professionale-con-unity-3d-e-c/?couponCode=NUTTY-WEBSITE"> Check out our Best Seller course!</a></p>
                         </div>
                     </div>

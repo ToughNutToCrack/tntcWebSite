@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import { StyleSheet, css } from 'aphrodite'
-import { FaTwitter, FaYoutube, FaInstagram, FaBars, FaGithub } from 'react-icons/fa'
+import { FaTwitter, FaYoutube, FaInstagram, FaBars, FaGithub, FaDiscord } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
 import Menu from './Menu'
 
@@ -9,6 +9,7 @@ const twitterLink = 'https://twitter.com/tntcproject'
 const instagramLink = 'https://www.instagram.com/tntcproject/'
 const youtubeLink = 'https://www.youtube.com/channel/UCTR740iIPwfu7Pz_BoCEJ-g'
 const githubLink = 'https://github.com/ToughNutToCrack'
+const discordLink = 'https://discord.gg/Z8QD8uF'
 
 // OLD Business card AR effect
 const arLink = 'https://toughnuttocrack.it/business-cards-ar/'
@@ -175,6 +176,7 @@ class Header extends Component {
                         <a className={ css(styles.singleSocialIcon) } target="_blank" rel="noopener noreferrer" href={ instagramLink }><FaInstagram /></a>
                         <a className={ css(styles.singleSocialIcon) } target="_blank" rel="noopener noreferrer" href={ youtubeLink }><FaYoutube /></a>
                         <a className={ css(styles.singleSocialIcon) } target="_blank" rel="noopener noreferrer" href={ githubLink }><FaGithub /></a>
+                        <a className={ css(styles.singleSocialIcon) } target="_blank" rel="noopener noreferrer" href={ discordLink }><FaDiscord /></a>
                     </IconContext.Provider>    
                 </div>
                 <div className={ css(styles.hambContainer, styles.hover) } onClick={ this.openMenu }>
