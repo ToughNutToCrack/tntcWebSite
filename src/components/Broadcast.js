@@ -95,10 +95,10 @@ const styles = StyleSheet.create({
     },
     white: {
         backgroundColor: '#ffffff',
-        color: '#424242',
+        color: '#1e1e1e',
     },
     grey: {
-        backgroundColor: '#424242',
+        backgroundColor: '#1e1e1e',
         color: '#ffffff',
     },
     red: {

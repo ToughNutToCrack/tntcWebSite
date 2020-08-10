@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { css, StyleSheet } from 'aphrodite'
 
-import ScrollPls from './SrcollPls'
-
-import courseLogoImg from '../assets/images/photo/Courses.png'
-import youtubeImg from '../assets/images/photo/Youtube.png'
+import buildImg from '../assets/images/photo/build.png'
+import arImg from '../assets/images/photo/ar2.jpg'
+import vrImg from '../assets/images/photo/vr.jpg'
+import premiereImg from '../assets/images/photo/premiere.jpg'
 
 import broadcastVideo from '../assets/video/broadcast.mp4'
 
@@ -102,10 +102,10 @@ const styles = StyleSheet.create({
     },
     white: {
         backgroundColor: '#ffffff',
-        color: '#424242',
+        color: '#1e1e1e',
     },
     grey: {
-        backgroundColor: '#424242',
+        backgroundColor: '#1e1e1e',
         color: '#ffffff',
     },
     red: {
@@ -215,6 +215,27 @@ const styles = StyleSheet.create({
             width: '25%'
         }
     },
+    width40: {
+        width: '45%',
+        '@media screen and (max-height: 700px)': {
+            width: '45%'
+        },
+        '@media screen and (max-width: 880px) and (orientation: portrait)': {
+            width: '25%'
+        },
+        '@media screen and (min-height: 332px) and (max-height: 650px) and (orientation: portrait)': {
+            width: '25%'
+        },
+        '@media screen and (max-height: 400px) and (orientation: landscape)': {
+            width: '25%'
+        },
+        '@media screen and (min-width: 1000px) and (max-height: 400px) and (orientation: landscape)': {
+            width: '15%'
+        },
+        '@media screen and and (max-width: 1000px) and (max-height: 200px) and (orientation: landscape)': {
+            width: '25%'
+        }
+    },
     hideObject: {
         '@media screen and (max-height: 460px) and (max-width: 426px) and (orientation: portrait)': {
             display: 'none'
@@ -240,9 +261,6 @@ const styles = StyleSheet.create({
         fontSize: '2vw',
         display: 'contents'
     },
-    videoDiv: {
-        padding: '10px',
-    },
     overlayVideo: {
         position: 'absolute',
         zIndex: '1', 
@@ -258,11 +276,11 @@ const styles = StyleSheet.create({
 class Studio2 extends Component {
   render() {
     return (
-        <div className={ css(styles.container) }>
+        <div className={ css(styles.container, styles.grey) }>
             <div className={ css(styles.videoWrapper) }>
                 <div className={ css(styles.center2, styles.videoDiv) }>
                     <div className= { css(styles.overlayVideo) }>
-                        <p className={ css(styles.normal, styles.textWhite, styles.textWithShadow) }>We create video, interactive applications and innovative realtime 3D solutions for your business.</p>
+                        <p className={ css(styles.normal, styles.textWhite, styles.textWithShadow) }>We create videogames and innovative realtime 3D solutions for your business.</p>
                     </div>
                     <video width="100%" autoPlay loop>
                         <source src={ broadcastVideo } type="video/mp4" />
@@ -276,21 +294,49 @@ class Studio2 extends Component {
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
                         <div className={ css(styles.responsiveFont, styles.responsiveTop, styles.paddingLeft, styles.paddingRight) }>
-                            <p><span className={ css(styles.textOrange, styles.normal, styles.responsiveFont) }>Experts at your service!</span></p>
-                            <p>Over these years, we've successfully developed many projects for customers, from the simplest to the complex one. Contact us for more information, to talk about your idea or a quotation. We're always happy to clarify any doubt!</p>                            
-                            <p><a className={ css(styles.textGrey, styles.normal, styles.responsiveFont) } href="https://www.youtube.com/channel/UCtj_LuYF9i5xkk4Q9EYamYA?sub_confirmation=1"> Subscribe.</a></p>
-                            <a href="https://www.youtube.com/channel/UCtj_LuYF9i5xkk4Q9EYamYA?sub_confirmation=1"><img className={ css(styles.center, styles.width60) }  src={ youtubeImg } alt=""/></a>
+                            <p><span className={ css(styles.textOrange, styles.normal, styles.responsiveFont) }> Augmented reality</span></p>
+                            <p>Handheld AR is a powerful way to show your products, art, or idea.
+                               Nowadays, almost any mobile device supports it, and we encourage you to think out of the box and give it a try!
+                               We'll follow you in any step; design, development, content creation, and release!
+                            </p>                            
+                            <p><a className={ css(styles.textOrange, styles.normal, styles.responsiveFont) } href="https://www.udemy.com/game-development-professionale-con-unity-3d-e-c/?couponCode=NUTTY-WEBSITE"> Also, find out the WEB AR Framework we're developing!</a></p>
+                            <img className={ css(styles.center, styles.width60) }  src={ arImg } alt=""/>
                         </div>
                     </div>
                 </div>
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
                         <div className={ css(styles.responsiveFont, styles.responsiveTop, styles.paddingLeft, styles.paddingRight) }>
-                            <a href="https://www.udemy.com/game-development-professionale-con-unity-3d-e-c/?couponCode=NUTTY-WEBSITE"><img className={ css(styles.center, styles.width60) }  src={ courseLogoImg } alt=""/></a>
-                            <p><span className={ css(styles.textGrey, styles.normal, styles.responsiveFont) }>Courses</span></p>
-                            <p>Teaching the development of 3D applications and videogames is one of our aims.
-                               Contact us if you need to organize classrooms about these topics or if you are in search of speakers for an event.</p>
-                            <p><a className={ css(styles.textOrange, styles.normal, styles.responsiveFont) } href="https://www.udemy.com/game-development-professionale-con-unity-3d-e-c/?couponCode=NUTTY-WEBSITE"> Check out our Best Seller course!</a></p>
+                            <img className={ css(styles.center, styles.width40) }  src={ vrImg } alt=""/>
+                            <p><span className={ css(styles.textOrange, styles.normal, styles.responsiveFont) }>Virtual Reality</span></p>
+                            <p>
+                            Headsets like the Oculus Quest are changing the VR market: Accessible price, lightweight hardware, integrated hand tracking, and the possibility of using the headset as standalone or attach it via cable to use the full power of a computer.
+                            </p>
+                            <p><span className={ css(styles.textOrange, styles.normal, styles.responsiveFont) }> Immerse your audience in a new world!</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className={ css(styles.divisionsWrapper, styles.grey) }>
+                <div className={ css(styles.division) }>
+                    <div className={ css(styles.innerDivision) }>
+                        <div className={ css(styles.responsiveFont, styles.responsiveTop, styles.paddingLeft, styles.paddingRight) }>
+                            <p><span className={ css(styles.textOrange, styles.normal, styles.responsiveFont) }>Unity3D</span></p>
+                            <p>
+                            We take advantage of one of the most powerful game engines to create any real-time 3D or 2D solution; videogames, product configurators, training and education experiences, marketing applications, and many more.
+                            </p>
+                            <p><span className={ css(styles.textOrange, styles.normal, styles.responsiveFont) }> Build one Software and use it on any platform!</span></p>
+                            <img className={ css(styles.center, styles.width60) }  src={ buildImg } alt=""/>
+                        </div>
+                    </div>
+                </div>
+                <div className={ css(styles.division) }>
+                    <div className={ css(styles.innerDivision) }>
+                        <div className={ css(styles.responsiveFont, styles.responsiveTop, styles.paddingLeft, styles.paddingRight) }>
+                            <img className={ css(styles.center, styles.width60) }  src={ premiereImg } alt=""/>
+                            <p><span className={ css(styles.textOrange, styles.normal, styles.responsiveFont) }>Content Creation</span></p>
+                            <p>We create educational and technical video about Unity3D and, more in general, game development. Enrich your application with engaging videos.</p>                            
                         </div>
                     </div>
                 </div>

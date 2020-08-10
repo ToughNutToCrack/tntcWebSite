@@ -124,7 +124,7 @@ class Contacts extends Component {
 
                                     <div className={ css(styles.inner) }>
                                         <h2>Create a project with us.</h2>
-                                        <a className={ css(styles.link) } href="mailto:info@tntc.it">What are you looking for?</a>
+                                        <a className={ css(styles.link) } href="mailto:info@tntc.it">Over these years, we've successfully developed many projects for customers, from the simplest to the complex one. Contact us for more information, to talk about your idea or a quotation. We're always happy to clarify any doubt!</a>
                                     </div>
 
                                     <div className={ css(styles.inner, styles.textOrange) }>
