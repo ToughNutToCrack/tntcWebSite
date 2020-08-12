@@ -142,7 +142,7 @@ class Header extends Component {
     }
 
     isHome() {
-        if (window.location.pathname !== '/studio' && window.location.pathname !== '/broadcast' && window.location.pathname !== '/contacts') {
+        if (window.location.pathname !== '/studio' && window.location.pathname !== '/broadcast' && window.location.pathname !== '/contacts' && window.location.pathname !== '/webarFramework') {
             return styles.headerTransparent
         }
         return styles.header
@@ -164,6 +164,9 @@ class Header extends Component {
                         </li>
                         <li className={ css(styles.nav) }>
                             <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/broadcast">Broadcast</NavLink>
+                        </li>
+                        <li className={ css(styles.nav) }>
+                            <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/webarFramework">**Name**</NavLink>
                         </li>
                         <li className={ css(styles.nav) }>
                             <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/contacts">Contacts</NavLink>

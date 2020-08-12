@@ -12,6 +12,7 @@ import Contacts from './Contacts'
 import Page from './Page'
 import Studio from './Studio'
 import Broadcast from './Broadcast'
+import ARFramework from './ARFramework'
 
 class Content extends Component {
   render() {
@@ -24,6 +25,7 @@ class Content extends Component {
                       <Route exact path='/studio' component={ Studio }/>
                       <Route exact path='/broadcast' component={ Broadcast }/>
                       <Route exact path='/contacts' component={ Contacts }/>
+                      <Route exact path='/webarFramework' component={ ARFramework }/>
                   </Switch>
               </CSSTransition>
           </TransitionGroup>
@@ -41,6 +43,7 @@ class AFrameWrapper extends Component {
               <Route exact path='/studio' component={ Page }/>
               <Route exact path='/broadcast' component={ Page }/>
               <Route exact path='/contacts' component={ Page }/>
+              <Route exact path='/webarFramework' component={ Page }/>
           </Switch>
       </>
     )  

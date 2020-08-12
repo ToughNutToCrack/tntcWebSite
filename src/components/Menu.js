@@ -153,10 +153,7 @@ class Menu extends Component {
 
     render() {
         return ( 
-            // <Fade top when={this.state.isOpen} duration="300" >
             <div className={ this.state.isOpen ? css(styles.openMenu) : css(styles.closeMenu) }> 
-                {/* <div className={css(styles.openMenu) }> */}
-
                 <div className={ css(styles.closeIconContainer, styles.hover) } onClick={ this.closeMenu }>
                     <IoIosClose className={ css(styles.closeIcon) }/>
                 </div>              
@@ -171,6 +168,9 @@ class Menu extends Component {
                         </li>
                         <li className={ css(styles.nav) }>
                             <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/broadcast" onClick={ this.closeMenu }>Broadcast</NavLink>
+                        </li>  
+                        <li className={ css(styles.nav) }>
+                            <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/webarFramework" onClick={ this.closeMenu }>**Name**</NavLink>
                         </li>                      
                         <li className={ css(styles.nav) }>
                             <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/contacts" onClick={ this.closeMenu }>Contacts</NavLink>
