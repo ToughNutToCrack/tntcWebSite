@@ -2,11 +2,11 @@ import React, { Component } from 'react'
 import { css, StyleSheet } from 'aphrodite'
 
 import buildImg from '../assets/images/photo/build.png'
-import arImg from '../assets/images/photo/ar2.jpg'
-import vrImg from '../assets/images/photo/vr.jpg'
-import premiereImg from '../assets/images/photo/premiere.jpg'
+import arImg from '../assets/images/studio/ar.png'
+import vrImg from '../assets/images/studio/vr.png'
+import contentCreationImg from '../assets/images/studio/contentCreation.png'
 
-import broadcastVideo from '../assets/video/broadcast.mp4'
+import studioVideo from '../assets/video/studio.mp4'
 
 const styles = StyleSheet.create({
     container: {
@@ -74,7 +74,8 @@ const styles = StyleSheet.create({
         verticalAlign: 'middle',
         margin: 'auto',
         width: '100%',
-        marginTop: '100px'
+        marginTop: '180px',
+        marginBottom: '180px'
     },
     responsiveTop: {
         '@media screen and (max-width: 880px) and (orientation: portrait)': {
@@ -84,7 +85,7 @@ const styles = StyleSheet.create({
     responsiveFont: {
         fontSize: '2vw',
         '@media screen and (min-width: 1200px) and (orientation: landscape)': {
-            fontSize: '1.5vw',
+            fontSize: '1.2vw',
         },
         '@media screen and (min-width: 0px) and (max-width: 880px)': {
             fontSize: '1.5vh'
@@ -256,7 +257,6 @@ const styles = StyleSheet.create({
     videoWrapper: {
         fontFamily: '"HeadLand One", serif',
         height: '100%',
-        marginTop: '100px',
         width: '100%',
         fontSize: '2vw',
         display: 'contents'
@@ -282,10 +282,9 @@ class Studio2 extends Component {
                     <div className= { css(styles.overlayVideo) }>
                         <p className={ css(styles.normal, styles.textWhite, styles.textWithShadow) }>We create videogames and innovative realtime 3D solutions for your business.</p>
                     </div>
-                    <video width="100%" autoPlay loop>
-                        <source src={ broadcastVideo } type="video/mp4" />
+                    <video width="60%" autoPlay loop>
+                        <source src={ studioVideo } type="video/mp4" />
                     </video>
-                    
                 </div>
                 
             </div>
@@ -334,7 +333,7 @@ class Studio2 extends Component {
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
                         <div className={ css(styles.responsiveFont, styles.responsiveTop, styles.paddingLeft, styles.paddingRight) }>
-                            <img className={ css(styles.center, styles.width60) }  src={ premiereImg } alt=""/>
+                            <img className={ css(styles.center, styles.width60) }  src={ contentCreationImg } alt=""/>
                             <p><span className={ css(styles.textOrange, styles.normal, styles.responsiveFont) }>Content Creation</span></p>
                             <p>We create educational and technical video about Unity3D and, more in general, game development. Enrich your application with engaging videos.</p>                            
                         </div>

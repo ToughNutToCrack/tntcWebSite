@@ -66,7 +66,8 @@ const styles = StyleSheet.create({
     center: {
         display: 'inline-block',
         verticalAlign: 'middle',
-        margin: 'auto'
+        margin: 'auto', 
+        width: '60%'
     },
     videoWrapper: {
         fontFamily: '"HeadLand One", serif',
