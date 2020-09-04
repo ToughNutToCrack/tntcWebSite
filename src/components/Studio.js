@@ -279,12 +279,12 @@ class Studio2 extends Component {
         <div className={ css(styles.container, styles.grey) }>
             <div className={ css(styles.videoWrapper) }>
                 <div className={ css(styles.center2, styles.videoDiv) }>
-                    <div className= { css(styles.overlayVideo) }>
-                        <p className={ css(styles.normal, styles.textWhite, styles.textWithShadow) }>We create videogames and innovative realtime 3D solutions for your business.</p>
-                    </div>
-                    <video width="60%" autoPlay loop>
+                    <video width="55%" autoPlay loop>
                         <source src={ studioVideo } type="video/mp4" />
                     </video>
+                    <div className= { css() }>
+                        <p className={ css(styles.normal, styles.textWhite, styles.textWithShadow) }>We create innovative realtime 3D solutions for your business.</p>
+                    </div>
                 </div>
                 
             </div>
