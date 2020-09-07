@@ -67,16 +67,19 @@ const styles = StyleSheet.create({
     center: {
         display: 'inline-block',
         verticalAlign: 'middle',
-        margin: 'auto'
     },
-    center2: {
-        display: 'inline-block',
-        verticalAlign: 'middle',
-        margin: 'auto',
-        width: '100%',
-        marginTop: '180px',
-        marginBottom: '180px'
+    headerMargin: {
+        marginTop: '120px'
     },
+    imageMargin2: {
+        marginBottom: '90px'
+    }, 
+    imageMargin3: {
+        marginTop: '90px',
+        '@media screen and (min-width: 0px) and (max-width: 880px)': {
+            marginTop: '0px',
+        }
+    }, 
     responsiveTop: {
         '@media screen and (max-width: 880px) and (orientation: portrait)': {
             paddingTop: '10%'
@@ -278,8 +281,8 @@ class Studio2 extends Component {
     return (
         <div className={ css(styles.container, styles.grey) }>
             <div className={ css(styles.videoWrapper) }>
-                <div className={ css(styles.center2, styles.videoDiv) }>
-                    <video width="55%" autoPlay loop>
+                <div className={ css(styles.center, styles.headerMargin) }>
+                    <video width="100%" autoPlay loop>
                         <source src={ studioVideo } type="video/mp4" />
                     </video>
                     <div className= { css() }>
@@ -293,20 +296,20 @@ class Studio2 extends Component {
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
                         <div className={ css(styles.responsiveFont, styles.responsiveTop, styles.paddingLeft, styles.paddingRight) }>
+                            <img className={ css(styles.center, styles.width60) }  src={ arImg } alt=""/>
                             <p><span className={ css(styles.textOrange, styles.normal, styles.responsiveFont) }> Augmented reality</span></p>
                             <p>Handheld AR is a powerful way to show your products, art, or idea.
                                Nowadays, almost any mobile device supports it, and we encourage you to think out of the box and give it a try!
                                We'll follow you in any step; design, development, content creation, and release!
                             </p>                            
                             <p><a className={ css(styles.textOrange, styles.normal, styles.responsiveFont) } href="https://www.udemy.com/game-development-professionale-con-unity-3d-e-c/?couponCode=NUTTY-WEBSITE"> Also, find out the WEB AR Framework we're developing!</a></p>
-                            <img className={ css(styles.center, styles.width60) }  src={ arImg } alt=""/>
                         </div>
                     </div>
                 </div>
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
                         <div className={ css(styles.responsiveFont, styles.responsiveTop, styles.paddingLeft, styles.paddingRight) }>
-                            <img className={ css(styles.center, styles.width40) }  src={ vrImg } alt=""/>
+                            <img className={ css(styles.center, styles.width40, styles.imageMargin3) }  src={ vrImg } alt=""/>
                             <p><span className={ css(styles.textOrange, styles.normal, styles.responsiveFont) }>Virtual Reality</span></p>
                             <p>
                             Headsets like the Oculus Quest are changing the VR market: Accessible price, lightweight hardware, integrated hand tracking, and the possibility of using the headset as standalone or attach it via cable to use the full power of a computer.
@@ -321,18 +324,18 @@ class Studio2 extends Component {
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
                         <div className={ css(styles.responsiveFont, styles.responsiveTop, styles.paddingLeft, styles.paddingRight) }>
+                            <img className={ css(styles.center, styles.width60) }  src={ buildImg } alt=""/>
                             <p><span className={ css(styles.textOrange, styles.normal, styles.responsiveFont) }>Unity3D</span></p>
                             <p>
                             We take advantage of one of the most powerful game engines to create any real-time 3D or 2D solution; videogames, product configurators, training and education experiences, marketing applications, and many more.
                             </p>
                             <p><span className={ css(styles.textOrange, styles.normal, styles.responsiveFont) }> Build one Software and use it on any platform!</span></p>
-                            <img className={ css(styles.center, styles.width60) }  src={ buildImg } alt=""/>
                         </div>
                     </div>
                 </div>
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
-                        <div className={ css(styles.responsiveFont, styles.responsiveTop, styles.paddingLeft, styles.paddingRight) }>
+                        <div className={ css(styles.responsiveFont, styles.responsiveTop, styles.paddingLeft, styles.paddingRight, styles.imageMargin2) }>
                             <img className={ css(styles.center, styles.width60) }  src={ contentCreationImg } alt=""/>
                             <p><span className={ css(styles.textOrange, styles.normal, styles.responsiveFont) }>Content Creation</span></p>
                             <p>We create educational and technical video about Unity3D and, more in general, game development. Enrich your application with engaging videos.</p>                            
