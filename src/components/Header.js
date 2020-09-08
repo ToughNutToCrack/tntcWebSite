@@ -54,6 +54,9 @@ const styles = StyleSheet.create({
         opacity: 1,
         '@media only screen and (max-width: 880px) and (orientation: portrait)': {
             display: 'none'
+        },
+        '@media only screen and (max-width: 880px)': {
+            width: '60%',
         }
     },
     navs: {

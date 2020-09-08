@@ -100,6 +100,21 @@ const styles = StyleSheet.create({
             fontSize: '2.5vh'
         }
     },
+    responsiveFontTitle: {
+        fontSize: '2.3vw',
+        '@media screen and (min-width: 1200px) and (orientation: landscape)': {
+            fontSize: '1.5vw',
+        },
+        '@media screen and (min-width: 0px) and (max-width: 880px)': {
+            fontSize: '1.8vh'
+        },
+        '@media screen and (min-height: 332px) and (max-height: 565px)': {
+            fontSize: '1.8vh'
+        },
+        '@media screen and (min-height: 0px) and (max-height: 331px)': {
+            fontSize: '2.8vh'
+        }
+    },
     black: {
         backgroundColor: '#000000',
         color: '#ffffff',
@@ -127,20 +142,6 @@ const styles = StyleSheet.create({
     box: {
         boxSizing: 'border-box'
     },
-    big: {
-        fontFamily: '"Patua One", regular',
-        fontSize: '4vW',
-        '@media only screen and (min-width: 880px) and (orientation: landscape)': {
-            fontSize: '3vw',
-        }
-    },
-    little: {
-        fontFamily: '"Patua One", regular',
-        fontSize: '2vw',
-        '@media only screen and (min-width: 880px) and (orientation: landscape)': {
-            fontSize: '22px',
-        }
-    },
     normal: {
         fontFamily: '"Patua One", regular',
         fontSize: '2vW',
@@ -154,30 +155,8 @@ const styles = StyleSheet.create({
             fontSize: '4vh',
         },
     },
-    normalxs: {
-        fontSize: '1.3vW',
-        '@media only screen and (max-width: 880px)': {
-            fontSize: '2vw',
-        },
-        '@media only screen and (max-width: 440px)': {
-            fontSize: '3vw',
-        },
-        '@media only screen and (max-height: 440px)': {
-            fontSize: '3vh',
-            lineHeight: '5px'
-        }
-    },
-    textRed: {
-        color: '#ed1c24'
-    },
     textOrange: {
         color: '#FF926B'
-    },
-    textBlack: {
-        color: '#000000'
-    },
-    textGrey: {
-        color: '#424242'
     },
     textWhite: {
         color: '#ffffff'
@@ -297,12 +276,12 @@ class Studio2 extends Component {
                     <div className={ css(styles.innerDivision) }>
                         <div className={ css(styles.responsiveFont, styles.responsiveTop, styles.paddingLeft, styles.paddingRight) }>
                             <img className={ css(styles.center, styles.width60) }  src={ arImg } alt=""/>
-                            <p><span className={ css(styles.textOrange, styles.normal, styles.responsiveFont) }> Augmented reality</span></p>
+                            <p><span className={ css(styles.textOrange, styles.responsiveFontTitle) }> Augmented reality</span></p>
                             <p>Handheld AR is a powerful way to show your products, art, or idea.
                                Nowadays, almost any mobile device supports it, and we encourage you to think out of the box and give it a try!
                                We'll follow you in any step; design, development, content creation, and release!
                             </p>                            
-                            <p><a className={ css(styles.textOrange, styles.normal, styles.responsiveFont) } href="https://www.udemy.com/game-development-professionale-con-unity-3d-e-c/?couponCode=NUTTY-WEBSITE"> Also, find out the WEB AR Framework we're developing!</a></p>
+                            <p><a className={ css(styles.textOrange) } href="https://twitter.com/tntcproject/status/1288561743543832576"> Also, check out the WEB AR Framework we're developing!</a></p>
                         </div>
                     </div>
                 </div>
@@ -310,11 +289,11 @@ class Studio2 extends Component {
                     <div className={ css(styles.innerDivision) }>
                         <div className={ css(styles.responsiveFont, styles.responsiveTop, styles.paddingLeft, styles.paddingRight) }>
                             <img className={ css(styles.center, styles.width40, styles.imageMargin3) }  src={ vrImg } alt=""/>
-                            <p><span className={ css(styles.textOrange, styles.normal, styles.responsiveFont) }>Virtual Reality</span></p>
+                            <p><span className={ css(styles.textOrange, styles.responsiveFontTitle) }>Virtual Reality</span></p>
                             <p>
                             Headsets like the Oculus Quest are changing the VR market: Accessible price, lightweight hardware, integrated hand tracking, and the possibility of using the headset as standalone or attach it via cable to use the full power of a computer.
                             </p>
-                            <p><span className={ css(styles.textOrange, styles.normal, styles.responsiveFont) }> Immerse your audience in a new world!</span></p>
+                            <p><span className={ css(styles.textOrange) }> Immerse your audience in a new world!</span></p>
                         </div>
                     </div>
                 </div>
@@ -325,11 +304,11 @@ class Studio2 extends Component {
                     <div className={ css(styles.innerDivision) }>
                         <div className={ css(styles.responsiveFont, styles.responsiveTop, styles.paddingLeft, styles.paddingRight) }>
                             <img className={ css(styles.center, styles.width60) }  src={ buildImg } alt=""/>
-                            <p><span className={ css(styles.textOrange, styles.normal, styles.responsiveFont) }>Unity3D</span></p>
+                            <p><span className={ css(styles.textOrange, styles.responsiveFontTitle) }>Unity3D</span></p>
                             <p>
                             We take advantage of one of the most powerful game engines to create any real-time 3D or 2D solution; videogames, product configurators, training and education experiences, marketing applications, and many more.
                             </p>
-                            <p><span className={ css(styles.textOrange, styles.normal, styles.responsiveFont) }> Build one Software and use it on any platform!</span></p>
+                            <p><span className={ css(styles.textOrange) }> Build one Software and use it on any platform!</span></p>
                         </div>
                     </div>
                 </div>
@@ -337,7 +316,7 @@ class Studio2 extends Component {
                     <div className={ css(styles.innerDivision) }>
                         <div className={ css(styles.responsiveFont, styles.responsiveTop, styles.paddingLeft, styles.paddingRight, styles.imageMargin2) }>
                             <img className={ css(styles.center, styles.width60) }  src={ contentCreationImg } alt=""/>
-                            <p><span className={ css(styles.textOrange, styles.normal, styles.responsiveFont) }>Content Creation</span></p>
+                            <p><span className={ css(styles.textOrange, styles.responsiveFontTitle) }>Content Creation</span></p>
                             <p>We create educational and technical video about Unity3D and, more in general, game development. Enrich your application with engaging videos.</p>                            
                         </div>
                     </div>
