@@ -101,6 +101,7 @@ const styles = StyleSheet.create({
         }
     },
     responsiveFontTitle: {
+        fontFamily: '"Patua One", regular',
         fontSize: '2.3vw',
         '@media screen and (min-width: 1200px) and (orientation: landscape)': {
             fontSize: '1.5vw',
@@ -114,6 +115,9 @@ const styles = StyleSheet.create({
         '@media screen and (min-height: 0px) and (max-height: 331px)': {
             fontSize: '2.8vh'
         }
+    },
+    patuaFont: {
+        fontFamily: '"Patua One", regular'
     },
     black: {
         backgroundColor: '#000000',
@@ -281,7 +285,7 @@ class Studio2 extends Component {
                                Nowadays, almost any mobile device supports it, and we encourage you to think out of the box and give it a try!
                                We'll follow you in any step; design, development, content creation, and release!
                             </p>                            
-                            <p><a className={ css(styles.textOrange) } href="https://twitter.com/tntcproject/status/1288561743543832576"> Also, check out the WEB AR Framework we're developing!</a></p>
+                            <p><a className={ css(styles.textOrange, styles.patuaFont) } href="https://twitter.com/tntcproject/status/1288561743543832576"> Also, check out the WEB AR Framework we're developing!</a></p>
                         </div>
                     </div>
                 </div>
@@ -293,7 +297,7 @@ class Studio2 extends Component {
                             <p>
                             Headsets like the Oculus Quest are changing the VR market: Accessible price, lightweight hardware, integrated hand tracking, and the possibility of using the headset as standalone or attach it via cable to use the full power of a computer.
                             </p>
-                            <p><span className={ css(styles.textOrange) }> Immerse your audience in a new world!</span></p>
+                            <p><span className={ css(styles.textOrange, styles.patuaFont) }> Immerse your audience in a new world!</span></p>
                         </div>
                     </div>
                 </div>
@@ -308,7 +312,7 @@ class Studio2 extends Component {
                             <p>
                             We take advantage of one of the most powerful game engines to create any real-time 3D or 2D solution; videogames, product configurators, training and education experiences, marketing applications, and many more.
                             </p>
-                            <p><span className={ css(styles.textOrange) }> Build one Software and use it on any platform!</span></p>
+                            <p><span className={ css(styles.textOrange, styles.patuaFont) }> Build one Software and use it on any platform!</span></p>
                         </div>
                     </div>
                 </div>
