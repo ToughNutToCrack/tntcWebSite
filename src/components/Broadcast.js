@@ -226,7 +226,11 @@ const styles = StyleSheet.create({
         marginTop: '200px',
         width: '100%',
         fontSize: '2vw',
-        display: 'inline-table'
+        display: 'inline-table',
+        '@media screen and (max-width: 1544px)': {
+            height: '65%',
+            marginTop: '120px',
+        },
     },
     videoDiv: {
         padding: '10px',
