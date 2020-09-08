@@ -256,6 +256,9 @@ const styles = StyleSheet.create({
         '@media screen and (min-width: 0px) and (max-width: 1000px)': {
             top: '30%'
         }
+    },
+    height80: {
+        height: '80%'
     }
 })
 
@@ -278,7 +281,7 @@ class Studio2 extends Component {
             <div className={ css(styles.divisionsWrapper, styles.grey) }>
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
-                        <div className={ css(styles.responsiveFont, styles.responsiveTop, styles.paddingLeft, styles.paddingRight) }>
+                        <div className={ css(styles.responsiveFont, styles.responsiveTop, styles.paddingLeft, styles.paddingRight, styles.height80) }>
                             <img className={ css(styles.center, styles.width60) }  src={ arImg } alt=""/>
                             <p><span className={ css(styles.textOrange, styles.responsiveFontTitle) }> Augmented reality</span></p>
                             <p>Handheld AR is a powerful way to show your products, art, or idea.
@@ -291,8 +294,8 @@ class Studio2 extends Component {
                 </div>
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
-                        <div className={ css(styles.responsiveFont, styles.responsiveTop, styles.paddingLeft, styles.paddingRight) }>
-                            <img className={ css(styles.center, styles.width40, styles.imageMargin3) }  src={ vrImg } alt=""/>
+                        <div className={ css(styles.responsiveFont, styles.responsiveTop, styles.paddingLeft, styles.paddingRight, styles.height80) }>
+                            <img className={ css(styles.center, styles.width60) }  src={ vrImg } alt=""/>
                             <p><span className={ css(styles.textOrange, styles.responsiveFontTitle) }>Virtual Reality</span></p>
                             <p>
                             Headsets like the Oculus Quest are changing the VR market: Accessible price, lightweight hardware, integrated hand tracking, and the possibility of using the headset as standalone or attach it via cable to use the full power of a computer.
@@ -306,7 +309,7 @@ class Studio2 extends Component {
             <div className={ css(styles.divisionsWrapper, styles.grey) }>
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
-                        <div className={ css(styles.responsiveFont, styles.responsiveTop, styles.paddingLeft, styles.paddingRight) }>
+                        <div className={ css(styles.responsiveFont, styles.responsiveTop, styles.paddingLeft, styles.paddingRight, styles.height80) }>
                             <img className={ css(styles.center, styles.width60) }  src={ buildImg } alt=""/>
                             <p><span className={ css(styles.textOrange, styles.responsiveFontTitle) }>Unity3D</span></p>
                             <p>
@@ -318,7 +321,7 @@ class Studio2 extends Component {
                 </div>
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
-                        <div className={ css(styles.responsiveFont, styles.responsiveTop, styles.paddingLeft, styles.paddingRight, styles.imageMargin2) }>
+                        <div className={ css(styles.responsiveFont, styles.responsiveTop, styles.paddingLeft, styles.paddingRight, styles.height80) }>
                             <img className={ css(styles.center, styles.width60) }  src={ contentCreationImg } alt=""/>
                             <p><span className={ css(styles.textOrange, styles.responsiveFontTitle) }>Content Creation</span></p>
                             <p>We create educational and technical video about Unity3D and, more in general, game development. Enrich your application with engaging videos.</p>                            
