@@ -5,6 +5,7 @@ import ScrollPls from './SrcollPls'
 
 import courseLogoImg from '../assets/images/photo/studio1.jpg.png'
 import youtubeImg from '../assets/images/photo/Youtube.png'
+import coursesImg from '../assets/images/photo/GameJam.png'
 
 import broadcastVideo from '../assets/video/broadcast.mp4'
 
@@ -251,25 +252,24 @@ class Broadcast extends Component {
                         <p className={ css(styles.normalxs) }></p>
                     </div>
                 </div>
-                <ScrollPls color='#424242' visible={ true } />
             </div>
             <div className={ css(styles.divisionsWrapper, styles.orange) }>
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
                         <div className={ css(styles.responsiveFont, styles.responsiveTop, styles.paddingLeft, styles.paddingRight) }>
+                            <a href="https://www.youtube.com/channel/UCtj_LuYF9i5xkk4Q9EYamYA?sub_confirmation=1"><img className={ css(styles.center, styles.width60) }  src={ youtubeImg } alt=""/></a>
                             <p><span className={ css(styles.textGrey, styles.normal, styles.responsiveFont) }>YouTube</span></p>
                             <p>On Youtube, we share our passion for game development.
                                Here you can find tutorials, suggestions, tools, and more.
                                Our YT page is a way to challenge ourselves continually, and constructively shows our professional skills. </p>
                             <p><a className={ css(styles.textGrey, styles.normal, styles.responsiveFont) } href="https://www.youtube.com/channel/UCtj_LuYF9i5xkk4Q9EYamYA?sub_confirmation=1"> Subscribe.</a></p>
-                            <a href="https://www.youtube.com/channel/UCtj_LuYF9i5xkk4Q9EYamYA?sub_confirmation=1"><img className={ css(styles.center, styles.width60) }  src={ youtubeImg } alt=""/></a>
                         </div>
                     </div>
                 </div>
                 <div className={ css(styles.division) }>
                     <div className={ css(styles.innerDivision) }>
                         <div className={ css(styles.responsiveFont, styles.responsiveTop, styles.paddingLeft, styles.paddingRight) }>
-                            <a href="https://www.udemy.com/game-development-professionale-con-unity-3d-e-c/?couponCode=NUTTY-WEBSITE"><img className={ css(styles.center, styles.width60) }  src={ courseLogoImg } alt=""/></a>
+                            <a href="https://www.udemy.com/game-development-professionale-con-unity-3d-e-c/?couponCode=NUTTY-WEBSITE"><img className={ css(styles.center, styles.width60) }  src={ coursesImg } alt=""/></a>
                             <p><span className={ css(styles.textGrey, styles.normal, styles.responsiveFont) }>Courses & Community</span></p>
                             <p>Teaching the development of 3D applications and videogames is one of our aims.
                                Contact us if you need to organize classrooms about these topics or if you are in search of speakers for an event.</p>
