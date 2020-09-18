@@ -70,7 +70,7 @@ class Placeholder extends Component {
     render() {
         return (
             <div className={ css(styles.placeholder, this.state.loaded ? styles.placeoff : null) } >
-                <div className={ css(styles.text) }> <p>This is the place where <span className={ css(styles.textOrange, styles.big) }>Nutty</span> lives.</p> </div>
+                <div className={ css(styles.text) }> <p>Wait, <span className={ css(styles.textOrange, styles.big) }>Nutty</span> is loading the site.</p> </div>
             </div>
         )
     }

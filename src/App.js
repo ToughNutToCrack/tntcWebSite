@@ -21,11 +21,16 @@ class App extends Component {
         else 
           return <></>
     }
+
+    isWebAR() {
+        if (window.location.pathname == '/phoenyx')
+          return <></>
+    }
     
     render() {
         return ( 
             <div className={ css(styles.app) }>
-                {this.isThree()}
+                {this.isWebAR() || this.isThree()}
             </div>
         );
     }
