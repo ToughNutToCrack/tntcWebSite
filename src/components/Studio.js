@@ -247,16 +247,6 @@ const styles = StyleSheet.create({
         fontSize: '2vw',
         display: 'contents'
     },
-    overlayVideo: {
-        position: 'absolute',
-        zIndex: '1', 
-        left: '50%',
-        top: '50%',
-        transform: 'translate(-50%, -50%)',
-        '@media screen and (min-width: 0px) and (max-width: 1000px)': {
-            top: '30%'
-        }
-    },
     height80: {
         height: '80%'
     }

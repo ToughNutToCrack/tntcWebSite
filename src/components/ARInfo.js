@@ -4,6 +4,8 @@ import ImageZoom from 'react-medium-image-zoom'
 
 import arjsImg from '../assets/images/photo/arjs.png'
 
+const name = 'ARWT'
+
 const styles = StyleSheet.create({
     wrapper: {
         fontFamily: '"HeadLand One", serif',
@@ -52,6 +54,22 @@ const styles = StyleSheet.create({
         verticalAlign: 'middle',
         margin: 'auto'
     },
+    responsiveFontTitle: {
+        fontFamily: '"Patua One", regular',
+        fontSize: '2.3vw',
+        '@media screen and (min-width: 1200px) and (orientation: landscape)': {
+            fontSize: '1.5vw',
+        },
+        '@media screen and (min-width: 0px) and (max-width: 880px)': {
+            fontSize: '1.8vh'
+        },
+        '@media screen and (min-height: 332px) and (max-height: 565px)': {
+            fontSize: '1.8vh'
+        },
+        '@media screen and (min-height: 0px) and (max-height: 331px)': {
+            fontSize: '2.8vh'
+        }
+    },
 
 })
 
@@ -60,11 +78,25 @@ class ARInfo extends Component {
     render() {
         return (
             <div className={ css(styles.wrapper, styles.responsiveFont) }>
-                <p>A Web AR framework for Unity3D.</p>
-                <p>**Name** is a bridge between Unity3D and some of the major WEB AR libraries.</p>
-                <p>The main idea is to take advantage of these Javascript XR platforms and port them to the Unity3D ecosystem.</p>
-                <p>All you need is to create your standard 3D Unity application, add some ready to use Components from the library, and build for WebGL from Unity. The library does all Unity -> JS conversions under the hood. No need to touch the JS code.</p>
-                <p className={ css(styles.textOrange, styles.normal) }>Roadmap</p>
+                <p>Hi, we are <b>ToughNutToCrack</b>, and making AR experiences is one of the primary services we offer.</p>
+                <p>One of the most requested things is to create AR experiences for the Web to avoid forcing the end-user to download a dedicated application.
+                   We all know how boring it can be downloading an application that we will use for a limited time. Therefore, you often risk losing a potential customer or limiting the spread of your AR experience.</p>
+                <p>Of course, there are some solutions for creating Web AR experiences; however, none of these tools offer the same convenience as a graphic engine as <b>Unity</b>. 
+                   Given that Unity is the environment on which we are more experienced, and we have a great knowledge of the web ecosystem in the 3D field, we decided to create <b>{name}</b>.
+                </p>
+                <p>This library allows you to use Unity to build <b>AR Web applications</b>, working as a bridge between Unity and the best AR libraries available for the Web.</p>
+
+                <p>Our goal is to distribute the code for free and create a good community that supports and evolves the library to grow and stay up to date.
+At the moment, this project is carried out in our free time, and therefore has relatively slow growth.
+For this reason, we would like to gather all possible support to allow us to speed up the development of this library.
+More support will allow us to dedicate more time to realize this project, which will remain free and open source for anyone in any case.
+                </p>
+                <br></br>
+                <p>The roadmap below represents our ideal goals and the features we would like to add to {name}.
+At the moment, we are closing the first version that gives you the possibility to create marker-based 3D web applications. The idea is to release this first version and then continue the development enriching with these features. 
+Many of these features are experimental and need a dedicated study for the implementation. So the progress of the library will depend on the support and the community feedback.
+                </p>
+                <p className={ css(styles.textOrange, styles.normal, styles.responsiveFontTitle) }>Roadmap</p>
                 <ImageZoom
                    image={ {
                        src: arjsImg,
