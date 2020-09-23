@@ -12,6 +12,7 @@
     "detect-browser": "^4.1.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+    "react-helmet": "^6.1.0",
     "react-icons": "^3.3.0",
     "react-medium-image-zoom": "^3.0.15",
     "react-reveal": "^1.2.2",
