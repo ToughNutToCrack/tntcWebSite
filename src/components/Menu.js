@@ -11,6 +11,8 @@ const youtubeLink = 'https://www.youtube.com/channel/UCtj_LuYF9i5xkk4Q9EYamYA'
 const githubLink = 'https://github.com/ToughNutToCrack'
 const discordLink = 'https://discord.gg/Z8QD8uF'
 
+const name = 'ARWT'
+
 const resizeKeyframes = {
     '0%': {
         height: '0%'
@@ -169,9 +171,9 @@ class Menu extends Component {
                         <li className={ css(styles.nav) }>
                             <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/broadcast" onClick={ this.closeMenu }>Broadcast</NavLink>
                         </li>  
-                        {/* <li className={ css(styles.nav) }>
-                            <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/webarFramework" onClick={ this.closeMenu }>**Name**</NavLink>
-                        </li>                       */}
+                        <li className={ css(styles.nav) }>
+                            <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/webarFramework" onClick={ this.closeMenu }>{name}</NavLink>
+                        </li>                      
                         <li className={ css(styles.nav) }>
                             <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/contacts" onClick={ this.closeMenu }>Contacts</NavLink>
                         </li>

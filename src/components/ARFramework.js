@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 import { css, StyleSheet } from 'aphrodite'
 
-import broadcastVideo from '../assets/video/broadcast.mp4'
+import arVideo from '../assets/video/ar.mp4'
 
 import ARChangelog from './ARChangelog'
 import ARInfo from './ARInfo'
 import ARSupport from './ARSupport'
+
+const name = 'ARWT'
 
 const styles = StyleSheet.create({
     container: {
@@ -66,16 +68,13 @@ const styles = StyleSheet.create({
     center: {
         display: 'inline-block',
         verticalAlign: 'middle',
-        margin: 'auto', 
-        width: '60%'
     },
     videoWrapper: {
         fontFamily: '"HeadLand One", serif',
         height: '100%',
-        marginTop: '130px',
         width: '100%',
         fontSize: '2vw',
-        display: 'inline-table'
+        display: 'contents'
     },
     textOrange: {
         color: '#FF926B'
@@ -86,16 +85,25 @@ const styles = StyleSheet.create({
     title: {
         fontFamily: '"Patua One", regular',
         fontSize: '6vW',
-        marginBottom: '30px',
         marginTop: '0',
-        '@media only screen and (max-width: 880px)': {
-            fontSize: '6vw',
-        },
+        marginBottom: '0',
         '@media only screen and (max-width: 440px)': {
             fontSize: '8vw',
         },
         '@media only screen and (max-height: 300px)': {
             fontSize: '8vh',
+        }
+    }, 
+    subtitle: {
+        fontFamily: '"Patua One", regular',
+        fontSize: '3vW',
+        marginBottom: '30px',
+        marginTop: '0',
+        '@media only screen and (max-width: 440px)': {
+            fontSize: '4vw',
+        },
+        '@media only screen and (max-height: 300px)': {
+            fontSize: '4vh',
         }
     }, 
     normal: {
@@ -123,7 +131,10 @@ const styles = StyleSheet.create({
     },
     active: {
         color: '#424242',
-    }
+    },
+    headerMargin: {
+        marginTop: '120px'
+    },
 })
 
 class ARFramework extends Component {
@@ -154,10 +165,11 @@ class ARFramework extends Component {
     return (
         <div className={ css(styles.container) }>
             <div className={ css(styles.videoWrapper) }>
-                <div className={ css(styles.center) }>
-                    <p className={ css(styles.textOrange, styles.title) }>**NAME**</p>
+                <div className={ css(styles.center, styles.headerMargin) }>
+                    <p className={ css(styles.textOrange, styles.title) }>{name}</p>
+                    <p className={ css(styles.textOrange, styles.subtitle) }>AR Web Template</p>
                     <video width="100%" autoPlay loop>
-                        <source src={ broadcastVideo } type="video/mp4" />
+                        <source src={ arVideo } type="video/mp4" />
                     </video>
                 </div>
                 <div className={ css(styles.normal) }>
@@ -170,8 +182,8 @@ class ARFramework extends Component {
                     <div className={ css(styles.secondaryHeaderChild) }>
                         <a className={ css(styles.textGrey) }>Changelog</a>
                     </div>
-                    <div className={ css(styles.secondaryHeaderChild) } onClick={ () => this.secondaryHeader(3) }>
-                        <a className={ css(styles.secondaryHeaderText, styles.textOrange, this.state.pageIndex == 3 ? styles.active : null) }>Support Us</a>
+                    <div className={ css(styles.secondaryHeaderChild) }>
+                        <a className={ css(styles.textGrey) }>Support Us</a>
                     </div>
                 </div>
                 <div>

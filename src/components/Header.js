@@ -11,8 +11,7 @@ const youtubeLink = 'https://www.youtube.com/channel/UCTR740iIPwfu7Pz_BoCEJ-g'
 const githubLink = 'https://github.com/ToughNutToCrack'
 const discordLink = 'https://discord.gg/Z8QD8uF'
 
-// OLD Business card AR effect
-const arLink = 'https://toughnuttocrack.it/business-cards-ar/'
+const name = 'ARWT'
 
 const styles = StyleSheet.create({
     header: {
@@ -168,9 +167,9 @@ class Header extends Component {
                         <li className={ css(styles.nav) }>
                             <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/broadcast">Broadcast</NavLink>
                         </li>
-                        {/* <li className={ css(styles.nav) }>
-                            <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/webarFramework">**Name**</NavLink>
-                        </li> */}
+                        <li className={ css(styles.nav) }>
+                            <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/webarFramework">{name}</NavLink>
+                        </li>
                         <li className={ css(styles.nav) }>
                             <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/contacts">Contacts</NavLink>
                         </li>

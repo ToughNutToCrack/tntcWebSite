@@ -22,6 +22,11 @@ class App extends Component {
         else 
           return <></>
     }
+
+    isWebAR() {
+        if (window.location.pathname == '/phoenyx')
+          return <></>
+    }
     
     render() {
         return ( 
@@ -46,7 +51,7 @@ class App extends Component {
                     <meta property="twitter:image" content="https://toughnuttocrack.it/static/media/preview.png"/>
                 </Helmet>
             
-                {this.isThree()}
+                {this.isWebAR() || this.isThree()}
             </div>
         );
     }
