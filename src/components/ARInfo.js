@@ -70,6 +70,9 @@ const styles = StyleSheet.create({
             fontSize: '2.8vh'
         }
     },
+    leftText: {
+        textAlign: 'left'
+    }
 
 })
 
@@ -77,7 +80,7 @@ class ARInfo extends Component {
 
     render() {
         return (
-            <div className={ css(styles.wrapper, styles.responsiveFont) }>
+            <div className={ css(styles.wrapper, styles.responsiveFont, styles.leftText) }>
                 <p>Hi, we are <b>ToughNutToCrack</b>, and making AR experiences is one of the primary services we offer.</p>
                 <p>One of the most requested things is to create AR experiences for the Web to avoid forcing the end-user to download a dedicated application.
                    We all know how boring it can be downloading an application that we will use for a limited time. Therefore, you often risk losing a potential customer or limiting the spread of your AR experience.</p>
@@ -89,7 +92,7 @@ class ARInfo extends Component {
                 <p>Our goal is to distribute the code for free and create a good community that supports and evolves the library to grow and stay up to date.
 At the moment, this project is carried out in our free time, and therefore has relatively slow growth.
 For this reason, we would like to gather all possible support to allow us to speed up the development of this library.
-More support will allow us to dedicate more time to realize this project, which will remain free and open source for anyone in any case.
+More support will allow us to dedicate more time to implement this project, which will remain free and open source for anyone in any case.
                 </p>
                 <br></br>
                 <p>The roadmap below represents our ideal goals and the features we would like to add to {name}.

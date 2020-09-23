@@ -172,7 +172,7 @@ class Menu extends Component {
                             <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/broadcast" onClick={ this.closeMenu }>Broadcast</NavLink>
                         </li>  
                         <li className={ css(styles.nav) }>
-                            <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/webarFramework" onClick={ this.closeMenu }>{name}</NavLink>
+                            <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/arwt" onClick={ this.closeMenu }>{name}</NavLink>
                         </li>                      
                         <li className={ css(styles.nav) }>
                             <NavLink className={ css(styles.navLink, styles.hover) } activeClassName={ css(styles.active) } to="/contacts" onClick={ this.closeMenu }>Contacts</NavLink>

@@ -258,7 +258,7 @@ class Studio2 extends Component {
         <div className={ css(styles.container, styles.grey) }>
             <div className={ css(styles.videoWrapper) }>
                 <div className={ css(styles.center, styles.headerMargin) }>
-                    <video width="100%" autoPlay loop>
+                    <video width="100%" autoPlay loop muted>
                         <source src={ studioVideo } type="video/mp4" />
                     </video>
                     <div className= { css() }>

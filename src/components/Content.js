@@ -25,7 +25,7 @@ class Content extends Component {
                       <Route exact path='/studio' component={ Studio }/>
                       <Route exact path='/broadcast' component={ Broadcast }/>
                       <Route exact path='/contacts' component={ Contacts }/>
-                      <Route exact path='/webarFramework' component={ ARFramework }/>
+                      <Route exact path='/arwt' component={ ARFramework }/>
                   </Switch>
               </CSSTransition>
           </TransitionGroup>
@@ -43,7 +43,7 @@ class AFrameWrapper extends Component {
               <Route exact path='/studio' component={ Page }/>
               <Route exact path='/broadcast' component={ Page }/>
               <Route exact path='/contacts' component={ Page }/>
-              <Route exact path='/webarFramework' component={ Page }/>
+              <Route exact path='/arwt' component={ Page }/>
           </Switch>
       </>
     )  

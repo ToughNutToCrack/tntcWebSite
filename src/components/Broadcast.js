@@ -265,7 +265,7 @@ class Broadcast extends Component {
         <div className={ css(styles.container) }>
             <div className={ css(styles.videoWrapper) }>
                 <div className={ css(styles.center, styles.videoDiv) }>
-                    <video width="100%" autoPlay loop>
+                    <video width="100%" autoPlay loop muted>
                         <source src={ broadcastVideo } type="video/mp4" />
                     </video>
                 </div>

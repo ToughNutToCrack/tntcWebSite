@@ -168,7 +168,7 @@ class ARFramework extends Component {
                 <div className={ css(styles.center, styles.headerMargin) }>
                     <p className={ css(styles.textOrange, styles.title) }>{name}</p>
                     <p className={ css(styles.textOrange, styles.subtitle) }>AR Web Template</p>
-                    <video width="100%" autoPlay loop>
+                    <video width="100%" autoPlay loop muted>
                         <source src={ arVideo } type="video/mp4" />
                     </video>
                 </div>
