@@ -92,7 +92,7 @@ class ARInfo extends Component {
                 <p>Our goal is to distribute the code for free and create a good community that supports and evolves the library to grow and stay up to date.
 At the moment, this project is carried out in our free time, and therefore has relatively slow growth.
 For this reason, we would like to gather all possible support to allow us to speed up the development of this library.
-More support will allow us to dedicate more time to implement this project, which will remain free and open source for anyone in any case.
+More support will allow us to dedicate more time to implement this project, <b>which will remain free and open source for anyone in any case</b>.
                 </p>
                 <br></br>
                 <p>The roadmap below represents our ideal goals and the features we would like to add to {name}.

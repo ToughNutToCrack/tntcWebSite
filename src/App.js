@@ -24,7 +24,7 @@ class App extends Component {
     }
 
     isWebAR() {
-        if (window.location.pathname == '/phoenyx')
+        if (window.location.pathname == '/arwtdemo')
           return <></>
     }
     

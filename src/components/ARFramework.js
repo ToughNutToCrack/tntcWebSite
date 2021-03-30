@@ -6,6 +6,7 @@ import arVideo from '../assets/video/ar.mp4'
 import ARChangelog from './ARChangelog'
 import ARInfo from './ARInfo'
 import ARSupport from './ARSupport'
+import ARDocumentation from './ARDocumentation'
 
 const name = 'ARWT'
 
@@ -154,6 +155,8 @@ class ARFramework extends Component {
       switch (this.state.pageIndex) {
           case 0 :
               return <ARInfo />;
+          case 1 :
+              return <ARDocumentation />;
           case 2 :
               return <ARChangelog />;
           case 3 :
@@ -176,14 +179,14 @@ class ARFramework extends Component {
                     <div className={ css(styles.secondaryHeaderChild) } onClick={ () => this.secondaryHeader(0) }>
                         <a className={ css(styles.secondaryHeaderText, styles.textOrange, this.state.pageIndex == 0 ? styles.active : null) }>Info</a>
                     </div>
-                    <div className={ css(styles.secondaryHeaderChild) }>
-                        <a className={ css(styles.textGrey) }>Documentation</a>
+                    <div className={ css(styles.secondaryHeaderChild) } onClick={ () => this.secondaryHeader(1) }>
+                        <a className={ css(styles.secondaryHeaderText, styles.textOrange, this.state.pageIndex == 1 ? styles.active : null) }>Documentation</a>
                     </div>
-                    <div className={ css(styles.secondaryHeaderChild) }>
-                        <a className={ css(styles.textGrey) }>Changelog</a>
+                    <div className={ css(styles.secondaryHeaderChild) } onClick={ () => this.secondaryHeader(2) }>
+                        <a className={ css(styles.secondaryHeaderText, styles.textOrange, this.state.pageIndex == 2 ? styles.active : null) }>Changelog</a>
                     </div>
-                    <div className={ css(styles.secondaryHeaderChild) }>
-                        <a className={ css(styles.textGrey) }>Support Us</a>
+                    <div className={ css(styles.secondaryHeaderChild) } onClick={ () => this.secondaryHeader(3) }>
+                        <a className={ css(styles.secondaryHeaderText, styles.textOrange, this.state.pageIndex == 3 ? styles.active : null) }>Support Us</a>
                     </div>
                 </div>
                 <div>
